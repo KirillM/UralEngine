@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		53A790852392A17500E29426 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53A790842392A17500E29426 /* main.cpp */; };
+		53A790852392A17500E29426 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53A790842392A17500E29426 /* main.cpp */; settings = {COMPILER_FLAGS = "-o Dependent"; }; };
+		53A790922392AE1500E29426 /* Ural.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 53A790912392AE1500E29426 /* Ural.hpp */; };
+		53A790942392AE1500E29426 /* UralPriv.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 53A790932392AE1500E29426 /* UralPriv.hpp */; };
+		53A790962392AE1500E29426 /* Ural.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53A790952392AE1500E29426 /* Ural.cpp */; };
+		53A790A12392AFF300E29426 /* UralStatic.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 53A790A02392AFF300E29426 /* UralStatic.hpp */; };
+		53A790A32392AFF300E29426 /* UralStaticPriv.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 53A790A22392AFF300E29426 /* UralStaticPriv.hpp */; };
+		53A790A52392AFF300E29426 /* UralStatic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53A790A42392AFF300E29426 /* UralStatic.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,10 +31,32 @@
 /* Begin PBXFileReference section */
 		53A790812392A17500E29426 /* UralEngine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = UralEngine; sourceTree = BUILT_PRODUCTS_DIR; };
 		53A790842392A17500E29426 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		53A7908F2392AE1500E29426 /* libUralDynamic.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libUralDynamic.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		53A790912392AE1500E29426 /* Ural.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Ural.hpp; sourceTree = "<group>"; };
+		53A790932392AE1500E29426 /* UralPriv.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = UralPriv.hpp; sourceTree = "<group>"; };
+		53A790952392AE1500E29426 /* Ural.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Ural.cpp; sourceTree = "<group>"; };
+		53A7909E2392AFF300E29426 /* libUralStatic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libUralStatic.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		53A790A02392AFF300E29426 /* UralStatic.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = UralStatic.hpp; sourceTree = "<group>"; };
+		53A790A22392AFF300E29426 /* UralStaticPriv.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = UralStaticPriv.hpp; sourceTree = "<group>"; };
+		53A790A42392AFF300E29426 /* UralStatic.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UralStatic.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		53A7907E2392A17500E29426 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53A7908D2392AE1500E29426 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53A7909C2392AFF300E29426 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,6 +70,8 @@
 			isa = PBXGroup;
 			children = (
 				53A790832392A17500E29426 /* UralEngine */,
+				53A790902392AE1500E29426 /* UralDynamic */,
+				53A7909F2392AFF300E29426 /* UralStatic */,
 				53A790822392A17500E29426 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				53A790812392A17500E29426 /* UralEngine */,
+				53A7908F2392AE1500E29426 /* libUralDynamic.dylib */,
+				53A7909E2392AFF300E29426 /* libUralStatic.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -62,7 +94,48 @@
 			path = UralEngine;
 			sourceTree = "<group>";
 		};
+		53A790902392AE1500E29426 /* UralDynamic */ = {
+			isa = PBXGroup;
+			children = (
+				53A790912392AE1500E29426 /* Ural.hpp */,
+				53A790932392AE1500E29426 /* UralPriv.hpp */,
+				53A790952392AE1500E29426 /* Ural.cpp */,
+			);
+			path = UralDynamic;
+			sourceTree = "<group>";
+		};
+		53A7909F2392AFF300E29426 /* UralStatic */ = {
+			isa = PBXGroup;
+			children = (
+				53A790A02392AFF300E29426 /* UralStatic.hpp */,
+				53A790A22392AFF300E29426 /* UralStaticPriv.hpp */,
+				53A790A42392AFF300E29426 /* UralStatic.cpp */,
+			);
+			path = UralStatic;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		53A7908B2392AE1500E29426 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53A790922392AE1500E29426 /* Ural.hpp in Headers */,
+				53A790942392AE1500E29426 /* UralPriv.hpp in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53A7909A2392AFF300E29426 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53A790A12392AFF300E29426 /* UralStatic.hpp in Headers */,
+				53A790A32392AFF300E29426 /* UralStaticPriv.hpp in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		53A790802392A17500E29426 /* UralEngine */ = {
@@ -82,6 +155,40 @@
 			productReference = 53A790812392A17500E29426 /* UralEngine */;
 			productType = "com.apple.product-type.tool";
 		};
+		53A7908E2392AE1500E29426 /* UralDynamic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53A790972392AE1500E29426 /* Build configuration list for PBXNativeTarget "UralDynamic" */;
+			buildPhases = (
+				53A7908B2392AE1500E29426 /* Headers */,
+				53A7908C2392AE1500E29426 /* Sources */,
+				53A7908D2392AE1500E29426 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UralDynamic;
+			productName = Ural;
+			productReference = 53A7908F2392AE1500E29426 /* libUralDynamic.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		53A7909D2392AFF300E29426 /* UralStatic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53A790A62392AFF300E29426 /* Build configuration list for PBXNativeTarget "UralStatic" */;
+			buildPhases = (
+				53A7909A2392AFF300E29426 /* Headers */,
+				53A7909B2392AFF300E29426 /* Sources */,
+				53A7909C2392AFF300E29426 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UralStatic;
+			productName = UralStatic;
+			productReference = 53A7909E2392AFF300E29426 /* libUralStatic.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -92,6 +199,12 @@
 				ORGANIZATIONNAME = "Кирилл Мезрин";
 				TargetAttributes = {
 					53A790802392A17500E29426 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					53A7908E2392AE1500E29426 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					53A7909D2392AFF300E29426 = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
 				};
@@ -110,6 +223,8 @@
 			projectRoot = "";
 			targets = (
 				53A790802392A17500E29426 /* UralEngine */,
+				53A7908E2392AE1500E29426 /* UralDynamic */,
+				53A7909D2392AFF300E29426 /* UralStatic */,
 			);
 		};
 /* End PBXProject section */
@@ -123,6 +238,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		53A7908C2392AE1500E29426 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53A790962392AE1500E29426 /* Ural.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53A7909B2392AFF300E29426 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53A790A52392AFF300E29426 /* UralStatic.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
@@ -132,7 +263,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -162,7 +293,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_C_LANGUAGE_STANDARD = c11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -181,6 +312,8 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				SYMROOT = build;
+				VALID_ARCHS = x86_64;
 			};
 			name = Debug;
 		};
@@ -190,7 +323,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -220,7 +353,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_C_LANGUAGE_STANDARD = c11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -232,6 +365,8 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				SYMROOT = build;
+				VALID_ARCHS = x86_64;
 			};
 			name = Release;
 		};
@@ -242,6 +377,7 @@
 				DEVELOPMENT_TEAM = 5CDN7636Z2;
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYMROOT = "$(SRCROOT)/builds/";
 			};
 			name = Debug;
 		};
@@ -252,6 +388,73 @@
 				DEVELOPMENT_TEAM = 5CDN7636Z2;
 				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYMROOT = "$(SRCROOT)/builds/";
+			};
+			name = Release;
+		};
+		53A790982392AE1500E29426 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5CDN7636Z2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		53A790992392AE1500E29426 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5CDN7636Z2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		53A790A72392AFF300E29426 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5CDN7636Z2;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		53A790A82392AFF300E29426 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5CDN7636Z2;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_ENABLE_CPP_EXCEPTIONS = YES;
+				GCC_ENABLE_CPP_RTTI = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -272,6 +475,24 @@
 			buildConfigurations = (
 				53A790892392A17500E29426 /* Debug */,
 				53A7908A2392A17500E29426 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53A790972392AE1500E29426 /* Build configuration list for PBXNativeTarget "UralDynamic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53A790982392AE1500E29426 /* Debug */,
+				53A790992392AE1500E29426 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53A790A62392AFF300E29426 /* Build configuration list for PBXNativeTarget "UralStatic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53A790A72392AFF300E29426 /* Debug */,
+				53A790A82392AFF300E29426 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
