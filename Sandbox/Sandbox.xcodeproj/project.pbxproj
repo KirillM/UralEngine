@@ -7,132 +7,129 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		537F12AA2392D7EF00369F57 /* EntryPoint.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 537F12A82392D7EF00369F57 /* EntryPoint.hpp */; };
-		537F12AD2393015F00369F57 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 537F12AB2393015F00369F57 /* Application.cpp */; };
-		537F12AE2393015F00369F57 /* Application.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 537F12AC2393015F00369F57 /* Application.hpp */; };
-		537F12B02393030400369F57 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 537F12AF2393030400369F57 /* Core.h */; };
+		537F12B223930A4B00369F57 /* libUralEngine.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 537F12B123930A4B00369F57 /* libUralEngine.dylib */; };
+		537F12B323930A4B00369F57 /* libUralEngine.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 537F12B123930A4B00369F57 /* libUralEngine.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		53A790CF2392C5A600E29426 /* Sandbox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53A790CE2392C5A600E29426 /* Sandbox.cpp */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		537F12B423930A4B00369F57 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				537F12B323930A4B00369F57 /* libUralEngine.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53A790C92392C5A600E29426 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		537F12A82392D7EF00369F57 /* EntryPoint.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = EntryPoint.hpp; sourceTree = "<group>"; };
-		537F12AB2393015F00369F57 /* Application.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
-		537F12AC2393015F00369F57 /* Application.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Application.hpp; sourceTree = "<group>"; };
-		537F12AF2393030400369F57 /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
-		53A7908F2392AE1500E29426 /* libUralEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libUralEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		53A790912392AE1500E29426 /* Ural.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Ural.hpp; sourceTree = "<group>"; };
+		537F12B123930A4B00369F57 /* libUralEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libUralEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		53A790CB2392C5A600E29426 /* Sandbox */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Sandbox; sourceTree = BUILT_PRODUCTS_DIR; };
+		53A790CE2392C5A600E29426 /* Sandbox.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Sandbox.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		53A7908D2392AE1500E29426 /* Frameworks */ = {
+		53A790C82392C5A600E29426 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				537F12B223930A4B00369F57 /* libUralEngine.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		537F129B2392CBE700369F57 /* src */ = {
+		537F12952392CAF100369F57 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				537F12A62392CF6800369F57 /* Ural */,
-				53A790912392AE1500E29426 /* Ural.hpp */,
-			);
-			path = src;
-			sourceTree = "<group>";
-		};
-		537F12A62392CF6800369F57 /* Ural */ = {
-			isa = PBXGroup;
-			children = (
-				537F12A82392D7EF00369F57 /* EntryPoint.hpp */,
-				537F12AB2393015F00369F57 /* Application.cpp */,
-				537F12AC2393015F00369F57 /* Application.hpp */,
-				537F12AF2393030400369F57 /* Core.h */,
-			);
-			path = Ural;
-			sourceTree = "<group>";
-		};
-		53A790782392A17500E29426 = {
-			isa = PBXGroup;
-			children = (
-				53A790902392AE1500E29426 /* UralEngine */,
-				53A790822392A17500E29426 /* Products */,
-				53A790A92392C45800E29426 /* Frameworks */,
-			);
-			sourceTree = "<group>";
-		};
-		53A790822392A17500E29426 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				53A7908F2392AE1500E29426 /* libUralEngine.dylib */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		53A790902392AE1500E29426 /* UralEngine */ = {
-			isa = PBXGroup;
-			children = (
-				537F129B2392CBE700369F57 /* src */,
-			);
-			path = UralEngine;
-			sourceTree = "<group>";
-		};
-		53A790A92392C45800E29426 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
+				537F12B123930A4B00369F57 /* libUralEngine.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		537F129A2392CB8300369F57 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				53A790CE2392C5A600E29426 /* Sandbox.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		53A790C22392C5A600E29426 = {
+			isa = PBXGroup;
+			children = (
+				53A790CD2392C5A600E29426 /* Sandbox */,
+				53A790CC2392C5A600E29426 /* Products */,
+				537F12952392CAF100369F57 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		53A790CC2392C5A600E29426 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				53A790CB2392C5A600E29426 /* Sandbox */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		53A790CD2392C5A600E29426 /* Sandbox */ = {
+			isa = PBXGroup;
+			children = (
+				537F129A2392CB8300369F57 /* src */,
+			);
+			path = Sandbox;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		53A7908B2392AE1500E29426 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				537F12AA2392D7EF00369F57 /* EntryPoint.hpp in Headers */,
-				537F12B02393030400369F57 /* Core.h in Headers */,
-				537F12AE2393015F00369F57 /* Application.hpp in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		53A7908E2392AE1500E29426 /* UralEngine */ = {
+		53A790CA2392C5A600E29426 /* Sandbox */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 53A790972392AE1500E29426 /* Build configuration list for PBXNativeTarget "UralEngine" */;
+			buildConfigurationList = 53A790D22392C5A600E29426 /* Build configuration list for PBXNativeTarget "Sandbox" */;
 			buildPhases = (
-				53A7908B2392AE1500E29426 /* Headers */,
-				53A7908C2392AE1500E29426 /* Sources */,
-				53A7908D2392AE1500E29426 /* Frameworks */,
+				53A790C72392C5A600E29426 /* Sources */,
+				53A790C82392C5A600E29426 /* Frameworks */,
+				53A790C92392C5A600E29426 /* CopyFiles */,
+				537F12B423930A4B00369F57 /* Embed Libraries */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = UralEngine;
-			productName = Ural;
-			productReference = 53A7908F2392AE1500E29426 /* libUralEngine.dylib */;
-			productType = "com.apple.product-type.library.dynamic";
+			name = Sandbox;
+			productName = Sandbox;
+			productReference = 53A790CB2392C5A600E29426 /* Sandbox */;
+			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		53A790792392A17500E29426 /* Project object */ = {
+		53A790C32392C5A600E29426 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "Кирилл Мезрин";
 				TargetAttributes = {
-					53A7908E2392AE1500E29426 = {
+					53A790CA2392C5A600E29426 = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
 				};
 			};
-			buildConfigurationList = 53A7907C2392A17500E29426 /* Build configuration list for PBXProject "UralEngine" */;
+			buildConfigurationList = 53A790C62392C5A600E29426 /* Build configuration list for PBXProject "Sandbox" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -140,35 +137,35 @@
 				en,
 				Base,
 			);
-			mainGroup = 53A790782392A17500E29426;
-			productRefGroup = 53A790822392A17500E29426 /* Products */;
+			mainGroup = 53A790C22392C5A600E29426;
+			productRefGroup = 53A790CC2392C5A600E29426 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				53A7908E2392AE1500E29426 /* UralEngine */,
+				53A790CA2392C5A600E29426 /* Sandbox */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		53A7908C2392AE1500E29426 /* Sources */ = {
+		53A790C72392C5A600E29426 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				537F12AD2393015F00369F57 /* Application.cpp in Sources */,
+				53A790CF2392C5A600E29426 /* Sandbox.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		53A790862392A17500E29426 /* Debug */ = {
+		53A790D02392C5A600E29426 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -198,7 +195,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -217,18 +214,16 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
-				SYMROOT = build;
-				VALID_ARCHS = x86_64;
 			};
 			name = Debug;
 		};
-		53A790872392A17500E29426 /* Release */ = {
+		53A790D12392C5A600E29426 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -258,7 +253,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -270,78 +265,64 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
-				SYMROOT = build;
-				VALID_ARCHS = x86_64;
 			};
 			name = Release;
 		};
-		53A790982392AE1500E29426 /* Debug */ = {
+		53A790D32392C5A600E29426 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5CDN7636Z2;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				EXECUTABLE_PREFIX = lib;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_ENABLE_CPP_EXCEPTIONS = YES;
-				GCC_ENABLE_CPP_RTTI = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"UL_BUILD_DLYB=1",
-					"DEBUG=1",
 					"UL_PLATFORM_MAC=1",
+					"DEBUG=1",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				HEADER_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../UralEngine/UralEngine/src";
+				VALID_ARCHS = x86_64;
 			};
 			name = Debug;
 		};
-		53A790992392AE1500E29426 /* Release */ = {
+		53A790D42392C5A600E29426 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5CDN7636Z2;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				EXECUTABLE_PREFIX = lib;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_ENABLE_CPP_EXCEPTIONS = YES;
-				GCC_ENABLE_CPP_RTTI = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"UL_BUILD_DLYB=1",
-					"UL_PLATFORM_MAC=1",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "UL_PLATFORM_MAC=1";
+				HEADER_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../UralEngine/UralEngine/src";
+				VALID_ARCHS = x86_64;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		53A7907C2392A17500E29426 /* Build configuration list for PBXProject "UralEngine" */ = {
+		53A790C62392C5A600E29426 /* Build configuration list for PBXProject "Sandbox" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				53A790862392A17500E29426 /* Debug */,
-				53A790872392A17500E29426 /* Release */,
+				53A790D02392C5A600E29426 /* Debug */,
+				53A790D12392C5A600E29426 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		53A790972392AE1500E29426 /* Build configuration list for PBXNativeTarget "UralEngine" */ = {
+		53A790D22392C5A600E29426 /* Build configuration list for PBXNativeTarget "Sandbox" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				53A790982392AE1500E29426 /* Debug */,
-				53A790992392AE1500E29426 /* Release */,
+				53A790D32392C5A600E29426 /* Debug */,
+				53A790D42392C5A600E29426 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 53A790792392A17500E29426 /* Project object */;
+	rootObject = 53A790C32392C5A600E29426 /* Project object */;
 }

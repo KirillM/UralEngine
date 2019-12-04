@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "53A790802392A17500E29426"
-               BuildableName = "UralEngine"
+               BlueprintIdentifier = "53A7908E2392AE1500E29426"
+               BuildableName = "libUralEngine.dylib"
                BlueprintName = "UralEngine"
                ReferencedContainer = "container:UralEngine.xcodeproj">
             </BuildableReference>
@@ -44,12 +44,19 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "53A790802392A17500E29426"
-            BuildableName = "UralEngine"
+            BlueprintIdentifier = "53A7908E2392AE1500E29426"
+            BuildableName = "libUralEngine.dylib"
             BlueprintName = "UralEngine"
             ReferencedContainer = "container:UralEngine.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "UL_PLATFORM_MAC"
+            value = "1"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -61,8 +68,8 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "53A790802392A17500E29426"
-            BuildableName = "UralEngine"
+            BlueprintIdentifier = "53A7908E2392AE1500E29426"
+            BuildableName = "libUralEngine.dylib"
             BlueprintName = "UralEngine"
             ReferencedContainer = "container:UralEngine.xcodeproj">
          </BuildableReference>
