@@ -40,8 +40,11 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <PathRunnable
+         runnableDebuggingMode = "0"
+         FilePath = "/Users/kirillmezrin/dev/UralEngine/DerivedData/UralEngine/Build/Products/Release/libUralEngine.dylib">
+      </PathRunnable>
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "53A7908E2392AE1500E29426"
@@ -49,7 +52,7 @@
             BlueprintName = "UralEngine"
             ReferencedContainer = "container:UralEngine.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "UL_PLATFORM_MAC"

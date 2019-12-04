@@ -13,10 +13,13 @@
 
 // Для приложений использующих Ural
 #include "Ural/Application.hpp"
+#include "Ural/Log.hpp"
 
 //------Точка входа-----------------
 #include "Ural/EntryPoint.hpp"
 //----------------------------------
+
+
 /* The classes below are exported */
 #pragma GCC visibility push(default)
 

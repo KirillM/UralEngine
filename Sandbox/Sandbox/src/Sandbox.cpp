@@ -15,5 +15,5 @@ class Sandbox : public Ural::Application {
 
 Ural::Application* Ural::CreateApplication()
 {
-	return  new Sandbox();
+	return new Sandbox();
 }

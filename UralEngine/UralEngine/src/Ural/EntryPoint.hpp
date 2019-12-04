@@ -9,14 +9,14 @@
 #ifndef EntryPoint_hpp
 #define EntryPoint_hpp
 
-#include "Application.hpp"
-
 #ifdef UL_PLATFORM_MAC
 
 extern Ural::Application* Ural::CreateApplication();
 
 int main(int argc, const char * argv[]) {
 	printf("Hello world\n");
+	Ural::Log::Init();
+	Ural::Log::GetCoreLogger()->warn("Initialez Log");
 	auto app = Ural::CreateApplication();
 	app->Run();
 	delete app;

@@ -279,9 +279,12 @@
 					"UL_PLATFORM_MAC=1",
 					"DEBUG=1",
 				);
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../UralEngine/UralEngine/src",
+					"$(SRCROOT)/../UralEngine/vendor/spdlog/include",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../UralEngine/UralEngine/src";
+				USER_HEADER_SEARCH_PATHS = "";
 				VALID_ARCHS = x86_64;
 			};
 			name = Debug;
@@ -294,9 +297,12 @@
 				DEVELOPMENT_TEAM = 5CDN7636Z2;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = "UL_PLATFORM_MAC=1";
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../UralEngine/UralEngine/src",
+					"$(SRCROOT)/../UralEngine/vendor/spdlog/include",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../UralEngine/UralEngine/src";
+				USER_HEADER_SEARCH_PATHS = "";
 				VALID_ARCHS = x86_64;
 			};
 			name = Release;

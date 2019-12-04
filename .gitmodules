@@ -1,0 +1,3 @@
+[submodule "UralEngine/vendor/spdlog"]
+	path = UralEngine/vendor/spdlog
+	url = https://github.com/gabime/spdlog
