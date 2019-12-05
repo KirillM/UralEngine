@@ -13,7 +13,7 @@
 
 // Для приложений использующих Ural
 #include "Ural/Application.hpp"
-#include "Ural/Log.hpp"
+#include "Log/Log.hpp"
 
 //------Точка входа-----------------
 #include "Ural/EntryPoint.hpp"

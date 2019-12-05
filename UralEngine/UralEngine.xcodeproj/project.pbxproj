@@ -13,6 +13,7 @@
 		537F12AD2393015F00369F57 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 537F12AB2393015F00369F57 /* Application.cpp */; };
 		537F12AE2393015F00369F57 /* Application.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 537F12AC2393015F00369F57 /* Application.hpp */; };
 		537F12B02393030400369F57 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 537F12AF2393030400369F57 /* Core.h */; };
+		53BFD3F123994C7B00A4D06D /* Ural.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 53A790912392AE1500E29426 /* Ural.hpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		537F129B2392CBE700369F57 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				53BFD3F0239944E400A4D06D /* Log */,
 				537F12A62392CF6800369F57 /* Ural */,
 				53A790912392AE1500E29426 /* Ural.hpp */,
 			);
@@ -53,8 +55,6 @@
 				537F12AB2393015F00369F57 /* Application.cpp */,
 				537F12AC2393015F00369F57 /* Application.hpp */,
 				537F12AF2393030400369F57 /* Core.h */,
-				53722370239800D600312C05 /* Log.cpp */,
-				53722371239800D600312C05 /* Log.hpp */,
 			);
 			path = Ural;
 			sourceTree = "<group>";
@@ -91,6 +91,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		53BFD3F0239944E400A4D06D /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				53722370239800D600312C05 /* Log.cpp */,
+				53722371239800D600312C05 /* Log.hpp */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -102,6 +111,7 @@
 				537F12B02393030400369F57 /* Core.h in Headers */,
 				537F12AE2393015F00369F57 /* Application.hpp in Headers */,
 				53722373239800D600312C05 /* Log.hpp in Headers */,
+				53BFD3F123994C7B00A4D06D /* Ural.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

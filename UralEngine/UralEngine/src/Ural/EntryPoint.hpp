@@ -12,6 +12,7 @@
 #ifdef UL_PLATFORM_MAC
 
 extern Ural::Application* Ural::CreateApplication();
+//extern void Ural::Log::Init();
 
 int main(int argc, const char * argv[]) {
 	printf("Hello world\n");
