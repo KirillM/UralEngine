@@ -15,6 +15,10 @@
 #include "Ural/Application.hpp"
 #include "Log/Log.hpp"
 
+// События
+//#include "Events/Event.h"
+#include "Events/ApplicationEvent.h"
+
 //------Точка входа-----------------
 #include "Ural/EntryPoint.hpp"
 //----------------------------------

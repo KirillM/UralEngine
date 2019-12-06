@@ -20,3 +20,5 @@
 #endif
 
 #endif /* Core_h */
+
+#define BIT(x) (1 << x)

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53492C87239A9BD5009E1076 /* ApplicationEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 53492C86239A9BD5009E1076 /* ApplicationEvent.h */; };
+		53492C89239A9BE7009E1076 /* Event.h in Headers */ = {isa = PBXBuildFile; fileRef = 53492C88239A9BE7009E1076 /* Event.h */; };
+		53492C8B239A9BFC009E1076 /* KeyEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 53492C8A239A9BFC009E1076 /* KeyEvent.h */; };
+		53492C8D239A9C12009E1076 /* MouseEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 53492C8C239A9C12009E1076 /* MouseEvent.h */; };
 		53722372239800D600312C05 /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53722370239800D600312C05 /* Log.cpp */; };
 		53722373239800D600312C05 /* Log.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 53722371239800D600312C05 /* Log.hpp */; };
 		537F12AA2392D7EF00369F57 /* EntryPoint.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 537F12A82392D7EF00369F57 /* EntryPoint.hpp */; };
@@ -17,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		53492C86239A9BD5009E1076 /* ApplicationEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplicationEvent.h; sourceTree = "<group>"; };
+		53492C88239A9BE7009E1076 /* Event.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		53492C8A239A9BFC009E1076 /* KeyEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyEvent.h; sourceTree = "<group>"; };
+		53492C8C239A9C12009E1076 /* MouseEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MouseEvent.h; sourceTree = "<group>"; };
 		53722370239800D600312C05 /* Log.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Log.cpp; sourceTree = "<group>"; };
 		53722371239800D600312C05 /* Log.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Log.hpp; sourceTree = "<group>"; };
 		537F12A82392D7EF00369F57 /* EntryPoint.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = EntryPoint.hpp; sourceTree = "<group>"; };
@@ -38,9 +46,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		53492C85239A9BA5009E1076 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				53492C88239A9BE7009E1076 /* Event.h */,
+				53492C86239A9BD5009E1076 /* ApplicationEvent.h */,
+				53492C8A239A9BFC009E1076 /* KeyEvent.h */,
+				53492C8C239A9C12009E1076 /* MouseEvent.h */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
 		537F129B2392CBE700369F57 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				53492C85239A9BA5009E1076 /* Events */,
 				53BFD3F0239944E400A4D06D /* Log */,
 				537F12A62392CF6800369F57 /* Ural */,
 				53A790912392AE1500E29426 /* Ural.hpp */,
@@ -109,8 +129,12 @@
 			files = (
 				537F12AA2392D7EF00369F57 /* EntryPoint.hpp in Headers */,
 				537F12B02393030400369F57 /* Core.h in Headers */,
+				53492C8D239A9C12009E1076 /* MouseEvent.h in Headers */,
 				537F12AE2393015F00369F57 /* Application.hpp in Headers */,
+				53492C8B239A9BFC009E1076 /* KeyEvent.h in Headers */,
 				53722373239800D600312C05 /* Log.hpp in Headers */,
+				53492C87239A9BD5009E1076 /* ApplicationEvent.h in Headers */,
+				53492C89239A9BE7009E1076 /* Event.h in Headers */,
 				53BFD3F123994C7B00A4D06D /* Ural.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
