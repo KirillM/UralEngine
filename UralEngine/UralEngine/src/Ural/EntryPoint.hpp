@@ -12,12 +12,11 @@
 #ifdef UL_PLATFORM_MAC
 
 extern Ural::Application* Ural::CreateApplication();
-//extern void Ural::Log::Init();
 
 int main(int argc, const char * argv[]) {
-	printf("Hello world\n");
 	Ural::Log::Init();
-	Ural::Log::GetCoreLogger()->warn("Initialez Log");
+	UL_CORE_ERROR("Initialezed Log");
+	UL_INFO("INFO {0}", 7);
 	auto app = Ural::CreateApplication();
 	app->Run();
 	delete app;

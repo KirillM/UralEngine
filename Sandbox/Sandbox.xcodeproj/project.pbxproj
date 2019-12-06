@@ -105,6 +105,7 @@
 				53A790C82392C5A600E29426 /* Frameworks */,
 				53A790C92392C5A600E29426 /* CopyFiles */,
 				537F12B423930A4B00369F57 /* Embed Libraries */,
+				53492C84239967C3009E1076 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -146,6 +147,26 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		53492C84239967C3009E1076 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ninstall_name_tool -change /usr/local/lib/libUralEngine.dylib @executable_path/libUralEngine.dylib \"$CONFIGURATION_BUILD_DIR\"/\"$FULL_PRODUCT_NAME\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		53A790C72392C5A600E29426 /* Sources */ = {
@@ -283,6 +304,7 @@
 					"$(SRCROOT)/../UralEngine/UralEngine/src",
 					"$(SRCROOT)/../UralEngine/vendor/spdlog/include",
 				);
+				LD_RUNPATH_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "";
 				VALID_ARCHS = x86_64;
@@ -301,6 +323,7 @@
 					"$(SRCROOT)/../UralEngine/UralEngine/src",
 					"$(SRCROOT)/../UralEngine/vendor/spdlog/include",
 				);
+				LD_RUNPATH_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "";
 				VALID_ARCHS = x86_64;

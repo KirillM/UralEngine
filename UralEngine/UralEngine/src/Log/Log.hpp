@@ -18,22 +18,7 @@
 namespace Ural {
 	class Log {
 	public:
-		
-//		inline static std::shared_ptr<spdlog::logger>& test() {
-//			printf("test\n");
-//			return s_CoreLogger;
-//		}
-		
-//		static void test();
-		
-		static void Init()
-		{
-			spdlog::set_pattern("%^[%T] %n: %v%$");
-			s_CoreLogger = spdlog::stdout_color_mt("URAL");
-			s_CoreLogger->set_level(spdlog::level::trace);
-			s_ClientLogger = spdlog::stdout_color_mt("APP");
-			s_ClientLogger->set_level(spdlog::level::trace);
-		}
+		static void Init();
 		
 		inline static std::shared_ptr<spdlog::logger>& GetCoreLogger() { return s_CoreLogger; }
 		inline static std::shared_ptr<spdlog::logger>& GetClientLogger() { return s_ClientLogger; }
@@ -43,6 +28,17 @@ namespace Ural {
 		static std::shared_ptr<spdlog::logger> s_ClientLogger;
 	};
 }
+
+#define UL_CORE_FATAL(...) Ural::Log::GetCoreLogger()->fatal(__VA_ARGS__)
+#define UL_CORE_ERROR(...) Ural::Log::GetCoreLogger()->error(__VA_ARGS__)
+#define UL_CORE_WARN(...) Ural::Log::GetCoreLogger()->warn(__VA_ARGS__)
+#define UL_CORE_INFO(...) Ural::Log::GetCoreLogger()->info(__VA_ARGS__)
+#define UL_CORE_TRACE(...) Ural::Log::GetCoreLogger()->trace(__VA_ARGS__)
+
+#define UL_ERROR(...) Ural::Log::GetClientLogger()->error(__VA_ARGS__)
+#define UL_WARN(...) Ural::Log::GetClientLogger()->warn(__VA_ARGS__)
+#define UL_INFO(...) Ural::Log::GetClientLogger()->info(__VA_ARGS__)
+#define UL_TRACE(...) Ural::Log::GetClientLogger()->trace(__VA_ARGS__)
 
 #pragma GCC visibility pop
 
