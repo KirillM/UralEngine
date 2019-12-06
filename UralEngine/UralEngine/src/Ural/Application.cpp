@@ -8,6 +8,9 @@
 
 #include "Application.hpp"
 
+#include "Events/ApplicationEvent.h"
+#include "Log/Log.hpp"
+
 namespace Ural {
 	Application::Application()
 	{
@@ -20,6 +23,9 @@ namespace Ural {
 		
 	void Application::Run()
 	{
+		WindowResizeEvent e(1280, 720);
+		UL_TRACE(e);
+		
 		while (true);
 	}
 }

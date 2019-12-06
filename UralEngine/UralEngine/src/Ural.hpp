@@ -9,7 +9,7 @@
 #ifndef Ural_
 #define Ural_
 
-#include <stdio.h>
+#include <ulpch.pch>
 
 // Для приложений использующих Ural
 #include "Ural/Application.hpp"
@@ -23,9 +23,4 @@
 #include "Ural/EntryPoint.hpp"
 //----------------------------------
 
-
-/* The classes below are exported */
-#pragma GCC visibility push(default)
-
-#pragma GCC visibility pop
 #endif

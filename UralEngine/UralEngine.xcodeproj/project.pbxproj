@@ -11,6 +11,7 @@
 		53492C89239A9BE7009E1076 /* Event.h in Headers */ = {isa = PBXBuildFile; fileRef = 53492C88239A9BE7009E1076 /* Event.h */; };
 		53492C8B239A9BFC009E1076 /* KeyEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 53492C8A239A9BFC009E1076 /* KeyEvent.h */; };
 		53492C8D239A9C12009E1076 /* MouseEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 53492C8C239A9C12009E1076 /* MouseEvent.h */; };
+		536E7862239B145A00AD166E /* ulpch.pch in Headers */ = {isa = PBXBuildFile; fileRef = 5312F9D4239B0E8C007B2CFC /* ulpch.pch */; };
 		53722372239800D600312C05 /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53722370239800D600312C05 /* Log.cpp */; };
 		53722373239800D600312C05 /* Log.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 53722371239800D600312C05 /* Log.hpp */; };
 		537F12AA2392D7EF00369F57 /* EntryPoint.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 537F12A82392D7EF00369F57 /* EntryPoint.hpp */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5312F9D4239B0E8C007B2CFC /* ulpch.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ulpch.pch; sourceTree = "<group>"; };
 		53492C86239A9BD5009E1076 /* ApplicationEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplicationEvent.h; sourceTree = "<group>"; };
 		53492C88239A9BE7009E1076 /* Event.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
 		53492C8A239A9BFC009E1076 /* KeyEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyEvent.h; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				53BFD3F0239944E400A4D06D /* Log */,
 				537F12A62392CF6800369F57 /* Ural */,
 				53A790912392AE1500E29426 /* Ural.hpp */,
+				5312F9D4239B0E8C007B2CFC /* ulpch.pch */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -129,6 +132,7 @@
 			files = (
 				537F12AA2392D7EF00369F57 /* EntryPoint.hpp in Headers */,
 				537F12B02393030400369F57 /* Core.h in Headers */,
+				536E7862239B145A00AD166E /* ulpch.pch in Headers */,
 				53492C8D239A9C12009E1076 /* MouseEvent.h in Headers */,
 				537F12AE2393015F00369F57 /* Application.hpp in Headers */,
 				53492C8B239A9BFC009E1076 /* KeyEvent.h in Headers */,
@@ -330,6 +334,7 @@
 		53A790982392AE1500E29426 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5CDN7636Z2;
@@ -339,20 +344,26 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_ENABLE_CPP_RTTI = YES;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/src/ulpch.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"UL_BUILD_DLYB=1",
 					"DEBUG=1",
 					"UL_PLATFORM_MAC=1",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/vendor/spdlog/include";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/$(PROJECT_NAME)/src";
 			};
 			name = Debug;
 		};
 		53A790992392AE1500E29426 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5CDN7636Z2;
@@ -362,13 +373,18 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_ENABLE_CPP_EXCEPTIONS = YES;
 				GCC_ENABLE_CPP_RTTI = YES;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/src/ulpch.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"UL_BUILD_DLYB=1",
 					"UL_PLATFORM_MAC=1",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/vendor/spdlog/include";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/$(PROJECT_NAME)/src";
 			};
 			name = Release;
 		};

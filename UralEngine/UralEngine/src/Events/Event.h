@@ -11,9 +11,6 @@
 
 #include "Ural/Core.h"
 
-#include <string>
-#include <functional>
-
 namespace Ural {
 
 	enum class EventType

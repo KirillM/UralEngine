@@ -9,9 +9,8 @@
 #ifndef Log_hpp
 #define Log_hpp
 
-#include <memory>
 #include "spdlog/spdlog.h"
-#include "spdlog/sinks/stdout_color_sinks.h"
+#include "spdlog/fmt/ostr.h"
 
 #pragma GCC visibility push(default)
 
@@ -35,6 +34,7 @@ namespace Ural {
 #define UL_CORE_INFO(...) Ural::Log::GetCoreLogger()->info(__VA_ARGS__)
 #define UL_CORE_TRACE(...) Ural::Log::GetCoreLogger()->trace(__VA_ARGS__)
 
+#define UL_FATAL(...) Ural::Log::GetClientLogger()->fatal(__VA_ARGS__)
 #define UL_ERROR(...) Ural::Log::GetClientLogger()->error(__VA_ARGS__)
 #define UL_WARN(...) Ural::Log::GetClientLogger()->warn(__VA_ARGS__)
 #define UL_INFO(...) Ural::Log::GetClientLogger()->info(__VA_ARGS__)

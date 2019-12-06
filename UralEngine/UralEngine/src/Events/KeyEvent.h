@@ -9,8 +9,6 @@
 #ifndef KeyEvent_h
 #define KeyEvent_h
 
-#include <sstream>
-
 namespace Ural {
 	class URAL_API KeyEvent : public Event
 	{

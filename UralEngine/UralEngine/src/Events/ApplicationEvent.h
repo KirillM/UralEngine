@@ -11,14 +11,12 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Ural {
 
-	class URAL_API WindowsResizeEvent : public Event
+	class URAL_API WindowResizeEvent : public Event
 	{
 	public:
-		WindowsResizeEvent(unsigned int width, unsigned int height)
+		WindowResizeEvent(unsigned int width, unsigned int height)
 		: m_Width(width), m_Height(height) {};
 		
 		inline unsigned int GetWidth() const { return m_Width; }
@@ -37,10 +35,10 @@ namespace Ural {
 		unsigned int m_Width, m_Height;
 	};
 			
-	class URAL_API WindowsCloseEvent : public Event
+	class URAL_API WindowCloseEvent : public Event
 	{
 	public:
-		WindowsCloseEvent() = default;
+		WindowCloseEvent() = default;
 		EVENT_CLASS_TYPE(WindowClose)
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 	};

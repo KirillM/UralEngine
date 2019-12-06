@@ -10,7 +10,6 @@
 #define Application_hpp
 
 #include "Core.h"
-#include <stdio.h>
 
 #pragma GCC visibility push(default)
 
