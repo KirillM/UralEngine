@@ -293,6 +293,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5CDN7636Z2;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -305,6 +306,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/../UralEngine/UralEngine/src",
 					"$(SRCROOT)/../UralEngine/vendor/spdlog/include",
+					"$(SRCROOT)/../UralEngine/vendor/glfw/include",
 				);
 				LD_RUNPATH_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -317,6 +319,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5CDN7636Z2;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -326,6 +329,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/../UralEngine/UralEngine/src",
 					"$(SRCROOT)/../UralEngine/vendor/spdlog/include",
+					"$(SRCROOT)/../UralEngine/vendor/glfw/include",
 				);
 				LD_RUNPATH_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";

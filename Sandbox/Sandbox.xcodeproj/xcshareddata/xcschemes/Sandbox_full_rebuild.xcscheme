@@ -3,9 +3,37 @@
    LastUpgradeVersion = "1120"
    version = "2.0">
    <BuildAction
-      parallelizeBuildables = "YES"
+      parallelizeBuildables = "NO"
       buildImplicitDependencies = "YES">
       <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "533F535A239BF4570035661D"
+               BuildableName = "glfw-build"
+               BlueprintName = "glfw-build"
+               ReferencedContainer = "container:../UralEngine/vendor/glfw-build/glfw-build.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "53A7908E2392AE1500E29426"
+               BuildableName = "libUralEngine.dylib"
+               BlueprintName = "UralEngine"
+               ReferencedContainer = "container:../UralEngine/UralEngine.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
          <BuildActionEntry
             buildForTesting = "NO"
             buildForRunning = "YES"

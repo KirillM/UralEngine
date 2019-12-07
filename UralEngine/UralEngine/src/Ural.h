@@ -13,11 +13,13 @@
 
 // Для приложений использующих Ural
 #include "Ural/Application.h"
-#include "Ural/Log/Log.h"
+#include "Log/Log.h"
 
+//окно
+#include "Platform/Mac/MacWindow.h"
 // События
 //#include "Events/Event.h"
-#include "Ural/Events/ApplicationEvent.h"
+#include "Events/ApplicationEvent.h"
 
 //------Точка входа-----------------
 #include "Ural/EntryPoint.h"

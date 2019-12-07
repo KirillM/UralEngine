@@ -9,6 +9,8 @@
 #ifndef Core_h
 #define Core_h
 
+#include <stdio.h>
+
 #ifdef UL_PLATFORM_MAC
 	#ifdef UL_BUILD_DLYB
 		#define URAL_API
@@ -22,3 +24,11 @@
 #endif /* Core_h */
 
 #define BIT(x) (1 << x)
+
+#ifdef UL_ENABLED_ASSERTS
+	#define UL_ASSERT(exp, ...) { if (!(exp)) { UL_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
+	#define UL_CORE_ASSERT(exp, ...) { if (!(exp)) { UL_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
+#else
+	#define UL_ASSERT(exp, ...)
+	#define UL_CORE_ASSERT(exp, ...)
+#endif
