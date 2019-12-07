@@ -6,7 +6,7 @@
 //  Copyright © 2019 Кирилл Мезрин. All rights reserved.
 //
 
-#include "Application.hpp"
+#include "Application.h"
 
 #include "Events/ApplicationEvent.h"
 #include "Log/Log.hpp"

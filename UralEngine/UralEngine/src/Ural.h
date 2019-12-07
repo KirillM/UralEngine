@@ -1,13 +1,13 @@
 //
-//  Ural.hpp
+//  Ural.h
 //  Ural
 //
 //  Created by Кирилл Мезрин on 30/11/2019.
 //  Copyright © 2019 Кирилл Мезрин. All rights reserved.
 //
 
-#ifndef Ural_
-#define Ural_
+#ifndef Ural_h
+#define Ural_h
 
 #include <ulpch.pch>
 

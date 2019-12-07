@@ -1,13 +1,13 @@
 //
-//  EntryPoint.hpp
+//  EntryPoint.h
 //  UralEngine
 //
 //  Created by Кирилл Мезрин on 30/11/2019.
 //  Copyright © 2019 Кирилл Мезрин. All rights reserved.
 //
 
-#ifndef EntryPoint_hpp
-#define EntryPoint_hpp
+#ifndef EntryPoint_h
+#define EntryPoint_h
 
 #ifdef UL_PLATFORM_MAC
 
@@ -24,4 +24,4 @@ int main(int argc, const char * argv[]) {
 
 #endif
 
-#endif /* EntryPoint_hpp */
+#endif /* EntryPoint_h */

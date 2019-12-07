@@ -1,13 +1,13 @@
 //
-//  Log.hpp
+//  Log.h
 //  UralEngine
 //
 //  Created by Кирилл Мезрин on 04/12/2019.
 //  Copyright © 2019 Кирилл Мезрин. All rights reserved.
 //
 
-#ifndef Log_hpp
-#define Log_hpp
+#ifndef Log_h
+#define Log_h
 
 #include "spdlog/spdlog.h"
 #include "spdlog/fmt/ostr.h"
@@ -42,4 +42,4 @@ namespace Ural {
 
 #pragma GCC visibility pop
 
-#endif /* Log_hpp */
+#endif /* Log_h */

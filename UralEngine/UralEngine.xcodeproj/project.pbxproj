@@ -7,34 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		530164ED239BF68D00821B62 /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 530164EC239BF63800821B62 /* libglfw3.a */; };
+		530164F2239BF91A00821B62 /* Window.h in Headers */ = {isa = PBXBuildFile; fileRef = 530164F1239BF91A00821B62 /* Window.h */; };
 		53492C87239A9BD5009E1076 /* ApplicationEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 53492C86239A9BD5009E1076 /* ApplicationEvent.h */; };
 		53492C89239A9BE7009E1076 /* Event.h in Headers */ = {isa = PBXBuildFile; fileRef = 53492C88239A9BE7009E1076 /* Event.h */; };
 		53492C8B239A9BFC009E1076 /* KeyEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 53492C8A239A9BFC009E1076 /* KeyEvent.h */; };
 		53492C8D239A9C12009E1076 /* MouseEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 53492C8C239A9C12009E1076 /* MouseEvent.h */; };
 		536E7862239B145A00AD166E /* ulpch.pch in Headers */ = {isa = PBXBuildFile; fileRef = 5312F9D4239B0E8C007B2CFC /* ulpch.pch */; };
 		53722372239800D600312C05 /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53722370239800D600312C05 /* Log.cpp */; };
-		53722373239800D600312C05 /* Log.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 53722371239800D600312C05 /* Log.hpp */; };
-		537F12AA2392D7EF00369F57 /* EntryPoint.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 537F12A82392D7EF00369F57 /* EntryPoint.hpp */; };
+		53722373239800D600312C05 /* Log.h in Headers */ = {isa = PBXBuildFile; fileRef = 53722371239800D600312C05 /* Log.h */; };
+		537F12AA2392D7EF00369F57 /* EntryPoint.h in Headers */ = {isa = PBXBuildFile; fileRef = 537F12A82392D7EF00369F57 /* EntryPoint.h */; };
 		537F12AD2393015F00369F57 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 537F12AB2393015F00369F57 /* Application.cpp */; };
-		537F12AE2393015F00369F57 /* Application.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 537F12AC2393015F00369F57 /* Application.hpp */; };
+		537F12AE2393015F00369F57 /* Application.h in Headers */ = {isa = PBXBuildFile; fileRef = 537F12AC2393015F00369F57 /* Application.h */; };
 		537F12B02393030400369F57 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 537F12AF2393030400369F57 /* Core.h */; };
-		53BFD3F123994C7B00A4D06D /* Ural.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 53A790912392AE1500E29426 /* Ural.hpp */; };
+		53BFD3F123994C7B00A4D06D /* Ural.h in Headers */ = {isa = PBXBuildFile; fileRef = 53A790912392AE1500E29426 /* Ural.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		530164EC239BF63800821B62 /* libglfw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libglfw3.a; path = "vendor/glfw-build/src/libglfw3.a"; sourceTree = "<group>"; };
+		530164F1239BF91A00821B62 /* Window.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Window.h; sourceTree = "<group>"; };
 		5312F9D4239B0E8C007B2CFC /* ulpch.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ulpch.pch; sourceTree = "<group>"; };
 		53492C86239A9BD5009E1076 /* ApplicationEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplicationEvent.h; sourceTree = "<group>"; };
 		53492C88239A9BE7009E1076 /* Event.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
 		53492C8A239A9BFC009E1076 /* KeyEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyEvent.h; sourceTree = "<group>"; };
 		53492C8C239A9C12009E1076 /* MouseEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MouseEvent.h; sourceTree = "<group>"; };
 		53722370239800D600312C05 /* Log.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Log.cpp; sourceTree = "<group>"; };
-		53722371239800D600312C05 /* Log.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Log.hpp; sourceTree = "<group>"; };
-		537F12A82392D7EF00369F57 /* EntryPoint.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = EntryPoint.hpp; sourceTree = "<group>"; };
+		53722371239800D600312C05 /* Log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Log.h; sourceTree = "<group>"; };
+		537F12A82392D7EF00369F57 /* EntryPoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntryPoint.h; sourceTree = "<group>"; };
 		537F12AB2393015F00369F57 /* Application.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
-		537F12AC2393015F00369F57 /* Application.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Application.hpp; sourceTree = "<group>"; };
+		537F12AC2393015F00369F57 /* Application.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
 		537F12AF2393030400369F57 /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		53A7908F2392AE1500E29426 /* libUralEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libUralEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		53A790912392AE1500E29426 /* Ural.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Ural.hpp; sourceTree = "<group>"; };
+		53A790912392AE1500E29426 /* Ural.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ural.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,12 +46,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				530164ED239BF68D00821B62 /* libglfw3.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		530164EE239BF8BF00821B62 /* External */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = External;
+			sourceTree = "<group>";
+		};
+		530164EF239BF8CD00821B62 /* Platform */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Platform;
+			sourceTree = "<group>";
+		};
+		530164F0239BF90300821B62 /* Window */ = {
+			isa = PBXGroup;
+			children = (
+				530164F1239BF91A00821B62 /* Window.h */,
+			);
+			path = Window;
+			sourceTree = "<group>";
+		};
 		53492C85239A9BA5009E1076 /* Events */ = {
 			isa = PBXGroup;
 			children = (
@@ -62,10 +89,10 @@
 		537F129B2392CBE700369F57 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				53492C85239A9BA5009E1076 /* Events */,
-				53BFD3F0239944E400A4D06D /* Log */,
+				530164EF239BF8CD00821B62 /* Platform */,
+				530164EE239BF8BF00821B62 /* External */,
 				537F12A62392CF6800369F57 /* Ural */,
-				53A790912392AE1500E29426 /* Ural.hpp */,
+				53A790912392AE1500E29426 /* Ural.h */,
 				5312F9D4239B0E8C007B2CFC /* ulpch.pch */,
 			);
 			path = src;
@@ -74,9 +101,12 @@
 		537F12A62392CF6800369F57 /* Ural */ = {
 			isa = PBXGroup;
 			children = (
-				537F12A82392D7EF00369F57 /* EntryPoint.hpp */,
+				530164F0239BF90300821B62 /* Window */,
+				53492C85239A9BA5009E1076 /* Events */,
+				53BFD3F0239944E400A4D06D /* Log */,
+				537F12A82392D7EF00369F57 /* EntryPoint.h */,
 				537F12AB2393015F00369F57 /* Application.cpp */,
-				537F12AC2393015F00369F57 /* Application.hpp */,
+				537F12AC2393015F00369F57 /* Application.h */,
 				537F12AF2393030400369F57 /* Core.h */,
 			);
 			path = Ural;
@@ -110,6 +140,7 @@
 		53A790A92392C45800E29426 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				530164EC239BF63800821B62 /* libglfw3.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -118,7 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				53722370239800D600312C05 /* Log.cpp */,
-				53722371239800D600312C05 /* Log.hpp */,
+				53722371239800D600312C05 /* Log.h */,
 			);
 			path = Log;
 			sourceTree = "<group>";
@@ -130,16 +161,17 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				537F12AA2392D7EF00369F57 /* EntryPoint.hpp in Headers */,
+				537F12AA2392D7EF00369F57 /* EntryPoint.h in Headers */,
 				537F12B02393030400369F57 /* Core.h in Headers */,
 				536E7862239B145A00AD166E /* ulpch.pch in Headers */,
 				53492C8D239A9C12009E1076 /* MouseEvent.h in Headers */,
-				537F12AE2393015F00369F57 /* Application.hpp in Headers */,
+				537F12AE2393015F00369F57 /* Application.h in Headers */,
 				53492C8B239A9BFC009E1076 /* KeyEvent.h in Headers */,
-				53722373239800D600312C05 /* Log.hpp in Headers */,
+				53722373239800D600312C05 /* Log.h in Headers */,
 				53492C87239A9BD5009E1076 /* ApplicationEvent.h in Headers */,
 				53492C89239A9BE7009E1076 /* Event.h in Headers */,
-				53BFD3F123994C7B00A4D06D /* Ural.hpp in Headers */,
+				530164F2239BF91A00821B62 /* Window.h in Headers */,
+				53BFD3F123994C7B00A4D06D /* Ural.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,7 +385,14 @@
 					"UL_PLATFORM_MAC=1",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/vendor/spdlog/include";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/vendor/spdlog/include",
+					"$(SRCROOT)/vendor/glfw-build/src",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/vendor/glfw-build/src",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/$(PROJECT_NAME)/src";
@@ -381,7 +420,14 @@
 					"UL_PLATFORM_MAC=1",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/vendor/spdlog/include";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/vendor/spdlog/include",
+					"$(SRCROOT)/vendor/glfw-build/src",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/vendor/glfw-build/src",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/$(PROJECT_NAME)/src";

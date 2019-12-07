@@ -6,7 +6,7 @@
 //  Copyright © 2019 Кирилл Мезрин. All rights reserved.
 //
 
-#include "Log.hpp"
+#include "Log.h"
 #include "spdlog/sinks/stdout_color_sinks.h"
 
 namespace Ural {

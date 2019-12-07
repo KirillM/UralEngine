@@ -6,8 +6,8 @@
 //  Copyright © 2019 Кирилл Мезрин. All rights reserved.
 //
 
-#ifndef Application_hpp
-#define Application_hpp
+#ifndef Application_h
+#define Application_h
 
 #include "Core.h"
 
@@ -28,4 +28,4 @@ namespace Ural {
 
 #pragma GCC visibility pop
 
-#endif /* Application_hpp */
+#endif /* Application_h */
