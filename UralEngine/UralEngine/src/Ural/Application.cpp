@@ -9,7 +9,7 @@
 #include "Application.h"
 
 #include "Events/ApplicationEvent.h"
-#include "Log/Log.hpp"
+#include "Log/Log.h"
 
 namespace Ural {
 	Application::Application()

@@ -20,7 +20,6 @@
 		537F12AD2393015F00369F57 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 537F12AB2393015F00369F57 /* Application.cpp */; };
 		537F12AE2393015F00369F57 /* Application.h in Headers */ = {isa = PBXBuildFile; fileRef = 537F12AC2393015F00369F57 /* Application.h */; };
 		537F12B02393030400369F57 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 537F12AF2393030400369F57 /* Core.h */; };
-		53BFD3F123994C7B00A4D06D /* Ural.h in Headers */ = {isa = PBXBuildFile; fileRef = 53A790912392AE1500E29426 /* Ural.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -171,7 +170,6 @@
 				53492C87239A9BD5009E1076 /* ApplicationEvent.h in Headers */,
 				53492C89239A9BE7009E1076 /* Event.h in Headers */,
 				530164F2239BF91A00821B62 /* Window.h in Headers */,
-				53BFD3F123994C7B00A4D06D /* Ural.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

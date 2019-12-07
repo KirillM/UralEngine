@@ -9,6 +9,8 @@
 #ifndef MouseEvent_h
 #define MouseEvent_h
 
+#include "Event.h"
+
 namespace Ural {
 
 	class URAL_API MouseMovedEvent : public Event

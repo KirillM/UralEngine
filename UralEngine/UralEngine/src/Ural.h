@@ -12,15 +12,15 @@
 #include <ulpch.pch>
 
 // Для приложений использующих Ural
-#include "Ural/Application.hpp"
-#include "Log/Log.hpp"
+#include "Ural/Application.h"
+#include "Ural/Log/Log.h"
 
 // События
 //#include "Events/Event.h"
-#include "Events/ApplicationEvent.h"
+#include "Ural/Events/ApplicationEvent.h"
 
 //------Точка входа-----------------
-#include "Ural/EntryPoint.hpp"
+#include "Ural/EntryPoint.h"
 //----------------------------------
 
 #endif
