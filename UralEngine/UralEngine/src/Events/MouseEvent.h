@@ -16,11 +16,11 @@ namespace Ural {
 	class URAL_API MouseMovedEvent : public Event
 	{
 	public:
-		MouseMovedEvent(float x, float y)
+		MouseMovedEvent(float& x, float& y)
 		: m_MouseX(x), m_MouseY(y) {};
 		
-		inline float int GetX() const { return m_MouseX; }
-		inline float int GetY() const { return m_MouseY; }
+		inline float GetX() const { return m_MouseX; }
+		inline float& GetY() const { return m_MouseY; }
 		
 		std::string ToString() const override
 		{
@@ -32,17 +32,18 @@ namespace Ural {
 		EVENT_CLASS_TYPE(MouseMoved)
 		EVENT_CLASS_CATEGORY(EventCategoryInput | EventCategoryMouse)
 	private:
-		unsigned int m_MouseX, m_MouseY;
+		float& m_MouseX, &m_MouseY;
+		//float& m_MouseY;
 	};
 			
 	class URAL_API MouseScrolledEvent : public Event
 	{
 	public:
 		MouseScrolledEvent(float xOffset, float yOffset)
-			: m_xOffset(xOffst), m_yOffset(yOffset) {};
+			: m_xOffset(xOffset), m_yOffset(yOffset) {};
 		
-		inline float int GetXOffset() const { return m_xOffset; }
-		inline float int GetYOffset() const { return m_yOffset; }
+		inline float GetXOffset() const { return m_xOffset; }
+		inline float GetYOffset() const { return m_yOffset; }
 		
 		std::string ToString() const override
 		{

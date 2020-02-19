@@ -28,15 +28,15 @@ namespace Ural {
 	class URAL_API KeyPressedEvent : public KeyEvent
 	{
 	public:
-		KeyPressedEvent(int keycode, int repeatCount)
+		KeyPressedEvent(int keyCode, int repeatCount)
 			: KeyEvent(keyCode), m_RepeatCount(repeatCount) {}
 		
 		inline int GetREpeatCount() const { return m_RepeatCount; }
 		
-		std:string ToString() const override
+		std::string ToString() const override
 		{
-			std:stirngstream ss;
-			ss << "KeyPressedEvent" << m_KeyCode << " (" << m_RepeatCount << " repeats)";
+			std::stringstream ss;
+			ss << "KeyPressedEvent " << m_KeyCode << " (" << m_RepeatCount << " repeats)";
 			return ss.str();
 		}
 		
@@ -48,13 +48,13 @@ namespace Ural {
 	class URAL_API KeyReleasedEvent : public KeyEvent
 	{
 	public:
-		KeyReleasedEvent(int keycode)
-			: KeyEvent(keyCode)) {}
+		KeyReleasedEvent(int keyCode)
+			: KeyEvent(keyCode) {}
 		
-		std:string ToString() const override
+		std::string ToString() const override
 		{
-			std:stirngstream ss;
-			ss << "KeyReleasedEvent" << m_KeyCode;
+			std::stringstream ss;
+			ss << "KeyReleasedEvent " << m_KeyCode;
 			return ss.str();
 		}
 		

@@ -10,12 +10,16 @@
 #include "Ural/Core.h"
 #include "Log/Log.h"
 
+#include "Events/ApplicationEvent.h"
+#include "Events/KeyEvent.h"
+#include "Events/MouseEvent.h"
+
 namespace Ural {
 	static bool s_GLFWInitialized = false;
 	
 	Window* Window::Create(const WindowsProps& props)
 	{
-		return (Window*) new MacWindow(props);
+		return new MacWindow(props);
 	}
 
 	MacWindow::MacWindow(const WindowsProps& props)
@@ -48,6 +52,94 @@ namespace Ural {
 		glfwMakeContextCurrent(m_Window);
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
+		
+		// Set GLFW Callbacks
+		
+		glfwSetWindowSizeCallback(m_Window, [](GLFWwindow* window, int width, int height)
+		{
+			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
+			data.Width = width;
+			data.Height = height;
+			
+			WindowResizeEvent event(width, height);
+			data.Callback(event);
+		});
+		
+		glfwSetWindowCloseCallback(m_Window, [](GLFWwindow* window)
+		{
+			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
+			WindowCloseEvent event;
+			data.Callback(event);
+		});
+		
+		glfwSetKeyCallback(m_Window, [](GLFWwindow* window, int key ,int scancode, int action ,int mods)
+		{
+			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
+			switch (action) {
+				case GLFW_PRESS:
+				{
+					KeyPressedEvent event(key, 0);
+					data.Callback(event);
+					break;
+				}
+				case GLFW_RELEASE:
+				{
+					KeyReleasedEvent event(key);
+					data.Callback(event);
+					break;
+				}
+				case GLFW_REPEAT:
+				{
+					KeyPressedEvent event(key, 1);
+					data.Callback(event);
+					break;
+				}
+			}
+		});
+		
+		glfwSetMouseButtonCallback(m_Window, [](GLFWwindow* window, int button, int action, int mods)
+		{
+			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
+			switch (action) {
+					case GLFW_PRESS:
+					{
+						MouseButtonPressedEvent event(button);
+						data.Callback(event);
+						break;
+					}
+					case GLFW_RELEASE:
+					{
+						MouseButtonReleasedEvent event(button);
+						data.Callback(event);
+						break;
+					}
+				}
+		});
+		
+		glfwSetScrollCallback(m_Window, [](GLFWwindow* window, double xOffset, double yOffset)
+		{
+			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
+			MouseScrolledEvent event((float)xOffset, (float)yOffset);
+			data.Callback(event);
+		});
+		
+		
+		glfwSetCursorPosCallback(m_Window, [](GLFWwindow* window, double xPos, double yPos)
+		{
+			//std::cout << "mem1 " << &xPos << "\n\n";
+			float a = (float)xPos;
+			std::cout << "mem5 " << a << "\n\n";
+			float b = (float)yPos;
+			const float& c = a;
+			const float* d = &c;
+			std::cout << "mem2 " << &a << "\n\n";
+			std::cout << "mem3 " << d << "\n\n";
+			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
+			MouseMovedEvent event(a, b);
+			float e = event.GetX();
+			//float& f = event.GetX();
+			data.Callback(event);
+		});
  	}
 
 	void MacWindow::ShutDown()

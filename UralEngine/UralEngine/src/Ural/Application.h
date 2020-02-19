@@ -10,6 +10,8 @@
 #define Application_h
 
 #include "Core.h"
+#include "Platform/Window/Window.h"
+#include "Events/ApplicationEvent.h"
 
 #pragma GCC visibility push(default)
 
@@ -20,6 +22,12 @@ namespace Ural {
 		virtual ~Application();
 		
 		void Run();
+		
+		void OnEvent(Event& e);
+	private:
+		std::unique_ptr<Window> m_Window = nullptr;
+		bool m_Running = true;
+		float t = 0;
 	};
 
 	// Реализована в клиенте

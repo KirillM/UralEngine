@@ -14,6 +14,8 @@
 extern Ural::Application* Ural::CreateApplication();
 
 int main(int argc, const char * argv[]) {
+	
+	
 	Ural::Log::Init();
 	UL_CORE_WARN("Initialezed Log");
 	UL_INFO("INFO {0}", Ural::EventCategory::EventCategoryMouse);

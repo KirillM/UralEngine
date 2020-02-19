@@ -12,13 +12,22 @@
 #include "Log/Log.h"
 
 namespace Ural {
+
 	Application::Application()
+	
 	{
-		
+		m_Window = std::unique_ptr<Window>(Window::Create());
+		m_Window->SetEventCallback(std::bind(&Application::OnEvent, this, std::placeholders::_1));
 	}
+
 	Application::~Application()
 	{
 		
+	}
+
+	void Application::OnEvent(Event& e)
+	{
+		UL_CORE_INFO("az {0}", e);
 	}
 		
 	void Application::Run()
@@ -26,6 +35,9 @@ namespace Ural {
 		WindowResizeEvent e(1280, 720);
 		UL_TRACE(e);
 		
-		while (true);
+		while (m_Running)
+		{
+			m_Window->OnUpdate();
+		}
 	}
 }
