@@ -11,6 +11,8 @@
 
 #include "Core.h"
 #include "Platform/Window/Window.h"
+#include "Layers/LayerStack.h"
+#include "Events/Event.h"
 #include "Events/ApplicationEvent.h"
 
 #pragma GCC visibility push(default)
@@ -24,9 +26,13 @@ namespace Ural {
 		void Run();
 		
 		void OnEvent(Event& e);
+
+        void PushLayer(Layer* layer);
+        void PushOverlay(Layer* layer);
 	private:
 		std::unique_ptr<Window> m_Window = nullptr;
 		bool m_Running = true;
+        LayerStack m_LayerStack;
 		float t = 0;
 	};
 

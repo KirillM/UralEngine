@@ -18,9 +18,10 @@
 //окно
 #include "Platform/Mac/MacWindow.h"
 // События
-//#include "Events/Event.h"
+#include "Events/Event.h"
 #include "Events/ApplicationEvent.h"
-
+// слои
+#include "Layers/Layer.h"
 //------Точка входа-----------------
 #include "Ural/EntryPoint.h"
 //----------------------------------

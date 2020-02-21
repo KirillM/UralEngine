@@ -9,8 +9,36 @@
 #include <iostream>
 #include "Ural.h"
 
-class Sandbox : public Ural::Application {
-	
+class ExampleLayer: public Ural::Layer
+{
+public:
+    ExampleLayer() : Layer("Example")
+    {
+    }
+
+    void OnUpdate() override
+    {
+        UL_INFO("ExampleLayer::Update");
+    }
+
+    void OnEvent(Ural::Event& event) override
+    {
+        UL_TRACE("{0}", event);
+    }
+};
+
+class Sandbox : public Ural::Application
+{
+public:
+    Sandbox()
+    {
+        PushOverlay(new ExampleLayer());
+    }
+
+    ~Sandbox()
+    {
+
+    }
 };
 
 Ural::Application* Ural::CreateApplication()

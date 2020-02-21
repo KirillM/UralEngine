@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		530164ED239BF68D00821B62 /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 530164EC239BF63800821B62 /* libglfw3.a */; };
-		530164F2239BF91A00821B62 /* Window.h in Headers */ = {isa = PBXBuildFile; fileRef = 530164F1239BF91A00821B62 /* Window.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		530164FE239C290300821B62 /* MacWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 530164F6239C134E00821B62 /* MacWindow.cpp */; };
 		530164FF239C290600821B62 /* MacWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 530164F7239C134E00821B62 /* MacWindow.h */; };
 		53016505239C29F800821B62 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53016504239C29F800821B62 /* OpenGL.framework */; };
@@ -19,13 +18,35 @@
 		53492C89239A9BE7009E1076 /* Event.h in Headers */ = {isa = PBXBuildFile; fileRef = 53492C88239A9BE7009E1076 /* Event.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		53492C8B239A9BFC009E1076 /* KeyEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 53492C8A239A9BFC009E1076 /* KeyEvent.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		53492C8D239A9C12009E1076 /* MouseEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 53492C8C239A9C12009E1076 /* MouseEvent.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		5360CEC123FD1E6E00D2F5DB /* UralEngine_IOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 5360CEC023FD1E6E00D2F5DB /* UralEngine_IOS.m */; };
+		5360CEC223FD1E6E00D2F5DB /* UralEngine_IOS.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5360CEBF23FD1E6E00D2F5DB /* UralEngine_IOS.h */; };
+		5360CEC623FD1E7400D2F5DB /* Window.h in Headers */ = {isa = PBXBuildFile; fileRef = 530164F1239BF91A00821B62 /* Window.h */; };
+		5360CEC723FD1F9F00D2F5DB /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 537F12AB2393015F00369F57 /* Application.cpp */; };
+		5360CEC823FD1FBD00D2F5DB /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53722370239800D600312C05 /* Log.cpp */; };
 		536E7862239B145A00AD166E /* ulpch.pch in Headers */ = {isa = PBXBuildFile; fileRef = 5312F9D4239B0E8C007B2CFC /* ulpch.pch */; settings = {ATTRIBUTES = (Private, ); }; };
 		53722372239800D600312C05 /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53722370239800D600312C05 /* Log.cpp */; };
 		53722373239800D600312C05 /* Log.h in Headers */ = {isa = PBXBuildFile; fileRef = 53722371239800D600312C05 /* Log.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		537F12AD2393015F00369F57 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 537F12AB2393015F00369F57 /* Application.cpp */; };
 		537F12AE2393015F00369F57 /* Application.h in Headers */ = {isa = PBXBuildFile; fileRef = 537F12AC2393015F00369F57 /* Application.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		537F12B02393030400369F57 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 537F12AF2393030400369F57 /* Core.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		53D79651240066A800D752C7 /* LayerStack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53D7964F240066A800D752C7 /* LayerStack.cpp */; };
+		53D79652240066A800D752C7 /* LayerStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 53D79650240066A800D752C7 /* LayerStack.h */; };
+		53D79655240066B400D752C7 /* Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53D79653240066B400D752C7 /* Layer.cpp */; };
+		53D79656240066B400D752C7 /* Layer.h in Headers */ = {isa = PBXBuildFile; fileRef = 53D79654240066B400D752C7 /* Layer.h */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5360CEBB23FD1E6E00D2F5DB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				5360CEC223FD1E6E00D2F5DB /* UralEngine_IOS.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		530164EC239BF63800821B62 /* libglfw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libglfw3.a; path = "vendor/glfw-build/src/libglfw3.a"; sourceTree = "<group>"; };
@@ -41,6 +62,14 @@
 		53492C88239A9BE7009E1076 /* Event.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
 		53492C8A239A9BFC009E1076 /* KeyEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyEvent.h; sourceTree = "<group>"; };
 		53492C8C239A9C12009E1076 /* MouseEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MouseEvent.h; sourceTree = "<group>"; };
+		5360CEA023FD1C3700D2F5DB /* UralEngine_IOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UralEngine_IOS.h; sourceTree = "<group>"; };
+		5360CEA123FD1C3700D2F5DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5360CEAC23FD1C5C00D2F5DB /* UralEngine_IOS_Static.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UralEngine_IOS_Static.h; sourceTree = "<group>"; };
+		5360CEAD23FD1C5C00D2F5DB /* UralEngine_IOS_Static.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UralEngine_IOS_Static.m; sourceTree = "<group>"; };
+		5360CEB323FD1CAD00D2F5DB /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/System/Library/Frameworks/OpenGLES.framework; sourceTree = DEVELOPER_DIR; };
+		5360CEBD23FD1E6E00D2F5DB /* libUralEngine IOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libUralEngine IOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5360CEBF23FD1E6E00D2F5DB /* UralEngine_IOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UralEngine_IOS.h; sourceTree = "<group>"; };
+		5360CEC023FD1E6E00D2F5DB /* UralEngine_IOS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UralEngine_IOS.m; sourceTree = "<group>"; };
 		53722370239800D600312C05 /* Log.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Log.cpp; sourceTree = "<group>"; };
 		53722371239800D600312C05 /* Log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Log.h; sourceTree = "<group>"; };
 		537F12A82392D7EF00369F57 /* EntryPoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntryPoint.h; sourceTree = "<group>"; };
@@ -49,9 +78,20 @@
 		537F12AF2393030400369F57 /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		53A7908F2392AE1500E29426 /* libUralEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libUralEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		53A790912392AE1500E29426 /* Ural.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ural.h; sourceTree = "<group>"; };
+		53D7964F240066A800D752C7 /* LayerStack.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LayerStack.cpp; sourceTree = "<group>"; };
+		53D79650240066A800D752C7 /* LayerStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LayerStack.h; sourceTree = "<group>"; };
+		53D79653240066B400D752C7 /* Layer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Layer.cpp; sourceTree = "<group>"; };
+		53D79654240066B400D752C7 /* Layer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Layer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5360CEBA23FD1E6E00D2F5DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		53A7908D2392AE1500E29426 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -127,9 +167,37 @@
 			path = Events;
 			sourceTree = "<group>";
 		};
+		5360CE9F23FD1C3700D2F5DB /* UralEngine IOS */ = {
+			isa = PBXGroup;
+			children = (
+				5360CEA023FD1C3700D2F5DB /* UralEngine_IOS.h */,
+				5360CEA123FD1C3700D2F5DB /* Info.plist */,
+			);
+			path = "UralEngine IOS";
+			sourceTree = "<group>";
+		};
+		5360CEAB23FD1C5C00D2F5DB /* UralEngine IOS Static */ = {
+			isa = PBXGroup;
+			children = (
+				5360CEAC23FD1C5C00D2F5DB /* UralEngine_IOS_Static.h */,
+				5360CEAD23FD1C5C00D2F5DB /* UralEngine_IOS_Static.m */,
+			);
+			path = "UralEngine IOS Static";
+			sourceTree = "<group>";
+		};
+		5360CEBE23FD1E6E00D2F5DB /* UralEngine IOS */ = {
+			isa = PBXGroup;
+			children = (
+				5360CEBF23FD1E6E00D2F5DB /* UralEngine_IOS.h */,
+				5360CEC023FD1E6E00D2F5DB /* UralEngine_IOS.m */,
+			);
+			path = "UralEngine IOS";
+			sourceTree = "<group>";
+		};
 		537F129B2392CBE700369F57 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				53D7964E2400668300D752C7 /* Layers */,
 				530164EE239BF8BF00821B62 /* External */,
 				530164EF239BF8CD00821B62 /* Platform */,
 				53492C85239A9BA5009E1076 /* Events */,
@@ -156,6 +224,9 @@
 			isa = PBXGroup;
 			children = (
 				53A790902392AE1500E29426 /* UralEngine */,
+				5360CE9F23FD1C3700D2F5DB /* UralEngine IOS */,
+				5360CEAB23FD1C5C00D2F5DB /* UralEngine IOS Static */,
+				5360CEBE23FD1E6E00D2F5DB /* UralEngine IOS */,
 				53A790822392A17500E29426 /* Products */,
 				53A790A92392C45800E29426 /* Frameworks */,
 			);
@@ -165,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				53A7908F2392AE1500E29426 /* libUralEngine.dylib */,
+				5360CEBD23FD1E6E00D2F5DB /* libUralEngine IOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -180,6 +252,7 @@
 		53A790A92392C45800E29426 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5360CEB323FD1CAD00D2F5DB /* OpenGLES.framework */,
 				5301650A239C2A7200821B62 /* CoreVideo.framework */,
 				53016508239C2A4F00821B62 /* IOKit.framework */,
 				53016506239C29FF00821B62 /* Cocoa.framework */,
@@ -198,6 +271,17 @@
 			path = Log;
 			sourceTree = "<group>";
 		};
+		53D7964E2400668300D752C7 /* Layers */ = {
+			isa = PBXGroup;
+			children = (
+				53D7964F240066A800D752C7 /* LayerStack.cpp */,
+				53D79650240066A800D752C7 /* LayerStack.h */,
+				53D79653240066B400D752C7 /* Layer.cpp */,
+				53D79654240066B400D752C7 /* Layer.h */,
+			);
+			path = Layers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -205,22 +289,41 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53D79656240066B400D752C7 /* Layer.h in Headers */,
 				537F12B02393030400369F57 /* Core.h in Headers */,
 				536E7862239B145A00AD166E /* ulpch.pch in Headers */,
 				53492C8D239A9C12009E1076 /* MouseEvent.h in Headers */,
+				53D79652240066A800D752C7 /* LayerStack.h in Headers */,
 				537F12AE2393015F00369F57 /* Application.h in Headers */,
+				5360CEC623FD1E7400D2F5DB /* Window.h in Headers */,
 				53492C8B239A9BFC009E1076 /* KeyEvent.h in Headers */,
 				53722373239800D600312C05 /* Log.h in Headers */,
 				530164FF239C290600821B62 /* MacWindow.h in Headers */,
 				53492C87239A9BD5009E1076 /* ApplicationEvent.h in Headers */,
 				53492C89239A9BE7009E1076 /* Event.h in Headers */,
-				530164F2239BF91A00821B62 /* Window.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		5360CEBC23FD1E6E00D2F5DB /* UralEngine IOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5360CEC323FD1E6E00D2F5DB /* Build configuration list for PBXNativeTarget "UralEngine IOS" */;
+			buildPhases = (
+				5360CEB923FD1E6E00D2F5DB /* Sources */,
+				5360CEBA23FD1E6E00D2F5DB /* Frameworks */,
+				5360CEBB23FD1E6E00D2F5DB /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "UralEngine IOS";
+			productName = "UralEngine IOS";
+			productReference = 5360CEBD23FD1E6E00D2F5DB /* libUralEngine IOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		53A7908E2392AE1500E29426 /* UralEngine */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 53A790972392AE1500E29426 /* Build configuration list for PBXNativeTarget "UralEngine" */;
@@ -247,6 +350,9 @@
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "Кирилл Мезрин";
 				TargetAttributes = {
+					5360CEBC23FD1E6E00D2F5DB = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
 					53A7908E2392AE1500E29426 = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
@@ -266,24 +372,70 @@
 			projectRoot = "";
 			targets = (
 				53A7908E2392AE1500E29426 /* UralEngine */,
+				5360CEBC23FD1E6E00D2F5DB /* UralEngine IOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5360CEB923FD1E6E00D2F5DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5360CEC823FD1FBD00D2F5DB /* Log.cpp in Sources */,
+				5360CEC723FD1F9F00D2F5DB /* Application.cpp in Sources */,
+				5360CEC123FD1E6E00D2F5DB /* UralEngine_IOS.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		53A7908C2392AE1500E29426 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				530164FE239C290300821B62 /* MacWindow.cpp in Sources */,
 				53722372239800D600312C05 /* Log.cpp in Sources */,
+				53D79651240066A800D752C7 /* LayerStack.cpp in Sources */,
 				537F12AD2393015F00369F57 /* Application.cpp in Sources */,
+				53D79655240066B400D752C7 /* Layer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		5360CEC423FD1E6E00D2F5DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5CDN7636Z2;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5360CEC523FD1E6E00D2F5DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5CDN7636Z2;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		53A790862392A17500E29426 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -484,6 +636,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5360CEC323FD1E6E00D2F5DB /* Build configuration list for PBXNativeTarget "UralEngine IOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5360CEC423FD1E6E00D2F5DB /* Debug */,
+				5360CEC523FD1E6E00D2F5DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		53A7907C2392A17500E29426 /* Build configuration list for PBXProject "UralEngine" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

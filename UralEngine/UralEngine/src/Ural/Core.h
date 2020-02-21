@@ -12,6 +12,8 @@
 #include <stdio.h>
 
 #ifdef UL_PLATFORM_MAC
+    #define GL_SILENCE_DEPRECATION
+
 	#ifdef UL_BUILD_DLYB
 		#define URAL_API
 	#else
@@ -32,3 +34,4 @@
 	#define UL_ASSERT(exp, ...)
 	#define UL_CORE_ASSERT(exp, ...)
 #endif
+
