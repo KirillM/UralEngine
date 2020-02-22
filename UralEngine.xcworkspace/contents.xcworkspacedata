@@ -10,4 +10,7 @@
    <FileRef
       location = "group:UralEngine/vendor/glfw-build/glfw-build.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:UralEngine/vendor/GLAD/GLAD.xcodeproj">
+   </FileRef>
 </Workspace>

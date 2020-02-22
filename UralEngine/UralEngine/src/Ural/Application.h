@@ -30,10 +30,10 @@ namespace Ural {
         void PushLayer(Layer* layer);
         void PushOverlay(Layer* layer);
 	private:
+        bool OnWindowClose(WindowCloseEvent& e);
 		std::unique_ptr<Window> m_Window = nullptr;
 		bool m_Running = true;
         LayerStack m_LayerStack;
-		float t = 0;
 	};
 
 	// Реализована в клиенте

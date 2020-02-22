@@ -18,6 +18,7 @@
 		53492C89239A9BE7009E1076 /* Event.h in Headers */ = {isa = PBXBuildFile; fileRef = 53492C88239A9BE7009E1076 /* Event.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		53492C8B239A9BFC009E1076 /* KeyEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 53492C8A239A9BFC009E1076 /* KeyEvent.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		53492C8D239A9C12009E1076 /* MouseEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 53492C8C239A9C12009E1076 /* MouseEvent.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		535D3A5724012680007EFB22 /* libGLAD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 535D3A5624012680007EFB22 /* libGLAD.a */; };
 		5360CEC123FD1E6E00D2F5DB /* UralEngine_IOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 5360CEC023FD1E6E00D2F5DB /* UralEngine_IOS.m */; };
 		5360CEC223FD1E6E00D2F5DB /* UralEngine_IOS.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5360CEBF23FD1E6E00D2F5DB /* UralEngine_IOS.h */; };
 		5360CEC623FD1E7400D2F5DB /* Window.h in Headers */ = {isa = PBXBuildFile; fileRef = 530164F1239BF91A00821B62 /* Window.h */; };
@@ -62,6 +63,9 @@
 		53492C88239A9BE7009E1076 /* Event.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
 		53492C8A239A9BFC009E1076 /* KeyEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyEvent.h; sourceTree = "<group>"; };
 		53492C8C239A9C12009E1076 /* MouseEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MouseEvent.h; sourceTree = "<group>"; };
+		535D3A352401236C007EFB22 /* libglad.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglad.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		535D3A3724012426007EFB22 /* libglad.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglad.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		535D3A5624012680007EFB22 /* libGLAD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGLAD.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5360CEA023FD1C3700D2F5DB /* UralEngine_IOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UralEngine_IOS.h; sourceTree = "<group>"; };
 		5360CEA123FD1C3700D2F5DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5360CEAC23FD1C5C00D2F5DB /* UralEngine_IOS_Static.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UralEngine_IOS_Static.h; sourceTree = "<group>"; };
@@ -101,6 +105,7 @@
 				53016507239C29FF00821B62 /* Cocoa.framework in Frameworks */,
 				53016505239C29F800821B62 /* OpenGL.framework in Frameworks */,
 				530164ED239BF68D00821B62 /* libglfw3.a in Frameworks */,
+				535D3A5724012680007EFB22 /* libGLAD.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +257,9 @@
 		53A790A92392C45800E29426 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				535D3A5624012680007EFB22 /* libGLAD.a */,
+				535D3A3724012426007EFB22 /* libglad.a */,
+				535D3A352401236C007EFB22 /* libglad.a */,
 				5360CEB323FD1CAD00D2F5DB /* OpenGLES.framework */,
 				5301650A239C2A7200821B62 /* CoreVideo.framework */,
 				53016508239C2A4F00821B62 /* IOKit.framework */,
@@ -581,15 +589,18 @@
 					"DEBUG=1",
 					"UL_PLATFORM_MAC=1",
 					"UL_ENABLED_ASSERTS=1",
+					GLFW_INCLUDE_NONE,
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/vendor/spdlog/include",
 					"$(SRCROOT)/vendor/glfw/include",
+					"$(SRCROOT)/vendor/GLAD/include",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/vendor/glfw-build/src",
+					"$(PROJECT_DIR)/vendor/GLAD/include/glad",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -617,15 +628,18 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"UL_BUILD_DLYB=1",
 					"UL_PLATFORM_MAC=1",
+					GLFW_INCLUDE_NONE,
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/vendor/spdlog/include",
 					"$(SRCROOT)/vendor/glfw/include",
+					"$(SRCROOT)/vendor/GLAD/include",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/vendor/glfw-build/src",
+					"$(PROJECT_DIR)/vendor/GLAD/include/glad",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

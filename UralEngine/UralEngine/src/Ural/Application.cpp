@@ -10,15 +10,21 @@
 
 #include "Events/ApplicationEvent.h"
 #include "Log/Log.h"
-#include <GLFW/glfw3.h>
+#include <glad/glad.h>
 
 namespace Ural {
+
+#define BIND_EVENT_FN(x) std::bind(&Application::x, this, std::placeholders::_1)
 
 	Application::Application()
 	
 	{
 		m_Window = std::unique_ptr<Window>(Window::Create());
-		m_Window->SetEventCallback(std::bind(&Application::OnEvent, this, std::placeholders::_1));
+		m_Window->SetEventCallback(BIND_EVENT_FN(OnEvent));
+
+        unsigned int id;
+        glad_glGenVertexArrays(1, &id);
+        //glGenVertexArrays(1, &id);
 	}
 
 	Application::~Application()
@@ -31,17 +37,23 @@ namespace Ural {
 		UL_CORE_INFO("event {0}", e);
 
         EventDispatcher dispatcher(e);
-        dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(onWindowClose));
+        dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(OnWindowClose));
 
         UL_CORE_TRACE("{0}", e);
 
         for (auto it = m_LayerStack.end(); it != m_LayerStack.begin(); )
         {
             (*--it)->OnEvent(e);
-            if (e.Handled)
+            if (e.m_Handled)
                 break;
         }
 	}
+
+    bool Application::OnWindowClose(WindowCloseEvent &e)
+    {
+        m_Running = false;
+        return true;
+    }
 		
 	void Application::Run()
 	{

@@ -51,7 +51,7 @@ namespace Ural {
 		{
 			return GetCategoryFlags() & category;
 		}
-	protected:
+	//protected:
 		bool m_Handled = false;
 	};
 
@@ -69,7 +69,9 @@ namespace Ural {
 			if (m_Event.GetEventType() == T::GetStaticType())
 			{
 				m_Event.m_Handled = func(*(T*)&m_Event);
+                return true;
 			}
+            return false;
 		}
 	private:
 		Event& m_Event;
