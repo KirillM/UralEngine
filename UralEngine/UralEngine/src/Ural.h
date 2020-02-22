@@ -22,6 +22,14 @@
 #include "Events/Event.h"
 #include "Events/ApplicationEvent.h"
 
+// опрос на ввод
+#include "Input/Input.h"
+#include "Platform/Mac/MacInput.h"
+
+// коды ввода
+#include "Input/KeyCodes.h"
+#include "Input/MouseButtonCodes.h"
+
 // слои
 #include "Layers/Layer.h"
 #include "Layers/imgui/ImGuiLayer.h"

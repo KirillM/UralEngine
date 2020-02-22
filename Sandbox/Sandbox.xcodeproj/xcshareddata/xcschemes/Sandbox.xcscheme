@@ -14,6 +14,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "53A7908E2392AE1500E29426"
+               BuildableName = "libUralEngine.dylib"
+               BlueprintName = "UralEngine"
+               ReferencedContainer = "container:../UralEngine/UralEngine.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "53A790CA2392C5A600E29426"
                BuildableName = "Sandbox"
                BlueprintName = "Sandbox"

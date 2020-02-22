@@ -19,11 +19,14 @@ public:
     void OnUpdate() override
     {
         UL_INFO("ExampleLayer::Update");
+
+        if(Ural::Input::IsKeyPressed(UL_KEY_TAB))
+            UL_INFO("Tab key is pressed!");
     }
 
     void OnEvent(Ural::Event& event) override
     {
-        UL_TRACE("{0}", event);
+       // UL_TRACE("{0}", event);
     }
 };
 

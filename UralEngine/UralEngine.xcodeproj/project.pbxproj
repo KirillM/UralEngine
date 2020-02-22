@@ -40,6 +40,11 @@
 		53F6EA0824014EC600EF58AA /* ImGuiOpenGLRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 53F6EA0624014EC600EF58AA /* ImGuiOpenGLRenderer.h */; };
 		53F6EA0A2401627C00EF58AA /* libGLAD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F6EA092401627C00EF58AA /* libGLAD.a */; };
 		53F6EA0B240182CB00EF58AA /* ImGuiLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53F6EA002401497800EF58AA /* ImGuiLayer.cpp */; };
+		53F6EA0E24019D1200EF58AA /* Input.h in Headers */ = {isa = PBXBuildFile; fileRef = 53F6EA0D24019D1200EF58AA /* Input.h */; };
+		53F6EA1324019E8700EF58AA /* MacInput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53F6EA1124019E8700EF58AA /* MacInput.cpp */; };
+		53F6EA1424019E8700EF58AA /* MacInput.h in Headers */ = {isa = PBXBuildFile; fileRef = 53F6EA1224019E8700EF58AA /* MacInput.h */; };
+		53F6EA162401AF3A00EF58AA /* KeyCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 53F6EA152401AF3A00EF58AA /* KeyCodes.h */; };
+		53F6EA182401AFB600EF58AA /* MouseButtonCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 53F6EA172401AFB300EF58AA /* MouseButtonCodes.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -95,6 +100,11 @@
 		53F6EA0524014EC600EF58AA /* ImGuiOpenGLRenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImGuiOpenGLRenderer.cpp; sourceTree = "<group>"; };
 		53F6EA0624014EC600EF58AA /* ImGuiOpenGLRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImGuiOpenGLRenderer.h; sourceTree = "<group>"; };
 		53F6EA092401627C00EF58AA /* libGLAD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGLAD.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		53F6EA0D24019D1200EF58AA /* Input.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Input.h; sourceTree = "<group>"; };
+		53F6EA1124019E8700EF58AA /* MacInput.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MacInput.cpp; sourceTree = "<group>"; };
+		53F6EA1224019E8700EF58AA /* MacInput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacInput.h; sourceTree = "<group>"; };
+		53F6EA152401AF3A00EF58AA /* KeyCodes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyCodes.h; sourceTree = "<group>"; };
+		53F6EA172401AFB300EF58AA /* MouseButtonCodes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MouseButtonCodes.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +171,8 @@
 			children = (
 				530164F6239C134E00821B62 /* MacWindow.cpp */,
 				530164F7239C134E00821B62 /* MacWindow.h */,
+				53F6EA1124019E8700EF58AA /* MacInput.cpp */,
+				53F6EA1224019E8700EF58AA /* MacInput.h */,
 			);
 			path = Mac;
 			sourceTree = "<group>";
@@ -213,6 +225,7 @@
 		537F129B2392CBE700369F57 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				53F6EA0C24019CEE00EF58AA /* Input */,
 				53D7964E2400668300D752C7 /* Layers */,
 				530164EE239BF8BF00821B62 /* External */,
 				530164EF239BF8CD00821B62 /* Platform */,
@@ -319,6 +332,16 @@
 			path = OpenGL;
 			sourceTree = "<group>";
 		};
+		53F6EA0C24019CEE00EF58AA /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				53F6EA0D24019D1200EF58AA /* Input.h */,
+				53F6EA152401AF3A00EF58AA /* KeyCodes.h */,
+				53F6EA172401AFB300EF58AA /* MouseButtonCodes.h */,
+			);
+			path = Input;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -326,8 +349,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53F6EA0E24019D1200EF58AA /* Input.h in Headers */,
 				53D79656240066B400D752C7 /* Layer.h in Headers */,
+				53F6EA162401AF3A00EF58AA /* KeyCodes.h in Headers */,
 				537F12B02393030400369F57 /* Core.h in Headers */,
+				53F6EA1424019E8700EF58AA /* MacInput.h in Headers */,
 				536E7862239B145A00AD166E /* ulpch.pch in Headers */,
 				53492C8D239A9C12009E1076 /* MouseEvent.h in Headers */,
 				53F6EA032401497800EF58AA /* ImGuiLayer.h in Headers */,
@@ -338,6 +364,7 @@
 				53722373239800D600312C05 /* Log.h in Headers */,
 				530164FF239C290600821B62 /* MacWindow.h in Headers */,
 				53492C87239A9BD5009E1076 /* ApplicationEvent.h in Headers */,
+				53F6EA182401AFB600EF58AA /* MouseButtonCodes.h in Headers */,
 				53492C89239A9BE7009E1076 /* Event.h in Headers */,
 				53F6EA0824014EC600EF58AA /* ImGuiOpenGLRenderer.h in Headers */,
 			);
@@ -438,6 +465,7 @@
 				53F6EA0724014EC600EF58AA /* ImGuiOpenGLRenderer.cpp in Sources */,
 				53D79651240066A800D752C7 /* LayerStack.cpp in Sources */,
 				537F12AD2393015F00369F57 /* Application.cpp in Sources */,
+				53F6EA1324019E8700EF58AA /* MacInput.cpp in Sources */,
 				53D79655240066B400D752C7 /* Layer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

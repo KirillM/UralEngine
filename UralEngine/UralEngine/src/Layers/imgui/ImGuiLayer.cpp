@@ -13,6 +13,7 @@
 #include <GLFW/glfw3.h>
 #include "Ural/Application.h"
 #include "Platform/Mac/MacWindow.h"
+#include <glad/glad.h>
 
 namespace Ural {
     ImGuiLayer::ImGuiLayer() : Layer("ImGuiLayer")
@@ -75,10 +76,13 @@ namespace Ural {
         w = app.GetWindow().GetWidth();
         h = app.GetWindow().GetHeight();
 
-        glfwGetFramebufferSize(g_Window, &display_w, &display_h);
+        auto window = static_cast<GLFWwindow*>(Application::Get().GetWindow().GetNativeWindow());
+        glfwGetFramebufferSize(window, &display_w, &display_h);
         io.DisplaySize = ImVec2((float)w, (float)h);
+
         if (w > 0 && h > 0)
             io.DisplayFramebufferScale = ImVec2((float)display_w / w, (float)display_h / h);
+
 
         float time = (float)glfwGetTime();
         io.DeltaTime = m_Time > 0.0 ? (time - m_Time) : (1.0f / 60.0f);
@@ -102,7 +106,7 @@ namespace Ural {
         dispatcher.Dispatch<MouseScrolledEvent>(UL_BIND_EVENT_FN(OnMouseScrolledEvent));
         dispatcher.Dispatch<KeyPressedEvent>(UL_BIND_EVENT_FN(OnKeyPressedEvent));
         dispatcher.Dispatch<KeyReleasedEvent>(UL_BIND_EVENT_FN(OnKeyReleasedEvent));
-        //dispatcher.Dispatch<KeyTypedEvent>(UL_BIND_EVENT_FN(OnKeyTypedEvent));
+        dispatcher.Dispatch<KeyTypedEvent>(UL_BIND_EVENT_FN(OnKeyTypedEvent));
         dispatcher.Dispatch<WindowResizeEvent>(UL_BIND_EVENT_FN(OnWindowResizedEvent));
     }
 
@@ -137,18 +141,47 @@ namespace Ural {
     }
     bool ImGuiLayer::OnKeyPressedEvent(KeyPressedEvent& e)
     {
+        ImGuiIO& io = ImGui::GetIO();
+        io.KeysDown[e.GetKeyCode()] = true;
+
         return false;
     }
     bool ImGuiLayer::OnKeyReleasedEvent(KeyReleasedEvent& e)
     {
+        ImGuiIO& io = ImGui::GetIO();
+        io.KeysDown[e.GetKeyCode()] = false;
+
+        io.KeyCtrl  = io.KeysDown[GLFW_KEY_LEFT_CONTROL] || io.KeysDown[GLFW_KEY_RIGHT_CONTROL];
+        io.KeyShift = io.KeysDown[GLFW_KEY_LEFT_SHIFT] || io.KeysDown[GLFW_KEY_RIGHT_SHIFT];
+        io.KeyAlt   = io.KeysDown[GLFW_KEY_LEFT_ALT] || io.KeysDown[GLFW_KEY_RIGHT_ALT];
+        io.KeySuper = io.KeysDown[GLFW_KEY_LEFT_SUPER] || io.KeysDown[GLFW_KEY_RIGHT_SUPER];
         return false;
     }
-//    bool ImGuiLayer::OnKeyTypedEvent(KeyTypedEvent& e)
-//    {
-//
-//    }
+    bool ImGuiLayer::OnKeyTypedEvent(KeyTypedEvent& e)
+    {
+        ImGuiIO& io = ImGui::GetIO();
+        int keyCode = e.GetKeyCode();
+        if (keyCode > 0 && keyCode < 0x10000)
+            io.AddInputCharacter((unsigned short)keyCode);
+        
+        return false;
+    }
     bool ImGuiLayer::OnWindowResizedEvent(WindowResizeEvent& e)
     {
+
+        int w, h;
+        int display_w, display_h;
+        w = e.GetWidth();
+        h = e.GetHeight();
+        
+        auto window = static_cast<GLFWwindow*>(Application::Get().GetWindow().GetNativeWindow());
+        glfwGetFramebufferSize(window, &display_w, &display_h);
+
+        ImGuiIO& io = ImGui::GetIO();
+        io.DisplaySize = ImVec2(w, h);
+        io.DisplayFramebufferScale = ImVec2((float)display_w / w, (float)display_h / h);
+
+        glViewport(0, 0, (float)w, (float)h);
         return false;
     }
 }

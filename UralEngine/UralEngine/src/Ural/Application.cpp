@@ -11,6 +11,8 @@
 #include "Events/ApplicationEvent.h"
 #include "Log/Log.h"
 #include <glad/glad.h>
+
+#include "Input/Input.h"
 //#include <GLFW/glfw3.h>
 //#include <OpenGL/gl3.h>
 
@@ -72,6 +74,9 @@ namespace Ural {
             glClear(GL_COLOR_BUFFER_BIT);
             for (Layer* layer : m_LayerStack)
                 layer->OnUpdate();
+
+            std::pair<float, float> position = Input::GetMousePosition();
+            UL_CORE_TRACE("{0}, {1}", std::get<0>(position), std::get<1>(position));
 
 			m_Window->OnUpdate();
 		}

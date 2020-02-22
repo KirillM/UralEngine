@@ -13,9 +13,6 @@
 #include <GLFW/glfw3.h>
 
 namespace Ural {
-
-    extern GLFWwindow* g_Window;
-
 	class MacWindow : public Window {
 	public:
 		MacWindow(const WindowsProps& props);
@@ -29,6 +26,8 @@ namespace Ural {
 		inline void SetEventCallback(const EventcallabckFn& callback) override { m_Data.Callback = callback; };
 		void SetVSync(bool enabled) override;
 		bool IsVSync() const override;
+
+        inline virtual void* GetNativeWindow() const override { return m_Window; }
 	private:
 		virtual void Init(const WindowsProps& props);
 		virtual void ShutDown();
