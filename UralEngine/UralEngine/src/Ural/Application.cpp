@@ -10,9 +10,9 @@
 
 #include "Events/ApplicationEvent.h"
 #include "Log/Log.h"
-#include <glad/glad.h>
-//#include <GLFW/glfw3.h>
-//#include <OpenGL/gl3.h>
+//#include <glad/glad.h>
+#include <GLFW/glfw3.h>
+#include <OpenGL/gl3.h>
 
 namespace Ural {
 

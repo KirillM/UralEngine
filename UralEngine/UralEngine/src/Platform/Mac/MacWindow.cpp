@@ -14,8 +14,8 @@
 #include "Events/KeyEvent.h"
 #include "Events/MouseEvent.h"
 
-#include <glad/glad.h>
-//#include <GLFW/glfw3.h>
+//#include <glad/glad.h>
+// GLFW_INCLUDE_NONE
 
 namespace Ural {
 	static bool s_GLFWInitialized = false;
@@ -58,14 +58,10 @@ namespace Ural {
 		
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
-        int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
-        UL_CORE_ASSERT(status, "Failed to initialized GLAD")
+        //int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+        //UL_CORE_ASSERT(status, "Failed to initialized GLAD")
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
-
-//         unsigned int id;
-//        // glad_glGenVertexArrays(1, &id);
-//         glGenVertexArrays(1, &id);
 		
 		// Set GLFW Callbacks
 		

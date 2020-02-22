@@ -12,8 +12,6 @@
 #include "Platform/Window/Window.h"
 #include <GLFW/glfw3.h>
 
-//struct GLFWwindow;
-
 namespace Ural {
 	class MacWindow : public Window {
 	public:
