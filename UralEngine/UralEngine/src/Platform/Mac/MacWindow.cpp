@@ -62,7 +62,12 @@ namespace Ural {
             glfwSetErrorCallback(GLFWErrorCallback);
 			s_GLFWInitialized = true;
 		}
-		
+
+        //////
+        glfwWindowHint(GLFW_RESIZABLE, GL_TRUE);
+        glfwWindowHint(GLFW_DECORATED, GL_TRUE);
+        glfwWindowHint(GLFW_TRANSPARENT_FRAMEBUFFER, GL_TRUE); // Only on latest versions
+        ///////
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
         int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);

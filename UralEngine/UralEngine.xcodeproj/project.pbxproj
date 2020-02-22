@@ -29,6 +29,7 @@
 		537F12AD2393015F00369F57 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 537F12AB2393015F00369F57 /* Application.cpp */; };
 		537F12AE2393015F00369F57 /* Application.h in Headers */ = {isa = PBXBuildFile; fileRef = 537F12AC2393015F00369F57 /* Application.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		537F12B02393030400369F57 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 537F12AF2393030400369F57 /* Core.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		539E3CC52401C36D0037A90E /* ImGuiBuild.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 539E3CC42401C36D0037A90E /* ImGuiBuild.cpp */; };
 		53D79651240066A800D752C7 /* LayerStack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53D7964F240066A800D752C7 /* LayerStack.cpp */; };
 		53D79652240066A800D752C7 /* LayerStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 53D79650240066A800D752C7 /* LayerStack.h */; };
 		53D79655240066B400D752C7 /* Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53D79653240066B400D752C7 /* Layer.cpp */; };
@@ -36,7 +37,6 @@
 		53F6E9FE240148DC00EF58AA /* libimgui.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F6E9FD240148DC00EF58AA /* libimgui.a */; };
 		53F6EA022401497800EF58AA /* ImGuiLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53F6EA002401497800EF58AA /* ImGuiLayer.cpp */; };
 		53F6EA032401497800EF58AA /* ImGuiLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 53F6EA012401497800EF58AA /* ImGuiLayer.h */; };
-		53F6EA0724014EC600EF58AA /* ImGuiOpenGLRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53F6EA0524014EC600EF58AA /* ImGuiOpenGLRenderer.cpp */; };
 		53F6EA0824014EC600EF58AA /* ImGuiOpenGLRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 53F6EA0624014EC600EF58AA /* ImGuiOpenGLRenderer.h */; };
 		53F6EA0A2401627C00EF58AA /* libGLAD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F6EA092401627C00EF58AA /* libGLAD.a */; };
 		53F6EA0B240182CB00EF58AA /* ImGuiLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53F6EA002401497800EF58AA /* ImGuiLayer.cpp */; };
@@ -88,6 +88,7 @@
 		537F12AB2393015F00369F57 /* Application.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
 		537F12AC2393015F00369F57 /* Application.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
 		537F12AF2393030400369F57 /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
+		539E3CC42401C36D0037A90E /* ImGuiBuild.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ImGuiBuild.cpp; sourceTree = "<group>"; };
 		53A7908F2392AE1500E29426 /* libUralEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libUralEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		53A790912392AE1500E29426 /* Ural.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ural.h; sourceTree = "<group>"; };
 		53D7964F240066A800D752C7 /* LayerStack.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LayerStack.cpp; sourceTree = "<group>"; };
@@ -319,6 +320,7 @@
 			children = (
 				53F6EA002401497800EF58AA /* ImGuiLayer.cpp */,
 				53F6EA012401497800EF58AA /* ImGuiLayer.h */,
+				539E3CC42401C36D0037A90E /* ImGuiBuild.cpp */,
 			);
 			path = imgui;
 			sourceTree = "<group>";
@@ -462,10 +464,10 @@
 				530164FE239C290300821B62 /* MacWindow.cpp in Sources */,
 				53F6EA022401497800EF58AA /* ImGuiLayer.cpp in Sources */,
 				53722372239800D600312C05 /* Log.cpp in Sources */,
-				53F6EA0724014EC600EF58AA /* ImGuiOpenGLRenderer.cpp in Sources */,
 				53D79651240066A800D752C7 /* LayerStack.cpp in Sources */,
 				537F12AD2393015F00369F57 /* Application.cpp in Sources */,
 				53F6EA1324019E8700EF58AA /* MacInput.cpp in Sources */,
+				539E3CC52401C36D0037A90E /* ImGuiBuild.cpp in Sources */,
 				53D79655240066B400D752C7 /* Layer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -659,6 +661,7 @@
 					"$(SRCROOT)/vendor/glfw/include",
 					"$(SRCROOT)/vendor/GLAD/include",
 					"$(SRCROOT)/vendor/imgui",
+					"$(SRCROOT)/vendor/glm",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -699,6 +702,7 @@
 					"$(SRCROOT)/vendor/glfw/include",
 					"$(SRCROOT)/vendor/GLAD/include",
 					"$(SRCROOT)/vendor/imgui",
+					"$(SRCROOT)/vendor/glm",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
