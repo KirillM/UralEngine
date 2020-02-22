@@ -11,6 +11,8 @@
 #include "Events/ApplicationEvent.h"
 #include "Log/Log.h"
 #include <glad/glad.h>
+//#include <GLFW/glfw3.h>
+//#include <OpenGL/gl3.h>
 
 namespace Ural {
 
@@ -23,8 +25,8 @@ namespace Ural {
 		m_Window->SetEventCallback(BIND_EVENT_FN(OnEvent));
 
         unsigned int id;
-        glad_glGenVertexArrays(1, &id);
-        //glGenVertexArrays(1, &id);
+       // glad_glGenVertexArrays(1, &id);
+        glGenVertexArrays(1, &id);
 	}
 
 	Application::~Application()
@@ -33,7 +35,7 @@ namespace Ural {
 	}
 
 	void Application::OnEvent(Event& e)
-	{
+	{        
 		UL_CORE_INFO("event {0}", e);
 
         EventDispatcher dispatcher(e);

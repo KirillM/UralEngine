@@ -62,6 +62,10 @@ namespace Ural {
         UL_CORE_ASSERT(status, "Failed to initialized GLAD")
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
+
+//         unsigned int id;
+//        // glad_glGenVertexArrays(1, &id);
+//         glGenVertexArrays(1, &id);
 		
 		// Set GLFW Callbacks
 		
