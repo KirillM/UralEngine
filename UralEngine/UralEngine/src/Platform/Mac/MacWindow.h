@@ -13,6 +13,9 @@
 #include <GLFW/glfw3.h>
 
 namespace Ural {
+
+    extern GLFWwindow* g_Window;
+
 	class MacWindow : public Window {
 	public:
 		MacWindow(const WindowsProps& props);

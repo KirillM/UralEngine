@@ -1,0 +1,321 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		53F6E9ED240146FE00EF58AA /* imgui_widgets.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53F6E9CB240146FD00EF58AA /* imgui_widgets.cpp */; };
+		53F6E9EE240146FE00EF58AA /* imgui_internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 53F6E9CC240146FD00EF58AA /* imgui_internal.h */; };
+		53F6E9EF240146FE00EF58AA /* imstb_rectpack.h in Headers */ = {isa = PBXBuildFile; fileRef = 53F6E9CD240146FD00EF58AA /* imstb_rectpack.h */; };
+		53F6E9F0240146FE00EF58AA /* imgui_draw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53F6E9CE240146FE00EF58AA /* imgui_draw.cpp */; };
+		53F6E9F1240146FE00EF58AA /* imstb_textedit.h in Headers */ = {isa = PBXBuildFile; fileRef = 53F6E9CF240146FE00EF58AA /* imstb_textedit.h */; };
+		53F6E9F2240146FE00EF58AA /* imgui.h in Headers */ = {isa = PBXBuildFile; fileRef = 53F6E9D0240146FE00EF58AA /* imgui.h */; };
+		53F6E9F3240146FE00EF58AA /* imstb_truetype.h in Headers */ = {isa = PBXBuildFile; fileRef = 53F6E9D1240146FE00EF58AA /* imstb_truetype.h */; };
+		53F6E9F4240146FE00EF58AA /* imgui_demo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53F6E9D2240146FE00EF58AA /* imgui_demo.cpp */; };
+		53F6E9F5240146FE00EF58AA /* imconfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 53F6E9D3240146FE00EF58AA /* imconfig.h */; };
+		53F6E9F6240146FE00EF58AA /* imgui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53F6E9D5240146FE00EF58AA /* imgui.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		53F6E9C5240146C800EF58AA /* libimgui.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libimgui.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		53F6E9CB240146FD00EF58AA /* imgui_widgets.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_widgets.cpp; path = ../../../imgui/imgui_widgets.cpp; sourceTree = "<group>"; };
+		53F6E9CC240146FD00EF58AA /* imgui_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = imgui_internal.h; path = ../../../imgui/imgui_internal.h; sourceTree = "<group>"; };
+		53F6E9CD240146FD00EF58AA /* imstb_rectpack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = imstb_rectpack.h; path = ../../../imgui/imstb_rectpack.h; sourceTree = "<group>"; };
+		53F6E9CE240146FE00EF58AA /* imgui_draw.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_draw.cpp; path = ../../../imgui/imgui_draw.cpp; sourceTree = "<group>"; };
+		53F6E9CF240146FE00EF58AA /* imstb_textedit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = imstb_textedit.h; path = ../../../imgui/imstb_textedit.h; sourceTree = "<group>"; };
+		53F6E9D0240146FE00EF58AA /* imgui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = imgui.h; path = ../../../imgui/imgui.h; sourceTree = "<group>"; };
+		53F6E9D1240146FE00EF58AA /* imstb_truetype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = imstb_truetype.h; path = ../../../imgui/imstb_truetype.h; sourceTree = "<group>"; };
+		53F6E9D2240146FE00EF58AA /* imgui_demo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_demo.cpp; path = ../../../imgui/imgui_demo.cpp; sourceTree = "<group>"; };
+		53F6E9D3240146FE00EF58AA /* imconfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = imconfig.h; path = ../../../imgui/imconfig.h; sourceTree = "<group>"; };
+		53F6E9D4240146FE00EF58AA /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE.txt; path = ../../../imgui/LICENSE.txt; sourceTree = "<group>"; };
+		53F6E9D5240146FE00EF58AA /* imgui.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = imgui.cpp; path = ../../../imgui/imgui.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		53F6E9C3240146C800EF58AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		53F6E8CF2401468600EF58AA = {
+			isa = PBXGroup;
+			children = (
+				53F6E9CA240146EB00EF58AA /* imgui */,
+				53F6E9C6240146C800EF58AA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		53F6E9C6240146C800EF58AA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				53F6E9C5240146C800EF58AA /* libimgui.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		53F6E9CA240146EB00EF58AA /* imgui */ = {
+			isa = PBXGroup;
+			children = (
+				53F6E9D3240146FE00EF58AA /* imconfig.h */,
+				53F6E9D2240146FE00EF58AA /* imgui_demo.cpp */,
+				53F6E9CE240146FE00EF58AA /* imgui_draw.cpp */,
+				53F6E9CC240146FD00EF58AA /* imgui_internal.h */,
+				53F6E9CB240146FD00EF58AA /* imgui_widgets.cpp */,
+				53F6E9D5240146FE00EF58AA /* imgui.cpp */,
+				53F6E9D0240146FE00EF58AA /* imgui.h */,
+				53F6E9CD240146FD00EF58AA /* imstb_rectpack.h */,
+				53F6E9CF240146FE00EF58AA /* imstb_textedit.h */,
+				53F6E9D1240146FE00EF58AA /* imstb_truetype.h */,
+				53F6E9D4240146FE00EF58AA /* LICENSE.txt */,
+			);
+			path = imgui;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		53F6E9C1240146C800EF58AA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53F6E9F2240146FE00EF58AA /* imgui.h in Headers */,
+				53F6E9F3240146FE00EF58AA /* imstb_truetype.h in Headers */,
+				53F6E9EE240146FE00EF58AA /* imgui_internal.h in Headers */,
+				53F6E9F1240146FE00EF58AA /* imstb_textedit.h in Headers */,
+				53F6E9F5240146FE00EF58AA /* imconfig.h in Headers */,
+				53F6E9EF240146FE00EF58AA /* imstb_rectpack.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		53F6E9C4240146C800EF58AA /* imgui */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53F6E9C7240146C800EF58AA /* Build configuration list for PBXNativeTarget "imgui" */;
+			buildPhases = (
+				53F6E9C1240146C800EF58AA /* Headers */,
+				53F6E9C2240146C800EF58AA /* Sources */,
+				53F6E9C3240146C800EF58AA /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = imgui;
+			productName = imgui;
+			productReference = 53F6E9C5240146C800EF58AA /* libimgui.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		53F6E8D02401468600EF58AA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1130;
+				TargetAttributes = {
+					53F6E9C4240146C800EF58AA = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 53F6E8D32401468600EF58AA /* Build configuration list for PBXProject "imgui" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 53F6E8CF2401468600EF58AA;
+			productRefGroup = 53F6E9C6240146C800EF58AA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				53F6E9C4240146C800EF58AA /* imgui */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		53F6E9C2240146C800EF58AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53F6E9ED240146FE00EF58AA /* imgui_widgets.cpp in Sources */,
+				53F6E9F6240146FE00EF58AA /* imgui.cpp in Sources */,
+				53F6E9F0240146FE00EF58AA /* imgui_draw.cpp in Sources */,
+				53F6E9F4240146FE00EF58AA /* imgui_demo.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		53F6E8D42401468600EF58AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = "";
+			};
+			name = Debug;
+		};
+		53F6E8D52401468600EF58AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = "";
+			};
+			name = Release;
+		};
+		53F6E9C8240146C800EF58AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 5CDN7636Z2;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		53F6E9C9240146C800EF58AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 5CDN7636Z2;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		53F6E8D32401468600EF58AA /* Build configuration list for PBXProject "imgui" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53F6E8D42401468600EF58AA /* Debug */,
+				53F6E8D52401468600EF58AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53F6E9C7240146C800EF58AA /* Build configuration list for PBXNativeTarget "imgui" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53F6E9C8240146C800EF58AA /* Debug */,
+				53F6E9C9240146C800EF58AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 53F6E8D02401468600EF58AA /* Project object */;
+}

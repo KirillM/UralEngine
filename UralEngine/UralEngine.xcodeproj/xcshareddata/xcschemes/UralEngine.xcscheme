@@ -28,6 +28,34 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "53F6E9C4240146C800EF58AA"
+               BuildableName = "libimgui.a"
+               BlueprintName = "imgui"
+               ReferencedContainer = "container:vendor/imgui-build/imgui/imgui.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "535D3A432401256B007EFB22"
+               BuildableName = "libGLAD.a"
+               BlueprintName = "GLAD"
+               ReferencedContainer = "container:vendor/GLAD/GLAD.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "53A7908E2392AE1500E29426"
                BuildableName = "libUralEngine.dylib"
                BlueprintName = "UralEngine"

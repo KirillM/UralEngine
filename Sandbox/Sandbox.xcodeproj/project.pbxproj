@@ -307,8 +307,11 @@
 					"$(SRCROOT)/../UralEngine/UralEngine/src",
 					"$(SRCROOT)/../UralEngine/vendor/spdlog/include",
 					"$(SRCROOT)/../UralEngine/vendor/glfw/include",
+					"$(SRCROOT)/../UralEngine/vendor/imgui",
+					"$(SRCROOT)/../vendor/GLAD/include",
 				);
 				LD_RUNPATH_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../vendor/GLAD/include/glad";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "";
 				VALID_ARCHS = x86_64;
@@ -330,8 +333,11 @@
 					"$(SRCROOT)/../UralEngine/UralEngine/src",
 					"$(SRCROOT)/../UralEngine/vendor/spdlog/include",
 					"$(SRCROOT)/../UralEngine/vendor/glfw/include",
+					"$(SRCROOT)/../UralEngine/vendor/imgui",
+					"$(SRCROOT)/../vendor/GLAD/include",
 				);
 				LD_RUNPATH_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../vendor/GLAD/include/glad";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "";
 				VALID_ARCHS = x86_64;

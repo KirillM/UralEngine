@@ -4,3 +4,6 @@
 [submodule "UralEngine/vendor/glfw"]
 	path = UralEngine/vendor/glfw
 	url = https://github.com/glfw/glfw
+[submodule "UralEngine/vendor/imgui"]
+	path = UralEngine/vendor/imgui
+	url = https://github.com/ocornut/imgui

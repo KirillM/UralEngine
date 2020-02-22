@@ -10,23 +10,27 @@
 
 #include "Events/ApplicationEvent.h"
 #include "Log/Log.h"
-//#include <glad/glad.h>
-#include <GLFW/glfw3.h>
-#include <OpenGL/gl3.h>
+#include <glad/glad.h>
+//#include <GLFW/glfw3.h>
+//#include <OpenGL/gl3.h>
 
 namespace Ural {
 
 #define BIND_EVENT_FN(x) std::bind(&Application::x, this, std::placeholders::_1)
 
+    Application* Application::s_Instance = nullptr;
+
 	Application::Application()
 	
 	{
+        UL_CORE_ASSERT(!s_Instance, "Application already exists !");
+        s_Instance = this;
+
 		m_Window = std::unique_ptr<Window>(Window::Create());
 		m_Window->SetEventCallback(BIND_EVENT_FN(OnEvent));
 
-        unsigned int id;
-       // glad_glGenVertexArrays(1, &id);
-        glGenVertexArrays(1, &id);
+//        unsigned int id;
+//        glGenVertexArrays(1, &id);
 	}
 
 	Application::~Application()
@@ -59,8 +63,8 @@ namespace Ural {
 		
 	void Application::Run()
 	{
-		WindowResizeEvent e(1280, 720);
-		UL_TRACE(e);
+		//WindowResizeEvent e(1280, 720);
+		//UL_TRACE(e);
 		
 		while (m_Running)
 		{

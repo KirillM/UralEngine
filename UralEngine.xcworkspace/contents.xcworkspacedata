@@ -13,4 +13,7 @@
    <FileRef
       location = "group:UralEngine/vendor/GLAD/GLAD.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:UralEngine/vendor/imgui-build/imgui/imgui.xcodeproj">
+   </FileRef>
 </Workspace>

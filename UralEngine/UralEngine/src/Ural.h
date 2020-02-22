@@ -15,13 +15,17 @@
 #include "Ural/Application.h"
 #include "Log/Log.h"
 
-//окно
+// окно
 #include "Platform/Mac/MacWindow.h"
+
 // События
 #include "Events/Event.h"
 #include "Events/ApplicationEvent.h"
+
 // слои
 #include "Layers/Layer.h"
+#include "Layers/imgui/ImGuiLayer.h"
+
 //------Точка входа-----------------
 #include "Ural/EntryPoint.h"
 //----------------------------------
