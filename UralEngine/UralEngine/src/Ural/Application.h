@@ -15,6 +15,9 @@
 #include "Events/Event.h"
 #include "Events/ApplicationEvent.h"
 
+#include "Renderer/Shader.h"
+#include "Renderer/Buffer.h"
+
 #pragma GCC visibility push(default)
 
 namespace Ural {
@@ -38,7 +41,10 @@ namespace Ural {
 		bool m_Running = true;
         LayerStack m_LayerStack;
 
-        unsigned int m_VertextArray, m_VertexBuffer, m_IndexBuffer;
+        unsigned int m_VertextArray;
+        std::unique_ptr<Shader> m_Shader;
+        std::unique_ptr<VertexBuffer> m_VertexBuffer;
+        std::unique_ptr<IndexBuffer> m_IndexBuffer;
     private:
         static Application* s_Instance;
 	};

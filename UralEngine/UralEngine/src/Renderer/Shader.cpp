@@ -15,7 +15,7 @@ namespace Ural {
     {
         // Read our shaders into the appropriate buffers
         std::string vertexSource = vertexSrc; // Get source code for vertex shader.
-        std::string fragmentSource = vertexSrc; // Get source code for fragment shader.
+        std::string fragmentSource = fragmentSrc; // Get source code for fragment shader.
 
         // Create an empty vertex shader handle
         GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
@@ -76,7 +76,8 @@ namespace Ural {
             glDeleteShader(vertexShader);
 
             // Use the infoLog as you see fit.
-
+            UL_CORE_ERROR("{0}", infoLog.data());
+            UL_CORE_ASSERT(false, "Fragment shader compilation filaure!");
             // In this simple program, we'll just leave
             return;
         }
@@ -84,7 +85,8 @@ namespace Ural {
         // Vertex and fragment shaders are successfully compiled.
         // Now time to link them together into a program.
         // Get a program object.
-        GLuint program = glCreateProgram();
+        m_RendererID = glCreateProgram();
+        GLuint program = m_RendererID;
 
         // Attach our shaders to our program
         glAttachShader(program, vertexShader);
@@ -112,7 +114,8 @@ namespace Ural {
             glDeleteShader(fragmentShader);
 
             // Use the infoLog as you see fit.
-
+            UL_CORE_ERROR("{0}", infoLog.data());
+            UL_CORE_ASSERT(false, "Shader link filaure!");
             // In this simple program, we'll just leave
             return;
         }
@@ -124,17 +127,17 @@ namespace Ural {
 
     Shader::~Shader()
     {
-
+        glDeleteProgram(m_RendererID);
     }
 
     void Shader::Bind() const
     {
-
+        glUseProgram(m_RendererID);
     }
 
     void Shader::UnBind() const
     {
-
+        glUseProgram(0);
     }
 }
 

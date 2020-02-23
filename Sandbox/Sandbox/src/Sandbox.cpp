@@ -58,8 +58,8 @@ class Sandbox : public Ural::Application
 public:
     Sandbox()
     {
-        PushOverlay(new ExampleLayer());
-        PushOverlay(new Ural::ImGuiLayer());
+       // PushOverlay(new ExampleLayer());
+       // PushOverlay(new Ural::ImGuiLayer());
     }
 
     ~Sandbox()

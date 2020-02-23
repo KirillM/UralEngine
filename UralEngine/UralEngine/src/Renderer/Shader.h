@@ -9,9 +9,8 @@
 #ifndef Shader_hpp
 #define Shader_hpp
 
-//#include <string>
-
 namespace Ural {
+
     class Shader
     {
     public:
