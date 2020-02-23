@@ -10,6 +10,7 @@
 #define MacWindow_h
 
 #include "Platform/Window/Window.h"
+#include "Renderer/GraphicsContext.h"
 #include <GLFW/glfw3.h>
 
 namespace Ural {
@@ -33,7 +34,8 @@ namespace Ural {
 		virtual void ShutDown();
 	private:
 		GLFWwindow* m_Window;
-		
+        GraphicsContext* m_Context;
+
 		struct WindowData
 		{
 			std::string Title;

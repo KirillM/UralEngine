@@ -18,6 +18,11 @@
 		53492C89239A9BE7009E1076 /* Event.h in Headers */ = {isa = PBXBuildFile; fileRef = 53492C88239A9BE7009E1076 /* Event.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		53492C8B239A9BFC009E1076 /* KeyEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 53492C8A239A9BFC009E1076 /* KeyEvent.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		53492C8D239A9C12009E1076 /* MouseEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 53492C8C239A9C12009E1076 /* MouseEvent.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		535275BC240264930045E26B /* GraphicsContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 535275BB240264930045E26B /* GraphicsContext.h */; };
+		535275BF240264CB0045E26B /* OpenGLContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 535275BD240264CB0045E26B /* OpenGLContext.cpp */; };
+		535275C0240264CB0045E26B /* OpenGLContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 535275BE240264CB0045E26B /* OpenGLContext.h */; };
+		535275C324027D930045E26B /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 535275C124027D930045E26B /* Shader.cpp */; };
+		535275C424027D930045E26B /* Shader.h in Headers */ = {isa = PBXBuildFile; fileRef = 535275C224027D930045E26B /* Shader.h */; };
 		5360CEC123FD1E6E00D2F5DB /* UralEngine_IOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 5360CEC023FD1E6E00D2F5DB /* UralEngine_IOS.m */; };
 		5360CEC223FD1E6E00D2F5DB /* UralEngine_IOS.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5360CEBF23FD1E6E00D2F5DB /* UralEngine_IOS.h */; };
 		5360CEC623FD1E7400D2F5DB /* Window.h in Headers */ = {isa = PBXBuildFile; fileRef = 530164F1239BF91A00821B62 /* Window.h */; };
@@ -29,7 +34,6 @@
 		537F12AD2393015F00369F57 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 537F12AB2393015F00369F57 /* Application.cpp */; };
 		537F12AE2393015F00369F57 /* Application.h in Headers */ = {isa = PBXBuildFile; fileRef = 537F12AC2393015F00369F57 /* Application.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		537F12B02393030400369F57 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 537F12AF2393030400369F57 /* Core.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		539E3CC52401C36D0037A90E /* ImGuiBuild.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 539E3CC42401C36D0037A90E /* ImGuiBuild.cpp */; };
 		53D79651240066A800D752C7 /* LayerStack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53D7964F240066A800D752C7 /* LayerStack.cpp */; };
 		53D79652240066A800D752C7 /* LayerStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 53D79650240066A800D752C7 /* LayerStack.h */; };
 		53D79655240066B400D752C7 /* Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53D79653240066B400D752C7 /* Layer.cpp */; };
@@ -74,6 +78,11 @@
 		53492C88239A9BE7009E1076 /* Event.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
 		53492C8A239A9BFC009E1076 /* KeyEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyEvent.h; sourceTree = "<group>"; };
 		53492C8C239A9C12009E1076 /* MouseEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MouseEvent.h; sourceTree = "<group>"; };
+		535275BB240264930045E26B /* GraphicsContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GraphicsContext.h; sourceTree = "<group>"; };
+		535275BD240264CB0045E26B /* OpenGLContext.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = OpenGLContext.cpp; sourceTree = "<group>"; };
+		535275BE240264CB0045E26B /* OpenGLContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenGLContext.h; sourceTree = "<group>"; };
+		535275C124027D930045E26B /* Shader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Shader.cpp; sourceTree = "<group>"; };
+		535275C224027D930045E26B /* Shader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
 		5360CEA023FD1C3700D2F5DB /* UralEngine_IOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UralEngine_IOS.h; sourceTree = "<group>"; };
 		5360CEA123FD1C3700D2F5DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5360CEAC23FD1C5C00D2F5DB /* UralEngine_IOS_Static.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UralEngine_IOS_Static.h; sourceTree = "<group>"; };
@@ -196,6 +205,16 @@
 			path = Events;
 			sourceTree = "<group>";
 		};
+		535275BA240264570045E26B /* Renderer */ = {
+			isa = PBXGroup;
+			children = (
+				535275BB240264930045E26B /* GraphicsContext.h */,
+				535275C124027D930045E26B /* Shader.cpp */,
+				535275C224027D930045E26B /* Shader.h */,
+			);
+			path = Renderer;
+			sourceTree = "<group>";
+		};
 		5360CE9F23FD1C3700D2F5DB /* UralEngine IOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +245,7 @@
 		537F129B2392CBE700369F57 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				535275BA240264570045E26B /* Renderer */,
 				53F6EA0C24019CEE00EF58AA /* Input */,
 				53D7964E2400668300D752C7 /* Layers */,
 				530164EE239BF8BF00821B62 /* External */,
@@ -330,6 +350,8 @@
 			children = (
 				53F6EA0524014EC600EF58AA /* ImGuiOpenGLRenderer.cpp */,
 				53F6EA0624014EC600EF58AA /* ImGuiOpenGLRenderer.h */,
+				535275BD240264CB0045E26B /* OpenGLContext.cpp */,
+				535275BE240264CB0045E26B /* OpenGLContext.h */,
 			);
 			path = OpenGL;
 			sourceTree = "<group>";
@@ -352,13 +374,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				53F6EA0E24019D1200EF58AA /* Input.h in Headers */,
+				535275BC240264930045E26B /* GraphicsContext.h in Headers */,
 				53D79656240066B400D752C7 /* Layer.h in Headers */,
 				53F6EA162401AF3A00EF58AA /* KeyCodes.h in Headers */,
 				537F12B02393030400369F57 /* Core.h in Headers */,
 				53F6EA1424019E8700EF58AA /* MacInput.h in Headers */,
 				536E7862239B145A00AD166E /* ulpch.pch in Headers */,
 				53492C8D239A9C12009E1076 /* MouseEvent.h in Headers */,
+				535275C424027D930045E26B /* Shader.h in Headers */,
 				53F6EA032401497800EF58AA /* ImGuiLayer.h in Headers */,
+				535275C0240264CB0045E26B /* OpenGLContext.h in Headers */,
 				53D79652240066A800D752C7 /* LayerStack.h in Headers */,
 				537F12AE2393015F00369F57 /* Application.h in Headers */,
 				5360CEC623FD1E7400D2F5DB /* Window.h in Headers */,
@@ -462,12 +487,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				530164FE239C290300821B62 /* MacWindow.cpp in Sources */,
+				535275C324027D930045E26B /* Shader.cpp in Sources */,
 				53F6EA022401497800EF58AA /* ImGuiLayer.cpp in Sources */,
 				53722372239800D600312C05 /* Log.cpp in Sources */,
 				53D79651240066A800D752C7 /* LayerStack.cpp in Sources */,
+				535275BF240264CB0045E26B /* OpenGLContext.cpp in Sources */,
 				537F12AD2393015F00369F57 /* Application.cpp in Sources */,
 				53F6EA1324019E8700EF58AA /* MacInput.cpp in Sources */,
-				539E3CC52401C36D0037A90E /* ImGuiBuild.cpp in Sources */,
 				53D79655240066B400D752C7 /* Layer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

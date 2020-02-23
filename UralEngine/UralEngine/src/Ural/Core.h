@@ -9,7 +9,7 @@
 #ifndef Core_h
 #define Core_h
 
-#include <stdio.h>
+//#include <stdio.h>
 
 #ifdef UL_PLATFORM_MAC
     #define GL_SILENCE_DEPRECATION

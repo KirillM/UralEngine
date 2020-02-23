@@ -37,6 +37,8 @@ namespace Ural {
 		std::unique_ptr<Window> m_Window = nullptr;
 		bool m_Running = true;
         LayerStack m_LayerStack;
+
+        unsigned int m_VertextArray, m_VertexBuffer, m_IndexBuffer;
     private:
         static Application* s_Instance;
 	};

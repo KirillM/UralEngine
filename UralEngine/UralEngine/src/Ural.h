@@ -12,8 +12,8 @@
 #include <ulpch.pch>
 
 // Для приложений использующих Ural
-#include "Ural/Application.h"
 #include "Log/Log.h"
+#include "Ural/Application.h"
 
 // окно
 #include "Platform/Mac/MacWindow.h"
@@ -22,13 +22,13 @@
 #include "Events/Event.h"
 #include "Events/ApplicationEvent.h"
 
-// опрос на ввод
-#include "Input/Input.h"
-#include "Platform/Mac/MacInput.h"
-
 // коды ввода
 #include "Input/KeyCodes.h"
 #include "Input/MouseButtonCodes.h"
+
+// опрос на ввод
+#include "Input/Input.h"
+#include "Platform/Mac/MacInput.h"
 
 // слои
 #include "Layers/Layer.h"

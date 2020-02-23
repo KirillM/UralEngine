@@ -14,7 +14,7 @@
 #include "Events/KeyEvent.h"
 #include "Events/MouseEvent.h"
 
-#include <glad/glad.h>
+#include "Platform/OpenGL/OpenGLContext.h"
 // GLFW_INCLUDE_NONE
 
 namespace Ural {
@@ -46,9 +46,9 @@ namespace Ural {
 		m_Data.Title = props.Title;
 		m_Data.Width = props.Width;
 		m_Data.Height = props.Height;
-		
+
 		UL_CORE_INFO("Creating window {0} ({1}, {2})", props.Title, props.Width, props.Height);
-		
+
 		if (!s_GLFWInitialized)
 		{
 			int success = glfwInit();
@@ -58,20 +58,21 @@ namespace Ural {
             glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
             glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
             
-			UL_CORE_ASSERT(success, "Culd not initialized GLFW!");
+			UL_CORE_ASSERT(success, "Could not initialized GLFW!");
             glfwSetErrorCallback(GLFWErrorCallback);
 			s_GLFWInitialized = true;
 		}
 
         //////
-        glfwWindowHint(GLFW_RESIZABLE, GL_TRUE);
-        glfwWindowHint(GLFW_DECORATED, GL_TRUE);
-        glfwWindowHint(GLFW_TRANSPARENT_FRAMEBUFFER, GL_TRUE); // Only on latest versions
+//        glfwWindowHint(GLFW_RESIZABLE, GL_TRUE);
+//        glfwWindowHint(GLFW_DECORATED, GL_TRUE);
+//        glfwWindowHint(GLFW_TRANSPARENT_FRAMEBUFFER, GL_TRUE); // Only on latest versions
         ///////
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
-		glfwMakeContextCurrent(m_Window);
-        int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
-        UL_CORE_ASSERT(status, "Failed to initialized GLAD")
+
+        m_Context = new OpenGLContext(m_Window);
+        m_Context->Init();
+
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
         
@@ -180,7 +181,7 @@ namespace Ural {
 	void MacWindow::OnUpdate()
 	{
 		glfwPollEvents();
-		glfwSwapBuffers(m_Window);
+        m_Context->SwapBuffers();
 	}
 
 	void MacWindow::SetVSync(bool enabled)
