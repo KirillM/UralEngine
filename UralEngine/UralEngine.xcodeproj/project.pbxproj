@@ -32,7 +32,7 @@
 		535275D52402EC1A0045E26B /* VertexArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 535275D32402EC1A0045E26B /* VertexArray.cpp */; };
 		535275D62402EC1A0045E26B /* VertexArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 535275D42402EC1A0045E26B /* VertexArray.h */; };
 		535275D92402EE9F0045E26B /* OpenGLVertexArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 535275D72402EE9F0045E26B /* OpenGLVertexArray.cpp */; };
-		535275DA2402EE9F0045E26B /* OpenGLVertexArray.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 535275D82402EE9F0045E26B /* OpenGLVertexArray.hpp */; };
+		535275DA2402EE9F0045E26B /* OpenGLVertexArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 535275D82402EE9F0045E26B /* OpenGLVertexArray.h */; };
 		5360CEC123FD1E6E00D2F5DB /* UralEngine_IOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 5360CEC023FD1E6E00D2F5DB /* UralEngine_IOS.m */; };
 		5360CEC223FD1E6E00D2F5DB /* UralEngine_IOS.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5360CEBF23FD1E6E00D2F5DB /* UralEngine_IOS.h */; };
 		5360CEC623FD1E7400D2F5DB /* Window.h in Headers */ = {isa = PBXBuildFile; fileRef = 530164F1239BF91A00821B62 /* Window.h */; };
@@ -102,7 +102,7 @@
 		535275D32402EC1A0045E26B /* VertexArray.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = VertexArray.cpp; sourceTree = "<group>"; };
 		535275D42402EC1A0045E26B /* VertexArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VertexArray.h; sourceTree = "<group>"; };
 		535275D72402EE9F0045E26B /* OpenGLVertexArray.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = OpenGLVertexArray.cpp; sourceTree = "<group>"; };
-		535275D82402EE9F0045E26B /* OpenGLVertexArray.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = OpenGLVertexArray.hpp; sourceTree = "<group>"; };
+		535275D82402EE9F0045E26B /* OpenGLVertexArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenGLVertexArray.h; sourceTree = "<group>"; };
 		5360CEA023FD1C3700D2F5DB /* UralEngine_IOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UralEngine_IOS.h; sourceTree = "<group>"; };
 		5360CEA123FD1C3700D2F5DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5360CEAC23FD1C5C00D2F5DB /* UralEngine_IOS_Static.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UralEngine_IOS_Static.h; sourceTree = "<group>"; };
@@ -381,7 +381,7 @@
 				535275C92402929C0045E26B /* OpenGLBuffer.cpp */,
 				535275CA2402929C0045E26B /* OpenGLBuffer.h */,
 				535275D72402EE9F0045E26B /* OpenGLVertexArray.cpp */,
-				535275D82402EE9F0045E26B /* OpenGLVertexArray.hpp */,
+				535275D82402EE9F0045E26B /* OpenGLVertexArray.h */,
 			);
 			path = OpenGL;
 			sourceTree = "<group>";
@@ -408,7 +408,7 @@
 				535275BC240264930045E26B /* GraphicsContext.h in Headers */,
 				53D79656240066B400D752C7 /* Layer.h in Headers */,
 				53F6EA162401AF3A00EF58AA /* KeyCodes.h in Headers */,
-				535275DA2402EE9F0045E26B /* OpenGLVertexArray.hpp in Headers */,
+				535275DA2402EE9F0045E26B /* OpenGLVertexArray.h in Headers */,
 				537F12B02393030400369F57 /* Core.h in Headers */,
 				53F6EA1424019E8700EF58AA /* MacInput.h in Headers */,
 				536E7862239B145A00AD166E /* ulpch.pch in Headers */,

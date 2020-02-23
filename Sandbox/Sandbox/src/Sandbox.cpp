@@ -41,7 +41,7 @@ public:
 
     void OnUpdate() override
     {
-        UL_INFO("ExampleLayer::Update");
+       // UL_INFO("ExampleLayer::Update");
 
         if(Ural::Input::IsKeyPressed(UL_KEY_TAB))
             UL_INFO("Tab key is pressed!");
@@ -58,8 +58,8 @@ class Sandbox : public Ural::Application
 public:
     Sandbox()
     {
-       // PushOverlay(new ExampleLayer());
-       // PushOverlay(new Ural::ImGuiLayer());
+        PushOverlay(new ExampleLayer());
+        PushOverlay(new Ural::ImGuiLayer());
     }
 
     ~Sandbox()

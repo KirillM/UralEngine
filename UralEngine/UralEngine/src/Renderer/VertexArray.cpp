@@ -8,23 +8,9 @@
 
 #include "VertexArray.h"
 #include "Renderer.h"
+#include "Platform/OpenGL/OpenGLVertexArray.h"
 
 namespace Ural {
-    void VertexArray::Bind() const
-    {
-    }
-    void VertexArray::UnBind() const
-    {
-    }
-
-    void VertexArray::AddIndexBuffer(const std::shared_ptr<IndexBuffer>& indecBuffer)
-    {
-
-    }
-    void VertexArray::AddVertexBuffer(const std::shared_ptr<VertexBuffer>& vertexBuffer)
-    {
-        
-    }
 
     VertexArray* VertexArray::Create()
     {
@@ -34,7 +20,7 @@ namespace Ural {
                    return nullptr;
                }
                case RendererAPI::OpenGL: {
-                   return new OpenGLVertexArray(vertices, size);
+                   return new OpenGLVertexArray();
                }
          }
 

@@ -53,6 +53,7 @@ namespace Ural
         uint32_t GetComponentCount() const
         {
             switch (Type) {
+                case ShaderDataType::None:   UL_CORE_ASSERT(false, "Unknown ShaderDataType!"); return 0;
                 case ShaderDataType::Float:  return 1;
                 case ShaderDataType::Float2: return 2;
                 case ShaderDataType::Float3: return 3;
