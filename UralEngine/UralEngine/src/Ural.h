@@ -11,7 +11,7 @@
 
 #include <ulpch.pch>
 
-// Для приложений использующих Ural
+// для приложений использующих Ural
 #include "Log/Log.h"
 #include "Ural/Application.h"
 
@@ -33,6 +33,20 @@
 // слои
 #include "Layers/Layer.h"
 #include "Layers/imgui/ImGuiLayer.h"
+
+//------Отрисовщик------------------
+// буферы + шейдеры
+#include "Renderer/Shader.h"
+#include "Renderer/Buffer.h"
+#include "Renderer/VertexArray.h"
+
+// отрисовщик
+#include "Renderer/Renderer.h"
+#include "Renderer/RenderCommand.h"
+
+// камеры
+#include "Renderer/OrthographicCamera.h"
+//----------------------------------
 
 //------Точка входа-----------------
 #include "Ural/EntryPoint.h"

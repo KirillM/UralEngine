@@ -15,16 +15,12 @@
 #include "Events/Event.h"
 #include "Events/ApplicationEvent.h"
 
-#include "Renderer/Shader.h"
-#include "Renderer/Buffer.h"
-#include "Renderer/VertexArray.h"
-
 #pragma GCC visibility push(default)
 
 namespace Ural {
 	class URAL_API Application {
 	public:
-		Application();
+        Application();
 		virtual ~Application();
 		
 		void Run();
@@ -36,16 +32,13 @@ namespace Ural {
 
         static inline Application& Get() { return *s_Instance; }
         inline Window& GetWindow() { return *m_Window; }
+
 	private:
         bool OnWindowClose(WindowCloseEvent& e);
 		std::unique_ptr<Window> m_Window = nullptr;
 		bool m_Running = true;
         LayerStack m_LayerStack;
-
-        std::shared_ptr<Shader> m_Shader;
-        std::shared_ptr<Shader> m_BlueShader;
-        std::shared_ptr<VertexArray> m_VertexArray;
-        std::shared_ptr<VertexArray> m_SquareVA;
+        
     private:
         static Application* s_Instance;
 	};

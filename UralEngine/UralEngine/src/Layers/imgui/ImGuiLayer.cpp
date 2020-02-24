@@ -9,11 +9,7 @@
 #include "ImGuiLayer.h"
 
 #include <imgui.h>
-//#include "Platform/OpenGL/ImGuiOpenGLRenderer.h"
-//#define IMGUI_IMPL_API
-#include "examples/imgui_impl_opengl3.cpp"
-#include "examples/imgui_impl_glfw.cpp"
-
+#include "ImGuiBuild.cpp"
 #include <GLFW/glfw3.h>
 #include "Ural/Application.h"
 #include "Platform/Mac/MacWindow.h"

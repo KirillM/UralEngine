@@ -17,26 +17,129 @@
 
 
  */
-#include <glm/vec3.hpp> // glm::vec3
-#include <glm/vec4.hpp> // glm::vec4
-#include <glm/mat4x4.hpp> // glm::mat4
-#include <glm/gtc/matrix_transform.hpp> // glm::translate, glm::rotate, glm::scale, glm::perspective
-glm::mat4 camera(float Translate, glm::vec2 const & Rotate)
-{
-    glm::mat4 Projection = glm::perspective(glm::radians(45.0f), 4.0f / 3.0f, 0.1f, 100.f);
-    glm::mat4 View = glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, -Translate));
-    View = glm::rotate(View, Rotate.y, glm::vec3(-1.0f, 0.0f, 0.0f));
-    View = glm::rotate(View, Rotate.x, glm::vec3(0.0f, 1.0f, 0.0f));
-    glm::mat4 Model = glm::scale(glm::mat4(1.0f), glm::vec3(0.5f));
-    return Projection * View * Model;
-}
+
+//#include <glm/glm.hpp>
 
 class ExampleLayer: public Ural::Layer
 {
 public:
-    ExampleLayer() : Layer("Example")
+    ExampleLayer() : Layer("Example"), m_Camera(-1.6f, 1.6f, -0.9f, 0.9f)
     {
-        auto cam = camera(5.0f, {0.5f, 0.5f});
+        m_VertexArray.reset(Ural::VertexArray::Create());
+
+            float vertices[7 * 3] = {
+                 -0.5f, -0.5f, 0.0f, 0.8f, 0.2f, 0.8f, 1.0f,
+                 0.5f, -0.5f, 0.0f, 0.2f, 0.3f, 0.8f, 1.0f,
+                 0.0f, 0.5f, 0.0f,  0.8f, 0.8f, 0.2f, 1.0f
+             };
+
+            std::shared_ptr<Ural::VertexBuffer> m_VertexBuffer;
+            m_VertexBuffer.reset(Ural::VertexBuffer::Create(vertices, sizeof(vertices)));
+
+            Ural::BufferLayout layout = {
+                { Ural::ShaderDataType::Float3, "a_Position" },
+                { Ural::ShaderDataType::Float4, "a_Color" }
+                // { ShaderDataType::Float3, "a_Normal" }
+            };
+
+            m_VertexBuffer->SetLayout(layout);
+            m_VertexArray->AddVertexBuffer(m_VertexBuffer);
+
+            unsigned int indices[3] = {0, 1, 2};
+
+            std::shared_ptr<Ural::IndexBuffer> m_IndexBuffer;
+            m_IndexBuffer.reset(Ural::IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t)));
+            m_VertexArray->AddIndexBuffer(m_IndexBuffer);
+
+
+            m_SquareVA.reset(Ural::VertexArray::Create());
+
+            float squareVertices[3 * 4] = {
+                 -0.75f, -0.75f, 0.0f,
+                 0.75f, -0.75f, 0.0f,
+                 0.75f, 0.75f, 0.0f,
+                -0.75f, 0.75f, 0.0f
+            };
+
+            std::shared_ptr<Ural::VertexBuffer> squareVB;
+            squareVB.reset(Ural::VertexBuffer::Create(squareVertices, sizeof(squareVertices)));
+
+            Ural::BufferLayout squareVBlayout = {
+                   { Ural::ShaderDataType::Float3, "a_Position" },
+               };
+
+               squareVB->SetLayout(squareVBlayout);
+               m_SquareVA->AddVertexBuffer(squareVB);
+
+            unsigned int squareIndices[6] = {0, 1, 2, 2, 3, 0};
+            std::shared_ptr<Ural::IndexBuffer> squareIB;
+            squareIB.reset(Ural::IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t)));
+
+            m_SquareVA->AddIndexBuffer(squareIB);
+
+            std::string vertexSrc = R"(
+                #version 330 core
+
+                layout(location = 0) in vec3 a_Position;
+                layout(location = 1) in vec4 a_Color;
+
+                uniform mat4 u_ViewProjection;
+                out vec3 v_Position;
+                out vec4 v_Color;
+
+                void main()
+                {
+                    v_Position = a_Position;
+                    v_Color = a_Color;
+                    gl_Position = u_ViewProjection * vec4(a_Position, 1.0);
+                }
+            )";
+
+            std::string fragmentSrc = R"(
+                #version 330 core
+
+                layout(location = 0) out vec4 color;
+                in vec3 v_Position;
+                in vec4 v_Color;
+
+                void main()
+                {
+                    color = vec4(v_Position * 0.5 + 0.5, 1.0);
+                    color = v_Color;
+                }
+            )";
+
+            m_Shader.reset(new Ural::Shader(vertexSrc, fragmentSrc));
+
+
+            std::string blueShaderVertexSrc = R"(
+                      #version 330 core
+
+                      layout(location = 0) in vec3 a_Position;
+
+                      uniform mat4 u_ViewProjection;
+                      out vec3 v_Position;
+
+                      void main()
+                      {
+                          v_Position = a_Position;
+                          gl_Position = u_ViewProjection * vec4(a_Position, 1.0);
+                      }
+                  )";
+
+                  std::string blueShaderFragmentSrc = R"(
+                      #version 330 core
+
+                      layout(location = 0) out vec4 color;
+                      in vec3 v_Position;
+
+                      void main()
+                      {
+                          color = vec4(0.2, 0.3, 0.8, 1.0);
+                      }
+                  )";
+
+            m_BlueShader.reset(new Ural::Shader(blueShaderVertexSrc, blueShaderFragmentSrc));
     }
 
     void OnUpdate() override
@@ -45,12 +148,33 @@ public:
 
         if(Ural::Input::IsKeyPressed(UL_KEY_TAB))
             UL_INFO("Tab key is pressed!");
+
+        Ural::RenderCommand::SetClearColor({ 0.1f, 0.1f, 0.1f, 1 });
+        Ural::RenderCommand::Clear();
+
+        m_Camera.SetPostion({0.5f, 0.5f, 0.0f});
+        m_Camera.SetRotation(45.0f);
+
+        Ural::Renderer::BeginScene(m_Camera);
+
+        Ural::Renderer::Submit(m_BlueShader, m_SquareVA);
+        Ural::Renderer::Submit(m_Shader, m_VertexArray);
+
+        Ural::Renderer::EndScene();
     }
 
     void OnEvent(Ural::Event& event) override
     {
        // UL_TRACE("{0}", event);
     }
+
+private:
+    std::shared_ptr<Ural::Shader> m_Shader;
+    std::shared_ptr<Ural::Shader> m_BlueShader;
+    std::shared_ptr<Ural::VertexArray> m_VertexArray;
+    std::shared_ptr<Ural::VertexArray> m_SquareVA;
+
+    Ural::OrthographicCamera m_Camera;
 };
 
 class Sandbox : public Ural::Application

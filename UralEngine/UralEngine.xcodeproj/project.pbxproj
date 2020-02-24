@@ -47,6 +47,8 @@
 		537DE7402403BABA00109A8F /* RenderCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 537DE73E2403BABA00109A8F /* RenderCommand.h */; };
 		537DE7432403BEEF00109A8F /* OpenGLRendererAPI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 537DE7412403BEEF00109A8F /* OpenGLRendererAPI.cpp */; };
 		537DE7442403BEEF00109A8F /* OpenGLRendererAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 537DE7422403BEEF00109A8F /* OpenGLRendererAPI.h */; };
+		537DE7472403DC5B00109A8F /* OrthographicCamera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 537DE7452403DC5B00109A8F /* OrthographicCamera.cpp */; };
+		537DE7482403DC5B00109A8F /* OrthographicCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = 537DE7462403DC5B00109A8F /* OrthographicCamera.h */; };
 		537F12AD2393015F00369F57 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 537F12AB2393015F00369F57 /* Application.cpp */; };
 		537F12AE2393015F00369F57 /* Application.h in Headers */ = {isa = PBXBuildFile; fileRef = 537F12AC2393015F00369F57 /* Application.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		537F12B02393030400369F57 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 537F12AF2393030400369F57 /* Core.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -57,7 +59,6 @@
 		53F6E9FE240148DC00EF58AA /* libimgui.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F6E9FD240148DC00EF58AA /* libimgui.a */; };
 		53F6EA022401497800EF58AA /* ImGuiLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53F6EA002401497800EF58AA /* ImGuiLayer.cpp */; };
 		53F6EA032401497800EF58AA /* ImGuiLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 53F6EA012401497800EF58AA /* ImGuiLayer.h */; };
-		53F6EA0824014EC600EF58AA /* ImGuiOpenGLRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 53F6EA0624014EC600EF58AA /* ImGuiOpenGLRenderer.h */; };
 		53F6EA0A2401627C00EF58AA /* libGLAD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F6EA092401627C00EF58AA /* libGLAD.a */; };
 		53F6EA0B240182CB00EF58AA /* ImGuiLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53F6EA002401497800EF58AA /* ImGuiLayer.cpp */; };
 		53F6EA0E24019D1200EF58AA /* Input.h in Headers */ = {isa = PBXBuildFile; fileRef = 53F6EA0D24019D1200EF58AA /* Input.h */; };
@@ -125,6 +126,8 @@
 		537DE73E2403BABA00109A8F /* RenderCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RenderCommand.h; sourceTree = "<group>"; };
 		537DE7412403BEEF00109A8F /* OpenGLRendererAPI.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = OpenGLRendererAPI.cpp; sourceTree = "<group>"; };
 		537DE7422403BEEF00109A8F /* OpenGLRendererAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenGLRendererAPI.h; sourceTree = "<group>"; };
+		537DE7452403DC5B00109A8F /* OrthographicCamera.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = OrthographicCamera.cpp; sourceTree = "<group>"; };
+		537DE7462403DC5B00109A8F /* OrthographicCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrthographicCamera.h; sourceTree = "<group>"; };
 		537F12A82392D7EF00369F57 /* EntryPoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntryPoint.h; sourceTree = "<group>"; };
 		537F12AB2393015F00369F57 /* Application.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
 		537F12AC2393015F00369F57 /* Application.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
@@ -139,8 +142,6 @@
 		53F6E9FD240148DC00EF58AA /* libimgui.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libimgui.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		53F6EA002401497800EF58AA /* ImGuiLayer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ImGuiLayer.cpp; sourceTree = "<group>"; };
 		53F6EA012401497800EF58AA /* ImGuiLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImGuiLayer.h; sourceTree = "<group>"; };
-		53F6EA0524014EC600EF58AA /* ImGuiOpenGLRenderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImGuiOpenGLRenderer.cpp; sourceTree = "<group>"; };
-		53F6EA0624014EC600EF58AA /* ImGuiOpenGLRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImGuiOpenGLRenderer.h; sourceTree = "<group>"; };
 		53F6EA092401627C00EF58AA /* libGLAD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGLAD.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		53F6EA0D24019D1200EF58AA /* Input.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Input.h; sourceTree = "<group>"; };
 		53F6EA1124019E8700EF58AA /* MacInput.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MacInput.cpp; sourceTree = "<group>"; };
@@ -253,6 +254,8 @@
 				537DE73A2403B47B00109A8F /* RendererAPI.h */,
 				537DE73D2403BABA00109A8F /* RenderCommand.cpp */,
 				537DE73E2403BABA00109A8F /* RenderCommand.h */,
+				537DE7452403DC5B00109A8F /* OrthographicCamera.cpp */,
+				537DE7462403DC5B00109A8F /* OrthographicCamera.h */,
 			);
 			path = Renderer;
 			sourceTree = "<group>";
@@ -390,8 +393,6 @@
 		53F6EA0424014E9100EF58AA /* OpenGL */ = {
 			isa = PBXGroup;
 			children = (
-				53F6EA0524014EC600EF58AA /* ImGuiOpenGLRenderer.cpp */,
-				53F6EA0624014EC600EF58AA /* ImGuiOpenGLRenderer.h */,
 				535275BD240264CB0045E26B /* OpenGLContext.cpp */,
 				535275BE240264CB0045E26B /* OpenGLContext.h */,
 				535275C92402929C0045E26B /* OpenGLBuffer.cpp */,
@@ -447,8 +448,8 @@
 				53F6EA182401AFB600EF58AA /* MouseButtonCodes.h in Headers */,
 				53492C89239A9BE7009E1076 /* Event.h in Headers */,
 				535275C8240290830045E26B /* Buffer.h in Headers */,
-				53F6EA0824014EC600EF58AA /* ImGuiOpenGLRenderer.h in Headers */,
 				537DE7402403BABA00109A8F /* RenderCommand.h in Headers */,
+				537DE7482403DC5B00109A8F /* OrthographicCamera.h in Headers */,
 				535275CC2402929C0045E26B /* OpenGLBuffer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -544,6 +545,7 @@
 			files = (
 				535275CF24029A7A0045E26B /* Renderer.cpp in Sources */,
 				537DE73F2403BABA00109A8F /* RenderCommand.cpp in Sources */,
+				537DE7472403DC5B00109A8F /* OrthographicCamera.cpp in Sources */,
 				530164FE239C290300821B62 /* MacWindow.cpp in Sources */,
 				535275C7240290830045E26B /* Buffer.cpp in Sources */,
 				535275C324027D930045E26B /* Shader.cpp in Sources */,

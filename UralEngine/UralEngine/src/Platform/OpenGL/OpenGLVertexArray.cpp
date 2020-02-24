@@ -36,7 +36,7 @@ namespace Ural
     {
       //glCreateVertexArrays(1, &m_RendererID);
         glGenVertexArrays(1, &m_RendererID);
-       // glBindVertexArray(m_RendererID);
+        glBindVertexArray(m_RendererID);
     }
 
     OpenGLVertexArray::~OpenGLVertexArray()

@@ -9,6 +9,8 @@
 #ifndef Shader_hpp
 #define Shader_hpp
 
+#include <glm/glm.hpp>
+
 namespace Ural {
 
     class Shader
@@ -19,6 +21,8 @@ namespace Ural {
 
         void Bind() const;
         void UnBind() const;
+
+        void UploadUniformMat4(const std::string& name, const glm::mat4& matrix);
     private:
         uint32_t m_RendererID;
     };
