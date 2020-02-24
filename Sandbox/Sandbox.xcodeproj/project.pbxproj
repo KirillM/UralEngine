@@ -309,6 +309,7 @@
 					"$(SRCROOT)/../UralEngine/vendor/glm",
 					"$(SRCROOT)/../UralEngine/vendor/glfw/include",
 					"$(SRCROOT)/../UralEngine/vendor/imgui",
+					"$(SRCROOT)/../UralEngine/vendor/stb_image",
 				);
 				LD_RUNPATH_SEARCH_PATHS = "";
 				LIBRARY_SEARCH_PATHS = "";
@@ -335,6 +336,7 @@
 					"$(SRCROOT)/../UralEngine/vendor/glm",
 					"$(SRCROOT)/../UralEngine/vendor/glfw/include",
 					"$(SRCROOT)/../UralEngine/vendor/imgui",
+					"$(SRCROOT)/../UralEngine/vendor/stb_image",
 				);
 				LD_RUNPATH_SEARCH_PATHS = "";
 				LIBRARY_SEARCH_PATHS = "";
