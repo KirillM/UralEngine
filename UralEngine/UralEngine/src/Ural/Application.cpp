@@ -17,6 +17,9 @@
 
 #include "Platform/OpenGL/OpenGLBuffer.h"
 
+#include "Renderer/Renderer.h"
+#include "Renderer/RenderCommand.h"
+
 namespace Ural {
 
 #define BIND_EVENT_FN(x) std::bind(&Application::x, this, std::placeholders::_1)
@@ -41,6 +44,7 @@ namespace Ural {
              0.0f, 0.5f, 0.0f,  1.0f, 1.0f, 0.0f, 1.0f
          };
 
+        std::shared_ptr<VertexBuffer> m_VertexBuffer;
         m_VertexBuffer.reset(VertexBuffer::Create(vertices, sizeof(vertices)));
 
         BufferLayout layout = {
@@ -53,6 +57,8 @@ namespace Ural {
         m_VertexArray->AddVertexBuffer(m_VertexBuffer);
 
         unsigned int indices[3] = {0, 1, 2};
+
+        std::shared_ptr<IndexBuffer> m_IndexBuffer;
         m_IndexBuffer.reset(IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t)));
         m_VertexArray->AddIndexBuffer(m_IndexBuffer);
 
@@ -178,16 +184,18 @@ namespace Ural {
 	{		
 		while (m_Running)
 		{
-            glClearColor(0.1f, 0.1f, 0.1f, 1);
-            glClear(GL_COLOR_BUFFER_BIT);
+            RenderCommand::SetClearColor({ 0.1f, 0.1f, 0.1f, 1 });
+            RenderCommand::Clear();
+
+            Renderer::BeginScene();
 
             m_BlueShader->Bind();
-            m_SquareVA->Bind();
-            glDrawElements(GL_TRIANGLES, m_SquareVA->GetIndexBuffer()->GetCount(), GL_UNSIGNED_INT, nullptr);
+            Renderer::Submit(m_SquareVA);
 
             m_Shader->Bind();
-            m_VertexArray->Bind();
-            glDrawElements(GL_TRIANGLES, m_IndexBuffer->GetCount(), GL_UNSIGNED_INT, nullptr);
+            Renderer::Submit(m_VertexArray);
+
+            Renderer::EndScene();
 
             for (Layer* layer : m_LayerStack)
                 layer->OnUpdate();

@@ -56,7 +56,7 @@ namespace Ural
 
     void OpenGLVertexArray::AddIndexBuffer(const std::shared_ptr<IndexBuffer>& indexBuffer)
     {
-       // glBindVertexArray(m_RendererID);
+        glBindVertexArray(m_RendererID);
         indexBuffer->Bind();
         m_IndexBuffer = indexBuffer;
     }

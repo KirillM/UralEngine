@@ -8,18 +8,19 @@
 
 #include "VertexArray.h"
 #include "Renderer.h"
+#include "RendererAPI.h"
 #include "Platform/OpenGL/OpenGLVertexArray.h"
 
 namespace Ural {
 
     VertexArray* VertexArray::Create()
     {
-        switch (Renderer::GetAPI()) {
-               case RendererAPI::None: {
+        switch (RendererAPI::GetAPI()) {
+            case RendererAPI::API::None: {
                    UL_CORE_ASSERT(false, "RendererAPI::None not supported");
                    return nullptr;
                }
-               case RendererAPI::OpenGL: {
+            case RendererAPI::API::OpenGL: {
                    return new OpenGLVertexArray();
                }
          }
