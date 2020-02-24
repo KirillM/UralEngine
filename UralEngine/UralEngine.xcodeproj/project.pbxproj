@@ -60,6 +60,10 @@
 		53D79652240066A800D752C7 /* LayerStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 53D79650240066A800D752C7 /* LayerStack.h */; };
 		53D79655240066B400D752C7 /* Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53D79653240066B400D752C7 /* Layer.cpp */; };
 		53D79656240066B400D752C7 /* Layer.h in Headers */ = {isa = PBXBuildFile; fileRef = 53D79654240066B400D752C7 /* Layer.h */; };
+		53DED84C2404898A0010AA78 /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53DED84A2404898A0010AA78 /* Texture.cpp */; };
+		53DED84D2404898A0010AA78 /* Texture.h in Headers */ = {isa = PBXBuildFile; fileRef = 53DED84B2404898A0010AA78 /* Texture.h */; };
+		53DED8502404899B0010AA78 /* OpenGLTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53DED84E2404899B0010AA78 /* OpenGLTexture.cpp */; };
+		53DED8512404899B0010AA78 /* OpenGLTexture.h in Headers */ = {isa = PBXBuildFile; fileRef = 53DED84F2404899B0010AA78 /* OpenGLTexture.h */; };
 		53F6E9FE240148DC00EF58AA /* libimgui.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F6E9FD240148DC00EF58AA /* libimgui.a */; };
 		53F6EA022401497800EF58AA /* ImGuiLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53F6EA002401497800EF58AA /* ImGuiLayer.cpp */; };
 		53F6EA032401497800EF58AA /* ImGuiLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 53F6EA012401497800EF58AA /* ImGuiLayer.h */; };
@@ -146,6 +150,10 @@
 		53D79650240066A800D752C7 /* LayerStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LayerStack.h; sourceTree = "<group>"; };
 		53D79653240066B400D752C7 /* Layer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Layer.cpp; sourceTree = "<group>"; };
 		53D79654240066B400D752C7 /* Layer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Layer.h; sourceTree = "<group>"; };
+		53DED84A2404898A0010AA78 /* Texture.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Texture.cpp; sourceTree = "<group>"; };
+		53DED84B2404898A0010AA78 /* Texture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Texture.h; sourceTree = "<group>"; };
+		53DED84E2404899B0010AA78 /* OpenGLTexture.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = OpenGLTexture.cpp; sourceTree = "<group>"; };
+		53DED84F2404899B0010AA78 /* OpenGLTexture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenGLTexture.h; sourceTree = "<group>"; };
 		53F6E9FD240148DC00EF58AA /* libimgui.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libimgui.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		53F6EA002401497800EF58AA /* ImGuiLayer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ImGuiLayer.cpp; sourceTree = "<group>"; };
 		53F6EA012401497800EF58AA /* ImGuiLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImGuiLayer.h; sourceTree = "<group>"; };
@@ -264,6 +272,8 @@
 				537DE73E2403BABA00109A8F /* RenderCommand.h */,
 				537DE7452403DC5B00109A8F /* OrthographicCamera.cpp */,
 				537DE7462403DC5B00109A8F /* OrthographicCamera.h */,
+				53DED84A2404898A0010AA78 /* Texture.cpp */,
+				53DED84B2404898A0010AA78 /* Texture.h */,
 			);
 			path = Renderer;
 			sourceTree = "<group>";
@@ -428,6 +438,8 @@
 				537DE7422403BEEF00109A8F /* OpenGLRendererAPI.h */,
 				538D5E9E240459EB00E42C47 /* OpenGLShader.cpp */,
 				538D5E9F240459EB00E42C47 /* OpenGLShader.h */,
+				53DED84E2404899B0010AA78 /* OpenGLTexture.cpp */,
+				53DED84F2404899B0010AA78 /* OpenGLTexture.h */,
 			);
 			path = OpenGL;
 			sourceTree = "<group>";
@@ -461,12 +473,14 @@
 				53492C8D239A9C12009E1076 /* MouseEvent.h in Headers */,
 				535275C424027D930045E26B /* Shader.h in Headers */,
 				53F6EA032401497800EF58AA /* ImGuiLayer.h in Headers */,
+				53DED8512404899B0010AA78 /* OpenGLTexture.h in Headers */,
 				537DE73C2403B47B00109A8F /* RendererAPI.h in Headers */,
 				535275C0240264CB0045E26B /* OpenGLContext.h in Headers */,
 				537DE7442403BEEF00109A8F /* OpenGLRendererAPI.h in Headers */,
 				53D79652240066A800D752C7 /* LayerStack.h in Headers */,
 				537F12AE2393015F00369F57 /* Application.h in Headers */,
 				5360CEC623FD1E7400D2F5DB /* Window.h in Headers */,
+				53DED84D2404898A0010AA78 /* Texture.h in Headers */,
 				53492C8B239A9BFC009E1076 /* KeyEvent.h in Headers */,
 				53722373239800D600312C05 /* Log.h in Headers */,
 				530164FF239C290600821B62 /* MacWindow.h in Headers */,
@@ -581,11 +595,13 @@
 				53F6EA022401497800EF58AA /* ImGuiLayer.cpp in Sources */,
 				537DE74C240437AE00109A8F /* TimeStep.cpp in Sources */,
 				53722372239800D600312C05 /* Log.cpp in Sources */,
+				53DED8502404899B0010AA78 /* OpenGLTexture.cpp in Sources */,
 				53D79651240066A800D752C7 /* LayerStack.cpp in Sources */,
 				535275BF240264CB0045E26B /* OpenGLContext.cpp in Sources */,
 				537F12AD2393015F00369F57 /* Application.cpp in Sources */,
 				538D5EA324045DB800E42C47 /* OpenGLShader.cpp in Sources */,
 				535275D92402EE9F0045E26B /* OpenGLVertexArray.cpp in Sources */,
+				53DED84C2404898A0010AA78 /* Texture.cpp in Sources */,
 				53F6EA1324019E8700EF58AA /* MacInput.cpp in Sources */,
 				537DE7432403BEEF00109A8F /* OpenGLRendererAPI.cpp in Sources */,
 				537DE73B2403B47B00109A8F /* RendererAPI.cpp in Sources */,

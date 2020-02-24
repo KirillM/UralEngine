@@ -38,7 +38,7 @@ public:
                  0.0f, 0.5f, 0.0f,  0.8f, 0.8f, 0.2f, 1.0f
              };
 
-            std::shared_ptr<Ural::VertexBuffer> m_VertexBuffer;
+            Ural::Ref<Ural::VertexBuffer> m_VertexBuffer;
             m_VertexBuffer.reset(Ural::VertexBuffer::Create(vertices, sizeof(vertices)));
 
             Ural::BufferLayout layout = {
@@ -52,32 +52,33 @@ public:
 
             unsigned int indices[3] = {0, 1, 2};
 
-            std::shared_ptr<Ural::IndexBuffer> m_IndexBuffer;
+            Ural::Ref<Ural::IndexBuffer> m_IndexBuffer;
             m_IndexBuffer.reset(Ural::IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t)));
             m_VertexArray->AddIndexBuffer(m_IndexBuffer);
 
 
             m_SquareVA.reset(Ural::VertexArray::Create());
 
-            float squareVertices[3 * 4] = {
-                 -0.5f, -0.5f, 0.0f,
-                 0.5f, -0.5f, 0.0f,
-                 0.5f, 0.5f, 0.0f,
-                -0.5f, 0.5f, 0.0f
+            float squareVertices[5 * 4] = {
+                 -0.5f, -0.5f, 0.0f, 0.0f, 0.0f,
+                 0.5f, -0.5f, 0.0f, 1.0f, 0.0f,
+                 0.5f, 0.5f, 0.0f, 1.0f, 1.0f,
+                -0.5f, 0.5f, 0.0f, 0.0f, 1.0f
             };
 
-            std::shared_ptr<Ural::VertexBuffer> squareVB;
+            Ural::Ref<Ural::VertexBuffer> squareVB;
             squareVB.reset(Ural::VertexBuffer::Create(squareVertices, sizeof(squareVertices)));
 
             Ural::BufferLayout squareVBlayout = {
                    { Ural::ShaderDataType::Float3, "a_Position" },
+                { Ural::ShaderDataType::Float2, "a_TextCoord" }
                };
 
                squareVB->SetLayout(squareVBlayout);
                m_SquareVA->AddVertexBuffer(squareVB);
 
             unsigned int squareIndices[6] = {0, 1, 2, 2, 3, 0};
-            std::shared_ptr<Ural::IndexBuffer> squareIB;
+            Ural::Ref<Ural::IndexBuffer> squareIB;
             squareIB.reset(Ural::IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t)));
 
             m_SquareVA->AddIndexBuffer(squareIB);
@@ -151,6 +152,43 @@ public:
                   )";
 
             m_FlatColorShader.reset(Ural::Shader::Create(flatColorShaderVertexSrc, flatColorShaderFragmentSrc));
+
+        std::string textureShaderVertexSrc = R"(
+                  #version 330 core
+
+                  layout(location = 0) in vec3 a_Position;
+                  layout(location = 1) in vec2 a_TextCoord;
+
+                  uniform mat4 u_ViewProjection;
+                  uniform mat4 u_Transform;
+
+                  out vec3 v_Position;
+                  out vec2 v_TextCoord;
+
+                  void main()
+                  {
+                      v_TextCoord = a_TextCoord;
+                      v_Position = a_Position;
+                      gl_Position = u_ViewProjection * u_Transform * vec4(a_Position, 1.0);
+                  }
+              )";
+
+              std::string textureShaderFragmentSrc = R"(
+                  #version 330 core
+
+                  layout(location = 0) out vec4 color;
+                  in vec3 v_Position;
+                  in vec2 v_TextCoord;
+
+                  uniform vec3 u_Color;
+
+                  void main()
+                  {
+                      color = vec4(v_TextCoord, 0.0, 1.0);
+                  }
+              )";
+
+        m_TextureShader.reset(Ural::Shader::Create(textureShaderVertexSrc, textureShaderFragmentSrc));
     }
 
     void OnUpdate(Ural::TimeStep ts) override
@@ -209,7 +247,8 @@ std::dynamic_pointer_cast<Ural::OpenGLShader>(m_FlatColorShader)->UploadUniformF
              }
         }
 
-        Ural::Renderer::Submit(m_Shader, m_VertexArray);
+        Ural::Renderer::Submit(m_TextureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
+        //Ural::Renderer::Submit(m_Shader, m_VertexArray);
         Ural::Renderer::EndScene();
     }
 
@@ -247,7 +286,7 @@ std::dynamic_pointer_cast<Ural::OpenGLShader>(m_FlatColorShader)->UploadUniformF
 
 private:
     Ural::Ref<Ural::Shader> m_Shader;
-    Ural::Ref<Ural::Shader> m_FlatColorShader;
+    Ural::Ref<Ural::Shader> m_FlatColorShader, m_TextureShader;
     Ural::Ref<Ural::VertexArray> m_VertexArray;
     Ural::Ref<Ural::VertexArray> m_SquareVA;
 
