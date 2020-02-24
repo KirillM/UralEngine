@@ -64,7 +64,6 @@
 		53F6EA022401497800EF58AA /* ImGuiLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53F6EA002401497800EF58AA /* ImGuiLayer.cpp */; };
 		53F6EA032401497800EF58AA /* ImGuiLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 53F6EA012401497800EF58AA /* ImGuiLayer.h */; };
 		53F6EA0A2401627C00EF58AA /* libGLAD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F6EA092401627C00EF58AA /* libGLAD.a */; };
-		53F6EA0B240182CB00EF58AA /* ImGuiLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53F6EA002401497800EF58AA /* ImGuiLayer.cpp */; };
 		53F6EA0E24019D1200EF58AA /* Input.h in Headers */ = {isa = PBXBuildFile; fileRef = 53F6EA0D24019D1200EF58AA /* Input.h */; };
 		53F6EA1324019E8700EF58AA /* MacInput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53F6EA1124019E8700EF58AA /* MacInput.cpp */; };
 		53F6EA1424019E8700EF58AA /* MacInput.h in Headers */ = {isa = PBXBuildFile; fileRef = 53F6EA1224019E8700EF58AA /* MacInput.h */; };
@@ -565,7 +564,6 @@
 				5360CEC823FD1FBD00D2F5DB /* Log.cpp in Sources */,
 				5360CEC723FD1F9F00D2F5DB /* Application.cpp in Sources */,
 				5360CEC123FD1E6E00D2F5DB /* UralEngine_IOS.m in Sources */,
-				53F6EA0B240182CB00EF58AA /* ImGuiLayer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

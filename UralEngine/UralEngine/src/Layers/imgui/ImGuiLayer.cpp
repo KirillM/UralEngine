@@ -114,9 +114,9 @@ namespace Ural {
 //
 //        ImGui::Render();
 //        ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
-        Begin();
-        OnImGuiRender();
-        End();
+      //  Begin();
+  //      OnMiGuiRender();
+      //  End();
     }
     void ImGuiLayer::OnEvent(Event& event)
     {
@@ -131,7 +131,7 @@ namespace Ural {
         dispatcher.Dispatch<WindowResizeEvent>(UL_BIND_EVENT_FN(ImGuiLayer::OnWindowResizedEvent));
     }
 
-    void ImGuiLayer::OnImGuiRender()
+    void ImGuiLayer::OnMiGuiRender()
     {
         static bool show = true;
         ImGui::ShowDemoWindow(&show);

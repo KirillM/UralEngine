@@ -29,10 +29,13 @@ namespace Ural {
         virtual void OnDetach() override;
         virtual void OnUpdate(TimeStep ts) override;
         virtual void OnEvent(Event& event) override;
-        virtual void OnImGuiRender();
-    private:
+
+    protected:
+        void OnMiGuiRender();
         void Begin();
         void End();
+        
+    private:
 
         bool OnMouseButtonPressedEvent(MouseButtonPressedEvent& e);
         bool OnMouseButtonReleasedEvent(MouseButtonReleasedEvent& e);
