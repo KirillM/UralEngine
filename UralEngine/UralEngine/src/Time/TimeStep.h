@@ -6,8 +6,8 @@
 //  Copyright © 2020 Кирилл Мезрин. All rights reserved.
 //
 
-#ifndef TimeStep_hpp
-#define TimeStep_hpp
+#ifndef TimeStep_h
+#define TimeStep_h
 
 namespace Ural {
 
@@ -25,4 +25,4 @@ namespace Ural {
     };
 }
 
-#endif /* TimeStep_hpp */
+#endif /* TimeStep_h */

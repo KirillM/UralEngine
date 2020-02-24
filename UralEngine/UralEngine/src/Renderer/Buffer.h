@@ -6,10 +6,8 @@
 //  Copyright © 2020 Кирилл Мезрин. All rights reserved.
 //
 
-#ifndef Buffer_hpp
-#define Buffer_hpp
-
-#include "Ural/Core.h"
+#ifndef Buffer_h
+#define Buffer_h
 
 namespace Ural
 {
@@ -107,7 +105,7 @@ namespace Ural
 
     class VertexBuffer {
     public:
-        virtual ~VertexBuffer() {};
+        virtual ~VertexBuffer() = default;
 
         virtual void Bind() const = 0;
         virtual void UnBind() const = 0;
@@ -121,7 +119,7 @@ namespace Ural
     class IndexBuffer
     {
     public:
-        virtual ~IndexBuffer() {};
+        virtual ~IndexBuffer() = default;
 
         virtual void Bind() const = 0;
         virtual void UnBind() const = 0;
@@ -132,4 +130,4 @@ namespace Ural
 }
 
 
-#endif /* Buffer_hpp */
+#endif /* Buffer_h */

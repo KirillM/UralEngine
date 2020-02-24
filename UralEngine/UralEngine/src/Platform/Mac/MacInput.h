@@ -6,8 +6,8 @@
 //  Copyright © 2020 Кирилл Мезрин. All rights reserved.
 //
 
-#ifndef MacInput_hpp
-#define MacInput_hpp
+#ifndef MacInput_h
+#define MacInput_h
 
 #include "Input/Input.h"
 
@@ -23,4 +23,4 @@ namespace Ural {
     };
 }
 
-#endif /* MacInput_hpp */
+#endif /* MacInput_h */

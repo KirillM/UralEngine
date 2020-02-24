@@ -6,8 +6,8 @@
 //  Copyright © 2020 Кирилл Мезрин. All rights reserved.
 //
 
-#ifndef OpenGLContext_hpp
-#define OpenGLContext_hpp
+#ifndef OpenGLContext_h
+#define OpenGLContext_h
 
 #include "Renderer/GraphicsContext.h"
 
@@ -27,4 +27,4 @@ namespace Ural {
 }
 
 
-#endif /* OpenGLContext_hpp */
+#endif /* OpenGLContext_h */

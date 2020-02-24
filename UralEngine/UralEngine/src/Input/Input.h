@@ -9,8 +9,6 @@
 #ifndef Input_h
 #define Input_h
 
-#include "Ural/Core.h"
-
 namespace Ural {
 
     class Input

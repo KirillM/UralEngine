@@ -6,8 +6,8 @@
 //  Copyright © 2020 Кирилл Мезрин. All rights reserved.
 //
 
-#ifndef OpenGLVertexArray_hpp
-#define OpenGLVertexArray_hpp
+#ifndef OpenGLVertexArray_h
+#define OpenGLVertexArray_h
 
 #include "Renderer/VertexArray.h"
 #include "Renderer/Buffer.h"
@@ -34,4 +34,4 @@ namespace Ural {
     };
 }
 
-#endif /* OpenGLVertexArray_hpp */
+#endif /* OpenGLVertexArray_h */

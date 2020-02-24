@@ -9,7 +9,6 @@
 #ifndef Window_h
 #define Window_h
 
-#include "Ural/Core.h"
 #include "Events/Event.h"
 
 namespace Ural {

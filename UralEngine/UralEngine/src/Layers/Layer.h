@@ -6,10 +6,9 @@
 //  Copyright © 2020 Кирилл Мезрин. All rights reserved.
 //
 
-#ifndef Layer_hpp
-#define Layer_hpp
+#ifndef Layer_h
+#define Layer_h
 
-#include "Ural/Core.h"
 #include "Events/Event.h"
 #include "Time/TimeStep.h"
 
@@ -32,4 +31,4 @@ namespace Ural {
     };
 }
 
-#endif /* Layer_hpp */
+#endif /* Layer_h */

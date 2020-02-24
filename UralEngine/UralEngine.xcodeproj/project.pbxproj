@@ -54,6 +54,8 @@
 		537F12AD2393015F00369F57 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 537F12AB2393015F00369F57 /* Application.cpp */; };
 		537F12AE2393015F00369F57 /* Application.h in Headers */ = {isa = PBXBuildFile; fileRef = 537F12AC2393015F00369F57 /* Application.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		537F12B02393030400369F57 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 537F12AF2393030400369F57 /* Core.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		538D5EA324045DB800E42C47 /* OpenGLShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 538D5E9E240459EB00E42C47 /* OpenGLShader.cpp */; };
+		538D5EA424045DBB00E42C47 /* OpenGLShader.h in Headers */ = {isa = PBXBuildFile; fileRef = 538D5E9F240459EB00E42C47 /* OpenGLShader.h */; };
 		53D79651240066A800D752C7 /* LayerStack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53D7964F240066A800D752C7 /* LayerStack.cpp */; };
 		53D79652240066A800D752C7 /* LayerStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 53D79650240066A800D752C7 /* LayerStack.h */; };
 		53D79655240066B400D752C7 /* Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53D79653240066B400D752C7 /* Layer.cpp */; };
@@ -136,6 +138,8 @@
 		537F12AB2393015F00369F57 /* Application.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
 		537F12AC2393015F00369F57 /* Application.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
 		537F12AF2393030400369F57 /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
+		538D5E9E240459EB00E42C47 /* OpenGLShader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = OpenGLShader.cpp; sourceTree = "<group>"; };
+		538D5E9F240459EB00E42C47 /* OpenGLShader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenGLShader.h; sourceTree = "<group>"; };
 		539E3CC42401C36D0037A90E /* ImGuiBuild.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ImGuiBuild.cpp; sourceTree = "<group>"; };
 		53A7908F2392AE1500E29426 /* libUralEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libUralEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		53A790912392AE1500E29426 /* Ural.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ural.h; sourceTree = "<group>"; };
@@ -189,6 +193,7 @@
 		530164EF239BF8CD00821B62 /* Platform */ = {
 			isa = PBXGroup;
 			children = (
+				538D5EA224045A8F00E42C47 /* Metal */,
 				53F6EA0424014E9100EF58AA /* OpenGL */,
 				530164F0239BF90300821B62 /* Window */,
 				530164F5239BFF2700821B62 /* IOS */,
@@ -329,6 +334,13 @@
 			path = Ural;
 			sourceTree = "<group>";
 		};
+		538D5EA224045A8F00E42C47 /* Metal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Metal;
+			sourceTree = "<group>";
+		};
 		53A790782392A17500E29426 = {
 			isa = PBXGroup;
 			children = (
@@ -415,6 +427,8 @@
 				535275D82402EE9F0045E26B /* OpenGLVertexArray.h */,
 				537DE7412403BEEF00109A8F /* OpenGLRendererAPI.cpp */,
 				537DE7422403BEEF00109A8F /* OpenGLRendererAPI.h */,
+				538D5E9E240459EB00E42C47 /* OpenGLShader.cpp */,
+				538D5E9F240459EB00E42C47 /* OpenGLShader.h */,
 			);
 			path = OpenGL;
 			sourceTree = "<group>";
@@ -459,6 +473,7 @@
 				530164FF239C290600821B62 /* MacWindow.h in Headers */,
 				535275D62402EC1A0045E26B /* VertexArray.h in Headers */,
 				53492C87239A9BD5009E1076 /* ApplicationEvent.h in Headers */,
+				538D5EA424045DBB00E42C47 /* OpenGLShader.h in Headers */,
 				537DE74D240437AE00109A8F /* TimeStep.h in Headers */,
 				53F6EA182401AFB600EF58AA /* MouseButtonCodes.h in Headers */,
 				53492C89239A9BE7009E1076 /* Event.h in Headers */,
@@ -571,6 +586,7 @@
 				53D79651240066A800D752C7 /* LayerStack.cpp in Sources */,
 				535275BF240264CB0045E26B /* OpenGLContext.cpp in Sources */,
 				537F12AD2393015F00369F57 /* Application.cpp in Sources */,
+				538D5EA324045DB800E42C47 /* OpenGLShader.cpp in Sources */,
 				535275D92402EE9F0045E26B /* OpenGLVertexArray.cpp in Sources */,
 				53F6EA1324019E8700EF58AA /* MacInput.cpp in Sources */,
 				537DE7432403BEEF00109A8F /* OpenGLRendererAPI.cpp in Sources */,

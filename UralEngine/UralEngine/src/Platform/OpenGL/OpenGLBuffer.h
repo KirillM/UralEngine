@@ -6,8 +6,8 @@
 //  Copyright © 2020 Кирилл Мезрин. All rights reserved.
 //
 
-#ifndef OpenGLBuffer_hpp
-#define OpenGLBuffer_hpp
+#ifndef OpenGLBuffer_h
+#define OpenGLBuffer_h
 
 #include "Renderer/Buffer.h"
 
@@ -45,4 +45,4 @@ namespace Ural {
     };
 }
 
-#endif /* OpenGLBuffer_hpp */
+#endif /* OpenGLBuffer_h */

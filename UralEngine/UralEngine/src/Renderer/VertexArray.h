@@ -6,15 +6,15 @@
 //  Copyright © 2020 Кирилл Мезрин. All rights reserved.
 //
 
-#ifndef VertexArray_hpp
-#define VertexArray_hpp
+#ifndef VertexArray_h
+#define VertexArray_h
 
 #include "Renderer/Buffer.h"
 
 namespace Ural {
     class VertexArray {
     public:
-        virtual ~VertexArray() {};
+        virtual ~VertexArray() = default;
 
         virtual void Bind() const = 0;
         virtual void UnBind() const = 0;
@@ -30,4 +30,4 @@ namespace Ural {
 }
 
 
-#endif /* VertexArray_hpp */
+#endif /* VertexArray_h */

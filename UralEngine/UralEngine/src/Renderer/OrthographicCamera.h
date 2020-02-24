@@ -6,8 +6,8 @@
 //  Copyright © 2020 Кирилл Мезрин. All rights reserved.
 //
 
-#ifndef OrthographicCamera_hpp
-#define OrthographicCamera_hpp
+#ifndef OrthographicCamera_h
+#define OrthographicCamera_h
 
 #include <glm/glm.hpp>
 
@@ -38,4 +38,4 @@ namespace Ural {
     };
 }
 
-#endif /* OrthographicCamera_hpp */
+#endif /* OrthographicCamera_h */

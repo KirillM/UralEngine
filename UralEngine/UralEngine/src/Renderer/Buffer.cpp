@@ -8,7 +8,6 @@
 
 #include "Buffer.h"
 #include "Renderer.h"
-#include "Ural/Core.h"
 #include "Platform/OpenGL/OpenGLBuffer.h"
 
 namespace Ural

@@ -7,7 +7,6 @@
 //
 
 #include "MacWindow.h"
-#include "Ural/Core.h"
 #include "Log/Log.h"
 
 #include "Events/ApplicationEvent.h"

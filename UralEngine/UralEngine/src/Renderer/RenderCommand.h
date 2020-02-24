@@ -6,8 +6,8 @@
 //  Copyright © 2020 Кирилл Мезрин. All rights reserved.
 //
 
-#ifndef RenderCommand_hpp
-#define RenderCommand_hpp
+#ifndef RenderCommand_h
+#define RenderCommand_h
 
 #include "RendererAPI.h"
 
@@ -36,4 +36,4 @@ namespace Ural {
 
 }
 
-#endif /* RenderCommand_hpp */
+#endif /* RenderCommand_h */

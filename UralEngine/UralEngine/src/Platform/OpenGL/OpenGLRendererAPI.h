@@ -6,8 +6,8 @@
 //  Copyright © 2020 Кирилл Мезрин. All rights reserved.
 //
 
-#ifndef OpenGLRendererAPI_hpp
-#define OpenGLRendererAPI_hpp
+#ifndef OpenGLRendererAPI_h
+#define OpenGLRendererAPI_h
 
 #include "Renderer/RendererAPI.h"
 
@@ -22,4 +22,4 @@ namespace Ural {
     };
 }
 
-#endif /* OpenGLRendererAPI_hpp */
+#endif /* OpenGLRendererAPI_h */

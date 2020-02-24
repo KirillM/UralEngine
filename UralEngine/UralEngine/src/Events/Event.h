@@ -9,8 +9,6 @@
 #ifndef Event_h
 #define Event_h
 
-#include "Ural/Core.h"
-
 namespace Ural {
 
 	enum class EventType

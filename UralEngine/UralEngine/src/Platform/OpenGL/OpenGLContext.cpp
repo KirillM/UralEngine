@@ -8,8 +8,6 @@
 
 #include "OpenGLContext.h"
 
-#include "Ural/Core.h"
-
 #include <GLFW/glfw3.h>
 #include <glad/glad.h>
 

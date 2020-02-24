@@ -6,8 +6,8 @@
 //  Copyright © 2020 Кирилл Мезрин. All rights reserved.
 //
 
-#ifndef RendererAPI_hpp
-#define RendererAPI_hpp
+#ifndef RendererAPI_h
+#define RendererAPI_h
 
 #include <glm/glm.hpp>
 #include "VertexArray.h"
@@ -34,4 +34,4 @@ namespace Ural {
 
 }
 
-#endif /* RendererAPI_hpp */
+#endif /* RendererAPI_h */

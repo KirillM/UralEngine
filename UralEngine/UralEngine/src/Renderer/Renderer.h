@@ -6,8 +6,8 @@
 //  Copyright © 2020 Кирилл Мезрин. All rights reserved.
 //
 
-#ifndef Renderer_hpp
-#define Renderer_hpp
+#ifndef Renderer_h
+#define Renderer_h
 
 #include "RenderCommand.h"
 #include "RendererAPI.h"
@@ -22,7 +22,7 @@ namespace Ural {
         static void BeginScene(OrthographicCamera& camera);
         static void EndScene();
 
-        static void Submit( const std::shared_ptr<Shader>& shader, const std::shared_ptr<VertexArray>& vertexArray);
+        static void Submit( const std::shared_ptr<Shader>& shader, const std::shared_ptr<VertexArray>& vertexArray, const glm::mat4& transform = glm::mat4(1.0f));
 
         inline static RendererAPI::API GetAPI() { return RendererAPI::GetAPI(); }
     private:
@@ -35,4 +35,4 @@ namespace Ural {
     };
 }
 
-#endif /* Renderer_hpp */
+#endif /* Renderer_h */

@@ -7,7 +7,6 @@
 //
 
 #include "OpenGLVertexArray.h"
-#include "Ural/Core.h"
 #include <glad/glad.h>
 
 namespace Ural
