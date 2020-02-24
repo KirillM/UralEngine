@@ -23,7 +23,7 @@
 class ExampleLayer: public Ural::Layer
 {
 public:
-    ExampleLayer() : Layer("Example"), m_Camera(-1.6f, 1.6f, -0.9f, 0.9f)
+    ExampleLayer() : Layer("Example"), m_Camera(-1.6f, 1.6f, -0.9f, 0.9f), m_CameraPosition(0.0f)
     {
         m_VertexArray.reset(Ural::VertexArray::Create());
 
@@ -142,9 +142,35 @@ public:
             m_BlueShader.reset(new Ural::Shader(blueShaderVertexSrc, blueShaderFragmentSrc));
     }
 
-    void OnUpdate() override
+    void OnUpdate(Ural::TimeStep ts) override
     {
        // UL_INFO("ExampleLayer::Update");
+        UL_TRACE("Delta time: {0}s", ts.GetSeconds());
+        if (Ural::Input::IsKeyPressed(UL_KEY_LEFT))
+        {
+            m_CameraPosition.x -= m_CameraMoveSpeed * ts;
+        } else if (Ural::Input::IsKeyPressed(UL_KEY_RIGHT))
+        {
+            m_CameraPosition.x += m_CameraMoveSpeed * ts;
+        }
+
+        if (Ural::Input::IsKeyPressed(UL_KEY_UP))
+        {
+            m_CameraPosition.y += m_CameraMoveSpeed * ts;
+        } else if (Ural::Input::IsKeyPressed(UL_KEY_DOWN))
+        {
+            m_CameraPosition.y -= m_CameraMoveSpeed * ts;
+        }
+
+        if (Ural::Input::IsKeyPressed(UL_KEY_A))
+        {
+            m_CameraRotation += m_CameraRotationSpeed * ts;
+        }
+
+        if (Ural::Input::IsKeyPressed(UL_KEY_D))
+        {
+            m_CameraRotation -= m_CameraRotationSpeed * ts;
+        }
 
         if(Ural::Input::IsKeyPressed(UL_KEY_TAB))
             UL_INFO("Tab key is pressed!");
@@ -152,8 +178,8 @@ public:
         Ural::RenderCommand::SetClearColor({ 0.1f, 0.1f, 0.1f, 1 });
         Ural::RenderCommand::Clear();
 
-        m_Camera.SetPostion({0.5f, 0.5f, 0.0f});
-        m_Camera.SetRotation(45.0f);
+        m_Camera.SetPostion(m_CameraPosition);
+        m_Camera.SetRotation(m_CameraRotation);
 
         Ural::Renderer::BeginScene(m_Camera);
 
@@ -165,7 +191,34 @@ public:
 
     void OnEvent(Ural::Event& event) override
     {
+        Ural::EventDispatcher dispathcer(event);
+        dispathcer.Dispatch<Ural::KeyPressedEvent>(UL_BIND_EVENT_FN(ExampleLayer::OnKeyPressedEvent));
        // UL_TRACE("{0}", event);
+    }
+
+    bool OnKeyPressedEvent(Ural::KeyPressedEvent& event)
+    {
+//        if (event.GetKeyCode() == UL_KEY_LEFT)
+//        {
+//            m_CameraPosition.x -= m_CameraSpeed;
+//        }
+//
+//        if (event.GetKeyCode() == UL_KEY_RIGHT)
+//        {
+//            m_CameraPosition.x += m_CameraSpeed;
+//        }
+//
+//        if (event.GetKeyCode() == UL_KEY_UP)
+//        {
+//            m_CameraPosition.y += m_CameraSpeed;
+//        }
+//
+//        if (event.GetKeyCode() == UL_KEY_DOWN)
+//        {
+//            m_CameraPosition.y -= m_CameraSpeed;
+//        }
+
+        return false;
     }
 
 private:
@@ -175,6 +228,10 @@ private:
     std::shared_ptr<Ural::VertexArray> m_SquareVA;
 
     Ural::OrthographicCamera m_Camera;
+    glm::vec3 m_CameraPosition;
+    float m_CameraRotation = 0.0f;
+    float m_CameraMoveSpeed = 5.0f;
+    float m_CameraRotationSpeed = 180.1f;
 };
 
 class Sandbox : public Ural::Application

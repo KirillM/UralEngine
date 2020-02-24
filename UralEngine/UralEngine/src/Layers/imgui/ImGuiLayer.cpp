@@ -63,7 +63,7 @@ namespace Ural {
         ImGui::DestroyContext();
     }
 
-    void ImGuiLayer::OnUpdate()
+    void ImGuiLayer::OnUpdate(TimeStep ts)
     {
 //        ImGuiIO& io = ImGui::GetIO();
 //        Application& app = Application::Get();
@@ -121,14 +121,14 @@ namespace Ural {
     void ImGuiLayer::OnEvent(Event& event)
     {
         EventDispatcher dispatcher(event);
-        dispatcher.Dispatch<MouseButtonPressedEvent>(UL_BIND_EVENT_FN(OnMouseButtonPressedEvent));
-        dispatcher.Dispatch<MouseButtonReleasedEvent>(UL_BIND_EVENT_FN(OnMouseButtonReleasedEvent));
-        dispatcher.Dispatch<MouseMovedEvent>(UL_BIND_EVENT_FN(OnMouseMovedEvent));
-        dispatcher.Dispatch<MouseScrolledEvent>(UL_BIND_EVENT_FN(OnMouseScrolledEvent));
-        dispatcher.Dispatch<KeyPressedEvent>(UL_BIND_EVENT_FN(OnKeyPressedEvent));
-        dispatcher.Dispatch<KeyReleasedEvent>(UL_BIND_EVENT_FN(OnKeyReleasedEvent));
-        dispatcher.Dispatch<KeyTypedEvent>(UL_BIND_EVENT_FN(OnKeyTypedEvent));
-        dispatcher.Dispatch<WindowResizeEvent>(UL_BIND_EVENT_FN(OnWindowResizedEvent));
+        dispatcher.Dispatch<MouseButtonPressedEvent>(UL_BIND_EVENT_FN(ImGuiLayer::OnMouseButtonPressedEvent));
+        dispatcher.Dispatch<MouseButtonReleasedEvent>(UL_BIND_EVENT_FN(ImGuiLayer::OnMouseButtonReleasedEvent));
+        dispatcher.Dispatch<MouseMovedEvent>(UL_BIND_EVENT_FN(ImGuiLayer::OnMouseMovedEvent));
+        dispatcher.Dispatch<MouseScrolledEvent>(UL_BIND_EVENT_FN(ImGuiLayer::OnMouseScrolledEvent));
+        dispatcher.Dispatch<KeyPressedEvent>(UL_BIND_EVENT_FN(ImGuiLayer::OnKeyPressedEvent));
+        dispatcher.Dispatch<KeyReleasedEvent>(UL_BIND_EVENT_FN(ImGuiLayer::OnKeyReleasedEvent));
+        dispatcher.Dispatch<KeyTypedEvent>(UL_BIND_EVENT_FN(ImGuiLayer::OnKeyTypedEvent));
+        dispatcher.Dispatch<WindowResizeEvent>(UL_BIND_EVENT_FN(ImGuiLayer::OnWindowResizedEvent));
     }
 
     void ImGuiLayer::OnImGuiRender()

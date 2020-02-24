@@ -35,5 +35,5 @@
 	#define UL_CORE_ASSERT(exp, ...)
 #endif
 
-#define UL_BIND_EVENT_FN(fn) std::bind(&ImGuiLayer::fn, this, std::placeholders::_1)
+#define UL_BIND_EVENT_FN(fn) std::bind(&fn, this, std::placeholders::_1)
 

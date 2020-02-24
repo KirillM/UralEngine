@@ -46,6 +46,10 @@
 
 // камеры
 #include "Renderer/OrthographicCamera.h"
+
+// время
+#include "Time/TimeStep.h"
+
 //----------------------------------
 
 //------Точка входа-----------------

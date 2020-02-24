@@ -49,6 +49,8 @@
 		537DE7442403BEEF00109A8F /* OpenGLRendererAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 537DE7422403BEEF00109A8F /* OpenGLRendererAPI.h */; };
 		537DE7472403DC5B00109A8F /* OrthographicCamera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 537DE7452403DC5B00109A8F /* OrthographicCamera.cpp */; };
 		537DE7482403DC5B00109A8F /* OrthographicCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = 537DE7462403DC5B00109A8F /* OrthographicCamera.h */; };
+		537DE74C240437AE00109A8F /* TimeStep.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 537DE74A240437AE00109A8F /* TimeStep.cpp */; };
+		537DE74D240437AE00109A8F /* TimeStep.h in Headers */ = {isa = PBXBuildFile; fileRef = 537DE74B240437AE00109A8F /* TimeStep.h */; };
 		537F12AD2393015F00369F57 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 537F12AB2393015F00369F57 /* Application.cpp */; };
 		537F12AE2393015F00369F57 /* Application.h in Headers */ = {isa = PBXBuildFile; fileRef = 537F12AC2393015F00369F57 /* Application.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		537F12B02393030400369F57 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 537F12AF2393030400369F57 /* Core.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -128,6 +130,8 @@
 		537DE7422403BEEF00109A8F /* OpenGLRendererAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenGLRendererAPI.h; sourceTree = "<group>"; };
 		537DE7452403DC5B00109A8F /* OrthographicCamera.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = OrthographicCamera.cpp; sourceTree = "<group>"; };
 		537DE7462403DC5B00109A8F /* OrthographicCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrthographicCamera.h; sourceTree = "<group>"; };
+		537DE74A240437AE00109A8F /* TimeStep.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TimeStep.cpp; sourceTree = "<group>"; };
+		537DE74B240437AE00109A8F /* TimeStep.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeStep.h; sourceTree = "<group>"; };
 		537F12A82392D7EF00369F57 /* EntryPoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntryPoint.h; sourceTree = "<group>"; };
 		537F12AB2393015F00369F57 /* Application.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
 		537F12AC2393015F00369F57 /* Application.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
@@ -287,9 +291,19 @@
 			path = "UralEngine IOS";
 			sourceTree = "<group>";
 		};
+		537DE7492404379800109A8F /* Time */ = {
+			isa = PBXGroup;
+			children = (
+				537DE74A240437AE00109A8F /* TimeStep.cpp */,
+				537DE74B240437AE00109A8F /* TimeStep.h */,
+			);
+			path = Time;
+			sourceTree = "<group>";
+		};
 		537F129B2392CBE700369F57 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				537DE7492404379800109A8F /* Time */,
 				535275BA240264570045E26B /* Renderer */,
 				53F6EA0C24019CEE00EF58AA /* Input */,
 				53D7964E2400668300D752C7 /* Layers */,
@@ -445,6 +459,7 @@
 				530164FF239C290600821B62 /* MacWindow.h in Headers */,
 				535275D62402EC1A0045E26B /* VertexArray.h in Headers */,
 				53492C87239A9BD5009E1076 /* ApplicationEvent.h in Headers */,
+				537DE74D240437AE00109A8F /* TimeStep.h in Headers */,
 				53F6EA182401AFB600EF58AA /* MouseButtonCodes.h in Headers */,
 				53492C89239A9BE7009E1076 /* Event.h in Headers */,
 				535275C8240290830045E26B /* Buffer.h in Headers */,
@@ -551,6 +566,7 @@
 				535275C324027D930045E26B /* Shader.cpp in Sources */,
 				535275D22402A5730045E26B /* OpenGLBuffer.cpp in Sources */,
 				53F6EA022401497800EF58AA /* ImGuiLayer.cpp in Sources */,
+				537DE74C240437AE00109A8F /* TimeStep.cpp in Sources */,
 				53722372239800D600312C05 /* Log.cpp in Sources */,
 				53D79651240066A800D752C7 /* LayerStack.cpp in Sources */,
 				535275BF240264CB0045E26B /* OpenGLContext.cpp in Sources */,

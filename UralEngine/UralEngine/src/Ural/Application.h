@@ -14,6 +14,7 @@
 #include "Layers/LayerStack.h"
 #include "Events/Event.h"
 #include "Events/ApplicationEvent.h"
+#include "Time/TimeStep.h"
 
 #pragma GCC visibility push(default)
 
@@ -35,9 +36,12 @@ namespace Ural {
 
 	private:
         bool OnWindowClose(WindowCloseEvent& e);
+    private:
 		std::unique_ptr<Window> m_Window = nullptr;
 		bool m_Running = true;
         LayerStack m_LayerStack;
+        //TimeStep m_Timestep;
+        float m_LastFrameTime = 0.0f;
         
     private:
         static Application* s_Instance;

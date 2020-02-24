@@ -27,7 +27,7 @@ namespace Ural {
 
         virtual void OnAttach() override;
         virtual void OnDetach() override;
-        virtual void OnUpdate() override;
+        virtual void OnUpdate(TimeStep ts) override;
         virtual void OnEvent(Event& event) override;
         virtual void OnImGuiRender();
     private:

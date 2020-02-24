@@ -11,6 +11,7 @@
 #include "Events/ApplicationEvent.h"
 #include "Log/Log.h"
 #include "Input/Input.h"
+#include <GLFW/glfw3.h>
 
 namespace Ural {
 
@@ -57,8 +58,12 @@ namespace Ural {
 	{		
 		while (m_Running)
 		{
+            float time = (float)glfwGetTime();
+            TimeStep timestep = time - m_LastFrameTime;
+            m_LastFrameTime = time;
+
             for (Layer* layer : m_LayerStack)
-                layer->OnUpdate();
+                layer->OnUpdate(timestep);
 			m_Window->OnUpdate();
 
             //std::pair<float, float> position = Input::GetMousePosition();
