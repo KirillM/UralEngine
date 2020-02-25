@@ -21,7 +21,7 @@ namespace Ural {
 
         virtual uint32_t GetWidth() const override { return m_Width; }
         virtual uint32_t GetHeight() const override { return m_Height; }
-        virtual void Bind() const override;
+        virtual void Bind(uint32_t slot) const override;
     private:
         std::string m_Path;
         uint32_t m_Width, m_Height;

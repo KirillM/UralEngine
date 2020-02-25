@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		537F12B223930A4B00369F57 /* libUralEngine.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 537F12B123930A4B00369F57 /* libUralEngine.dylib */; };
 		537F12B323930A4B00369F57 /* libUralEngine.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 537F12B123930A4B00369F57 /* libUralEngine.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		538BD9D124049EA900862193 /* texture.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 538BD9D024049DD000862193 /* texture.png */; };
 		53A790CF2392C5A600E29426 /* Sandbox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53A790CE2392C5A600E29426 /* Sandbox.cpp */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
+				538BD9D124049EA900862193 /* texture.png in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
@@ -37,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		537F12B123930A4B00369F57 /* libUralEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libUralEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		538BD9D024049DD000862193 /* texture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = texture.png; sourceTree = "<group>"; };
 		53A790CB2392C5A600E29426 /* Sandbox */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Sandbox; sourceTree = BUILT_PRODUCTS_DIR; };
 		53A790CE2392C5A600E29426 /* Sandbox.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Sandbox.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,6 +72,14 @@
 			path = src;
 			sourceTree = "<group>";
 		};
+		538BD9CF24049CE500862193 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				538BD9D024049DD000862193 /* texture.png */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
 		53A790C22392C5A600E29426 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +100,7 @@
 		53A790CD2392C5A600E29426 /* Sandbox */ = {
 			isa = PBXGroup;
 			children = (
+				538BD9CF24049CE500862193 /* assets */,
 				537F129A2392CB8300369F57 /* src */,
 			);
 			path = Sandbox;

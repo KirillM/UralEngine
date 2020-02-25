@@ -38,6 +38,7 @@
 // буферы + шейдеры
 #include "Renderer/Shader.h"
 #include "Renderer/Buffer.h"
+#include "Renderer/Texture.h"
 #include "Renderer/VertexArray.h"
 
 // отрисовщик

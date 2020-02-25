@@ -22,6 +22,8 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 #include "Platform/OpenGL/OpenGLShader.h"
+#include "Platform/OpenGL/OpenGLTexture.h"
+#include "Renderer/Texture.h"
 
 static glm::vec3 m_SquareColor = {0.2f, 0.3f, 0.8f};
 
@@ -189,6 +191,13 @@ public:
               )";
 
         m_TextureShader.reset(Ural::Shader::Create(textureShaderVertexSrc, textureShaderFragmentSrc));
+
+        std::string path = R"(/Users/kirillmezrin/dev/UralEngine/UralEngine/working/texture.png)";
+//        Ural::Ref<Ural::Texture2D> text = Ural::Texture2D::Create(path);
+//        m_Texture.reset(text);
+        //m_Texture.reset(Ural::Texture2D::Create(""));
+     //   m_Texture.reset(Ural::Texture2D::Create(""));
+        m_Texture = Ural::Texture2D::Create(path);
     }
 
     void OnUpdate(Ural::TimeStep ts) override
@@ -246,7 +255,7 @@ std::dynamic_pointer_cast<Ural::OpenGLShader>(m_FlatColorShader)->UploadUniformF
                  Ural::Renderer::Submit(m_FlatColorShader, m_SquareVA, transfrom);
              }
         }
-
+        m_Texture->Bind();
         Ural::Renderer::Submit(m_TextureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
         //Ural::Renderer::Submit(m_Shader, m_VertexArray);
         Ural::Renderer::EndScene();
@@ -289,6 +298,8 @@ private:
     Ural::Ref<Ural::Shader> m_FlatColorShader, m_TextureShader;
     Ural::Ref<Ural::VertexArray> m_VertexArray;
     Ural::Ref<Ural::VertexArray> m_SquareVA;
+
+    Ural::Texture2D* m_Texture;
 
     Ural::OrthographicCamera m_Camera;
     glm::vec3 m_CameraPosition;
