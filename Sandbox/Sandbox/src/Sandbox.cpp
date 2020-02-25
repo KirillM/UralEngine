@@ -183,27 +183,27 @@ public:
                   in vec2 v_TextCoord;
 
                   uniform vec3 u_Color;
+                  uniform sampler2D u_Texture;
 
                   void main()
                   {
-                      color = vec4(v_TextCoord, 0.0, 1.0);
+                      color = texture(u_Texture, v_TextCoord);
                   }
               )";
 
         m_TextureShader.reset(Ural::Shader::Create(textureShaderVertexSrc, textureShaderFragmentSrc));
 
-        std::string path = R"(/Users/kirillmezrin/dev/UralEngine/UralEngine/working/texture.png)";
-//        Ural::Ref<Ural::Texture2D> text = Ural::Texture2D::Create(path);
-//        m_Texture.reset(text);
-        //m_Texture.reset(Ural::Texture2D::Create(""));
-     //   m_Texture.reset(Ural::Texture2D::Create(""));
-        m_Texture = Ural::Texture2D::Create(path);
+
+        m_Texture = Ural::Texture2D::Create(R"(texture.png)");
+
+        std::dynamic_pointer_cast<Ural::OpenGLShader>(m_TextureShader)->Bind();
+        std::dynamic_pointer_cast<Ural::OpenGLShader>(m_TextureShader)->UploadUniformInt("u_Texture", 1);
     }
 
     void OnUpdate(Ural::TimeStep ts) override
     {
-        UL_INFO("ExampleLayer::Update");
-        UL_TRACE("Delta time: {0}s", ts.GetSeconds());
+        //UL_INFO("ExampleLayer::Update");
+        //UL_TRACE("Delta time: {0}s", ts.GetSeconds());
         if (Ural::Input::IsKeyPressed(UL_KEY_LEFT))
         {
             m_CameraPosition.x -= m_CameraMoveSpeed * ts;
@@ -242,19 +242,19 @@ public:
 
         glm::mat4 scale = glm::scale(glm::mat4(1.0f), glm::vec3(0.1f));
 
-
-        std::dynamic_pointer_cast<Ural::OpenGLShader>(m_FlatColorShader)->Bind();
-std::dynamic_pointer_cast<Ural::OpenGLShader>(m_FlatColorShader)->UploadUniformFloat3("u_Color", m_SquareColor);
-
-        for (int y = 0; y < 20; y++)
-        {
-            for (int x = 0; x < 20; x++)
-             {
-                 glm::vec3 pos(x * 0.11f, y * 0.11f, 0.0f);
-                 glm::mat4 transfrom = glm::translate(glm::mat4(1.0f), pos) * scale;
-                 Ural::Renderer::Submit(m_FlatColorShader, m_SquareVA, transfrom);
-             }
-        }
+//
+//        std::dynamic_pointer_cast<Ural::OpenGLShader>(m_FlatColorShader)->Bind();
+//std::dynamic_pointer_cast<Ural::OpenGLShader>(m_FlatColorShader)->UploadUniformFloat3("u_Color", m_SquareColor);
+//
+//        for (int y = 0; y < 20; y++)
+//        {
+//            for (int x = 0; x < 20; x++)
+//             {
+//                 glm::vec3 pos(x * 0.11f, y * 0.11f, 0.0f);
+//                 glm::mat4 transfrom = glm::translate(glm::mat4(1.0f), pos) * scale;
+//                 Ural::Renderer::Submit(m_FlatColorShader, m_SquareVA, transfrom);
+//             }
+//        }
         m_Texture->Bind();
         Ural::Renderer::Submit(m_TextureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
         //Ural::Renderer::Submit(m_Shader, m_VertexArray);
@@ -299,7 +299,7 @@ private:
     Ural::Ref<Ural::VertexArray> m_VertexArray;
     Ural::Ref<Ural::VertexArray> m_SquareVA;
 
-    Ural::Texture2D* m_Texture;
+    Ural::Ref<Ural::Texture2D> m_Texture;
 
     Ural::OrthographicCamera m_Camera;
     glm::vec3 m_CameraPosition;

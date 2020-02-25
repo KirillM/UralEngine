@@ -12,7 +12,7 @@
 #include "Platform/OpenGL/OpenGLTexture.h"
 
 namespace Ural {
-    Texture2D* Texture2D::Create(const std::string& path)
+    Ref<Texture2D> Texture2D::Create(const std::string& path)
     {
         switch (RendererAPI::GetAPI()) {
               case RendererAPI::API::None: {
@@ -20,7 +20,7 @@ namespace Ural {
                      return nullptr;
                  }
               case RendererAPI::API::OpenGL: {
-                  return new OpenGLTexture2D(path);//std::make_shared<OpenGLTexture2D>(path);
+                     return std::make_shared<OpenGLTexture2D>(path);
                  }
            }
 
