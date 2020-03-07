@@ -67,7 +67,11 @@ namespace Ural {
 //        glfwWindowHint(GLFW_DECORATED, GL_TRUE);
 //        glfwWindowHint(GLFW_TRANSPARENT_FRAMEBUFFER, GL_TRUE); // Only on latest versions
         ///////
+//        int count;
+//        GLFWmonitor **monitors = glfwGetMonitors(&count);
+//        const GLFWvidmode *mode = glfwGetVideoMode(monitors[1]);
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
+//                m_Window = glfwCreateWindow(mode->width, mode->height, m_Data.Title.c_str(), monitors[1], nullptr);
 
         m_Context = new OpenGLContext(m_Window);
         m_Context->Init();

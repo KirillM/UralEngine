@@ -47,6 +47,7 @@
 
 // камеры
 #include "Renderer/OrthographicCamera.h"
+#include "Ural/OrthographicCameraController.h"
 
 // время
 #include "Time/TimeStep.h"

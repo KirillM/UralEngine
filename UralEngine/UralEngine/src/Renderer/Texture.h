@@ -6,8 +6,8 @@
 //  Copyright © 2020 Кирилл Мезрин. All rights reserved.
 //
 
-#ifndef Texture_hpp
-#define Texture_hpp
+#ifndef Texture_h
+#define Texture_h
 
 #pragma GCC visibility push(default)
 
@@ -32,5 +32,5 @@ namespace Ural {
 
 #pragma GCC visibility pop
 
-#endif /* Texture_hpp */
+#endif /* Texture_h */
 

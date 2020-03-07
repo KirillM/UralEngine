@@ -56,6 +56,8 @@
 		537F12B02393030400369F57 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 537F12AF2393030400369F57 /* Core.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		538D5EA324045DB800E42C47 /* OpenGLShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 538D5E9E240459EB00E42C47 /* OpenGLShader.cpp */; };
 		538D5EA424045DBB00E42C47 /* OpenGLShader.h in Headers */ = {isa = PBXBuildFile; fileRef = 538D5E9F240459EB00E42C47 /* OpenGLShader.h */; };
+		53A6FCFE2413AE190099865A /* OrthographicCameraController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53A6FCFC2413AE190099865A /* OrthographicCameraController.cpp */; };
+		53A6FCFF2413AE190099865A /* OrthographicCameraController.h in Headers */ = {isa = PBXBuildFile; fileRef = 53A6FCFD2413AE190099865A /* OrthographicCameraController.h */; };
 		53D79651240066A800D752C7 /* LayerStack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53D7964F240066A800D752C7 /* LayerStack.cpp */; };
 		53D79652240066A800D752C7 /* LayerStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 53D79650240066A800D752C7 /* LayerStack.h */; };
 		53D79655240066B400D752C7 /* Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53D79653240066B400D752C7 /* Layer.cpp */; };
@@ -2121,6 +2123,8 @@
 		538D5E9E240459EB00E42C47 /* OpenGLShader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = OpenGLShader.cpp; sourceTree = "<group>"; };
 		538D5E9F240459EB00E42C47 /* OpenGLShader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenGLShader.h; sourceTree = "<group>"; };
 		539E3CC42401C36D0037A90E /* ImGuiBuild.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ImGuiBuild.cpp; sourceTree = "<group>"; };
+		53A6FCFC2413AE190099865A /* OrthographicCameraController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = OrthographicCameraController.cpp; sourceTree = "<group>"; };
+		53A6FCFD2413AE190099865A /* OrthographicCameraController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrthographicCameraController.h; sourceTree = "<group>"; };
 		53A7908F2392AE1500E29426 /* libUralEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libUralEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		53A790912392AE1500E29426 /* Ural.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ural.h; sourceTree = "<group>"; };
 		53D7964F240066A800D752C7 /* LayerStack.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LayerStack.cpp; sourceTree = "<group>"; };
@@ -2318,6 +2322,8 @@
 				537F12AB2393015F00369F57 /* Application.cpp */,
 				537F12AC2393015F00369F57 /* Application.h */,
 				537F12AF2393030400369F57 /* Core.h */,
+				53A6FCFC2413AE190099865A /* OrthographicCameraController.cpp */,
+				53A6FCFD2413AE190099865A /* OrthographicCameraController.h */,
 			);
 			path = Ural;
 			sourceTree = "<group>";
@@ -5200,6 +5206,7 @@
 				535275DA2402EE9F0045E26B /* OpenGLVertexArray.h in Headers */,
 				537F12B02393030400369F57 /* Core.h in Headers */,
 				53F6EA1424019E8700EF58AA /* MacInput.h in Headers */,
+				53A6FCFF2413AE190099865A /* OrthographicCameraController.h in Headers */,
 				536E7862239B145A00AD166E /* ulpch.pch in Headers */,
 				53492C8D239A9C12009E1076 /* MouseEvent.h in Headers */,
 				535275C424027D930045E26B /* Shader.h in Headers */,
@@ -5378,6 +5385,7 @@
 				535275BF240264CB0045E26B /* OpenGLContext.cpp in Sources */,
 				537F12AD2393015F00369F57 /* Application.cpp in Sources */,
 				538D5EA324045DB800E42C47 /* OpenGLShader.cpp in Sources */,
+				53A6FCFE2413AE190099865A /* OrthographicCameraController.cpp in Sources */,
 				535275D92402EE9F0045E26B /* OpenGLVertexArray.cpp in Sources */,
 				53DED84C2404898A0010AA78 /* Texture.cpp in Sources */,
 				53F6EA1324019E8700EF58AA /* MacInput.cpp in Sources */,

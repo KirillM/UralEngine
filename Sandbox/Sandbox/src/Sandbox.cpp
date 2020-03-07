@@ -30,7 +30,7 @@ static glm::vec3 m_SquareColor = {0.2f, 0.3f, 0.8f};
 class ExampleLayer: public Ural::Layer
 {
 public:
-    ExampleLayer() : Layer("Example"), m_Camera(-1.6f, 1.6f, -0.9f, 0.9f), m_CameraPosition(0.0f)
+    ExampleLayer() : Layer("Example"), m_CameraController(1280.0f / 720.0f, true)
     {
         m_VertexArray.reset(Ural::VertexArray::Create());
 
@@ -119,7 +119,7 @@ public:
                 }
             )";
 
-            m_Shader.reset(Ural::Shader::Create(vertexSrc, fragmentSrc));
+            m_Shader = Ural::Shader::Create("VertexPosColor", vertexSrc, fragmentSrc);
 
 
             std::string flatColorShaderVertexSrc = R"(
@@ -153,163 +153,81 @@ public:
                       }
                   )";
 
-            m_FlatColorShader.reset(Ural::Shader::Create(flatColorShaderVertexSrc, flatColorShaderFragmentSrc));
+            m_FlatColorShader = Ural::Shader::Create("FlatColor",flatColorShaderVertexSrc, flatColorShaderFragmentSrc);
+        
 
-        std::string textureShaderVertexSrc = R"(
-                  #version 330 core
+        auto textureShader = m_ShaderLibrary.Load("assets/shaders/texture.glsl");
+        //m_TextureShader = Ural::Shader::Create(R"(assets/shaders/texture.glsl)");
+        m_Texture = Ural::Texture2D::Create(R"(assets/textures/text2.png)");
+        m_Logo = Ural::Texture2D::Create(R"(assets/textures/alpha2.png)");
 
-                  layout(location = 0) in vec3 a_Position;
-                  layout(location = 1) in vec2 a_TextCoord;
-
-                  uniform mat4 u_ViewProjection;
-                  uniform mat4 u_Transform;
-
-                  out vec3 v_Position;
-                  out vec2 v_TextCoord;
-
-                  void main()
-                  {
-                      v_TextCoord = a_TextCoord;
-                      v_Position = a_Position;
-                      gl_Position = u_ViewProjection * u_Transform * vec4(a_Position, 1.0);
-                  }
-              )";
-
-              std::string textureShaderFragmentSrc = R"(
-                  #version 330 core
-
-                  layout(location = 0) out vec4 color;
-                  in vec3 v_Position;
-                  in vec2 v_TextCoord;
-
-                  uniform vec3 u_Color;
-                  uniform sampler2D u_Texture;
-
-                  void main()
-                  {
-                      color = texture(u_Texture, v_TextCoord);
-                  }
-              )";
-
-        m_TextureShader.reset(Ural::Shader::Create(textureShaderVertexSrc, textureShaderFragmentSrc));
-
-
-        m_Texture = Ural::Texture2D::Create(R"(texture.png)");
-
-        std::dynamic_pointer_cast<Ural::OpenGLShader>(m_TextureShader)->Bind();
-        std::dynamic_pointer_cast<Ural::OpenGLShader>(m_TextureShader)->UploadUniformInt("u_Texture", 1);
+        std::dynamic_pointer_cast<Ural::OpenGLShader>(textureShader)->Bind();
+        std::dynamic_pointer_cast<Ural::OpenGLShader>(textureShader)->UploadUniformInt("u_Texture", 1);
     }
 
     void OnUpdate(Ural::TimeStep ts) override
     {
-        //UL_INFO("ExampleLayer::Update");
-        //UL_TRACE("Delta time: {0}s", ts.GetSeconds());
-        if (Ural::Input::IsKeyPressed(UL_KEY_LEFT))
-        {
-            m_CameraPosition.x -= m_CameraMoveSpeed * ts;
-        } else if (Ural::Input::IsKeyPressed(UL_KEY_RIGHT))
-        {
-            m_CameraPosition.x += m_CameraMoveSpeed * ts;
-        }
-
-        if (Ural::Input::IsKeyPressed(UL_KEY_UP))
-        {
-            m_CameraPosition.y += m_CameraMoveSpeed * ts;
-        } else if (Ural::Input::IsKeyPressed(UL_KEY_DOWN))
-        {
-            m_CameraPosition.y -= m_CameraMoveSpeed * ts;
-        }
-
-        if (Ural::Input::IsKeyPressed(UL_KEY_A))
-        {
-            m_CameraRotation += m_CameraRotationSpeed * ts;
-        }
-
-        if (Ural::Input::IsKeyPressed(UL_KEY_D))
-        {
-            m_CameraRotation -= m_CameraRotationSpeed * ts;
-        }
-        if(Ural::Input::IsKeyPressed(UL_KEY_TAB))
-            UL_INFO("Tab key is pressed!");
+        m_CameraController.OnUpdate(ts);
 
         Ural::RenderCommand::SetClearColor({ 0.1f, 0.1f, 0.1f, 1.0f });
         Ural::RenderCommand::Clear();
 
-        m_Camera.SetPostion(m_CameraPosition);
-        m_Camera.SetRotation(m_CameraRotation);
-
-        Ural::Renderer::BeginScene(m_Camera);
+        Ural::Renderer::BeginScene(m_CameraController.GetCamera());
 
         glm::mat4 scale = glm::scale(glm::mat4(1.0f), glm::vec3(0.1f));
 
-//
-//        std::dynamic_pointer_cast<Ural::OpenGLShader>(m_FlatColorShader)->Bind();
-//std::dynamic_pointer_cast<Ural::OpenGLShader>(m_FlatColorShader)->UploadUniformFloat3("u_Color", m_SquareColor);
-//
-//        for (int y = 0; y < 20; y++)
-//        {
-//            for (int x = 0; x < 20; x++)
-//             {
-//                 glm::vec3 pos(x * 0.11f, y * 0.11f, 0.0f);
-//                 glm::mat4 transfrom = glm::translate(glm::mat4(1.0f), pos) * scale;
-//                 Ural::Renderer::Submit(m_FlatColorShader, m_SquareVA, transfrom);
-//             }
-//        }
+
+        std::dynamic_pointer_cast<Ural::OpenGLShader>(m_FlatColorShader)->Bind();
+        std::dynamic_pointer_cast<Ural::OpenGLShader>(m_FlatColorShader)->UploadUniformFloat3("u_Color", m_SquareColor);
+
+        for (int y = 0; y < 20; y++)
+        {
+            for (int x = 0; x < 20; x++)
+             {
+                 glm::vec3 pos(x * 0.11f, y * 0.11f, 0.0f);
+                 glm::mat4 transfrom = glm::translate(glm::mat4(1.0f), pos) * scale;
+                 Ural::Renderer::Submit(m_FlatColorShader, m_SquareVA, transfrom);
+             }
+        }
+
+        auto textureShader = m_ShaderLibrary.Get("texture");
+
         m_Texture->Bind();
-        Ural::Renderer::Submit(m_TextureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
+        Ural::Renderer::Submit(textureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
+        m_Logo->Bind();
+        Ural::Renderer::Submit(textureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
         //Ural::Renderer::Submit(m_Shader, m_VertexArray);
         Ural::Renderer::EndScene();
     }
 
-    void OnEvent(Ural::Event& event) override
+    void OnEvent(Ural::Event& e) override
     {
-        Ural::EventDispatcher dispathcer(event);
-        dispathcer.Dispatch<Ural::KeyPressedEvent>(UL_BIND_EVENT_FN(ExampleLayer::OnKeyPressedEvent));
-       // UL_TRACE("{0}", event);
-    }
+        m_CameraController.OnEvent(e);
 
-    bool OnKeyPressedEvent(Ural::KeyPressedEvent& event)
-    {
-//        if (event.GetKeyCode() == UL_KEY_LEFT)
-//        {
-//            m_CameraPosition.x -= m_CameraSpeed;
-//        }
-//
-//        if (event.GetKeyCode() == UL_KEY_RIGHT)
-//        {
-//            m_CameraPosition.x += m_CameraSpeed;
-//        }
-//
-//        if (event.GetKeyCode() == UL_KEY_UP)
-//        {
-//            m_CameraPosition.y += m_CameraSpeed;
-//        }
-//
-//        if (event.GetKeyCode() == UL_KEY_DOWN)
-//        {
-//            m_CameraPosition.y -= m_CameraSpeed;
-//        }
+        if (e.GetEventType() == Ural::EventType::WindowResize)
+        {
+//            auto& re = (Ural::WindowResizeEvent&)e;
 
-        return false;
+//
+//            float zoom = re.GetWidth() / 1280.0f;
+//            m_CameraController.SetZoomLevel(zoom);
+        }
     }
 
 private:
+
+    Ural::ShaderLibrary m_ShaderLibrary;
+
     Ural::Ref<Ural::Shader> m_Shader;
-    Ural::Ref<Ural::Shader> m_FlatColorShader, m_TextureShader;
+    Ural::Ref<Ural::Shader> m_FlatColorShader;
     Ural::Ref<Ural::VertexArray> m_VertexArray;
     Ural::Ref<Ural::VertexArray> m_SquareVA;
 
-    Ural::Ref<Ural::Texture2D> m_Texture;
+    Ural::Ref<Ural::Texture2D> m_Texture, m_Logo;
 
-    Ural::OrthographicCamera m_Camera;
-    glm::vec3 m_CameraPosition;
-    float m_CameraRotation = 0.0f;
-    float m_CameraMoveSpeed = 5.0f;
-    float m_CameraRotationSpeed = 180.1f;
+    Ural::OrthographicCameraController m_CameraController;
 
- //   glm::vec3 m_SquareColor = {0.2f, 0.3f, 0.8f};
-//    float m_SquareMoveSpeed = 1.0f;
-//    glm::vec3 m_SquarePosition;
+    glm::vec3 m_SquareColor = {0.2f, 0.3f, 0.8f};
 
 };
 
@@ -337,7 +255,7 @@ public:
     Sandbox()
     {
         PushOverlay(new ExampleLayer());
-        PushOverlay(new MyMiGUI());
+      //  PushOverlay(new MyMiGUI());
     }
 
     ~Sandbox()

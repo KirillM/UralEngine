@@ -26,6 +26,19 @@ namespace Ural {
         m_Width = width;
         m_Height = height;
 
+        GLenum interalFormat = 0, dataFormat = 0;
+        if (channels == 4)
+        {
+            interalFormat = GL_RGBA8;
+            dataFormat = GL_RGBA;
+        }
+        else if (channels == 3) {
+            interalFormat = GL_RGB8;
+            dataFormat = GL_RGB;
+        }
+
+        UL_CORE_ASSERT(interalFormat && dataFormat, "Fornat bot supported!")
+
        // glGenTextures(GL_TEXTURE_2D, 1, &m_RendererID);
        // glTextureStorage2D(m_RendererID, 1, GL_RGB8, m_Width, m_Height);
 
@@ -34,7 +47,7 @@ namespace Ural {
         glBindTexture(GL_TEXTURE_2D, m_RendererID);
 
     //    glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
-        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, m_Width, m_Height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+        glTexImage2D(GL_TEXTURE_2D, 0, interalFormat, m_Width, m_Height, 0, dataFormat, GL_UNSIGNED_BYTE, data);
       //          glGetError();
         //glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);

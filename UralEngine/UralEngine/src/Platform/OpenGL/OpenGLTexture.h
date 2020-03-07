@@ -6,8 +6,8 @@
 //  Copyright © 2020 Кирилл Мезрин. All rights reserved.
 //
 
-#ifndef OpenGLTexture_hpp
-#define OpenGLTexture_hpp
+#ifndef OpenGLTexture_h
+#define OpenGLTexture_h
 
 #include "Renderer/Texture.h"
 
@@ -29,4 +29,4 @@ namespace Ural {
     };
 }
 
-#endif /* OpenGLTexture_hpp */
+#endif /* OpenGLTexture_h */
