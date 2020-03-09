@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		537F12B223930A4B00369F57 /* libUralEngine.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 537F12B123930A4B00369F57 /* libUralEngine.dylib */; };
 		537F12B323930A4B00369F57 /* libUralEngine.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 537F12B123930A4B00369F57 /* libUralEngine.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		53A6FD062413D72F0099865A /* Sandbox2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53A6FD042413D72F0099865A /* Sandbox2D.cpp */; };
 		53A790CF2392C5A600E29426 /* Sandbox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53A790CE2392C5A600E29426 /* Sandbox.cpp */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,8 @@
 /* Begin PBXFileReference section */
 		537F12B123930A4B00369F57 /* libUralEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libUralEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		53A6FCFB2412DDBF0099865A /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = assets; path = ../../UralEngine/working/assets; sourceTree = "<group>"; };
+		53A6FD042413D72F0099865A /* Sandbox2D.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Sandbox2D.cpp; sourceTree = "<group>"; };
+		53A6FD052413D72F0099865A /* Sandbox2D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sandbox2D.h; sourceTree = "<group>"; };
 		53A790CB2392C5A600E29426 /* Sandbox */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Sandbox; sourceTree = BUILT_PRODUCTS_DIR; };
 		53A790CE2392C5A600E29426 /* Sandbox.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Sandbox.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,6 +69,8 @@
 			isa = PBXGroup;
 			children = (
 				53A790CE2392C5A600E29426 /* Sandbox.cpp */,
+				53A6FD042413D72F0099865A /* Sandbox2D.cpp */,
+				53A6FD052413D72F0099865A /* Sandbox2D.h */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -176,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				53A790CF2392C5A600E29426 /* Sandbox.cpp in Sources */,
+				53A6FD062413D72F0099865A /* Sandbox2D.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

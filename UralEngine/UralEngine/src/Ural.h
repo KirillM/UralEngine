@@ -43,6 +43,7 @@
 
 // отрисовщик
 #include "Renderer/Renderer.h"
+#include "Renderer/Renderer2D.h"
 #include "Renderer/RenderCommand.h"
 
 // камеры
@@ -55,7 +56,7 @@
 //----------------------------------
 
 //------Точка входа-----------------
-#include "Ural/EntryPoint.h"
+//#include "Ural/EntryPoint.h"
 //----------------------------------
 
 #endif

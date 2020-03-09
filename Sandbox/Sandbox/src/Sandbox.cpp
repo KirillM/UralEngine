@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include "Ural.h"
+#include "Ural/EntryPoint.h"
 #include <imgui.h>
 
 /*
@@ -25,6 +26,8 @@
 #include "Platform/OpenGL/OpenGLTexture.h"
 #include "Renderer/Texture.h"
 
+#include "Sandbox2D.h"
+
 static glm::vec3 m_SquareColor = {0.2f, 0.3f, 0.8f};
 
 class ExampleLayer: public Ural::Layer
@@ -32,7 +35,7 @@ class ExampleLayer: public Ural::Layer
 public:
     ExampleLayer() : Layer("Example"), m_CameraController(1280.0f / 720.0f, true)
     {
-        m_VertexArray.reset(Ural::VertexArray::Create());
+        m_VertexArray = Ural::VertexArray::Create();
 
             float vertices[7 * 3] = {
                  -0.5f, -0.5f, 0.0f, 0.8f, 0.2f, 0.8f, 1.0f,
@@ -59,7 +62,7 @@ public:
             m_VertexArray->AddIndexBuffer(m_IndexBuffer);
 
 
-            m_SquareVA.reset(Ural::VertexArray::Create());
+            m_SquareVA = Ural::VertexArray::Create();
 
             float squareVertices[5 * 4] = {
                  -0.5f, -0.5f, 0.0f, 0.0f, 0.0f,
@@ -227,7 +230,7 @@ private:
 
     Ural::OrthographicCameraController m_CameraController;
 
-    glm::vec3 m_SquareColor = {0.2f, 0.3f, 0.8f};
+  //  glm::vec3 m_SquareColor = {0.2f, 0.3f, 0.8f};
 
 };
 
@@ -254,8 +257,9 @@ class Sandbox : public Ural::Application
 public:
     Sandbox()
     {
-        PushOverlay(new ExampleLayer());
-      //  PushOverlay(new MyMiGUI());
+        //PushOverlay(new ExampleLayer());
+        PushOverlay(new Sandbox2D());
+        //PushOverlay(new MyMiGUI());
     }
 
     ~Sandbox()

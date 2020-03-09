@@ -13,7 +13,7 @@
 
 namespace Ural {
 
-    VertexArray* VertexArray::Create()
+    Ref<VertexArray> VertexArray::Create()
     {
         switch (RendererAPI::GetAPI()) {
             case RendererAPI::API::None: {
@@ -21,7 +21,7 @@ namespace Ural {
                    return nullptr;
                }
             case RendererAPI::API::OpenGL: {
-                   return new OpenGLVertexArray();
+                   return std::make_shared<OpenGLVertexArray>();
                }
          }
 

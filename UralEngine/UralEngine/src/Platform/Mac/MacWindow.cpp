@@ -160,18 +160,8 @@ namespace Ural {
 		
 		glfwSetCursorPosCallback(m_Window, [](GLFWwindow* window, double xPos, double yPos)
 		{
-			//std::cout << "mem1 " << &xPos << "\n\n";
-//			float a = (float)xPos;
-//			std::cout << "mem5 " << a << "\n\n";
-//			float b = (float)yPos;
-//			const float& c = a;
-//			const float* d = &c;
-//			std::cout << "mem2 " << &a << "\n\n";
-//			std::cout << "mem3 " << d << "\n\n";
 			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
 			MouseMovedEvent event((float)xPos, (float)yPos);
-			//float e = event.GetX();
-			//float& f = event.GetX();
 			data.Callback(event);
 		});
  	}
