@@ -14,7 +14,6 @@
 #include "Events/KeyEvent.h"
 #include "Events/MouseEvent.h"
 
-#include <glad/glad.h>
 // GLFW_INCLUDE_NONE
 
 namespace Ural {
@@ -56,7 +55,7 @@ namespace Ural {
 
             glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
             glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-            glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+            glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_COMPAT_PROFILE);
             
 			UL_CORE_ASSERT(success, "Culd not initialized GLFW!");
             glfwSetErrorCallback(GLFWErrorCallback);
@@ -65,8 +64,8 @@ namespace Ural {
 		
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
-        int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
-        UL_CORE_ASSERT(status, "Failed to initialized GLAD")
+      //  int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+     //   UL_CORE_ASSERT(status, "Failed to initialized GLAD")
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
         

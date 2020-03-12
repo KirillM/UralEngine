@@ -13,7 +13,6 @@
 #include <GLFW/glfw3.h>
 #include "Ural/Application.h"
 #include "Platform/Mac/MacWindow.h"
-#include <glad/glad.h>
 
 namespace Ural {
     ImGuiLayer::ImGuiLayer() : Layer("ImGuiLayer")

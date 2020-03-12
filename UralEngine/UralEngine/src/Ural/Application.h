@@ -34,6 +34,7 @@ namespace Ural {
         inline Window& GetWindow() { return *m_Window; }
 	private:
         bool OnWindowClose(WindowCloseEvent& e);
+        bool OnWindowResize(WindowResizeEvent& e);
 		std::unique_ptr<Window> m_Window = nullptr;
 		bool m_Running = true;
         LayerStack m_LayerStack;

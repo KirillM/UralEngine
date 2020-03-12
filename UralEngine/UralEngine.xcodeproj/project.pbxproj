@@ -18,6 +18,10 @@
 		53492C89239A9BE7009E1076 /* Event.h in Headers */ = {isa = PBXBuildFile; fileRef = 53492C88239A9BE7009E1076 /* Event.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		53492C8B239A9BFC009E1076 /* KeyEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 53492C8A239A9BFC009E1076 /* KeyEvent.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		53492C8D239A9C12009E1076 /* MouseEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 53492C8C239A9C12009E1076 /* MouseEvent.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		535E5824241826AB007D8846 /* Primitives.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 535E5823241826AB007D8846 /* Primitives.cpp */; };
+		535E5826241827EE007D8846 /* PrimitiveShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 535E5825241827EE007D8846 /* PrimitiveShader.cpp */; };
+		535E582824183644007D8846 /* Blending.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 535E582724183644007D8846 /* Blending.cpp */; };
+		535E582A24183C86007D8846 /* Antialiasing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 535E582924183C86007D8846 /* Antialiasing.cpp */; };
 		5360CEC123FD1E6E00D2F5DB /* UralEngine_IOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 5360CEC023FD1E6E00D2F5DB /* UralEngine_IOS.m */; };
 		5360CEC223FD1E6E00D2F5DB /* UralEngine_IOS.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5360CEBF23FD1E6E00D2F5DB /* UralEngine_IOS.h */; };
 		5360CEC623FD1E7400D2F5DB /* Window.h in Headers */ = {isa = PBXBuildFile; fileRef = 530164F1239BF91A00821B62 /* Window.h */; };
@@ -70,10 +74,19 @@
 		53016508239C2A4F00821B62 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		5301650A239C2A7200821B62 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		5312F9D4239B0E8C007B2CFC /* ulpch.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ulpch.pch; sourceTree = "<group>"; };
+		531C766F241685FF000A1EEC /* Constants.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Constants.cpp; sourceTree = "<group>"; };
+		53249A442419808300626E57 /* Textures.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Textures.cpp; sourceTree = "<group>"; };
+		53249A462419B3D600626E57 /* Shaders.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Shaders.cpp; sourceTree = "<group>"; };
+		53249A47241A25F500626E57 /* Lightning.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Lightning.cpp; sourceTree = "<group>"; };
+		53249A48241AAAC600626E57 /* Anisantropic.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Anisantropic.cpp; sourceTree = "<group>"; };
 		53492C86239A9BD5009E1076 /* ApplicationEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplicationEvent.h; sourceTree = "<group>"; };
 		53492C88239A9BE7009E1076 /* Event.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
 		53492C8A239A9BFC009E1076 /* KeyEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyEvent.h; sourceTree = "<group>"; };
 		53492C8C239A9C12009E1076 /* MouseEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MouseEvent.h; sourceTree = "<group>"; };
+		535E5823241826AB007D8846 /* Primitives.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Primitives.cpp; sourceTree = "<group>"; };
+		535E5825241827EE007D8846 /* PrimitiveShader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PrimitiveShader.cpp; sourceTree = "<group>"; };
+		535E582724183644007D8846 /* Blending.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Blending.cpp; sourceTree = "<group>"; };
+		535E582924183C86007D8846 /* Antialiasing.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Antialiasing.cpp; sourceTree = "<group>"; };
 		5360CEA023FD1C3700D2F5DB /* UralEngine_IOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UralEngine_IOS.h; sourceTree = "<group>"; };
 		5360CEA123FD1C3700D2F5DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5360CEAC23FD1C5C00D2F5DB /* UralEngine_IOS_Static.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UralEngine_IOS_Static.h; sourceTree = "<group>"; };
@@ -94,6 +107,11 @@
 		53D79650240066A800D752C7 /* LayerStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LayerStack.h; sourceTree = "<group>"; };
 		53D79653240066B400D752C7 /* Layer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Layer.cpp; sourceTree = "<group>"; };
 		53D79654240066B400D752C7 /* Layer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Layer.h; sourceTree = "<group>"; };
+		53EEBA782416C2FD006F8600 /* Errors.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Errors.cpp; sourceTree = "<group>"; };
+		53EEBA792416C6CA006F8600 /* Extension.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Extension.cpp; sourceTree = "<group>"; };
+		53EEBA7B2416CBA0006F8600 /* State.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = State.cpp; sourceTree = "<group>"; };
+		53EEBA7D2416D057006F8600 /* Commands.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Commands.cpp; sourceTree = "<group>"; };
+		53EEBA7F2416DAE0006F8600 /* Draw.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Draw.cpp; sourceTree = "<group>"; };
 		53F6E9FD240148DC00EF58AA /* libimgui.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libimgui.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		53F6EA002401497800EF58AA /* ImGuiLayer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ImGuiLayer.cpp; sourceTree = "<group>"; };
 		53F6EA012401497800EF58AA /* ImGuiLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImGuiLayer.h; sourceTree = "<group>"; };
@@ -184,6 +202,27 @@
 			path = IOS;
 			sourceTree = "<group>";
 		};
+		531C766E241685E4000A1EEC /* Super */ = {
+			isa = PBXGroup;
+			children = (
+				531C766F241685FF000A1EEC /* Constants.cpp */,
+				53EEBA782416C2FD006F8600 /* Errors.cpp */,
+				53EEBA792416C6CA006F8600 /* Extension.cpp */,
+				53EEBA7B2416CBA0006F8600 /* State.cpp */,
+				53EEBA7D2416D057006F8600 /* Commands.cpp */,
+				53EEBA7F2416DAE0006F8600 /* Draw.cpp */,
+				535E5823241826AB007D8846 /* Primitives.cpp */,
+				535E5825241827EE007D8846 /* PrimitiveShader.cpp */,
+				535E582724183644007D8846 /* Blending.cpp */,
+				535E582924183C86007D8846 /* Antialiasing.cpp */,
+				53249A442419808300626E57 /* Textures.cpp */,
+				53249A462419B3D600626E57 /* Shaders.cpp */,
+				53249A47241A25F500626E57 /* Lightning.cpp */,
+				53249A48241AAAC600626E57 /* Anisantropic.cpp */,
+			);
+			path = Super;
+			sourceTree = "<group>";
+		};
 		53492C85239A9BA5009E1076 /* Events */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +291,7 @@
 		53A790782392A17500E29426 = {
 			isa = PBXGroup;
 			children = (
+				531C766E241685E4000A1EEC /* Super */,
 				53A790902392AE1500E29426 /* UralEngine */,
 				5360CE9F23FD1C3700D2F5DB /* UralEngine IOS */,
 				5360CEAB23FD1C5C00D2F5DB /* UralEngine IOS Static */,
@@ -459,12 +499,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				535E5824241826AB007D8846 /* Primitives.cpp in Sources */,
 				530164FE239C290300821B62 /* MacWindow.cpp in Sources */,
 				53F6EA022401497800EF58AA /* ImGuiLayer.cpp in Sources */,
 				53722372239800D600312C05 /* Log.cpp in Sources */,
+				535E5826241827EE007D8846 /* PrimitiveShader.cpp in Sources */,
 				53F6EA0724014EC600EF58AA /* ImGuiOpenGLRenderer.cpp in Sources */,
 				53D79651240066A800D752C7 /* LayerStack.cpp in Sources */,
+				535E582824183644007D8846 /* Blending.cpp in Sources */,
 				537F12AD2393015F00369F57 /* Application.cpp in Sources */,
+				535E582A24183C86007D8846 /* Antialiasing.cpp in Sources */,
 				53F6EA1324019E8700EF58AA /* MacInput.cpp in Sources */,
 				53D79655240066B400D752C7 /* Layer.cpp in Sources */,
 			);
@@ -651,7 +695,6 @@
 					"DEBUG=1",
 					"UL_PLATFORM_MAC=1",
 					"UL_ENABLED_ASSERTS=1",
-					GLFW_INCLUDE_NONE,
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				HEADER_SEARCH_PATHS = (
@@ -664,6 +707,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/vendor/glfw-build/src",
 					"$(PROJECT_DIR)/vendor/GLAD/include/glad",
+					"$(PROJECT_DIR)/Super",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -691,7 +735,6 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"UL_BUILD_DLYB=1",
 					"UL_PLATFORM_MAC=1",
-					GLFW_INCLUDE_NONE,
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				HEADER_SEARCH_PATHS = (
@@ -704,6 +747,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/vendor/glfw-build/src",
 					"$(PROJECT_DIR)/vendor/GLAD/include/glad",
+					"$(PROJECT_DIR)/Super",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
