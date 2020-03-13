@@ -16,11 +16,6 @@
 #include <OpenGL/glu.h>
 //#include <OpenGL/gl3.h>
 
-//#include <GLShaderManager.h> // Shader Manager Class
-
-GLBatch triangleBatch;
-GLShaderManager shaderManager;
-
 namespace Ural {
 
 #define BIND_EVENT_FN(x) std::bind(&Application::x, this, std::placeholders::_1)
@@ -147,7 +142,7 @@ namespace Ural {
             // не является чтоным размером точки в пикселях, а приблизительном диаметре окружности содержаий все пиксели точки
             glPointSize(64); // поддерживает не все размеры
 
-            glLineWidth(GLfloat width)
+           // glLineWidth(GLfloat width)
             glEnable(GL_LINE_STIPPLE);
              glLineStipple(2, 127); // (factor, pattern)
              // pattern - 16 бит, каждый бит соответсвует 1-му пикселю // 0000000011111111 -> ттттттттсссссссс (темно - светло)

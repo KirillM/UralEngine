@@ -18,10 +18,6 @@
 		53492C89239A9BE7009E1076 /* Event.h in Headers */ = {isa = PBXBuildFile; fileRef = 53492C88239A9BE7009E1076 /* Event.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		53492C8B239A9BFC009E1076 /* KeyEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 53492C8A239A9BFC009E1076 /* KeyEvent.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		53492C8D239A9C12009E1076 /* MouseEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 53492C8C239A9C12009E1076 /* MouseEvent.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		535E5824241826AB007D8846 /* Primitives.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 535E5823241826AB007D8846 /* Primitives.cpp */; };
-		535E5826241827EE007D8846 /* PrimitiveShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 535E5825241827EE007D8846 /* PrimitiveShader.cpp */; };
-		535E582824183644007D8846 /* Blending.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 535E582724183644007D8846 /* Blending.cpp */; };
-		535E582A24183C86007D8846 /* Antialiasing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 535E582924183C86007D8846 /* Antialiasing.cpp */; };
 		5360CEC123FD1E6E00D2F5DB /* UralEngine_IOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 5360CEC023FD1E6E00D2F5DB /* UralEngine_IOS.m */; };
 		5360CEC223FD1E6E00D2F5DB /* UralEngine_IOS.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5360CEBF23FD1E6E00D2F5DB /* UralEngine_IOS.h */; };
 		5360CEC623FD1E7400D2F5DB /* Window.h in Headers */ = {isa = PBXBuildFile; fileRef = 530164F1239BF91A00821B62 /* Window.h */; };
@@ -499,16 +495,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				535E5824241826AB007D8846 /* Primitives.cpp in Sources */,
 				530164FE239C290300821B62 /* MacWindow.cpp in Sources */,
 				53F6EA022401497800EF58AA /* ImGuiLayer.cpp in Sources */,
 				53722372239800D600312C05 /* Log.cpp in Sources */,
-				535E5826241827EE007D8846 /* PrimitiveShader.cpp in Sources */,
 				53F6EA0724014EC600EF58AA /* ImGuiOpenGLRenderer.cpp in Sources */,
 				53D79651240066A800D752C7 /* LayerStack.cpp in Sources */,
-				535E582824183644007D8846 /* Blending.cpp in Sources */,
 				537F12AD2393015F00369F57 /* Application.cpp in Sources */,
-				535E582A24183C86007D8846 /* Antialiasing.cpp in Sources */,
 				53F6EA1324019E8700EF58AA /* MacInput.cpp in Sources */,
 				53D79655240066B400D752C7 /* Layer.cpp in Sources */,
 			);
