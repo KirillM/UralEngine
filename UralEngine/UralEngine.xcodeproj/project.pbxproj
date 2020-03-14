@@ -99,6 +99,7 @@
 		537F12AF2393030400369F57 /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		53A7908F2392AE1500E29426 /* libUralEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libUralEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		53A790912392AE1500E29426 /* Ural.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ural.h; sourceTree = "<group>"; };
+		53ADA90D241D5AB100732268 /* working */ = {isa = PBXFileReference; lastKnownFileType = folder; path = working; sourceTree = "<group>"; };
 		53D7964F240066A800D752C7 /* LayerStack.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LayerStack.cpp; sourceTree = "<group>"; };
 		53D79650240066A800D752C7 /* LayerStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LayerStack.h; sourceTree = "<group>"; };
 		53D79653240066B400D752C7 /* Layer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Layer.cpp; sourceTree = "<group>"; };
@@ -287,6 +288,7 @@
 		53A790782392A17500E29426 = {
 			isa = PBXGroup;
 			children = (
+				53ADA90D241D5AB100732268 /* working */,
 				531C766E241685E4000A1EEC /* Super */,
 				53A790902392AE1500E29426 /* UralEngine */,
 				5360CE9F23FD1C3700D2F5DB /* UralEngine IOS */,
