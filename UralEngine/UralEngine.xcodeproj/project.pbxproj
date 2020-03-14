@@ -19,7 +19,7 @@
 		53492C8B239A9BFC009E1076 /* KeyEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 53492C8A239A9BFC009E1076 /* KeyEvent.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		53492C8D239A9C12009E1076 /* MouseEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 53492C8C239A9C12009E1076 /* MouseEvent.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		535AD99F241D5ECC006AAD26 /* OpenGLShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 535AD99D241D5ECC006AAD26 /* OpenGLShader.cpp */; };
-		535AD9A0241D5ECC006AAD26 /* OpenGLShader.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 535AD99E241D5ECC006AAD26 /* OpenGLShader.hpp */; };
+		535AD9A0241D5ECC006AAD26 /* OpenGLShader.h in Headers */ = {isa = PBXBuildFile; fileRef = 535AD99E241D5ECC006AAD26 /* OpenGLShader.h */; };
 		5360CEC123FD1E6E00D2F5DB /* UralEngine_IOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 5360CEC023FD1E6E00D2F5DB /* UralEngine_IOS.m */; };
 		5360CEC223FD1E6E00D2F5DB /* UralEngine_IOS.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5360CEBF23FD1E6E00D2F5DB /* UralEngine_IOS.h */; };
 		5360CEC623FD1E7400D2F5DB /* Window.h in Headers */ = {isa = PBXBuildFile; fileRef = 530164F1239BF91A00821B62 /* Window.h */; };
@@ -47,6 +47,10 @@
 		53F6EA1424019E8700EF58AA /* MacInput.h in Headers */ = {isa = PBXBuildFile; fileRef = 53F6EA1224019E8700EF58AA /* MacInput.h */; };
 		53F6EA162401AF3A00EF58AA /* KeyCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 53F6EA152401AF3A00EF58AA /* KeyCodes.h */; };
 		53F6EA182401AFB600EF58AA /* MouseButtonCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 53F6EA172401AFB300EF58AA /* MouseButtonCodes.h */; };
+		53F704F1241D5F4B00608BAA /* stb_image.h in Headers */ = {isa = PBXBuildFile; fileRef = 53F704EF241D5F4B00608BAA /* stb_image.h */; };
+		53F704F2241D5F4B00608BAA /* stb_image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53F704F0241D5F4B00608BAA /* stb_image.cpp */; };
+		53F704F9241D615700608BAA /* test.h in Headers */ = {isa = PBXBuildFile; fileRef = 53F704F7241D615700608BAA /* test.h */; };
+		53F704FA241D615700608BAA /* test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53F704F8241D615700608BAA /* test.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -82,7 +86,7 @@
 		53492C8A239A9BFC009E1076 /* KeyEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyEvent.h; sourceTree = "<group>"; };
 		53492C8C239A9C12009E1076 /* MouseEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MouseEvent.h; sourceTree = "<group>"; };
 		535AD99D241D5ECC006AAD26 /* OpenGLShader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = OpenGLShader.cpp; sourceTree = "<group>"; };
-		535AD99E241D5ECC006AAD26 /* OpenGLShader.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = OpenGLShader.hpp; sourceTree = "<group>"; };
+		535AD99E241D5ECC006AAD26 /* OpenGLShader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenGLShader.h; sourceTree = "<group>"; };
 		535E5823241826AB007D8846 /* Primitives.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Primitives.cpp; sourceTree = "<group>"; };
 		535E5825241827EE007D8846 /* PrimitiveShader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PrimitiveShader.cpp; sourceTree = "<group>"; };
 		535E582724183644007D8846 /* Blending.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Blending.cpp; sourceTree = "<group>"; };
@@ -124,6 +128,10 @@
 		53F6EA1224019E8700EF58AA /* MacInput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacInput.h; sourceTree = "<group>"; };
 		53F6EA152401AF3A00EF58AA /* KeyCodes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyCodes.h; sourceTree = "<group>"; };
 		53F6EA172401AFB300EF58AA /* MouseButtonCodes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MouseButtonCodes.h; sourceTree = "<group>"; };
+		53F704EF241D5F4B00608BAA /* stb_image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
+		53F704F0241D5F4B00608BAA /* stb_image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stb_image.cpp; sourceTree = "<group>"; };
+		53F704F7241D615700608BAA /* test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = test.h; sourceTree = "<group>"; };
+		53F704F8241D615700608BAA /* test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = test.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -292,6 +300,8 @@
 		53A790782392A17500E29426 = {
 			isa = PBXGroup;
 			children = (
+				53F704EE241D5F4B00608BAA /* stb_image */,
+				53F704ED241D5F3000608BAA /* mine */,
 				53ADA90D241D5AB100732268 /* working */,
 				531C766E241685E4000A1EEC /* Super */,
 				53A790902392AE1500E29426 /* UralEngine */,
@@ -370,8 +380,6 @@
 			children = (
 				53F6EA0524014EC600EF58AA /* ImGuiOpenGLRenderer.cpp */,
 				53F6EA0624014EC600EF58AA /* ImGuiOpenGLRenderer.h */,
-				535AD99D241D5ECC006AAD26 /* OpenGLShader.cpp */,
-				535AD99E241D5ECC006AAD26 /* OpenGLShader.hpp */,
 			);
 			path = OpenGL;
 			sourceTree = "<group>";
@@ -386,6 +394,26 @@
 			path = Input;
 			sourceTree = "<group>";
 		};
+		53F704ED241D5F3000608BAA /* mine */ = {
+			isa = PBXGroup;
+			children = (
+				535AD99D241D5ECC006AAD26 /* OpenGLShader.cpp */,
+				535AD99E241D5ECC006AAD26 /* OpenGLShader.h */,
+				53F704F7241D615700608BAA /* test.h */,
+				53F704F8241D615700608BAA /* test.cpp */,
+			);
+			path = mine;
+			sourceTree = "<group>";
+		};
+		53F704EE241D5F4B00608BAA /* stb_image */ = {
+			isa = PBXGroup;
+			children = (
+				53F704EF241D5F4B00608BAA /* stb_image.h */,
+				53F704F0241D5F4B00608BAA /* stb_image.cpp */,
+			);
+			path = stb_image;
+			sourceTree = SOURCE_ROOT;
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -397,18 +425,20 @@
 				53D79656240066B400D752C7 /* Layer.h in Headers */,
 				53F6EA162401AF3A00EF58AA /* KeyCodes.h in Headers */,
 				537F12B02393030400369F57 /* Core.h in Headers */,
+				53F704F9241D615700608BAA /* test.h in Headers */,
 				53F6EA1424019E8700EF58AA /* MacInput.h in Headers */,
 				536E7862239B145A00AD166E /* ulpch.pch in Headers */,
 				53492C8D239A9C12009E1076 /* MouseEvent.h in Headers */,
 				53F6EA032401497800EF58AA /* ImGuiLayer.h in Headers */,
 				53D79652240066A800D752C7 /* LayerStack.h in Headers */,
 				537F12AE2393015F00369F57 /* Application.h in Headers */,
-				535AD9A0241D5ECC006AAD26 /* OpenGLShader.hpp in Headers */,
+				535AD9A0241D5ECC006AAD26 /* OpenGLShader.h in Headers */,
 				5360CEC623FD1E7400D2F5DB /* Window.h in Headers */,
 				53492C8B239A9BFC009E1076 /* KeyEvent.h in Headers */,
 				53722373239800D600312C05 /* Log.h in Headers */,
 				530164FF239C290600821B62 /* MacWindow.h in Headers */,
 				53492C87239A9BD5009E1076 /* ApplicationEvent.h in Headers */,
+				53F704F1241D5F4B00608BAA /* stb_image.h in Headers */,
 				53F6EA182401AFB600EF58AA /* MouseButtonCodes.h in Headers */,
 				53492C89239A9BE7009E1076 /* Event.h in Headers */,
 				53F6EA0824014EC600EF58AA /* ImGuiOpenGLRenderer.h in Headers */,
@@ -509,8 +539,10 @@
 				53F6EA022401497800EF58AA /* ImGuiLayer.cpp in Sources */,
 				53722372239800D600312C05 /* Log.cpp in Sources */,
 				53F6EA0724014EC600EF58AA /* ImGuiOpenGLRenderer.cpp in Sources */,
+				53F704FA241D615700608BAA /* test.cpp in Sources */,
 				53D79651240066A800D752C7 /* LayerStack.cpp in Sources */,
 				537F12AD2393015F00369F57 /* Application.cpp in Sources */,
+				53F704F2241D5F4B00608BAA /* stb_image.cpp in Sources */,
 				53F6EA1324019E8700EF58AA /* MacInput.cpp in Sources */,
 				53D79655240066B400D752C7 /* Layer.cpp in Sources */,
 			);
@@ -704,6 +736,7 @@
 					"$(SRCROOT)/vendor/glfw/include",
 					"$(SRCROOT)/vendor/GLAD/include",
 					"$(SRCROOT)/vendor/imgui",
+					"$(SRCROOT)/vendor/glm",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -744,6 +777,7 @@
 					"$(SRCROOT)/vendor/glfw/include",
 					"$(SRCROOT)/vendor/GLAD/include",
 					"$(SRCROOT)/vendor/imgui",
+					"$(SRCROOT)/vendor/glm",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
