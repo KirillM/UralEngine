@@ -33,6 +33,70 @@ namespace Ural {
 
 //        unsigned int id;
 //        glGenVertexArrays(1, &id);
+
+        GLuint vShader = glCreateShader(GL_VERTEX_SHADER);
+        GLuint pShader = glCreateShader(GL_FRAGMENT_SHADER);
+
+        const GLchar* vShaderText = R"(
+                #version 330
+                in vec4 a_Position;
+                in vec4 a_Color;
+
+                out vec4 v_Color;
+
+                void main(void) {
+                    v_Color = a_Color;
+                    gl_Position = a_Position;
+                })";
+        const GLchar* pShaderText = R"(
+               #version 330
+
+                in vec4 a_Color;
+
+                out vec4 v_FragColor;
+
+                void main(void) {
+                    v_FragColor = a_Color;
+                })";
+
+        glShaderSource(vShader, 1, &vShaderText, NULL);
+        glShaderSource(pShader, 1, &pShaderText, NULL);
+        glCompileShader(vShader);
+        glCompileShader(pShader);
+
+        GLint vShaderCompileStatus;
+        glGetShaderiv(vShader, GL_COMPILE_STATUS, &vShaderCompileStatus);
+
+        GLint pShaderCompileStatus;
+        glGetShaderiv(pShader, GL_COMPILE_STATUS, &pShaderCompileStatus);
+
+        char infoLog[1024];
+
+        if (!vShaderCompileStatus)
+            glGetShaderInfoLog(vShader, sizeof(infoLog), NULL, infoLog);
+        if (!pShaderCompileStatus)
+            glGetShaderInfoLog(vShader, sizeof(infoLog), NULL, infoLog);
+
+        if (!vShaderCompileStatus || !pShaderCompileStatus) {
+            std::cout << "Shader error:" << infoLog << "\n";
+            glDeleteShader(vShader);
+            glDeleteShader(pShader);
+            return;
+        }
+
+        GLuint shProgram = glCreateProgram();
+        glAttachShader(shProgram, vShader);
+        glAttachShader(shProgram, pShader);
+
+        glBindAttribLocation(shProgram, 0, "a_Position");
+        glBindAttribLocation(shProgram, 1, "a_Color");
+
+        glLinkProgram(shProgram);
+
+        glDeleteShader(vShader);
+        glDeleteShader(pShader);
+
+        glUseProgram(shProgram);
 	}
 
 	Application::~Application()
@@ -91,6 +155,20 @@ namespace Ural {
             //GL_COLOR_BUFFER_BIT - буфер цветов (пикселей), место где хранится отображаемое изображений
 
             
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
 
             // OpenGL - машина состояний
             // для преключания сотосяний
