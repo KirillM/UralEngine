@@ -31,26 +31,24 @@ namespace Ural {
         GLuint pShader = glCreateShader(GL_FRAGMENT_SHADER);
 
         const GLchar* vShaderText = R"(
-             #version 330 core
+             #version 330
              layout(location = 0) in vec4 a_Position;
-             //in vec4 a_Color;
+             layout(location = 1) in vec4 a_Color;
 
              out vec4 v_Color;
 
              void main(void) {
-                 v_Color = vec4(1.0, 1.0, 1.0, 1.0);
-                //a_Color;
                  gl_Position = a_Position;
+                 v_Color = a_Color;
              })";
         const GLchar* pShaderText = R"(
-            #version 330 core
-
-             in vec4 a_Color;
+            #version 330
 
              layout(location = 0) out vec4 v_FragColor;
+             in vec4 v_Color;
 
              void main(void) {
-                 v_FragColor = a_Color;
+                 v_FragColor = v_Color;
              })";
 
          glShaderSource(vShader, 1, &vShaderText, NULL);
@@ -82,32 +80,45 @@ namespace Ural {
          glAttachShader(shProgram, vShader);
          glAttachShader(shProgram, pShader);
 
-         glBindAttribLocation(shProgram, 0, "a_Position");
-         //glBindAttribLocation(shProgram, 1, "a_Color");
+        GLuint positionLoc = glGetAttribLocation(shProgram, "a_Position");
+        GLuint colorLoc = glGetAttribLocation(shProgram, "a_Color");
+
+         glBindAttribLocation(shProgram, positionLoc, "a_Position");
+         glBindAttribLocation(shProgram, colorLoc, "a_Color");
 
          glLinkProgram(shProgram);
+        glValidateProgram(shProgram);
+        GLint pProgramLinkStatus = 0;
 
-        GLint pShaderLinkStatus = 0;
-        glGetShaderiv(pShader, GL_LINK_STATUS, &pShaderLinkStatus);
-        if (!pShaderLinkStatus) {
+        glGetProgramiv(shProgram, GL_LINK_STATUS, &pProgramLinkStatus);
+        if (!pProgramLinkStatus) {
 
             GLint maxLength = 0;
             glGetProgramiv(shProgram, GL_INFO_LOG_LENGTH, &maxLength);
 
             // The maxLength includes the NULL character
-            char* infoLog = (char*)malloc(maxLength);
-            glGetProgramInfoLog(shProgram, maxLength, &maxLength, &infoLog[0]);
+            char* infoLoger = (char*)malloc(maxLength);
+            glGetProgramInfoLog(shProgram, maxLength, &maxLength, &infoLoger[0]);
 
-            std::cout << "Shader link error:" << infoLog << "\n";
-               glDeleteShader(vShader);
-               glDeleteShader(pShader);
-               return;
+            std::cout << "Shader link error:" << infoLoger << "\n";
+
+            glDeleteProgram(shProgram);
+            return;
         }
 
          glDeleteShader(vShader);
          glDeleteShader(pShader);
 
          glUseProgram(shProgram);
+
+        GLint maxLength = 0;
+           glGetProgramiv(shProgram, GL_INFO_LOG_LENGTH, &maxLength);
+
+           // The maxLength includes the NULL character
+           char* infoLoger = (char*)malloc(maxLength);
+           glGetProgramInfoLog(shProgram, maxLength, &maxLength, &infoLoger[0]);
+
+           std::cout << "Shader link error:" << infoLoger << "\n";
     }
 
     static void glBuffers()
@@ -325,8 +336,8 @@ namespace Ural {
         // sahder: layout attribute position  //sahder: vec4 // data is not mormilazed (-1.0 to 1.0), data stride, data pointer,if = 0 it will be interpreted as
         // an offset into buff
 
-        static const GLfloat positions[] = {0.1f, 0.3f, 0.6f, 1.0f}; //vec4
-        static const GLfloat colors[] = {0.5f, 0.5f, 0.5f, 1.0f}; // vec4
+        static const GLfloat positions[] = {-0.5f, -0.5f, 0.0f, 1.0f}; //vec4
+        static const GLfloat colors[] = {0.0f, 0.0f, 0.5f, 1.0f}; // vec4
         static const GLfloat normals[] = {1.0f, 2.0f, 3.0f}; // vec3
 //
 //        glBufferData(GL_ARRAY_BUFFER, sizeof(positions) + sizeof(colors) + sizeof(normals), NULL, GL_STATIC_DRAW);
@@ -360,18 +371,20 @@ namespace Ural {
         /*
          An important thing to remember, at the moment you initialize even one object/ variable in the struct, all of its other variables will be initialized to default value.
          */
-
+        //            -0.5f, -0.5f,
+        //            0.0f, 0.5f,
+        //            0.5f, -0.5f
        // struct vertex vtx = {.positions = {1,2,3}, .colors = {1,2,3}, .normals = {1,2,3}};
         memcpy(verticies[0].positions, positions, sizeof(verticies[0].positions));
         memcpy(verticies[0].colors, colors, sizeof(verticies[0].colors));
        // memcpy(verticies[0].normals, normals, sizeof(verticies[0].normals));
 
-        memcpy(verticies[1].positions, (GLfloat[]){0.4f, 0.7f, 0.3f, 1.0f}, sizeof(((struct vertex){0}).positions));
-        memcpy(verticies[1].colors, (GLfloat[]){0.5f, 0.5f, 0.5f, 1.0f}, sizeof(((struct vertex){0}).colors));
+        memcpy(verticies[1].positions, (GLfloat[]){0.0f, 0.5f, 0.0f, 1.0f}, sizeof(((struct vertex){0}).positions));
+        memcpy(verticies[1].colors, (GLfloat[]){0.1f, 0.1f, 0.1f, 1.0f}, sizeof(((struct vertex){0}).colors));
       //  memcpy(verticies[1].normals, (GLfloat[]){1.0f, 2.0f, 3.0f}, sizeof(((struct vertex){0}).normals));
 
-        memcpy(verticies[2].positions, (GLfloat[]){0.3f, 0.5f, 0.6f, 1.0f}, sizeof(((struct vertex){0}).positions));
-        memcpy(verticies[2].colors, (GLfloat[]){0.5f, 0.5f, 0.5f, 1.0f}, sizeof(((struct vertex){0}).colors));
+        memcpy(verticies[2].positions, (GLfloat[]){0.5f, -0.5f, 0.0f, 1.0f}, sizeof(((struct vertex){0}).positions));
+        memcpy(verticies[2].colors, (GLfloat[]){0.0f, 0.5f, 0.5f, 1.0f}, sizeof(((struct vertex){0}).colors));
       //  memcpy(verticies[2].normals, (GLfloat[]){1.0f, 2.0f, 3.0f}, sizeof(((struct vertex){0}).normals));
 
         glBufferData(GL_ARRAY_BUFFER, sizeof(struct vertex) * 3, verticies, GL_STATIC_DRAW);
@@ -383,7 +396,7 @@ namespace Ural {
          Again, when no VAO is bound, glVertexAttribPointer will not work
          and will generate an error if you call it
          */
-         glEnableVertexAttribArray(0);
+        glEnableVertexAttribArray(0);
         glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, sizeof(struct vertex), (GLvoid *)offsetof(struct vertex, positions));
          glEnableVertexAttribArray(1);
         glVertexAttribPointer(1, 4, GL_FLOAT, GL_FALSE, sizeof(struct vertex), (GLvoid *)offsetof(struct vertex, colors));
@@ -478,18 +491,24 @@ namespace Ural {
 		//WindowResizeEvent e(1280, 720);
 		//UL_TRACE(e);
 
-        static float vertecies[6] = {
-            -0.5f, -0.5f,
-            0.0f, 0.5f,
-            0.5f, -0.5f
-        };
-        unsigned int buffer;
-        glGenBuffers(1, &buffer);
-        glBindBuffer(GL_ARRAY_BUFFER, buffer);
-        glBufferData(GL_ARRAY_BUFFER, sizeof(float) * 6, vertecies, GL_STATIC_DRAW);
-        glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(float) * 2, nullptr);
-        glEnableVertexAttribArray(0);
+//        static float vertecies[6] = {
+//            -0.5f, -0.5f,
+//            0.0f, 0.5f,
+//            0.5f, -0.5f
+//        };
+//
+//        unsigned int vao;
+//        glGenVertexArrays(1, &vao);
+//        glBindVertexArray(vao);
+//
+//        unsigned int buffer;
+//        glGenBuffers(1, &buffer);
+//        glBindBuffer(GL_ARRAY_BUFFER, buffer);
+//        glBufferData(GL_ARRAY_BUFFER, sizeof(float) * 6, vertecies, GL_STATIC_DRAW);
+//        glEnableVertexAttribArray(0);
+//        glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(float) * 2, nullptr);
 
+        glVertex();
         glShaders();
 
 
@@ -510,8 +529,8 @@ namespace Ural {
             //glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 
-             //  glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, nullptr);
-            glDrawArrays(GL_TRIANGLES, 0, 3);
+               glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, nullptr);
+            //glDrawArrays(GL_TRIANGLES, 0, 3);
 
                         GLenum err = glGetError();
                         const GLubyte *str = gluErrorString(err); // строка описывающая метку ошибки
@@ -589,8 +608,8 @@ namespace Ural {
 //
 //            glDisable(GL_LINE_STIPPLE);
 
-            for (Layer* layer : m_LayerStack)
-                layer->OnUpdate();
+//            for (Layer* layer : m_LayerStack)
+//                layer->OnUpdate();
 
             std::pair<float, float> position = Input::GetMousePosition();
             UL_CORE_TRACE("{0}, {1}", std::get<0>(position), std::get<1>(position));
