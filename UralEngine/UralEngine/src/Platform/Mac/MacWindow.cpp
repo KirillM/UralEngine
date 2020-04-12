@@ -55,7 +55,7 @@ namespace Ural {
 
             glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
             glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-            glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_COMPAT_PROFILE);
+            glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
             
 			UL_CORE_ASSERT(success, "Culd not initialized GLFW!");
             glfwSetErrorCallback(GLFWErrorCallback);
