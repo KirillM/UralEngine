@@ -428,6 +428,80 @@ namespace Ural {
        // glDeleteVertexArrays(1, &vao);
     }
 
+    static void instanceRender()
+    {
+        /*
+          Your graphics card doesn’t really have a lot of work to do to
+         render a single blade of grass, and the system is likely to spend most of its time sending
+         commands to OpenGL rather than actually drawing anything
+         */
+
+        /*
+         Instanced rendering is a method provided by OpenGL to specify that you want to draw
+         many copies of the same geometry with a single function call. This functionality is
+         accessed through instanced rendering functions
+         */
+
+        glDrawArraysInstanced(<#GLenum mode#>, <#GLint first#>, <#GLsizei count#>, <#GLsizei instancecount#>);
+        glDrawElementsInstanced(<#GLenum mode#>, <#GLsizei count#>, <#GLenum type#>, <#const GLvoid *indices#>, <#GLsizei instancecount#>);
+
+        /*
+         One of the things that makes instanced rendering usable and very powerful is a
+         special, built-in variable in GLSL named gl_InstanceID
+
+        When the first copy of the vertices is sent
+        to OpenGL, gl_InstanceID will be zero. It will then be incremented once for each copy of
+        the geometry and will eventually reach primcount - 1
+         */
+
+        /*
+          Normally, the vertex attributes would be read per vertex and
+         a new value would be fed to the shader. However, to make OpenGL read attributes from
+         the arrays once per instance, you can call
+         */
+        glVertexAttribDivisor(<#GLuint index#>, <#GLuint divisor#>);
+        // index: index if attribute, divisor: the number of
+        // instances you’d like to pass between each new value being read from the array
+    }
+
+    static void storedTransformVerticies()
+    {
+        glGetBufferSubData(<#GLenum target#>, <#GLintptr offset#>, <#GLsizeiptr size#>, <#GLvoid *data#>);
+        glMapBuffer(<#GLenum target#>, <#GLenum access#>);
+
+        /*
+         The set of vertex attributes, or varyings, to be recorded during transform feedback mode is
+         specified using
+         */
+        glTransformFeedbackVaryings(<#GLuint program#>, <#GLsizei count#>, <#const GLchar *const *varyings#>, <#GLenum bufferMode#>);
+
+        glBindBuffer(GL_TRANSFORM_FEEDBACK_BUFFER, <#GLuint buffer#>);
+        glBindBufferBase(GL_TRANSFORM_FEEDBACK_BUFFER, <#GLuint index#>, <#GLuint buffer#>);
+        glBindBufferRange(<#GLenum target#>, <#GLuint index#>, <#GLuint buffer#>, <#GLintptr offset#>, <#GLsizeiptr size#>);
+        glPauseTransformFeedback();
+        glBeginTransformFeedback(<#GLenum primitiveMode#>);
+        glEndTransformFeedback();
+    }
+
+    static void rasterization()
+    {
+        /*
+         When GL_RASTERIZER_DISCARD is enabled, anything produced by the vertex or geometry
+         shader (if present) does not create any fragments, and the fragment shader never runs. If
+         you turn off rasterization and do not use transform feedback mode, the OpenGL pipeline
+         is essentially turned off.
+         */
+        glEnable(GL_RASTERIZER_DISCARD);
+        glDisable(GL_RASTERIZER_DISCARD);
+    }
+
+static void glSync()
+{
+    glFlush();
+    glFinish();
+
+    glFenceSync(GL_SYNC_GPU_COMMANDS_COMPLETE, <#GLbitfield flags#>);
+}
 	Application::Application()
 	
 	{
