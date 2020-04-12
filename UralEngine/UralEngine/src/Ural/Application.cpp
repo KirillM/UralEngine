@@ -31,22 +31,23 @@ namespace Ural {
         GLuint pShader = glCreateShader(GL_FRAGMENT_SHADER);
 
         const GLchar* vShaderText = R"(
-             #version 330
-             in vec4 a_Position;
-             in vec4 a_Color;
+             #version 330 core
+             layout(location = 0) in vec4 a_Position;
+             //in vec4 a_Color;
 
              out vec4 v_Color;
 
              void main(void) {
-                 v_Color = a_Color;
+                 v_Color = vec4(1.0, 1.0, 1.0, 1.0);
+                //a_Color;
                  gl_Position = a_Position;
              })";
         const GLchar* pShaderText = R"(
-            #version 330
+            #version 330 core
 
              in vec4 a_Color;
 
-             out vec4 v_FragColor;
+             layout(location = 0) out vec4 v_FragColor;
 
              void main(void) {
                  v_FragColor = a_Color;
@@ -68,7 +69,7 @@ namespace Ural {
          if (!vShaderCompileStatus)
              glGetShaderInfoLog(vShader, sizeof(infoLog), NULL, infoLog);
          if (!pShaderCompileStatus)
-             glGetShaderInfoLog(vShader, sizeof(infoLog), NULL, infoLog);
+             glGetShaderInfoLog(pShader, sizeof(infoLog), NULL, infoLog);
 
          if (!vShaderCompileStatus || !pShaderCompileStatus) {
              std::cout << "Shader error:" << infoLog << "\n";
@@ -82,9 +83,26 @@ namespace Ural {
          glAttachShader(shProgram, pShader);
 
          glBindAttribLocation(shProgram, 0, "a_Position");
-         glBindAttribLocation(shProgram, 1, "a_Color");
+         //glBindAttribLocation(shProgram, 1, "a_Color");
 
          glLinkProgram(shProgram);
+
+        GLint pShaderLinkStatus = 0;
+        glGetShaderiv(pShader, GL_LINK_STATUS, &pShaderLinkStatus);
+        if (!pShaderLinkStatus) {
+
+            GLint maxLength = 0;
+            glGetProgramiv(shProgram, GL_INFO_LOG_LENGTH, &maxLength);
+
+            // The maxLength includes the NULL character
+            char* infoLog = (char*)malloc(maxLength);
+            glGetProgramInfoLog(shProgram, maxLength, &maxLength, &infoLog[0]);
+
+            std::cout << "Shader link error:" << infoLog << "\n";
+               glDeleteShader(vShader);
+               glDeleteShader(pShader);
+               return;
+        }
 
          glDeleteShader(vShader);
          glDeleteShader(pShader);
@@ -356,7 +374,7 @@ namespace Ural {
         memcpy(verticies[2].colors, (GLfloat[]){0.5f, 0.5f, 0.5f, 1.0f}, sizeof(((struct vertex){0}).colors));
       //  memcpy(verticies[2].normals, (GLfloat[]){1.0f, 2.0f, 3.0f}, sizeof(((struct vertex){0}).normals));
 
-        glBufferData(GL_ARRAY_BUFFER, sizeof(verticies), verticies, GL_STATIC_DRAW);
+        glBufferData(GL_ARRAY_BUFFER, sizeof(struct vertex) * 3, verticies, GL_STATIC_DRAW);
 
         GLenum err = glGetError();
         const GLubyte *str = gluErrorString(glGetError()); //
@@ -365,9 +383,12 @@ namespace Ural {
          Again, when no VAO is bound, glVertexAttribPointer will not work
          and will generate an error if you call it
          */
-        glVertexAttribPointer(0, 4, GL_FLOAT, GL_TRUE, sizeof(struct vertex), (GLvoid *)offsetof(struct vertex, positions));
-        glVertexAttribPointer(1, 4, GL_FLOAT, GL_TRUE, sizeof(struct vertex), (GLvoid *)offsetof(struct vertex, colors));
+         glEnableVertexAttribArray(0);
+        glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, sizeof(struct vertex), (GLvoid *)offsetof(struct vertex, positions));
+         glEnableVertexAttribArray(1);
+        glVertexAttribPointer(1, 4, GL_FLOAT, GL_FALSE, sizeof(struct vertex), (GLvoid *)offsetof(struct vertex, colors));
        // glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(struct vertex), (GLvoid *)offsetof(struct vertex, normals));
+
 
 //        GLubyte indecies[] = {0 , 1, 2};
 //        glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_BYTE, indecies);
@@ -377,6 +398,12 @@ namespace Ural {
          If no buffer is bound to the GL_ELEMENT_ARRAY_BUFFER binding, glDrawElements won’t do
          anything
          */
+        GLuint indexBuffer;
+        glGenBuffers(1, &indexBuffer);
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, indexBuffer);
+        GLuint indecies[] = {0 , 1, 2};
+        
+        glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(GLuint) * 3, &indecies, GL_STATIC_DRAW);
         //glDrawElements(<#GLenum mode#>, <#GLsizei count#>, <#GLenum type#>, <#const GLvoid *indices#>);
         /*
           that allows you to use the same
@@ -451,6 +478,21 @@ namespace Ural {
 		//WindowResizeEvent e(1280, 720);
 		//UL_TRACE(e);
 
+        static float vertecies[6] = {
+            -0.5f, -0.5f,
+            0.0f, 0.5f,
+            0.5f, -0.5f
+        };
+        unsigned int buffer;
+        glGenBuffers(1, &buffer);
+        glBindBuffer(GL_ARRAY_BUFFER, buffer);
+        glBufferData(GL_ARRAY_BUFFER, sizeof(float) * 6, vertecies, GL_STATIC_DRAW);
+        glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(float) * 2, nullptr);
+        glEnableVertexAttribArray(0);
+
+        glShaders();
+
+
         glClearColor(0, 1, 1, 1); // устанавливает цвет для очистки окна
 
 		while (m_Running)
@@ -460,15 +502,16 @@ namespace Ural {
             WindowResizeEvent e(w, h);
             OnWindowResize(e);
 
+            //glDisable(GL_CULL_FACE);
+            //glDisable(GL_DEPTH_TEST);
+
             glClear(GL_COLOR_BUFFER_BIT); // очищает определенный буфер или комбинацию буферов, в данном случае удаляет из буфера пикселей последний отображенный рисунок
             //GL_COLOR_BUFFER_BIT - буфер цветов (пикселей), место где хранится отображаемое изображений
+            //glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-            
 
-            glVertex();
-              glShaders();
-            GLubyte indecies[] = {0, 1, 2};
-               glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_BYTE, indecies);
+             //  glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, nullptr);
+            glDrawArrays(GL_TRIANGLES, 0, 3);
 
                         GLenum err = glGetError();
                         const GLubyte *str = gluErrorString(err); // строка описывающая метку ошибки
