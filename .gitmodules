@@ -10,3 +10,30 @@
 [submodule "UralEngine/vendor/glm"]
 	path = UralEngine/vendor/glm
 	url = https://github.com/g-truc/glm
+[submodule "UralEngine/vendor/asio"]
+	path = UralEngine/vendor/asio
+	url = https://github.com/chriskohlhoff/asio
+[submodule "UralEngine/vendor/EASTL"]
+	path = UralEngine/vendor/EASTL
+	url = https://github.com/electronicarts/EASTL
+[submodule "UralEngine/vendor/bullet3"]
+	path = UralEngine/vendor/bullet3
+	url = https://github.com/bulletphysics/bullet3
+[submodule "UralEngine/vendor/assimp"]
+	path = UralEngine/vendor/assimp
+	url = https://github.com/assimp/assimp
+[submodule "UralEngine/vendor/unqlite"]
+	path = UralEngine/vendor/unqlite
+	url = https://github.com/symisc/unqlite
+[submodule "UralEngine/vendor/libsoundio"]
+	path = UralEngine/vendor/libsoundio
+	url = https://github.com/andrewrk/libsoundio
+[submodule "UralEngine/vendor/entt"]
+	path = UralEngine/vendor/entt
+	url = https://github.com/skypjack/entt
+[submodule "UralEngine/vendor/smmalloc"]
+	path = UralEngine/vendor/smmalloc
+	url = https://github.com/SergeyMakeev/smmalloc
+[submodule "UralEngine/vendor/nanovg"]
+	path = UralEngine/vendor/nanovg
+	url = https://github.com/memononen/nanovg
