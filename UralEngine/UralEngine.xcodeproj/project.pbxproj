@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		530164ED239BF68D00821B62 /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 530164EC239BF63800821B62 /* libglfw3.a */; };
-		530164FE239C290300821B62 /* MacWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 530164F6239C134E00821B62 /* MacWindow.cpp */; };
 		530164FF239C290600821B62 /* MacWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 530164F7239C134E00821B62 /* MacWindow.h */; };
 		53016505239C29F800821B62 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53016504239C29F800821B62 /* OpenGL.framework */; };
 		53016507239C29FF00821B62 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53016506239C29FF00821B62 /* Cocoa.framework */; };
@@ -34,6 +33,11 @@
 		53D79652240066A800D752C7 /* LayerStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 53D79650240066A800D752C7 /* LayerStack.h */; };
 		53D79655240066B400D752C7 /* Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53D79653240066B400D752C7 /* Layer.cpp */; };
 		53D79656240066B400D752C7 /* Layer.h in Headers */ = {isa = PBXBuildFile; fileRef = 53D79654240066B400D752C7 /* Layer.h */; };
+		53EDC1CD2444F852009E8291 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53EDC1CC2444F852009E8291 /* OpenGLES.framework */; };
+		53EDC1D02444F8FD009E8291 /* stb_image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53F704F0241D5F4B00608BAA /* stb_image.cpp */; };
+		53EDC1D22444F981009E8291 /* MacWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 530164F6239C134E00821B62 /* MacWindow.cpp */; };
+		53EDC1D32444F98E009E8291 /* LayerStack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53D7964F240066A800D752C7 /* LayerStack.cpp */; };
+		53EDC1D42444F993009E8291 /* Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53D79653240066B400D752C7 /* Layer.cpp */; };
 		53F6E9FE240148DC00EF58AA /* libimgui.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F6E9FD240148DC00EF58AA /* libimgui.a */; };
 		53F6EA022401497800EF58AA /* ImGuiLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53F6EA002401497800EF58AA /* ImGuiLayer.cpp */; };
 		53F6EA032401497800EF58AA /* ImGuiLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 53F6EA012401497800EF58AA /* ImGuiLayer.h */; };
@@ -145,6 +149,8 @@
 		53D79650240066A800D752C7 /* LayerStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LayerStack.h; sourceTree = "<group>"; };
 		53D79653240066B400D752C7 /* Layer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Layer.cpp; sourceTree = "<group>"; };
 		53D79654240066B400D752C7 /* Layer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Layer.h; sourceTree = "<group>"; };
+		53EDC1C92444F76A009E8291 /* MobileInput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobileInput.h; sourceTree = "<group>"; };
+		53EDC1CC2444F852009E8291 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.4.sdk/System/Library/Frameworks/OpenGLES.framework; sourceTree = DEVELOPER_DIR; };
 		53EEBA782416C2FD006F8600 /* Errors.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Errors.cpp; sourceTree = "<group>"; };
 		53EEBA792416C6CA006F8600 /* Extension.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Extension.cpp; sourceTree = "<group>"; };
 		53EEBA7B2416CBA0006F8600 /* State.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = State.cpp; sourceTree = "<group>"; };
@@ -172,6 +178,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53EDC1CD2444F852009E8291 /* OpenGLES.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +414,7 @@
 		53A790A92392C45800E29426 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				53EDC1CC2444F852009E8291 /* OpenGLES.framework */,
 				53F6EA092401627C00EF58AA /* libGLAD.a */,
 				53F6E9FD240148DC00EF58AA /* libimgui.a */,
 				5360CEB323FD1CAD00D2F5DB /* OpenGLES.framework */,
@@ -472,6 +480,7 @@
 				53F6EA0D24019D1200EF58AA /* Input.h */,
 				53F6EA152401AF3A00EF58AA /* KeyCodes.h */,
 				53F6EA172401AFB300EF58AA /* MouseButtonCodes.h */,
+				53EDC1C92444F76A009E8291 /* MobileInput.h */,
 			);
 			path = Input;
 			sourceTree = "<group>";
@@ -607,7 +616,10 @@
 			files = (
 				5360CEC823FD1FBD00D2F5DB /* Log.cpp in Sources */,
 				5360CEC723FD1F9F00D2F5DB /* Application.cpp in Sources */,
+				53EDC1D32444F98E009E8291 /* LayerStack.cpp in Sources */,
+				53EDC1D02444F8FD009E8291 /* stb_image.cpp in Sources */,
 				5360CEC123FD1E6E00D2F5DB /* UralEngine_IOS.m in Sources */,
+				53EDC1D42444F993009E8291 /* Layer.cpp in Sources */,
 				53F6EA0B240182CB00EF58AA /* ImGuiLayer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -616,10 +628,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				530164FE239C290300821B62 /* MacWindow.cpp in Sources */,
 				53F6EA022401497800EF58AA /* ImGuiLayer.cpp in Sources */,
 				53722372239800D600312C05 /* Log.cpp in Sources */,
 				53F6EA0724014EC600EF58AA /* ImGuiOpenGLRenderer.cpp in Sources */,
+				53EDC1D22444F981009E8291 /* MacWindow.cpp in Sources */,
 				53F704FA241D615700608BAA /* test.cpp in Sources */,
 				53A83F8A2441F2C500F1FBE3 /* MineShader.cpp in Sources */,
 				53D79651240066A800D752C7 /* LayerStack.cpp in Sources */,
@@ -636,33 +648,64 @@
 		5360CEC423FD1E6E00D2F5DB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULE_DEBUGGING = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5CDN7636Z2;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/src/ulpch.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					"UL_PLATFORM_IOS=1",
+					"UL_ENABLED_ASSERTS=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/vendor/spdlog/include",
+					"$(SRCROOT)/vendor/glm",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/$(PROJECT_NAME)/src";
+				VALID_ARCHS = "armv7s arm64 armv7 arm64e";
 			};
 			name = Debug;
 		};
 		5360CEC523FD1E6E00D2F5DB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULE_DEBUGGING = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5CDN7636Z2;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/src/ulpch.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "UL_PLATFORM_IOS=1";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/vendor/spdlog/include",
+					"$(SRCROOT)/vendor/glm",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/$(PROJECT_NAME)/src";
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7s arm64 armv7 arm64e";
 			};
 			name = Release;
 		};

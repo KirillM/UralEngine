@@ -18,6 +18,7 @@
 #include <OpenGL/gl3.h>
 
 #include <stdalign.h>
+#include <glm/glm.hpp>
 
 namespace Ural {
 

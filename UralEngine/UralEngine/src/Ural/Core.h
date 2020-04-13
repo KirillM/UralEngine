@@ -19,8 +19,10 @@
 	#else
 		#define URAL_API
 	#endif
-#else
-	#error Ural only supports Mac!
+#elif UL_PLATFORM_IOS
+    #define GLES_SILENCE_DEPRECATION
+    #define URAL_API
+	//#error Ural only supports Mac!
 #endif
 
 #endif /* Core_h */

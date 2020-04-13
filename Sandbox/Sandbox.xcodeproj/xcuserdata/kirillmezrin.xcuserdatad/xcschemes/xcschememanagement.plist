@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>SandboxIOS.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>Sandbox_full_rebuild.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +28,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>53A790CA2392C5A600E29426</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>53EDC1A92444E85D009E8291</key>
 		<dict>
 			<key>primary</key>
 			<true/>
