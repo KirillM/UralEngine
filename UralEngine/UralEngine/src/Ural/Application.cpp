@@ -443,8 +443,8 @@ namespace Ural {
          accessed through instanced rendering functions
          */
 
-        glDrawArraysInstanced(<#GLenum mode#>, <#GLint first#>, <#GLsizei count#>, <#GLsizei instancecount#>);
-        glDrawElementsInstanced(<#GLenum mode#>, <#GLsizei count#>, <#GLenum type#>, <#const GLvoid *indices#>, <#GLsizei instancecount#>);
+//        glDrawArraysInstanced(<#GLenum mode#>, <#GLint first#>, <#GLsizei count#>, <#GLsizei instancecount#>);
+//        glDrawElementsInstanced(<#GLenum mode#>, <#GLsizei count#>, <#GLenum type#>, <#const GLvoid *indices#>, <#GLsizei instancecount#>);
 
         /*
          One of the things that makes instanced rendering usable and very powerful is a
@@ -460,28 +460,28 @@ namespace Ural {
          a new value would be fed to the shader. However, to make OpenGL read attributes from
          the arrays once per instance, you can call
          */
-        glVertexAttribDivisor(<#GLuint index#>, <#GLuint divisor#>);
+//        glVertexAttribDivisor(<#GLuint index#>, <#GLuint divisor#>);
         // index: index if attribute, divisor: the number of
         // instances you’d like to pass between each new value being read from the array
     }
 
     static void storedTransformVerticies()
     {
-        glGetBufferSubData(<#GLenum target#>, <#GLintptr offset#>, <#GLsizeiptr size#>, <#GLvoid *data#>);
-        glMapBuffer(<#GLenum target#>, <#GLenum access#>);
-
-        /*
-         The set of vertex attributes, or varyings, to be recorded during transform feedback mode is
-         specified using
-         */
-        glTransformFeedbackVaryings(<#GLuint program#>, <#GLsizei count#>, <#const GLchar *const *varyings#>, <#GLenum bufferMode#>);
-
-        glBindBuffer(GL_TRANSFORM_FEEDBACK_BUFFER, <#GLuint buffer#>);
-        glBindBufferBase(GL_TRANSFORM_FEEDBACK_BUFFER, <#GLuint index#>, <#GLuint buffer#>);
-        glBindBufferRange(<#GLenum target#>, <#GLuint index#>, <#GLuint buffer#>, <#GLintptr offset#>, <#GLsizeiptr size#>);
-        glPauseTransformFeedback();
-        glBeginTransformFeedback(<#GLenum primitiveMode#>);
-        glEndTransformFeedback();
+//        glGetBufferSubData(<#GLenum target#>, <#GLintptr offset#>, <#GLsizeiptr size#>, <#GLvoid *data#>);
+//        glMapBuffer(<#GLenum target#>, <#GLenum access#>);
+//
+//        /*
+//         The set of vertex attributes, or varyings, to be recorded during transform feedback mode is
+//         specified using
+//         */
+//        glTransformFeedbackVaryings(<#GLuint program#>, <#GLsizei count#>, <#const GLchar *const *varyings#>, <#GLenum bufferMode#>);
+//
+//        glBindBuffer(GL_TRANSFORM_FEEDBACK_BUFFER, <#GLuint buffer#>);
+//        glBindBufferBase(GL_TRANSFORM_FEEDBACK_BUFFER, <#GLuint index#>, <#GLuint buffer#>);
+//        glBindBufferRange(<#GLenum target#>, <#GLuint index#>, <#GLuint buffer#>, <#GLintptr offset#>, <#GLsizeiptr size#>);
+//        glPauseTransformFeedback();
+//        glBeginTransformFeedback(<#GLenum primitiveMode#>);
+//        glEndTransformFeedback();
     }
 
     static void rasterization()
@@ -501,7 +501,7 @@ static void glSync()
     glFlush();
     glFinish();
 
-    glFenceSync(GL_SYNC_GPU_COMMANDS_COMPLETE, <#GLbitfield flags#>);
+  //  glFenceSync(GL_SYNC_GPU_COMMANDS_COMPLETE, <#GLbitfield flags#>);
 }
 	Application::Application()
 	

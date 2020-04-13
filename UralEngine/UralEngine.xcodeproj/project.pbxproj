@@ -17,11 +17,7 @@
 		53492C89239A9BE7009E1076 /* Event.h in Headers */ = {isa = PBXBuildFile; fileRef = 53492C88239A9BE7009E1076 /* Event.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		53492C8B239A9BFC009E1076 /* KeyEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 53492C8A239A9BFC009E1076 /* KeyEvent.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		53492C8D239A9C12009E1076 /* MouseEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 53492C8C239A9C12009E1076 /* MouseEvent.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		5360CEC123FD1E6E00D2F5DB /* UralEngine_IOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 5360CEC023FD1E6E00D2F5DB /* UralEngine_IOS.m */; };
-		5360CEC223FD1E6E00D2F5DB /* UralEngine_IOS.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5360CEBF23FD1E6E00D2F5DB /* UralEngine_IOS.h */; };
 		5360CEC623FD1E7400D2F5DB /* Window.h in Headers */ = {isa = PBXBuildFile; fileRef = 530164F1239BF91A00821B62 /* Window.h */; };
-		5360CEC723FD1F9F00D2F5DB /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 537F12AB2393015F00369F57 /* Application.cpp */; };
-		5360CEC823FD1FBD00D2F5DB /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53722370239800D600312C05 /* Log.cpp */; };
 		536E7862239B145A00AD166E /* ulpch.pch in Headers */ = {isa = PBXBuildFile; fileRef = 5312F9D4239B0E8C007B2CFC /* ulpch.pch */; settings = {ATTRIBUTES = (Private, ); }; };
 		53722372239800D600312C05 /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53722370239800D600312C05 /* Log.cpp */; };
 		53722373239800D600312C05 /* Log.h in Headers */ = {isa = PBXBuildFile; fileRef = 53722371239800D600312C05 /* Log.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -33,18 +29,13 @@
 		53D79652240066A800D752C7 /* LayerStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 53D79650240066A800D752C7 /* LayerStack.h */; };
 		53D79655240066B400D752C7 /* Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53D79653240066B400D752C7 /* Layer.cpp */; };
 		53D79656240066B400D752C7 /* Layer.h in Headers */ = {isa = PBXBuildFile; fileRef = 53D79654240066B400D752C7 /* Layer.h */; };
-		53EDC1CD2444F852009E8291 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53EDC1CC2444F852009E8291 /* OpenGLES.framework */; };
-		53EDC1D02444F8FD009E8291 /* stb_image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53F704F0241D5F4B00608BAA /* stb_image.cpp */; };
 		53EDC1D22444F981009E8291 /* MacWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 530164F6239C134E00821B62 /* MacWindow.cpp */; };
-		53EDC1D32444F98E009E8291 /* LayerStack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53D7964F240066A800D752C7 /* LayerStack.cpp */; };
-		53EDC1D42444F993009E8291 /* Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53D79653240066B400D752C7 /* Layer.cpp */; };
 		53F6E9FE240148DC00EF58AA /* libimgui.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F6E9FD240148DC00EF58AA /* libimgui.a */; };
 		53F6EA022401497800EF58AA /* ImGuiLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53F6EA002401497800EF58AA /* ImGuiLayer.cpp */; };
 		53F6EA032401497800EF58AA /* ImGuiLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 53F6EA012401497800EF58AA /* ImGuiLayer.h */; };
 		53F6EA0724014EC600EF58AA /* ImGuiOpenGLRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53F6EA0524014EC600EF58AA /* ImGuiOpenGLRenderer.cpp */; };
 		53F6EA0824014EC600EF58AA /* ImGuiOpenGLRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 53F6EA0624014EC600EF58AA /* ImGuiOpenGLRenderer.h */; };
 		53F6EA0A2401627C00EF58AA /* libGLAD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F6EA092401627C00EF58AA /* libGLAD.a */; };
-		53F6EA0B240182CB00EF58AA /* ImGuiLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53F6EA002401497800EF58AA /* ImGuiLayer.cpp */; };
 		53F6EA0E24019D1200EF58AA /* Input.h in Headers */ = {isa = PBXBuildFile; fileRef = 53F6EA0D24019D1200EF58AA /* Input.h */; };
 		53F6EA1324019E8700EF58AA /* MacInput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53F6EA1124019E8700EF58AA /* MacInput.cpp */; };
 		53F6EA1424019E8700EF58AA /* MacInput.h in Headers */ = {isa = PBXBuildFile; fileRef = 53F6EA1224019E8700EF58AA /* MacInput.h */; };
@@ -55,19 +46,6 @@
 		53F704F9241D615700608BAA /* test.h in Headers */ = {isa = PBXBuildFile; fileRef = 53F704F7241D615700608BAA /* test.h */; };
 		53F704FA241D615700608BAA /* test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53F704F8241D615700608BAA /* test.cpp */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		5360CEBB23FD1E6E00D2F5DB /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-				5360CEC223FD1E6E00D2F5DB /* UralEngine_IOS.h in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		530164EC239BF63800821B62 /* libglfw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libglfw3.a; path = "vendor/glfw-build/src/libglfw3.a"; sourceTree = "<group>"; };
@@ -127,14 +105,7 @@
 		535E5825241827EE007D8846 /* PrimitiveShader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PrimitiveShader.cpp; sourceTree = "<group>"; };
 		535E582724183644007D8846 /* Blending.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Blending.cpp; sourceTree = "<group>"; };
 		535E582924183C86007D8846 /* Antialiasing.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Antialiasing.cpp; sourceTree = "<group>"; };
-		5360CEA023FD1C3700D2F5DB /* UralEngine_IOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UralEngine_IOS.h; sourceTree = "<group>"; };
-		5360CEA123FD1C3700D2F5DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5360CEAC23FD1C5C00D2F5DB /* UralEngine_IOS_Static.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UralEngine_IOS_Static.h; sourceTree = "<group>"; };
-		5360CEAD23FD1C5C00D2F5DB /* UralEngine_IOS_Static.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UralEngine_IOS_Static.m; sourceTree = "<group>"; };
 		5360CEB323FD1CAD00D2F5DB /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.2.sdk/System/Library/Frameworks/OpenGLES.framework; sourceTree = DEVELOPER_DIR; };
-		5360CEBD23FD1E6E00D2F5DB /* libUralEngine IOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libUralEngine IOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5360CEBF23FD1E6E00D2F5DB /* UralEngine_IOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UralEngine_IOS.h; sourceTree = "<group>"; };
-		5360CEC023FD1E6E00D2F5DB /* UralEngine_IOS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UralEngine_IOS.m; sourceTree = "<group>"; };
 		53722370239800D600312C05 /* Log.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Log.cpp; sourceTree = "<group>"; };
 		53722371239800D600312C05 /* Log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Log.h; sourceTree = "<group>"; };
 		537F12A82392D7EF00369F57 /* EntryPoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntryPoint.h; sourceTree = "<group>"; };
@@ -174,14 +145,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5360CEBA23FD1E6E00D2F5DB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				53EDC1CD2444F852009E8291 /* OpenGLES.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		53A7908D2392AE1500E29426 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -323,33 +286,6 @@
 			path = Events;
 			sourceTree = "<group>";
 		};
-		5360CE9F23FD1C3700D2F5DB /* UralEngine IOS */ = {
-			isa = PBXGroup;
-			children = (
-				5360CEA023FD1C3700D2F5DB /* UralEngine_IOS.h */,
-				5360CEA123FD1C3700D2F5DB /* Info.plist */,
-			);
-			path = "UralEngine IOS";
-			sourceTree = "<group>";
-		};
-		5360CEAB23FD1C5C00D2F5DB /* UralEngine IOS Static */ = {
-			isa = PBXGroup;
-			children = (
-				5360CEAC23FD1C5C00D2F5DB /* UralEngine_IOS_Static.h */,
-				5360CEAD23FD1C5C00D2F5DB /* UralEngine_IOS_Static.m */,
-			);
-			path = "UralEngine IOS Static";
-			sourceTree = "<group>";
-		};
-		5360CEBE23FD1E6E00D2F5DB /* UralEngine IOS */ = {
-			isa = PBXGroup;
-			children = (
-				5360CEBF23FD1E6E00D2F5DB /* UralEngine_IOS.h */,
-				5360CEC023FD1E6E00D2F5DB /* UralEngine_IOS.m */,
-			);
-			path = "UralEngine IOS";
-			sourceTree = "<group>";
-		};
 		537F129B2392CBE700369F57 /* src */ = {
 			isa = PBXGroup;
 			children = (
@@ -386,9 +322,6 @@
 				53ADA90D241D5AB100732268 /* working */,
 				531C766E241685E4000A1EEC /* Super */,
 				53A790902392AE1500E29426 /* UralEngine */,
-				5360CE9F23FD1C3700D2F5DB /* UralEngine IOS */,
-				5360CEAB23FD1C5C00D2F5DB /* UralEngine IOS Static */,
-				5360CEBE23FD1E6E00D2F5DB /* UralEngine IOS */,
 				53A790822392A17500E29426 /* Products */,
 				53A790A92392C45800E29426 /* Frameworks */,
 			);
@@ -398,7 +331,6 @@
 			isa = PBXGroup;
 			children = (
 				53A7908F2392AE1500E29426 /* libUralEngine.dylib */,
-				5360CEBD23FD1E6E00D2F5DB /* libUralEngine IOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -539,23 +471,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		5360CEBC23FD1E6E00D2F5DB /* UralEngine IOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5360CEC323FD1E6E00D2F5DB /* Build configuration list for PBXNativeTarget "UralEngine IOS" */;
-			buildPhases = (
-				5360CEB923FD1E6E00D2F5DB /* Sources */,
-				5360CEBA23FD1E6E00D2F5DB /* Frameworks */,
-				5360CEBB23FD1E6E00D2F5DB /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "UralEngine IOS";
-			productName = "UralEngine IOS";
-			productReference = 5360CEBD23FD1E6E00D2F5DB /* libUralEngine IOS.a */;
-			productType = "com.apple.product-type.library.static";
-		};
 		53A7908E2392AE1500E29426 /* UralEngine */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 53A790972392AE1500E29426 /* Build configuration list for PBXNativeTarget "UralEngine" */;
@@ -582,9 +497,6 @@
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "Кирилл Мезрин";
 				TargetAttributes = {
-					5360CEBC23FD1E6E00D2F5DB = {
-						CreatedOnToolsVersion = 11.3.1;
-					};
 					53A7908E2392AE1500E29426 = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
@@ -604,26 +516,11 @@
 			projectRoot = "";
 			targets = (
 				53A7908E2392AE1500E29426 /* UralEngine */,
-				5360CEBC23FD1E6E00D2F5DB /* UralEngine IOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5360CEB923FD1E6E00D2F5DB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5360CEC823FD1FBD00D2F5DB /* Log.cpp in Sources */,
-				5360CEC723FD1F9F00D2F5DB /* Application.cpp in Sources */,
-				53EDC1D32444F98E009E8291 /* LayerStack.cpp in Sources */,
-				53EDC1D02444F8FD009E8291 /* stb_image.cpp in Sources */,
-				5360CEC123FD1E6E00D2F5DB /* UralEngine_IOS.m in Sources */,
-				53EDC1D42444F993009E8291 /* Layer.cpp in Sources */,
-				53F6EA0B240182CB00EF58AA /* ImGuiLayer.cpp in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		53A7908C2392AE1500E29426 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -645,70 +542,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		5360CEC423FD1E6E00D2F5DB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_MODULE_DEBUGGING = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5CDN7636Z2;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/src/ulpch.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-					"UL_PLATFORM_IOS=1",
-					"UL_ENABLED_ASSERTS=1",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/vendor/spdlog/include",
-					"$(SRCROOT)/vendor/glm",
-				);
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/$(PROJECT_NAME)/src";
-				VALID_ARCHS = "armv7s arm64 armv7 arm64e";
-			};
-			name = Debug;
-		};
-		5360CEC523FD1E6E00D2F5DB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_MODULE_DEBUGGING = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5CDN7636Z2;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/src/ulpch.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = "UL_PLATFORM_IOS=1";
-				HEADER_SEARCH_PATHS = (
-					"$(SRCROOT)/vendor/spdlog/include",
-					"$(SRCROOT)/vendor/glm",
-				);
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/$(PROJECT_NAME)/src";
-				VALIDATE_PRODUCT = YES;
-				VALID_ARCHS = "armv7s arm64 armv7 arm64e";
-			};
-			name = Release;
-		};
 		53A790862392A17500E29426 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -919,15 +752,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5360CEC323FD1E6E00D2F5DB /* Build configuration list for PBXNativeTarget "UralEngine IOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5360CEC423FD1E6E00D2F5DB /* Debug */,
-				5360CEC523FD1E6E00D2F5DB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		53A7907C2392A17500E29426 /* Build configuration list for PBXProject "UralEngine" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
