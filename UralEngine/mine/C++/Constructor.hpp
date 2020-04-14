@@ -7,8 +7,8 @@
 //
 
 
-#ifndef Constructor_hpp
-#define Constructor_hpp
+#ifndef Constructor_h
+#define Constructor_h
 
 #include <iostream>
 #include <string>
@@ -51,7 +51,7 @@ public:
     const std::string& GetName() const { return m_Name; }
 };
 
-#endif /* Constructor_hpp */
+#endif /* Constructor_h */
 
 int main()
 {

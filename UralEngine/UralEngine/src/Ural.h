@@ -45,6 +45,9 @@
 
 #else
 
+// surface
+#include "Platform/IOS/IOSSurface.h"
+
 // Для приложений использующих Ural
 #include "Ural/Application.h"
 #include "Ural/Mobile/MobileApplication.h"
@@ -53,10 +56,11 @@
 // События
 #include "Events/Event.h"
 #include "Events/ApplicationEvent.h"
-#include "Events/MobileEvent.h"
+#include "Events/Mobile/MobileEvent.h"
 
 // опрос на ввод
-#include "Input/Input.h"
+#include "Input/MobileInput.h"
+#include "Platform/IOS/IOSInput.h"
 
 // слои
 #include "Layers/Layer.h"

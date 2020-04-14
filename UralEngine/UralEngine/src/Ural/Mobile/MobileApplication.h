@@ -9,8 +9,9 @@
 #ifndef MobileApplication_h
 #define MobileApplication_h
 
-#include "Core.h"
-#include "Platform/Window/Window.h"
+#include "Ural/Core.h"
+#include "Ural/Application.h"
+#include "RenderArea/Surface.h"
 #include "Layers/LayerStack.h"
 #include "Events/Event.h"
 #include "Events/ApplicationEvent.h"
@@ -18,7 +19,7 @@
 #pragma GCC visibility push(default)
 
 namespace Ural {
-    class URAL_API MobileApplication {
+    class URAL_API MobileApplication : public Application {
     public:
         MobileApplication();
         virtual ~MobileApplication();
@@ -30,9 +31,9 @@ namespace Ural {
         void PushLayer(Layer* layer);
         void PushOverlay(Layer* layer);
 
-        inline Window& GetWindow() { return *m_Window; }
+        inline Surface& GetSurface() { return *m_Surface; }
     private:
-        std::unique_ptr<Window> m_Window = nullptr;
+        std::unique_ptr<Surface> m_Surface = nullptr;
         bool m_Running = true;
         LayerStack m_LayerStack;
     };
@@ -41,4 +42,4 @@ namespace Ural {
 
 #pragma GCC visibility pop
 
-#endif /* MobileApplication_hpp */
+#endif /* MobileApplication_h */

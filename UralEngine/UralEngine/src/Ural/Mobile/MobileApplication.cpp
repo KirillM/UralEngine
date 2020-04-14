@@ -18,7 +18,7 @@
 
 namespace Ural {
 
-#define BIND_EVENT_FN(x) std::bind(&Application::x, this, std::placeholders::_1)
+#define BIND_EVENT_FN(x) std::bind(&MobileApplication::x, this, std::placeholders::_1)
 
     Application* Application::s_Instance = nullptr;
 
@@ -499,14 +499,14 @@ static void glSync()
 
   //  glFenceSync(GL_SYNC_GPU_COMMANDS_COMPLETE, <#GLbitfield flags#>);
 }
-    Application::Application()
+    MobileApplication::MobileApplication()
 
     {
         UL_CORE_ASSERT(!s_Instance, "Application already exists !");
         s_Instance = this;
 
-        m_Window = std::unique_ptr<Window>(Window::Create());
-        m_Window->SetEventCallback(BIND_EVENT_FN(OnEvent));
+        m_Surface = std::unique_ptr<Surface>(Surface::Create());
+        m_Surface->SetEventCallback(BIND_EVENT_FN(OnEvent));
 
 //        unsigned int id;
 //        glGenVertexArrays(1, &id);
@@ -519,18 +519,18 @@ static void glSync()
 
     }
 
-    Application::~Application()
+    MobileApplication::~MobileApplication()
     {
 
     }
 
-    void Application::OnEvent(Event& e)
+    void MobileApplication::OnEvent(Event& e)
     {
         UL_CORE_INFO("event {0}", e);
 
         EventDispatcher dispatcher(e);
-        dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(OnWindowClose));
-        dispatcher.Dispatch<WindowResizeEvent>(BIND_EVENT_FN(OnWindowResize));
+//        dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(OnWindowClose));
+//        dispatcher.Dispatch<WindowResizeEvent>(BIND_EVENT_FN(OnWindowResize));
 
         UL_CORE_TRACE("{0}", e);
 
@@ -542,22 +542,7 @@ static void glSync()
         }
     }
 
-    bool Application::OnWindowResize(WindowResizeEvent &e)
-    {
-        int w = e.GetWidth();
-        int h = e.GetHeight();
-        glViewport(0, 0, w, h);
-
-        return true;
-    }
-
-    bool Application::OnWindowClose(WindowCloseEvent &e)
-    {
-        m_Running = false;
-        return true;
-    }
-
-    void Application::Run()
+    void MobileApplication::Run()
     {
         //WindowResizeEvent e(1280, 720);
         //UL_TRACE(e);
@@ -587,10 +572,10 @@ static void glSync()
 
         while (m_Running)
         {
-            int w = GetWindow().GetWidth();
-            int h = GetWindow().GetHeight();
-            WindowResizeEvent e(w, h);
-            OnWindowResize(e);
+//            int w = GetWindow().GetWidth();
+//            int h = GetWindow().GetHeight();
+//            WindowResizeEvent e(w, h);
+//            OnWindowResize(e);
 
             //glDisable(GL_CULL_FACE);
             //glDisable(GL_DEPTH_TEST);
@@ -682,19 +667,19 @@ static void glSync()
 //            for (Layer* layer : m_LayerStack)
 //                layer->OnUpdate();
 
-            std::pair<float, float> position = Input::GetMousePosition();
-            UL_CORE_TRACE("{0}, {1}", std::get<0>(position), std::get<1>(position));
+//            std::pair<float, float> position = MInput::GetMousePosition();
+//            UL_CORE_TRACE("{0}, {1}", std::get<0>(position), std::get<1>(position));
 
-            m_Window->OnUpdate(); // при переключении буферов (swap buffers) неявно вызывается glFlush()
+            m_Surface->OnUpdate(); // при переключении буферов (swap buffers) неявно вызывается glFlush()
         }
     }
 
-    void Application::PushLayer(Layer *layer)
+    void MobileApplication::PushLayer(Layer *layer)
     {
         m_LayerStack.PushLayer(layer);
     }
 
-    void Application::PushOverlay(Layer *layer)
+    void MobileApplication::PushOverlay(Layer *layer)
     {
         m_LayerStack.PushOverlay(layer);
     }

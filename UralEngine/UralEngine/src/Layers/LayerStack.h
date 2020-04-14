@@ -6,8 +6,8 @@
 //  Copyright © 2020 Кирилл Мезрин. All rights reserved.
 //
 
-#ifndef LayerStack_hpp
-#define LayerStack_hpp
+#ifndef LayerStack_h
+#define LayerStack_h
 
 #include <Ural/Core.h>
 #include "Layer.h"
@@ -35,4 +35,4 @@ namespace Ural {
     };
 }
 
-#endif /* LayerStack_hpp */
+#endif /* LayerStack_h */

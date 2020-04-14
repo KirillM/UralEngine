@@ -9,23 +9,24 @@
 #ifndef RenderArea_h
 #define RenderArea_h
 
+#include "Ural/Core.h"
 #include "Events/Event.h"
-class Event;
-class URAL_API RenderArea
-{
-public:
-    using EventcallabckFn = std::function<void(Event&)>;
 
-    virtual ~RenderArea() = default;
+namespace Ural {
+    class URAL_API RenderArea
+    {
+    public:
+        using EventcallabckFn = std::function<void(Event&)>;
 
-    virtual void OnUpdate() = 0;
+        virtual ~RenderArea() = default;
 
-    virtual unsigned int GetWidth() const = 0;
-    virtual unsigned int GetHeight() const = 0;
+        virtual void OnUpdate() = 0;
 
-    virtual void SetEventCallback(const EventcallabckFn& callback) = 0;
+        virtual unsigned int GetWidth() const = 0;
+        virtual unsigned int GetHeight() const = 0;
 
-  //  static Window* Create(const WindowsProps& props = WindowsProps());
-};
+        virtual void SetEventCallback(const EventcallabckFn& callback) = 0;
+    };
+}
 
 #endif /* RenderArea_h */

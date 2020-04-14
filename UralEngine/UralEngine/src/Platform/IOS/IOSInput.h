@@ -1,25 +1,21 @@
 //
-//  MobileInput.h
+//  IOSInput.hpp
 //  UralEngine IOS
 //
 //  Created by Кирилл Мезрин on 14.04.2020.
 //  Copyright © 2020 Кирилл Мезрин. All rights reserved.
 //
 
-#ifndef MobileInput_h
-#define MobileInput_h
+#ifndef IOSInput_h
+#define IOSInput_h
 
-#include "Ural/Core.h"
+#include "Input/MobileInput.h"
 
 namespace Ural {
-
-    class MobileInput
+    class IOSInput : public MobileInput
     {
-    private:
-        static MobileInput* s_Instance;
     };
-
 }
 
 
-#endif /* MobileInput_h */
+#endif /* IOSInput_h */

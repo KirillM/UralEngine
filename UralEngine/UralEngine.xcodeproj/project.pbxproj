@@ -42,6 +42,12 @@
 		536F48BA2445B0B6008DCDEB /* MobileApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = 536F48B82445B0B6008DCDEB /* MobileApplication.h */; };
 		536F48BB2445B148008DCDEB /* Application.h in Headers */ = {isa = PBXBuildFile; fileRef = 537F12AC2393015F00369F57 /* Application.h */; };
 		536F48C12445B6D3008DCDEB /* Surface.h in Headers */ = {isa = PBXBuildFile; fileRef = 536F48C02445B6D3008DCDEB /* Surface.h */; };
+		536F48C72445C7F7008DCDEB /* RenderArea.h in Headers */ = {isa = PBXBuildFile; fileRef = 536F48BD2445B6BE008DCDEB /* RenderArea.h */; };
+		536F48C82445C880008DCDEB /* RenderArea.h in Headers */ = {isa = PBXBuildFile; fileRef = 536F48BD2445B6BE008DCDEB /* RenderArea.h */; };
+		536F48CB2445CB89008DCDEB /* IOSSurface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 536F48C92445CB89008DCDEB /* IOSSurface.cpp */; };
+		536F48CC2445CB89008DCDEB /* IOSSurface.h in Headers */ = {isa = PBXBuildFile; fileRef = 536F48CA2445CB89008DCDEB /* IOSSurface.h */; };
+		536F48CF2445CE5E008DCDEB /* IOSInput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 536F48CD2445CE5E008DCDEB /* IOSInput.cpp */; };
+		536F48D02445CE5E008DCDEB /* IOSInput.h in Headers */ = {isa = PBXBuildFile; fileRef = 536F48CE2445CE5E008DCDEB /* IOSInput.h */; };
 		53722372239800D600312C05 /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53722370239800D600312C05 /* Log.cpp */; };
 		53722373239800D600312C05 /* Log.h in Headers */ = {isa = PBXBuildFile; fileRef = 53722371239800D600312C05 /* Log.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		537F12AE2393015F00369F57 /* Application.h in Headers */ = {isa = PBXBuildFile; fileRef = 537F12AC2393015F00369F57 /* Application.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -136,6 +142,10 @@
 		536F48B82445B0B6008DCDEB /* MobileApplication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobileApplication.h; sourceTree = "<group>"; };
 		536F48BD2445B6BE008DCDEB /* RenderArea.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RenderArea.h; sourceTree = "<group>"; };
 		536F48C02445B6D3008DCDEB /* Surface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Surface.h; sourceTree = "<group>"; };
+		536F48C92445CB89008DCDEB /* IOSSurface.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IOSSurface.cpp; sourceTree = "<group>"; };
+		536F48CA2445CB89008DCDEB /* IOSSurface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IOSSurface.h; sourceTree = "<group>"; };
+		536F48CD2445CE5E008DCDEB /* IOSInput.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IOSInput.cpp; sourceTree = "<group>"; };
+		536F48CE2445CE5E008DCDEB /* IOSInput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IOSInput.h; sourceTree = "<group>"; };
 		53722370239800D600312C05 /* Log.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Log.cpp; sourceTree = "<group>"; };
 		53722371239800D600312C05 /* Log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Log.h; sourceTree = "<group>"; };
 		537F12A82392D7EF00369F57 /* EntryPoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntryPoint.h; sourceTree = "<group>"; };
@@ -237,6 +247,10 @@
 		530164F5239BFF2700821B62 /* IOS */ = {
 			isa = PBXGroup;
 			children = (
+				536F48CA2445CB89008DCDEB /* IOSSurface.h */,
+				536F48C92445CB89008DCDEB /* IOSSurface.cpp */,
+				536F48CD2445CE5E008DCDEB /* IOSInput.cpp */,
+				536F48CE2445CE5E008DCDEB /* IOSInput.h */,
 			);
 			path = IOS;
 			sourceTree = "<group>";
@@ -517,6 +531,7 @@
 				5353FC0924450DAA005B88A6 /* Core.h in Headers */,
 				536F48BB2445B148008DCDEB /* Application.h in Headers */,
 				536F48C12445B6D3008DCDEB /* Surface.h in Headers */,
+				536F48CC2445CB89008DCDEB /* IOSSurface.h in Headers */,
 				5353FC0A24450DAA005B88A6 /* test.h in Headers */,
 				5353FC0C24450DAA005B88A6 /* ulpch.pch in Headers */,
 				5353FC0F24450DAA005B88A6 /* LayerStack.h in Headers */,
@@ -524,7 +539,9 @@
 				536F48BA2445B0B6008DCDEB /* MobileApplication.h in Headers */,
 				536F48A92445A885008DCDEB /* Event.h in Headers */,
 				5353FC1624450DAA005B88A6 /* stb_image.h in Headers */,
+				536F48D02445CE5E008DCDEB /* IOSInput.h in Headers */,
 				5353FC3724450F30005B88A6 /* MobileInput.h in Headers */,
+				536F48C82445C880008DCDEB /* RenderArea.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,6 +559,7 @@
 				53492C8D239A9C12009E1076 /* MouseEvent.h in Headers */,
 				536F48AD2445AADD008DCDEB /* DesktopEvent.h in Headers */,
 				53F6EA032401497800EF58AA /* ImGuiLayer.h in Headers */,
+				536F48C72445C7F7008DCDEB /* RenderArea.h in Headers */,
 				53D79652240066A800D752C7 /* LayerStack.h in Headers */,
 				537F12AE2393015F00369F57 /* Application.h in Headers */,
 				5360CEC623FD1E7400D2F5DB /* Window.h in Headers */,
@@ -632,10 +650,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				536F48CF2445CE5E008DCDEB /* IOSInput.cpp in Sources */,
 				5353FC1C24450DAA005B88A6 /* Log.cpp in Sources */,
 				5353FC1F24450DAA005B88A6 /* test.cpp in Sources */,
 				5353FC2124450DAA005B88A6 /* LayerStack.cpp in Sources */,
 				5353FC2324450DAA005B88A6 /* stb_image.cpp in Sources */,
+				536F48CB2445CB89008DCDEB /* IOSSurface.cpp in Sources */,
 				536F48B92445B0B6008DCDEB /* MobileApplication.cpp in Sources */,
 				5353FC2524450DAA005B88A6 /* Layer.cpp in Sources */,
 			);

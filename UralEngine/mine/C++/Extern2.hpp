@@ -6,9 +6,9 @@
 //  Copyright © 2020 Кирилл Мезрин. All rights reserved.
 //
 
-#ifndef Extern2_hpp
-#define Extern2_hpp
+#ifndef Extern2_h
+#define Extern2_h
 
 #include <stdio.h>
 
-#endif /* Extern2_hpp */
+#endif /* Extern2_h */

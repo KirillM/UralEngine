@@ -8,8 +8,8 @@
 
 #include <iostream>
 
-#ifndef Class_hpp
-#define Class_hpp
+#ifndef Class_h
+#define Class_h
 
 class Test
 {
@@ -33,7 +33,7 @@ public:
     std::string GetName2() override { return m_Name; }
 };
 
-#endif /* Class_hpp */
+#endif /* Class_h */
 
 
 int main() {

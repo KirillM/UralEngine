@@ -6,8 +6,8 @@
 //  Copyright © 2020 Кирилл Мезрин. All rights reserved.
 //
 
-#ifndef interface_hpp
-#define interface_hpp
+#ifndef interface_h
+#define interface_h
 
 #include <stdio.h>
 
@@ -40,4 +40,4 @@ int main()
 
 }
 
-#endif /* interface_hpp */
+#endif /* interface_h */

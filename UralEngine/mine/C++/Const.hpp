@@ -6,9 +6,9 @@
 //  Copyright © 2020 Кирилл Мезрин. All rights reserved.
 //
 
-#ifndef Const_hpp
-#define Const_hpp
+#ifndef Const_h
+#define Const_h
 
 #include <stdio.h>
 
-#endif /* Const_hpp */
+#endif /* Const_h */

@@ -6,8 +6,8 @@
 //  Copyright © 2020 Кирилл Мезрин. All rights reserved.
 //
 
-#ifndef ImGuiLayer_hpp
-#define ImGuiLayer_hpp
+#ifndef ImGuiLayer_h
+#define ImGuiLayer_h
 
 #include "Layers/Layer.h"
 
@@ -47,4 +47,4 @@ namespace Ural {
 
 #pragma GCC visibility pop
 
-#endif /* ImGuiLayer_hpp */
+#endif /* ImGuiLayer_h */

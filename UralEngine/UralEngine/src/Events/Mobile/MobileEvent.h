@@ -9,7 +9,7 @@
 #ifndef MobileEvent_h
 #define MobileEvent_h
 
-#include "Event.h"
+#include "Events/Event.h"
 
 namespace Ural {
     class URAL_API SurfaceResizeEvent : public Event

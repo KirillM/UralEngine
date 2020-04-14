@@ -6,7 +6,6 @@
 //  Copyright © 2019 Кирилл Мезрин. All rights reserved.
 //
 
-#include <iostream>
 #include "Ural.h"
 
 class ExampleLayer: public Ural::Layer
@@ -19,9 +18,6 @@ public:
     void OnUpdate() override
     {
         UL_INFO("ExampleLayer::Update");
-
-        if(Ural::Input::IsKeyPressed(UL_KEY_TAB))
-            UL_INFO("Tab key is pressed!");
     }
 
     void OnEvent(Ural::Event& event) override
@@ -30,7 +26,7 @@ public:
     }
 };
 
-class Sandbox : public Ural::Application
+class Sandbox : public Ural::MobileApplication
 {
 public:
     Sandbox()

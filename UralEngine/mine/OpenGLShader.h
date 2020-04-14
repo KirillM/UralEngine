@@ -25,4 +25,4 @@ namespace Ural {
     };
 }
 
-#endif /* OpenGLShader_hpp */
+#endif /* OpenGLShader_h */

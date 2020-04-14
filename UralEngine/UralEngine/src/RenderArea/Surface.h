@@ -12,9 +12,9 @@
 #include "Ural/Core.h"
 #include "RenderArea.h"
 
-namespace Surface {
+namespace Ural {
 
-    class URAL_API Window : public RenderArea
+    class URAL_API Surface : public RenderArea
     {
     public:
         static Surface* Create();

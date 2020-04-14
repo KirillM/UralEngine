@@ -46,4 +46,4 @@ namespace Ural {
 
 #pragma GCC visibility pop
 
-#endif /* DesktopApplication_hpp */
+#endif /* DesktopApplication_h */
