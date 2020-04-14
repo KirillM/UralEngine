@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@import GLKit;
+#import <GLKit/GLKit.h>
 
 @interface ViewController : GLKViewController
 

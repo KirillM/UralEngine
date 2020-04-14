@@ -9,7 +9,7 @@
 #import "ViewController.h"
 //#import <OpenGLES/ES3/gl.h>
 
-//#include "Sandbox.mm"
+#include "Sandbox.mm"
 
 #define GLES_SILENCE_DEPRECATION
 
