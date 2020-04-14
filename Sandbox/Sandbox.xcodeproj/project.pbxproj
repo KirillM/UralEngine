@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5353FC3424450E4E005B88A6 /* libUralEngine IOS.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5353FC3324450E4E005B88A6 /* libUralEngine IOS.dylib */; };
 		5353FC3524450E4E005B88A6 /* libUralEngine IOS.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 5353FC3324450E4E005B88A6 /* libUralEngine IOS.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		536F48D32445D5E1008DCDEB /* Sandbox.mm in Sources */ = {isa = PBXBuildFile; fileRef = 53EDC1C62444ED99009E8291 /* Sandbox.mm */; };
 		537F12B223930A4B00369F57 /* libUralEngine.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 537F12B123930A4B00369F57 /* libUralEngine.dylib */; };
 		537F12B323930A4B00369F57 /* libUralEngine.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 537F12B123930A4B00369F57 /* libUralEngine.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		53EDC1AE2444E85D009E8291 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EDC1AD2444E85D009E8291 /* AppDelegate.m */; };
@@ -18,7 +19,6 @@
 		53EDC1B92444E861009E8291 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53EDC1B82444E861009E8291 /* Assets.xcassets */; };
 		53EDC1BC2444E861009E8291 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53EDC1BA2444E861009E8291 /* LaunchScreen.storyboard */; };
 		53EDC1BF2444E861009E8291 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EDC1BE2444E861009E8291 /* main.m */; };
-		53EDC1C72444ED99009E8291 /* Sandbox.mm in Sources */ = {isa = PBXBuildFile; fileRef = 53EDC1C62444ED99009E8291 /* Sandbox.mm */; };
 		53EDC1C82444ED9E009E8291 /* Sandbox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53A790CE2392C5A600E29426 /* Sandbox.cpp */; };
 		53EDC1CB2444F81F009E8291 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53EDC1CA2444F81F009E8291 /* GLKit.framework */; };
 /* End PBXBuildFile section */
@@ -290,9 +290,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				53EDC1B42444E85D009E8291 /* ViewController.m in Sources */,
-				53EDC1C72444ED99009E8291 /* Sandbox.mm in Sources */,
 				53EDC1AE2444E85D009E8291 /* AppDelegate.m in Sources */,
 				53EDC1BF2444E861009E8291 /* main.m in Sources */,
+				536F48D32445D5E1008DCDEB /* Sandbox.mm in Sources */,
 				53EDC1B12444E85D009E8291 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

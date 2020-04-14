@@ -6,42 +6,50 @@
 //  Copyright © 2019 Кирилл Мезрин. All rights reserved.
 //
 
+//#include <iostream>
 #include "Ural.h"
 
-class ExampleLayer: public Ural::Layer
-{
-public:
-    ExampleLayer() : Layer("Example")
-    {
-    }
 
-    void OnUpdate() override
-    {
-        UL_INFO("ExampleLayer::Update");
-    }
+extern Ural::Application* Ural::CreateApplication();
 
-    void OnEvent(Ural::Event& event) override
-    {
-       // UL_TRACE("{0}", event);
-    }
-};
+//#include "Ural/Application.h"
+//#include "Ural/Mobile/MobileApplication.h"
 
-class Sandbox : public Ural::MobileApplication
-{
-public:
-    Sandbox()
-    {
-        PushOverlay(new ExampleLayer());
-     //  PushOverlay(new Ural::ImGuiLayer());
-    }
-
-    ~Sandbox()
-    {
-
-    }
-};
-
-Ural::Application* Ural::CreateApplication()
-{
-	return new Sandbox();
-}
+//class ExampleLayer: public Layer
+//{
+//public:
+//    ExampleLayer() : Layer("Example")
+//    {
+//    }
+//
+//    void OnUpdate() override
+//    {
+//        UL_INFO("ExampleLayer::Update");
+//    }
+//
+//    void OnEvent(Ural::Event& event) override
+//    {
+//       // UL_TRACE("{0}", event);
+//    }
+//};
+//
+//class Sandbox : public MobileApplication
+//{
+//public:
+//    Sandbox()
+//    {
+//        PushOverlay(new ExampleLayer());
+//     //  PushOverlay(new Ural::ImGuiLayer());
+//    }
+//
+//    ~Sandbox()
+//    {
+//
+//    }
+//};
+//
+//Ural::Application* Ural::CreateApplication()
+//{
+//	return new Sandbox();
+//}
+//

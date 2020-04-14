@@ -9,10 +9,10 @@
 #ifndef LayerStack_h
 #define LayerStack_h
 
-#include <Ural/Core.h>
+#include "Ural/Core.h"
 #include "Layer.h"
 
-#include <vector>
+//#include <vector>
 
 namespace Ural {
 
