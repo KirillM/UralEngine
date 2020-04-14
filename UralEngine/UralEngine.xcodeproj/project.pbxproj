@@ -48,7 +48,6 @@
 		536F48CC2445CB89008DCDEB /* IOSSurface.h in Headers */ = {isa = PBXBuildFile; fileRef = 536F48CA2445CB89008DCDEB /* IOSSurface.h */; };
 		536F48CF2445CE5E008DCDEB /* IOSInput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 536F48CD2445CE5E008DCDEB /* IOSInput.cpp */; };
 		536F48D02445CE5E008DCDEB /* IOSInput.h in Headers */ = {isa = PBXBuildFile; fileRef = 536F48CE2445CE5E008DCDEB /* IOSInput.h */; };
-		536F48D22445D4AD008DCDEB /* MobileEntryPoint.h in Headers */ = {isa = PBXBuildFile; fileRef = 536F48D12445D4AD008DCDEB /* MobileEntryPoint.h */; };
 		53722372239800D600312C05 /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53722370239800D600312C05 /* Log.cpp */; };
 		53722373239800D600312C05 /* Log.h in Headers */ = {isa = PBXBuildFile; fileRef = 53722371239800D600312C05 /* Log.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		537F12AE2393015F00369F57 /* Application.h in Headers */ = {isa = PBXBuildFile; fileRef = 537F12AC2393015F00369F57 /* Application.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -538,7 +537,6 @@
 				5353FC0A24450DAA005B88A6 /* test.h in Headers */,
 				5353FC0C24450DAA005B88A6 /* ulpch.pch in Headers */,
 				5353FC0F24450DAA005B88A6 /* LayerStack.h in Headers */,
-				536F48D22445D4AD008DCDEB /* MobileEntryPoint.h in Headers */,
 				5353FC1324450DAA005B88A6 /* Log.h in Headers */,
 				536F48BA2445B0B6008DCDEB /* MobileApplication.h in Headers */,
 				536F48A92445A885008DCDEB /* Event.h in Headers */,

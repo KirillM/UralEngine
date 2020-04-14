@@ -34,7 +34,6 @@ namespace Ural {
         inline Surface& GetSurface() { return *m_Surface; }
     private:
         std::unique_ptr<Surface> m_Surface = nullptr;
-        bool m_Running = true;
         LayerStack m_LayerStack;
     };
 

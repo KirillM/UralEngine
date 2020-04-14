@@ -28,7 +28,7 @@ namespace Ural {
         GLuint pShader = glCreateShader(GL_FRAGMENT_SHADER);
 
         const GLchar* vShaderText = R"(
-             #version 330
+             #version 300 es
              layout(location = 0) in vec4 a_Position;
              layout(location = 1) in vec4 a_Color;
 
@@ -39,7 +39,9 @@ namespace Ural {
                  v_Color = a_Color;
              })";
         const GLchar* pShaderText = R"(
-            #version 330
+            #version 300 es
+
+            precision mediump float;
 
              layout(location = 0) out vec4 v_FragColor;
              in vec4 v_Color;
@@ -387,7 +389,7 @@ namespace Ural {
         glBufferData(GL_ARRAY_BUFFER, sizeof(struct vertex) * 3, verticies, GL_STATIC_DRAW);
 
         GLenum err = glGetError();
-        //const GLubyte *str = gluErrorString(glGetError()); //
+        const GLubyte *str = glGetString(glGetError()); //
 
         /*
          Again, when no VAO is bound, glVertexAttribPointer will not work
@@ -517,6 +519,12 @@ static void glSync()
       //  glCondition();
       //  glBuffers();
 
+        glClearColor(1, 0, 0, 0); // устанавливает цвет для очистки окна
+        glClear(GL_COLOR_BUFFER_BIT);
+
+        glVertex();
+        glShaders();
+
     }
 
     MobileApplication::~MobileApplication()
@@ -544,6 +552,12 @@ static void glSync()
 
     void MobileApplication::Run()
     {
+    //    glClearColor(0, 1, 0, 0); // устанавливает цвет для очистки окна
+    //    glClear(GL_COLOR_BUFFER_BIT);
+
+    //    glVertex();
+    //    glShaders();
+
         //WindowResizeEvent e(1280, 720);
         //UL_TRACE(e);
 
@@ -564,14 +578,9 @@ static void glSync()
 //        glEnableVertexAttribArray(0);
 //        glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(float) * 2, nullptr);
 
-        glVertex();
-        glShaders();
 
+ //       glClearColor(1, 0, 0, 0); // устанавливает цвет для очистки окна
 
-        glClearColor(0, 1, 1, 1); // устанавливает цвет для очистки окна
-
-        while (m_Running)
-        {
 //            int w = GetWindow().GetWidth();
 //            int h = GetWindow().GetHeight();
 //            WindowResizeEvent e(w, h);
@@ -580,7 +589,7 @@ static void glSync()
             //glDisable(GL_CULL_FACE);
             //glDisable(GL_DEPTH_TEST);
 
-            glClear(GL_COLOR_BUFFER_BIT); // очищает определенный буфер или комбинацию буферов, в данном случае удаляет из буфера пикселей последний отображенный рисунок
+ //           glClear(GL_COLOR_BUFFER_BIT); // очищает определенный буфер или комбинацию буферов, в данном случае удаляет из буфера пикселей последний отображенный рисунок
             //GL_COLOR_BUFFER_BIT - буфер цветов (пикселей), место где хранится отображаемое изображений
             //glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
@@ -588,8 +597,8 @@ static void glSync()
                glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, nullptr);
             //glDrawArrays(GL_TRIANGLES, 0, 3);
 
-                        GLenum err = glGetError();
-                      //  const GLubyte *str = gluErrorString(err); // строка описывающая метку ошибки
+                 //       GLenum err = glGetError();
+                     //   const GLubyte *str = glGetString(glGetError()); // строка описывающая метку ошибки
 
 
 
@@ -671,7 +680,6 @@ static void glSync()
 //            UL_CORE_TRACE("{0}, {1}", std::get<0>(position), std::get<1>(position));
 
             m_Surface->OnUpdate(); // при переключении буферов (swap buffers) неявно вызывается glFlush()
-        }
     }
 
     void MobileApplication::PushLayer(Layer *layer)
