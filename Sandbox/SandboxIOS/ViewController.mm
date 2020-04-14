@@ -9,8 +9,6 @@
 #import "ViewController.h"
 #include "Sandbox.mm"
 
-#define GLES_SILENCE_DEPRECATION
-
 Ural::Application* Ural::CreateApplication()
 {
     return new Sandbox();

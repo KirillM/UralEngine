@@ -10,7 +10,7 @@
 #define Application_h
 
 #include "Core.h"
-#include "RenderArea/Window.h"
+#include "RenderSpace/Window.h"
 #include "Layers/LayerStack.h"
 #include "Events/Event.h"
 #include "Events/ApplicationEvent.h"

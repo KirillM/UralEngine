@@ -13,12 +13,12 @@
 #include "Events/Event.h"
 
 namespace Ural {
-    class URAL_API RenderArea
+    class URAL_API RenderSpace
     {
     public:
         using EventcallabckFn = std::function<void(Event&)>;
 
-        virtual ~RenderArea() = default;
+        virtual ~RenderSpace() = default;
 
         virtual void OnUpdate() = 0;
 

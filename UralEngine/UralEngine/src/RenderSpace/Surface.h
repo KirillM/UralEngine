@@ -10,11 +10,11 @@
 #define Surface_h
 
 #include "Ural/Core.h"
-#include "RenderArea.h"
+#include "RenderSpace.h"
 
 namespace Ural {
 
-    class URAL_API Surface : public RenderArea
+    class URAL_API Surface : public RenderSpace
     {
     public:
         static Surface* Create();

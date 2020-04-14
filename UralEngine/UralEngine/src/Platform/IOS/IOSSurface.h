@@ -9,7 +9,7 @@
 #ifndef IOSSurface_h
 #define IOSSurface_h
 
-#include "RenderArea/Surface.h"
+#include "RenderSpace/Surface.h"
 
 namespace Ural {
     class IOSSurface : public Surface {

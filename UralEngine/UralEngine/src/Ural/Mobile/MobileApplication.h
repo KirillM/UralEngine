@@ -11,7 +11,7 @@
 
 #include "Ural/Core.h"
 #include "Ural/Application.h"
-#include "RenderArea/Surface.h"
+#include "RenderSpace/Surface.h"
 #include "Layers/LayerStack.h"
 #include "Events/Event.h"
 #include "Events/ApplicationEvent.h"
