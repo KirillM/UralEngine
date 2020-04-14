@@ -9,8 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <GLKit/GLKit.h>
 
-#define GLES_SILENCE_DEPRECATION
-
 @interface ViewController : GLKViewController
 
 

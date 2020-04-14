@@ -492,6 +492,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"UL_PLATFORM_IOS=1",
+					"GLES_SILENCE_DEPRECATION=1",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/../UralEngine/UralEngine/src",
@@ -519,7 +520,10 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5CDN7636Z2;
-				GCC_PREPROCESSOR_DEFINITIONS = "UL_PLATFORM_IOS=1";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"UL_PLATFORM_IOS=1",
+					"GLES_SILENCE_DEPRECATION=1",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/../UralEngine/UralEngine/src",
 					"$(SRCROOT)/../UralEngine/vendor/spdlog/include",
