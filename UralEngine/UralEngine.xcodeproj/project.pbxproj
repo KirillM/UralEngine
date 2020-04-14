@@ -42,12 +42,14 @@
 		536F48BA2445B0B6008DCDEB /* MobileApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = 536F48B82445B0B6008DCDEB /* MobileApplication.h */; };
 		536F48BB2445B148008DCDEB /* Application.h in Headers */ = {isa = PBXBuildFile; fileRef = 537F12AC2393015F00369F57 /* Application.h */; };
 		536F48C12445B6D3008DCDEB /* Surface.h in Headers */ = {isa = PBXBuildFile; fileRef = 536F48C02445B6D3008DCDEB /* Surface.h */; };
-		536F48C72445C7F7008DCDEB /* RenderSpace.h in Headers */ = {isa = PBXBuildFile; fileRef = 536F48BD2445B6BE008DCDEB /* RenderSpace.h */; };
-		536F48C82445C880008DCDEB /* RenderSpace.h in Headers */ = {isa = PBXBuildFile; fileRef = 536F48BD2445B6BE008DCDEB /* RenderSpace.h */; };
 		536F48CB2445CB89008DCDEB /* IOSSurface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 536F48C92445CB89008DCDEB /* IOSSurface.cpp */; };
 		536F48CC2445CB89008DCDEB /* IOSSurface.h in Headers */ = {isa = PBXBuildFile; fileRef = 536F48CA2445CB89008DCDEB /* IOSSurface.h */; };
 		536F48CF2445CE5E008DCDEB /* IOSInput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 536F48CD2445CE5E008DCDEB /* IOSInput.cpp */; };
 		536F48D02445CE5E008DCDEB /* IOSInput.h in Headers */ = {isa = PBXBuildFile; fileRef = 536F48CE2445CE5E008DCDEB /* IOSInput.h */; };
+		536FB43524465FD4005298B6 /* OnScreenSurface.h in Headers */ = {isa = PBXBuildFile; fileRef = 536FB43424465FD4005298B6 /* OnScreenSurface.h */; };
+		536FB43624465FD4005298B6 /* OnScreenSurface.h in Headers */ = {isa = PBXBuildFile; fileRef = 536FB43424465FD4005298B6 /* OnScreenSurface.h */; };
+		536FB43824465FE8005298B6 /* OffScreenSurface.h in Headers */ = {isa = PBXBuildFile; fileRef = 536FB43724465FE8005298B6 /* OffScreenSurface.h */; };
+		536FB43924465FE8005298B6 /* OffScreenSurface.h in Headers */ = {isa = PBXBuildFile; fileRef = 536FB43724465FE8005298B6 /* OffScreenSurface.h */; };
 		53722372239800D600312C05 /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53722370239800D600312C05 /* Log.cpp */; };
 		53722373239800D600312C05 /* Log.h in Headers */ = {isa = PBXBuildFile; fileRef = 53722371239800D600312C05 /* Log.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		537F12AE2393015F00369F57 /* Application.h in Headers */ = {isa = PBXBuildFile; fileRef = 537F12AC2393015F00369F57 /* Application.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -140,13 +142,16 @@
 		536F48B42445B00C008DCDEB /* DesktopApplication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DesktopApplication.h; sourceTree = "<group>"; };
 		536F48B72445B0B6008DCDEB /* MobileApplication.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MobileApplication.cpp; sourceTree = "<group>"; };
 		536F48B82445B0B6008DCDEB /* MobileApplication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobileApplication.h; sourceTree = "<group>"; };
-		536F48BD2445B6BE008DCDEB /* RenderSpace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RenderSpace.h; sourceTree = "<group>"; };
 		536F48C02445B6D3008DCDEB /* Surface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Surface.h; sourceTree = "<group>"; };
 		536F48C92445CB89008DCDEB /* IOSSurface.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IOSSurface.cpp; sourceTree = "<group>"; };
 		536F48CA2445CB89008DCDEB /* IOSSurface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IOSSurface.h; sourceTree = "<group>"; };
 		536F48CD2445CE5E008DCDEB /* IOSInput.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IOSInput.cpp; sourceTree = "<group>"; };
 		536F48CE2445CE5E008DCDEB /* IOSInput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IOSInput.h; sourceTree = "<group>"; };
 		536F48D12445D4AD008DCDEB /* MobileEntryPoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobileEntryPoint.h; sourceTree = "<group>"; };
+		536FB43424465FD4005298B6 /* OnScreenSurface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OnScreenSurface.h; sourceTree = "<group>"; };
+		536FB43724465FE8005298B6 /* OffScreenSurface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OffScreenSurface.h; sourceTree = "<group>"; };
+		536FB43A24466098005298B6 /* HandHeldSurface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HandHeldSurface.h; sourceTree = "<group>"; };
+		536FB43D244660BC005298B6 /* EbeddedSurface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EbeddedSurface.h; sourceTree = "<group>"; };
 		53722370239800D600312C05 /* Log.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Log.cpp; sourceTree = "<group>"; };
 		53722371239800D600312C05 /* Log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Log.h; sourceTree = "<group>"; };
 		537F12A82392D7EF00369F57 /* EntryPoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntryPoint.h; sourceTree = "<group>"; };
@@ -212,19 +217,14 @@
 		530164EF239BF8CD00821B62 /* Platform */ = {
 			isa = PBXGroup;
 			children = (
-				53F6EA0424014E9100EF58AA /* OpenGL */,
+				538872B62446694A00D9BE4A /* Unix */,
+				538872B52446693C00D9BE4A /* Android */,
 				530164F5239BFF2700821B62 /* IOS */,
 				530164F4239BFF2100821B62 /* Mac */,
+				538872B42446692E00D9BE4A /* Win32 */,
 				530164F3239BFF1500821B62 /* Win64 */,
 			);
 			path = Platform;
-			sourceTree = "<group>";
-		};
-		530164F0239BF90300821B62 /* Window */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Window;
 			sourceTree = "<group>";
 		};
 		530164F3239BFF1500821B62 /* Win64 */ = {
@@ -366,23 +366,25 @@
 			path = Mobile;
 			sourceTree = "<group>";
 		};
-		536F48BC2445B6A0008DCDEB /* RenderSpace */ = {
+		536F48BC2445B6A0008DCDEB /* Surface */ = {
 			isa = PBXGroup;
 			children = (
-				536F48BD2445B6BE008DCDEB /* RenderSpace.h */,
-				530164F1239BF91A00821B62 /* Window.h */,
 				536F48C02445B6D3008DCDEB /* Surface.h */,
+				536FB43424465FD4005298B6 /* OnScreenSurface.h */,
+				536FB43724465FE8005298B6 /* OffScreenSurface.h */,
+				538872AC2446665600D9BE4A /* Device */,
 			);
-			path = RenderSpace;
+			path = Surface;
 			sourceTree = "<group>";
 		};
 		537F129B2392CBE700369F57 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				536F48BC2445B6A0008DCDEB /* RenderSpace */,
+				538872AD2446681600D9BE4A /* Context */,
+				536F48BC2445B6A0008DCDEB /* Surface */,
+				538872B12446690100D9BE4A /* RenderAPI */,
 				53F6EA0C24019CEE00EF58AA /* Input */,
 				53D7964E2400668300D752C7 /* Layers */,
-				530164F0239BF90300821B62 /* Window */,
 				530164EF239BF8CD00821B62 /* Platform */,
 				53492C85239A9BA5009E1076 /* Events */,
 				53BFD3F0239944E400A4D06D /* Log */,
@@ -402,6 +404,76 @@
 				536F48B22445AFD8008DCDEB /* Mobile */,
 			);
 			path = Ural;
+			sourceTree = "<group>";
+		};
+		538872AC2446665600D9BE4A /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				530164F1239BF91A00821B62 /* Window.h */,
+				536FB43A24466098005298B6 /* HandHeldSurface.h */,
+				536FB43D244660BC005298B6 /* EbeddedSurface.h */,
+			);
+			path = Device;
+			sourceTree = "<group>";
+		};
+		538872AD2446681600D9BE4A /* Context */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Context;
+			sourceTree = "<group>";
+		};
+		538872AF2446686000D9BE4A /* OpenGLES */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = OpenGLES;
+			sourceTree = "<group>";
+		};
+		538872B12446690100D9BE4A /* RenderAPI */ = {
+			isa = PBXGroup;
+			children = (
+				538872B32446691700D9BE4A /* Metal */,
+				538872B22446690F00D9BE4A /* Vulkan */,
+				538872AF2446686000D9BE4A /* OpenGLES */,
+				53F6EA0424014E9100EF58AA /* OpenGL */,
+			);
+			path = RenderAPI;
+			sourceTree = "<group>";
+		};
+		538872B22446690F00D9BE4A /* Vulkan */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Vulkan;
+			sourceTree = "<group>";
+		};
+		538872B32446691700D9BE4A /* Metal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Metal;
+			sourceTree = "<group>";
+		};
+		538872B42446692E00D9BE4A /* Win32 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Win32;
+			sourceTree = "<group>";
+		};
+		538872B52446693C00D9BE4A /* Android */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Android;
+			sourceTree = "<group>";
+		};
+		538872B62446694A00D9BE4A /* Unix */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Unix;
 			sourceTree = "<group>";
 		};
 		53A790782392A17500E29426 = {
@@ -538,12 +610,13 @@
 				5353FC0C24450DAA005B88A6 /* ulpch.pch in Headers */,
 				5353FC0F24450DAA005B88A6 /* LayerStack.h in Headers */,
 				5353FC1324450DAA005B88A6 /* Log.h in Headers */,
+				536FB43624465FD4005298B6 /* OnScreenSurface.h in Headers */,
 				536F48BA2445B0B6008DCDEB /* MobileApplication.h in Headers */,
+				536FB43924465FE8005298B6 /* OffScreenSurface.h in Headers */,
 				536F48A92445A885008DCDEB /* Event.h in Headers */,
 				5353FC1624450DAA005B88A6 /* stb_image.h in Headers */,
 				536F48D02445CE5E008DCDEB /* IOSInput.h in Headers */,
 				5353FC3724450F30005B88A6 /* MobileInput.h in Headers */,
-				536F48C82445C880008DCDEB /* RenderSpace.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,6 +627,7 @@
 				53F6EA0E24019D1200EF58AA /* DesktopInput.h in Headers */,
 				53D79656240066B400D752C7 /* Layer.h in Headers */,
 				53F6EA162401AF3A00EF58AA /* KeyCodes.h in Headers */,
+				536FB43824465FE8005298B6 /* OffScreenSurface.h in Headers */,
 				537F12B02393030400369F57 /* Core.h in Headers */,
 				53F704F9241D615700608BAA /* test.h in Headers */,
 				53F6EA1424019E8700EF58AA /* MacInput.h in Headers */,
@@ -561,7 +635,6 @@
 				53492C8D239A9C12009E1076 /* MouseEvent.h in Headers */,
 				536F48AD2445AADD008DCDEB /* DesktopEvent.h in Headers */,
 				53F6EA032401497800EF58AA /* ImGuiLayer.h in Headers */,
-				536F48C72445C7F7008DCDEB /* RenderSpace.h in Headers */,
 				53D79652240066A800D752C7 /* LayerStack.h in Headers */,
 				537F12AE2393015F00369F57 /* Application.h in Headers */,
 				5360CEC623FD1E7400D2F5DB /* Window.h in Headers */,
@@ -572,6 +645,7 @@
 				53492C87239A9BD5009E1076 /* ApplicationEvent.h in Headers */,
 				53F704F1241D5F4B00608BAA /* stb_image.h in Headers */,
 				53F6EA182401AFB600EF58AA /* MouseButtonCodes.h in Headers */,
+				536FB43524465FD4005298B6 /* OnScreenSurface.h in Headers */,
 				53492C89239A9BE7009E1076 /* Event.h in Headers */,
 				53F6EA0824014EC600EF58AA /* ImGuiOpenGLRenderer.h in Headers */,
 			);

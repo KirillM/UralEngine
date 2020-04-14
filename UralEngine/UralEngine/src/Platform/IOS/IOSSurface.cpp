@@ -16,7 +16,7 @@
 
 namespace Ural {
 
-    Surface* Surface::Create()
+    HandHeldSurface* HandHeldSurface::Create()
     {
         return new IOSSurface();
     }

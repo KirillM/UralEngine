@@ -507,7 +507,7 @@ static void glSync()
         UL_CORE_ASSERT(!s_Instance, "Application already exists !");
         s_Instance = this;
 
-        m_Surface = std::unique_ptr<Surface>(Surface::Create());
+        m_Surface = std::unique_ptr<HandHeldSurface>(HandHeldSurface::Create());
         m_Surface->SetEventCallback(BIND_EVENT_FN(OnEvent));
 
 //        unsigned int id;
@@ -673,8 +673,8 @@ static void glSync()
 //
 //            glDisable(GL_LINE_STIPPLE);
 
-//            for (Layer* layer : m_LayerStack)
-//                layer->OnUpdate();
+            for (Layer* layer : m_LayerStack)
+                layer->OnUpdate();
 
 //            std::pair<float, float> position = MInput::GetMousePosition();
 //            UL_CORE_TRACE("{0}, {1}", std::get<0>(position), std::get<1>(position));

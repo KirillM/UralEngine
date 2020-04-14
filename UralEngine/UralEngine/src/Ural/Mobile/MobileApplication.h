@@ -11,7 +11,7 @@
 
 #include "Ural/Core.h"
 #include "Ural/Application.h"
-#include "RenderSpace/Surface.h"
+#include "Surface/Device/HandHeldSurface.h"
 #include "Layers/LayerStack.h"
 #include "Events/Event.h"
 #include "Events/ApplicationEvent.h"
@@ -31,9 +31,9 @@ namespace Ural {
         void PushLayer(Layer* layer);
         void PushOverlay(Layer* layer);
 
-        inline Surface& GetSurface() { return *m_Surface; }
+        inline HandHeldSurface& GetSurface() { return *m_Surface; }
     private:
-        std::unique_ptr<Surface> m_Surface = nullptr;
+        std::unique_ptr<HandHeldSurface> m_Surface = nullptr;
         LayerStack m_LayerStack;
     };
 

@@ -9,7 +9,7 @@
 #ifndef MacWindow_h
 #define MacWindow_h
 
-#include "RenderArea/Window.h"
+#include "Surface/Device/Window.h"
 #include <GLFW/glfw3.h>
 
 namespace Ural {

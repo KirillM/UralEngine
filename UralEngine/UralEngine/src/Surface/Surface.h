@@ -1,24 +1,36 @@
 //
-//  RenderArea.h
-//  UralEngine
+//  Surface.h
+//  UralEngine IOS
 //
 //  Created by Кирилл Мезрин on 14.04.2020.
 //  Copyright © 2020 Кирилл Мезрин. All rights reserved.
 //
 
-#ifndef RenderArea_h
-#define RenderArea_h
+#ifndef Surface_h
+#define Surface_h
+
+//#include "Ural/Core.h"
+//#include "RenderSpace.h"
+//
+//namespace Ural {
+//
+//    class URAL_API Surface : public RenderSpace
+//    {
+//    public:
+//        static Surface* Create();
+//    };
+//}
 
 #include "Ural/Core.h"
 #include "Events/Event.h"
 
 namespace Ural {
-    class URAL_API RenderSpace
+    class URAL_API Surface
     {
     public:
         using EventcallabckFn = std::function<void(Event&)>;
 
-        virtual ~RenderSpace() = default;
+        virtual ~Surface() = default;
 
         virtual void OnUpdate() = 0;
 
@@ -29,4 +41,4 @@ namespace Ural {
     };
 }
 
-#endif /* RenderArea_h */
+#endif /* Surface_h */

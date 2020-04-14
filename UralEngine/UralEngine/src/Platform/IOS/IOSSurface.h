@@ -9,10 +9,10 @@
 #ifndef IOSSurface_h
 #define IOSSurface_h
 
-#include "RenderSpace/Surface.h"
+#include "Surface/Device/HandHeldSurface.h"
 
 namespace Ural {
-    class IOSSurface : public Surface {
+    class IOSSurface : public HandHeldSurface {
     public:
         IOSSurface();
         virtual ~IOSSurface();

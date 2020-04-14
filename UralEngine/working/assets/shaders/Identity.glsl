@@ -13,6 +13,8 @@ out vec4 v_Color;
 void main(void) {
     v_Color = a_Color;
     gl_Position = a_Position;
+    //in gl_InstanceID
+    //out gl_PointSize
 }
 
 
@@ -27,4 +29,8 @@ out vec4 v_FragColor; // любой out идет в цвет fragment
 
 void main(void) {
     v_FragColor = v_Color;
+//in    gl_FragCoord
+//in    gl_FrontFacing
+//in    gl_PointCoord
+//out   gl_FragDepth
 }

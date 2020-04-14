@@ -10,7 +10,7 @@
 #define Window_h
 
 #include "Ural/Core.h"
-#include "RenderSpace.h"
+#include "Surface/OnScreenSurface.h"
 
 namespace Ural {
 
@@ -27,7 +27,7 @@ namespace Ural {
 
 	};
 
-	class URAL_API Window : public RenderSpace
+	class URAL_API Window : public OnScreenSurface
 	{
 	public:
 		virtual void SetVSync(bool enabled) = 0;
