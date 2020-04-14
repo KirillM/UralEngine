@@ -12,6 +12,7 @@
 #include "Platform/OpenGL/ImGuiOpenGLRenderer.h"
 #include <GLFW/glfw3.h>
 #include "Ural/Application.h"
+#include "Ural/Desktop/DesktopApplication.h"
 #include "Platform/Mac/MacWindow.h"
 
 namespace Ural {
@@ -68,14 +69,14 @@ namespace Ural {
     void ImGuiLayer::OnUpdate()
     {
         ImGuiIO& io = ImGui::GetIO();
-        Application& app = Application::Get();
+        DesktopApplication& app = DesktopApplication::Get();
 
         int w, h;
         int display_w, display_h;
         w = app.GetWindow().GetWidth();
         h = app.GetWindow().GetHeight();
 
-        auto window = static_cast<GLFWwindow*>(Application::Get().GetWindow().GetNativeWindow());
+        auto window = static_cast<GLFWwindow*>(DesktopApplication::Get().GetWindow().GetNativeWindow());
         glfwGetFramebufferSize(window, &display_w, &display_h);
         io.DisplaySize = ImVec2((float)w, (float)h);
 
@@ -173,7 +174,7 @@ namespace Ural {
         w = e.GetWidth();
         h = e.GetHeight();
         
-        auto window = static_cast<GLFWwindow*>(Application::Get().GetWindow().GetNativeWindow());
+        auto window = static_cast<GLFWwindow*>(DesktopApplication::Get().GetWindow().GetNativeWindow());
         glfwGetFramebufferSize(window, &display_w, &display_h);
 
         ImGuiIO& io = ImGui::GetIO();

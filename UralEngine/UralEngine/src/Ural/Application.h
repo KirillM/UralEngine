@@ -10,7 +10,7 @@
 #define Application_h
 
 #include "Core.h"
-#include "Platform/Window/Window.h"
+#include "RenderArea/Window.h"
 #include "Layers/LayerStack.h"
 #include "Events/Event.h"
 #include "Events/ApplicationEvent.h"
@@ -20,25 +20,17 @@
 namespace Ural {
 	class URAL_API Application {
 	public:
-		Application();
-		virtual ~Application();
+		virtual ~Application() = default;
 		
-		void Run();
+		virtual void Run() = 0;
 		
-		void OnEvent(Event& e);
+		virtual void OnEvent(Event& e) = 0;
 
-        void PushLayer(Layer* layer);
-        void PushOverlay(Layer* layer);
+        virtual void PushLayer(Layer* layer) = 0;
+        virtual void PushOverlay(Layer* layer) = 0;
 
         static inline Application& Get() { return *s_Instance; }
-        inline Window& GetWindow() { return *m_Window; }
-	private:
-        bool OnWindowClose(WindowCloseEvent& e);
-        bool OnWindowResize(WindowResizeEvent& e);
-		std::unique_ptr<Window> m_Window = nullptr;
-		bool m_Running = true;
-        LayerStack m_LayerStack;
-    private:
+    protected:
         static Application* s_Instance;
 	};
 

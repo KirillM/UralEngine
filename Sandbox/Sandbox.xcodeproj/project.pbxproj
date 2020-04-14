@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5353FC3424450E4E005B88A6 /* libUralEngine IOS.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5353FC3324450E4E005B88A6 /* libUralEngine IOS.dylib */; };
+		5353FC3524450E4E005B88A6 /* libUralEngine IOS.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 5353FC3324450E4E005B88A6 /* libUralEngine IOS.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		537F12B223930A4B00369F57 /* libUralEngine.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 537F12B123930A4B00369F57 /* libUralEngine.dylib */; };
 		537F12B323930A4B00369F57 /* libUralEngine.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 537F12B123930A4B00369F57 /* libUralEngine.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		53EDC1AE2444E85D009E8291 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EDC1AD2444E85D009E8291 /* AppDelegate.m */; };
@@ -19,10 +21,20 @@
 		53EDC1C72444ED99009E8291 /* Sandbox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53EDC1C62444ED99009E8291 /* Sandbox.cpp */; };
 		53EDC1C82444ED9E009E8291 /* Sandbox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53A790CE2392C5A600E29426 /* Sandbox.cpp */; };
 		53EDC1CB2444F81F009E8291 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53EDC1CA2444F81F009E8291 /* GLKit.framework */; };
-		53EDC1CF2444F8AA009E8291 /* libUralEngine IOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53EDC1CE2444F8AA009E8291 /* libUralEngine IOS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		5353FC3624450E4F005B88A6 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5353FC3524450E4E005B88A6 /* libUralEngine IOS.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		537F12B423930A4B00369F57 /* Embed Libraries */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -46,6 +58,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5353FC3324450E4E005B88A6 /* libUralEngine IOS.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = "libUralEngine IOS.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
 		537F12B123930A4B00369F57 /* libUralEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libUralEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		53A790CB2392C5A600E29426 /* Sandbox */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Sandbox; sourceTree = BUILT_PRODUCTS_DIR; };
 		53A790CE2392C5A600E29426 /* Sandbox.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Sandbox.cpp; sourceTree = "<group>"; };
@@ -80,8 +93,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53EDC1CF2444F8AA009E8291 /* libUralEngine IOS.a in Frameworks */,
 				53EDC1CB2444F81F009E8291 /* GLKit.framework in Frameworks */,
+				5353FC3424450E4E005B88A6 /* libUralEngine IOS.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +104,7 @@
 		537F12952392CAF100369F57 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5353FC3324450E4E005B88A6 /* libUralEngine IOS.dylib */,
 				53EDC1CE2444F8AA009E8291 /* libUralEngine IOS.a */,
 				53EDC1CA2444F81F009E8291 /* GLKit.framework */,
 				53EDC1C32444EA58009E8291 /* OpenGLES.framework */,
@@ -182,6 +196,7 @@
 				53EDC1A62444E85D009E8291 /* Sources */,
 				53EDC1A72444E85D009E8291 /* Frameworks */,
 				53EDC1A82444E85D009E8291 /* Resources */,
+				5353FC3624450E4F005B88A6 /* Embed Libraries */,
 			);
 			buildRules = (
 			);

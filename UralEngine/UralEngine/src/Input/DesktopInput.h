@@ -13,7 +13,7 @@
 
 namespace Ural {
 
-    class Input
+    class DesktopInput
     {
     public:
         inline static bool IsKeyPressed(int keycode) { return s_Instance->IsKeyPressedImpl(keycode); }
@@ -30,7 +30,7 @@ namespace Ural {
         virtual float GetMouseYImpl() = 0;
         virtual std::pair<float, float> GetMousePositionImpl() = 0;
     private:
-        static Input* s_Instance;
+        static DesktopInput* s_Instance;
     };
 
 }

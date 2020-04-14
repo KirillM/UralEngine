@@ -11,8 +11,9 @@
 #include "Log/Log.h"
 
 #include "Events/ApplicationEvent.h"
-#include "Events/KeyEvent.h"
-#include "Events/MouseEvent.h"
+#include "Events/Desktop/DesktopEvent.h"
+#include "Events/Desktop/KeyEvent.h"
+#include "Events/Desktop/MouseEvent.h"
 
 // GLFW_INCLUDE_NONE
 

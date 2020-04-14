@@ -9,10 +9,14 @@
 #ifndef Ural_h
 #define Ural_h
 
+#include "Ural/Core.h"
 #include <ulpch.pch>
+
+#ifdef UL_PLATFORM_MAC
 
 // Для приложений использующих Ural
 #include "Ural/Application.h"
+#include "Ural/Desktop/DesktopApplication.h"
 #include "Log/Log.h"
 
 // окно
@@ -21,9 +25,10 @@
 // События
 #include "Events/Event.h"
 #include "Events/ApplicationEvent.h"
+#include "Events/Desktop/DesktopEvent.h"
 
 // опрос на ввод
-#include "Input/Input.h"
+#include "Input/DesktopInput.h"
 #include "Platform/Mac/MacInput.h"
 
 // коды ввода
@@ -35,7 +40,28 @@
 #include "Layers/imgui/ImGuiLayer.h"
 
 //------Точка входа-----------------
-#include "Ural/EntryPoint.h"
+#include "Ural/Desktop/EntryPoint.h"
 //----------------------------------
+
+#else
+
+// Для приложений использующих Ural
+#include "Ural/Application.h"
+#include "Ural/Mobile/MobileApplication.h"
+#include "Log/Log.h"
+
+// События
+#include "Events/Event.h"
+#include "Events/ApplicationEvent.h"
+#include "Events/MobileEvent.h"
+
+// опрос на ввод
+#include "Input/Input.h"
+
+// слои
+#include "Layers/Layer.h"
+#include "Layers/imgui/ImGuiLayer.h"
+
+#endif
 
 #endif

@@ -9,10 +9,10 @@
 #ifndef MacInput_hpp
 #define MacInput_hpp
 
-#include "Input/Input.h"
+#include "Input/DesktopInput.h"
 
 namespace Ural {
-    class MacInput : public Input
+    class MacInput : public DesktopInput
     {
     protected:
         virtual bool IsKeyPressedImpl(int keycode) override;

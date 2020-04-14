@@ -8,29 +8,30 @@
 
 #include "MacInput.h"
 #include <GLFW/glfw3.h>
-#include "Ural/Application.h"
+#include "Ural/Desktop/DesktopApplication.h"
 
 namespace Ural {
 
-    Input* Input::s_Instance = new MacInput();
+    DesktopInput* DesktopInput::s_Instance = new MacInput();
 
     bool MacInput::IsKeyPressedImpl(int keycode)
     {
-        auto window = static_cast<GLFWwindow*>(Application::Get().GetWindow().GetNativeWindow());
+        DesktopApplication& app = static_cast<DesktopApplication&>(DesktopApplication::Get());
+        auto window = static_cast<GLFWwindow*>(static_cast<DesktopApplication&>(DesktopApplication::Get()).GetWindow().GetNativeWindow());
         auto state = glfwGetKey(window, keycode);
         return state == GLFW_PRESS || state == GLFW_REPEAT;
     }
 
     bool MacInput::IsMouseButtonPressedImpl(int button)
     {
-        auto window = static_cast<GLFWwindow*>(Application::Get().GetWindow().GetNativeWindow());
+        auto window = static_cast<GLFWwindow*>(static_cast<DesktopApplication&>(DesktopApplication::Get()).GetWindow().GetNativeWindow());
         auto state = glfwGetMouseButton(window, button);
         return state == GLFW_PRESS;
     }
 
     float MacInput::GetMouseXImpl()
     {
-        auto window = static_cast<GLFWwindow*>(Application::Get().GetWindow().GetNativeWindow());
+        auto window = static_cast<GLFWwindow*>(static_cast<DesktopApplication&>(DesktopApplication::Get()).GetWindow().GetNativeWindow());
         double xPos, yPos;
         glfwGetCursorPos(window, &xPos, &yPos);
         return (float)xPos;
@@ -40,7 +41,7 @@ namespace Ural {
     {
        // auto[x, y] = GetMousePositionImpl();
         
-        auto window = static_cast<GLFWwindow*>(Application::Get().GetWindow().GetNativeWindow());
+        auto window = static_cast<GLFWwindow*>(static_cast<DesktopApplication&>(DesktopApplication::Get()).GetWindow().GetNativeWindow());
         double xPos, yPos;
         glfwGetCursorPos(window, &xPos, &yPos);
         return (float)yPos;
@@ -48,7 +49,7 @@ namespace Ural {
 
     std::pair<float, float> MacInput::GetMousePositionImpl()
     {
-        auto window = static_cast<GLFWwindow*>(Application::Get().GetWindow().GetNativeWindow());
+        auto window = static_cast<GLFWwindow*>(static_cast<DesktopApplication&>(DesktopApplication::Get()).GetWindow().GetNativeWindow());
         double xPos, yPos;
         glfwGetCursorPos(window, &xPos, &yPos);
         return { (float)xPos, (float)yPos };

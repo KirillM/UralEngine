@@ -9,7 +9,7 @@
 #ifndef MouseEvent_h
 #define MouseEvent_h
 
-#include "Event.h"
+#include "Events/Event.h"
 
 namespace Ural {
 

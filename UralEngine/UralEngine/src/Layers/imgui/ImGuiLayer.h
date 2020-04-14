@@ -11,9 +11,10 @@
 
 #include "Layers/Layer.h"
 
-#include "Events/KeyEvent.h"
-#include "Events/MouseEvent.h"
 #include "Events/ApplicationEvent.h"
+#include "Events/Desktop/DesktopEvent.h"
+#include "Events/Desktop/KeyEvent.h"
+#include "Events/Desktop/MouseEvent.h"
 
 #pragma GCC visibility push(default)
 

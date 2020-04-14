@@ -38,4 +38,4 @@
 #endif
 
 #define UL_BIND_EVENT_FN(fn) std::bind(&ImGuiLayer::fn, this, std::placeholders::_1)
-
+//#define BIND_EVENT_FN(x) std::bind(&Application::x, this, std::placeholders::_1)

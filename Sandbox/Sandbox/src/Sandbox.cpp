@@ -20,7 +20,7 @@ public:
     {
         UL_INFO("ExampleLayer::Update");
 
-        if(Ural::Input::IsKeyPressed(UL_KEY_TAB))
+        if(Ural::DesktopInput::IsKeyPressed(UL_KEY_TAB))
             UL_INFO("Tab key is pressed!");
     }
 
@@ -30,7 +30,7 @@ public:
     }
 };
 
-class Sandbox : public Ural::Application
+class Sandbox : public Ural::DesktopApplication
 {
 public:
     Sandbox()
