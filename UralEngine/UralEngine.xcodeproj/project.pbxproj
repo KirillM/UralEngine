@@ -723,7 +723,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/$(PROJECT_NAME)/src";
-				VALID_ARCHS = "x86_64 i386";
+				VALID_ARCHS = x86_64;
 			};
 			name = Debug;
 		};
@@ -765,7 +765,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/$(PROJECT_NAME)/src";
-				VALID_ARCHS = "x86_64 i386";
+				VALID_ARCHS = x86_64;
 			};
 			name = Release;
 		};

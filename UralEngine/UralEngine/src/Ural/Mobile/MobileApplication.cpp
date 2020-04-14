@@ -519,7 +519,7 @@ static void glSync()
       //  glCondition();
       //  glBuffers();
 
-        glClearColor(1, 0, 0, 0); // устанавливает цвет для очистки окна
+        glClearColor(1, 0, 0, 1); // устанавливает цвет для очистки окна
         glClear(GL_COLOR_BUFFER_BIT);
 
         glVertex();
@@ -552,8 +552,8 @@ static void glSync()
 
     void MobileApplication::Run()
     {
-    //    glClearColor(0, 1, 0, 0); // устанавливает цвет для очистки окна
-    //    glClear(GL_COLOR_BUFFER_BIT);
+//        glClearColor(0, 1, 0, 0); // устанавливает цвет для очистки окна
+//        glClear(GL_COLOR_BUFFER_BIT);
 
     //    glVertex();
     //    glShaders();
