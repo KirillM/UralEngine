@@ -12,12 +12,9 @@
 #include "Log/Log.h"
 
 #include "Input/Desktop/DesktopInput.h"
-#include <GLFW/glfw3.h>
-#include <OpenGL/glu.h>
+//#include <OpenGL/gl3.h>
+#include "RenderAPI/OpenGL/OpenGLAPI.h"
 
-#include <OpenGL/gl3.h>
-
-#include <stdalign.h>
 #include <glm/glm.hpp>
 
 namespace Ural {

@@ -9,7 +9,6 @@
 #ifndef Application_h
 #define Application_h
 
-#include "Core.h"
 #include "Surface/Device/Window.h"
 #include "Layers/LayerStack.h"
 #include "Events/Event.h"

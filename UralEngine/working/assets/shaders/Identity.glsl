@@ -94,6 +94,26 @@ centroid out centroid1;
  uniform buffer objects than to individually load one uniform at a time
  */
 
+// By default parameters are interpolated between shader stages in a perspective correct
+// manner. You can specify nonperspective interpolation with the noperspective keyword or
+// even no interpolation at all with the flat keyword. You can also optionally use the smooth
+// keyword to explicitly state the variable is smoothly interpolated in a perspective correct
+// manner, but that is already the default. Here are a few example declarations.
+smooth out vec3 vSmoothValue;
+flat out vec3 vFlatColor;
+noperspective float vLinearlySmoothed;
+
+<none>          // Just a normal local variable, no outside visibility or access.
+const           // A compile-time constant, or a read-only parameter to a function.
+in              // A variable passed in from a previous stage.
+in centroid     // Passed in from a previous state, uses centroid interpolation.
+out             // Passed out to the next processing stage or assigned a return value in a function.
+out centroid    // Passed out to the next processing stage, uses centroid interpolation.
+inout           // A read/write variable. Only valid for local function parameters.
+uniform         // Value is passed in from client code and does not change across vertices
+// The centroid qualifier has no effect unless rendering is being done to a multisampled
+// buffer. In a single sampled buffer, interpolation is always performed from the center of a
+// pixel.
 
 uniform TransofrmBlock
 {

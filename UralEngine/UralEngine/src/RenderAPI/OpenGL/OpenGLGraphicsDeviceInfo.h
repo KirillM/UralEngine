@@ -9,8 +9,13 @@
 #ifndef OpenGLGraphicsDeviceInfo_h
 #define OpenGLGraphicsDeviceInfo_h
 
+#include "GraphicsDevice/GraphicsDeviceInfo.h"
+
 namespace Ural {
 
+    class OpenGLGraphicsDeviceInfo : public GraphicsDeviceInfo {
+
+    };
 }
 
 #endif /* OpenGLGraphicsDeviceInfo_h */

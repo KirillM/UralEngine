@@ -11,6 +11,10 @@
 
 namespace Ural {
 
+    class GraphicsDeviceInfo {
+    public:
+        static void PrintInfo();
+    };
 }
 
 #endif /* GraphicsDeviceInfo_h */

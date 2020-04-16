@@ -10,15 +10,12 @@
 #define Core_h
 
 #ifdef UL_PLATFORM_MAC
-    #define GL_SILENCE_DEPRECATION
-
 	#ifdef UL_BUILD_DLYB
 		#define URAL_API
 	#else
 		#define URAL_API
 	#endif
 #elif UL_PLATFORM_IOS
-    #define GLES_SILENCE_DEPRECATION
     #define URAL_API
 	//#error Ural only supports Mac!
 #endif
@@ -37,3 +34,11 @@
 
 #define UL_BIND_EVENT_FN(fn) std::bind(&ImGuiLayer::fn, this, std::placeholders::_1)
 //#define BIND_EVENT_FN(x) std::bind(&Application::x, this, std::placeholders::_1)
+
+namespace Ural {
+    template<typename T>
+    using Scope = std::unique_ptr<T>;
+
+    template<typename T>
+    using Ref = std::shared_ptr<T>;
+}

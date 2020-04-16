@@ -16,6 +16,8 @@
 #include <stdalign.h>
 #include <glm/glm.hpp>
 
+#include "GraphicsDevice/GraphicsDeviceInfo.h"
+
 namespace Ural {
 
 #define BIND_EVENT_FN(x) std::bind(&MobileApplication::x, this, std::placeholders::_1)
@@ -524,6 +526,8 @@ static void glSync()
 
         glVertex();
         glShaders();
+
+        GraphicsDeviceInfo::PrintInfo();
 
     }
 

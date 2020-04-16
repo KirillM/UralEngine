@@ -7,7 +7,6 @@
 //
 
 #include "OpenGLError.h"
-#include "Core.h"
 #include "OpenGLAPI.h"
 
 namespace Ural {
