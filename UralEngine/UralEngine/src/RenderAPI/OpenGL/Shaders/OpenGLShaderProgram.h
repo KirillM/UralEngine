@@ -20,17 +20,18 @@ namespace Ural {
         void UseProgram() const;
         void StopProgram() const;
 
-        void AttachShaderSlot(const OpenGLShaderSlot& shaderSlot);
+        void AttachShaderSlot(const Ref<OpenGLShaderSlot> shaderSlot);
         void DetachShaderSlot();
 
         bool IsValid() const;
 
         void Compile() const;
+    public:
+        GLuint m_ProgramID;
     private:
         inline static void Log(GLuint programID);
     private:
         Ref<OpenGLShaderSlot> m_ShaderSlot;
-        GLuint m_ProgramID;
     };
 }
 

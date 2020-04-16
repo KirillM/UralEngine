@@ -10,6 +10,9 @@
 #define OpenGLShader_h
 
 #include "Renderer/Shaders/Shader.h"
+#include "RenderAPI/OpenGL/Shaders/OpenGLShaderSlot.h"
+#include "RenderAPI/OpenGL/Shaders/OpenGLShaderProgram.h"
+#include <glm/glm.hpp>
 
 typedef unsigned int GLenum;
 
@@ -20,7 +23,7 @@ namespace Ural {
     public:
         OpenGLShader(const std::string& filepath);
         OpenGLShader(const std::string& name, const std::string& vertexSrc, const std::string& fragmentSrc);
-        ~OpenGLShader();
+        ~OpenGLShader() = default;
 
         virtual void Bind() const override;
         virtual void UnBind() const override;
@@ -44,9 +47,10 @@ namespace Ural {
     private:
         std::string ReadFile(const std::string& filepath);
         std::unordered_map<GLenum, std::string> PreProcess(const std::string& source);
-        void Compile(const std::unordered_map<GLenum, std::string>& shaderSources);
+        void Compile(const std::string& vertexSrc, const std::string& fragmentSrc);
     private:
-        uint32_t m_RendererID;
+        Ref<OpenGLShaderSlot> m_ShaderSlot;
+        Scope<OpenGLShaderProgram> m_ShaderProgram;
         std::string m_Name;
     };
 }

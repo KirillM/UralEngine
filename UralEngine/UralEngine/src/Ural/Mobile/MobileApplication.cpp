@@ -11,7 +11,7 @@
 #include "Events/ApplicationEvent.h"
 #include "Log/Log.h"
 
-#include <OpenGLES/ES3/gl.h>
+#include "RenderAPI/OpenGL/OpenGLAPI.h"
 
 #include <stdalign.h>
 #include <glm/glm.hpp>

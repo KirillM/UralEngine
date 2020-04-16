@@ -29,9 +29,9 @@ namespace Ural {
         glUseProgram(0);
     }
 
-    void OpenGLShaderProgram::AttachShaderSlot(const OpenGLShaderSlot& shaderSlot)
+    void OpenGLShaderProgram::AttachShaderSlot(const Ref<OpenGLShaderSlot> shaderSlot)
     {
-        m_ShaderSlot = std::make_shared<OpenGLShaderSlot>(shaderSlot);
+        m_ShaderSlot = shaderSlot;
 
         m_ProgramID = glCreateProgram();
         /*
