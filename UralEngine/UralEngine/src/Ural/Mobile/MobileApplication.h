@@ -16,6 +16,8 @@
 #include "Events/Event.h"
 #include "Events/ApplicationEvent.h"
 
+#include "RenderAPI/OpenGL/Shaders/OpenGLShader.h"
+
 #pragma GCC visibility push(default)
 
 namespace Ural {
@@ -34,6 +36,7 @@ namespace Ural {
         inline HandHeldSurface& GetSurface() { return *m_Surface; }
     private:
         std::unique_ptr<HandHeldSurface> m_Surface = nullptr;
+        Scope<OpenGLShader> m_Shader = nullptr;
         LayerStack m_LayerStack;
     };
 

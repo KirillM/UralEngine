@@ -447,6 +447,7 @@
 					"$(SRCROOT)/../UralEngine/vendor/spdlog/include",
 					"$(SRCROOT)/../UralEngine/vendor/glfw/include",
 					"$(SRCROOT)/../UralEngine/vendor/GLAD/include",
+					"$(SRCROOT)/../UralEngine/vendor/glm",
 				);
 				LD_RUNPATH_SEARCH_PATHS = "";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../vendor/GLAD/include/glad";
@@ -472,6 +473,7 @@
 					"$(SRCROOT)/../UralEngine/vendor/spdlog/include",
 					"$(SRCROOT)/../UralEngine/vendor/glfw/include",
 					"$(SRCROOT)/../UralEngine/vendor/GLAD/include",
+					"$(SRCROOT)/../UralEngine/vendor/glm",
 				);
 				LD_RUNPATH_SEARCH_PATHS = "";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../vendor/GLAD/include/glad";
@@ -497,6 +499,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/../UralEngine/UralEngine/src",
 					"$(SRCROOT)/../UralEngine/vendor/spdlog/include",
+					"$(SRCROOT)/../UralEngine/vendor/glm",
 				);
 				INFOPLIST_FILE = SandboxIOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
@@ -527,6 +530,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/../UralEngine/UralEngine/src",
 					"$(SRCROOT)/../UralEngine/vendor/spdlog/include",
+					"$(SRCROOT)/../UralEngine/vendor/glm",
 				);
 				INFOPLIST_FILE = SandboxIOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
