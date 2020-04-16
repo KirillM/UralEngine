@@ -28,12 +28,12 @@
 #include "Events/Desktop/DesktopEvent.h"
 
 // опрос на ввод
-#include "Input/DesktopInput.h"
+#include "Input/Desktop/DesktopInput.h"
 #include "Platform/Mac/MacInput.h"
 
 // коды ввода
-#include "Input/KeyCodes.h"
-#include "Input/MouseButtonCodes.h"
+#include "Input/Desktop/KeyCodes.h"
+#include "Input/Desktop/MouseButtonCodes.h"
 
 // слои
 #include "Layers/Layer.h"
@@ -59,7 +59,7 @@
 #include "Events/Mobile/MobileEvent.h"
 
 // опрос на ввод
-#include "Input/MobileInput.h"
+#include "Input/HandHandled/MobileInput.h"
 #include "Platform/IOS/IOSInput.h"
 
 // слои

@@ -9,7 +9,7 @@
 #ifndef IOSInput_h
 #define IOSInput_h
 
-#include "Input/MobileInput.h"
+#include "Input/HandHandled/MobileInput.h"
 
 namespace Ural {
     class IOSInput : public MobileInput

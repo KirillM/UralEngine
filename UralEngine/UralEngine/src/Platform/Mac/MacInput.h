@@ -9,7 +9,7 @@
 #ifndef MacInput_h
 #define MacInput_h
 
-#include "Input/DesktopInput.h"
+#include "Input/Desktop/DesktopInput.h"
 
 namespace Ural {
     class MacInput : public DesktopInput

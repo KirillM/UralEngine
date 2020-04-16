@@ -520,7 +520,7 @@ static void glSync()
       //  glBuffers();
 
         glClearColor(1, 0, 0, 1); // устанавливает цвет для очистки окна
-        glClear(GL_COLOR_BUFFER_BIT);
+       // glClear(GL_COLOR_BUFFER_BIT);
 
         glVertex();
         glShaders();
@@ -553,7 +553,7 @@ static void glSync()
     void MobileApplication::Run()
     {
 //        glClearColor(0, 1, 0, 0); // устанавливает цвет для очистки окна
-//        glClear(GL_COLOR_BUFFER_BIT);
+        glClear(GL_COLOR_BUFFER_BIT);
 
     //    glVertex();
     //    glShaders();
@@ -597,8 +597,8 @@ static void glSync()
                glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, nullptr);
             //glDrawArrays(GL_TRIANGLES, 0, 3);
 
-                 //       GLenum err = glGetError();
-                     //   const GLubyte *str = glGetString(glGetError()); // строка описывающая метку ошибки
+                        GLenum err = glGetError();
+                        const GLubyte *str = glGetString(glGetError()); // строка описывающая метку ошибки
 
 
 

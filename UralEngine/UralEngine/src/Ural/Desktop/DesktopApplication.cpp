@@ -11,7 +11,7 @@
 #include "Events/Desktop/DesktopEvent.h"
 #include "Log/Log.h"
 
-#include "Input/DesktopInput.h"
+#include "Input/Desktop/DesktopInput.h"
 #include <GLFW/glfw3.h>
 #include <OpenGL/glu.h>
 
