@@ -554,7 +554,7 @@ static void glSync()
         m_Shader = Shader::Create("test", vShaderText, pShaderText);
         m_Shader->Bind();
 
-        ShaderCompiler::PrintSupportedProgramFormats();
+        ShaderCompiler::CurrentProgram();
         GraphicsDeviceInfo::PrintInfo();
 
     }

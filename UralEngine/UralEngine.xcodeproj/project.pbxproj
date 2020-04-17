@@ -80,12 +80,12 @@
 		53678FE3244740C3000FF94D /* CopyingBuffer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 53678FDF244740C3000FF94D /* CopyingBuffer.hpp */; };
 		53678FE6244740F5000FF94D /* VertexBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53678FE4244740F5000FF94D /* VertexBuffer.cpp */; };
 		53678FE7244740F5000FF94D /* VertexBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53678FE4244740F5000FF94D /* VertexBuffer.cpp */; };
-		53678FE8244740F5000FF94D /* VertexBuffer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 53678FE5244740F5000FF94D /* VertexBuffer.hpp */; };
-		53678FE9244740F5000FF94D /* VertexBuffer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 53678FE5244740F5000FF94D /* VertexBuffer.hpp */; };
+		53678FE8244740F5000FF94D /* VertexBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 53678FE5244740F5000FF94D /* VertexBuffer.h */; };
+		53678FE9244740F5000FF94D /* VertexBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 53678FE5244740F5000FF94D /* VertexBuffer.h */; };
 		53678FEC24474105000FF94D /* IndexBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53678FEA24474105000FF94D /* IndexBuffer.cpp */; };
 		53678FED24474105000FF94D /* IndexBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53678FEA24474105000FF94D /* IndexBuffer.cpp */; };
-		53678FEE24474105000FF94D /* IndexBuffer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 53678FEB24474105000FF94D /* IndexBuffer.hpp */; };
-		53678FEF24474105000FF94D /* IndexBuffer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 53678FEB24474105000FF94D /* IndexBuffer.hpp */; };
+		53678FEE24474105000FF94D /* IndexBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 53678FEB24474105000FF94D /* IndexBuffer.h */; };
+		53678FEF24474105000FF94D /* IndexBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 53678FEB24474105000FF94D /* IndexBuffer.h */; };
 		53678FF3244855DD000FF94D /* Error.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53678FF2244855DD000FF94D /* Error.cpp */; };
 		53678FF4244855DD000FF94D /* Error.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53678FF2244855DD000FF94D /* Error.cpp */; };
 		536E7862239B145A00AD166E /* ulpch.pch in Headers */ = {isa = PBXBuildFile; fileRef = 5312F9D4239B0E8C007B2CFC /* ulpch.pch */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -136,6 +136,22 @@
 		538B348C244972E700AF91C3 /* OpenGLShaderCompiler.h in Headers */ = {isa = PBXBuildFile; fileRef = 538B3489244972E700AF91C3 /* OpenGLShaderCompiler.h */; };
 		538B348D244972E700AF91C3 /* OpenGLShaderCompiler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 538B348A244972E700AF91C3 /* OpenGLShaderCompiler.cpp */; };
 		538B348E244972E700AF91C3 /* OpenGLShaderCompiler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 538B348A244972E700AF91C3 /* OpenGLShaderCompiler.cpp */; };
+		538B34982449CC4900AF91C3 /* VertexArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 538B34962449CC4900AF91C3 /* VertexArray.h */; };
+		538B34992449CC4900AF91C3 /* VertexArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 538B34962449CC4900AF91C3 /* VertexArray.h */; };
+		538B349A2449CC4900AF91C3 /* VertexArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 538B34972449CC4900AF91C3 /* VertexArray.cpp */; };
+		538B349B2449CC4900AF91C3 /* VertexArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 538B34972449CC4900AF91C3 /* VertexArray.cpp */; };
+		538B349E2449CCA000AF91C3 /* OpenGLIndexBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 538B349C2449CCA000AF91C3 /* OpenGLIndexBuffer.h */; };
+		538B349F2449CCA000AF91C3 /* OpenGLIndexBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 538B349C2449CCA000AF91C3 /* OpenGLIndexBuffer.h */; };
+		538B34A02449CCA000AF91C3 /* OpenGLIndexBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 538B349D2449CCA000AF91C3 /* OpenGLIndexBuffer.cpp */; };
+		538B34A12449CCA000AF91C3 /* OpenGLIndexBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 538B349D2449CCA000AF91C3 /* OpenGLIndexBuffer.cpp */; };
+		538B34A42449CD5000AF91C3 /* OpenGLVertexArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 538B34A22449CD5000AF91C3 /* OpenGLVertexArray.h */; };
+		538B34A52449CD5000AF91C3 /* OpenGLVertexArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 538B34A22449CD5000AF91C3 /* OpenGLVertexArray.h */; };
+		538B34A62449CD5000AF91C3 /* OpenGLVertexArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 538B34A32449CD5000AF91C3 /* OpenGLVertexArray.cpp */; };
+		538B34A72449CD5000AF91C3 /* OpenGLVertexArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 538B34A32449CD5000AF91C3 /* OpenGLVertexArray.cpp */; };
+		538B34A82449D04300AF91C3 /* OpenGLVertexBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 538B34902449BF0100AF91C3 /* OpenGLVertexBuffer.h */; };
+		538B34A92449D04300AF91C3 /* OpenGLVertexBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 538B34902449BF0100AF91C3 /* OpenGLVertexBuffer.h */; };
+		538B34AA2449D04600AF91C3 /* OpenGLVertexBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 538B34912449BF0100AF91C3 /* OpenGLVertexBuffer.cpp */; };
+		538B34AB2449D04700AF91C3 /* OpenGLVertexBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 538B34912449BF0100AF91C3 /* OpenGLVertexBuffer.cpp */; };
 		53CDC2FF24485A4E006DB18C /* OpenGLError.h in Headers */ = {isa = PBXBuildFile; fileRef = 538872DA2446724400D9BE4A /* OpenGLError.h */; };
 		53CDC30024485A51006DB18C /* OpenGLError.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 538872D92446724400D9BE4A /* OpenGLError.cpp */; };
 		53CDC30224485B25006DB18C /* OpenGLAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 53CDC30124485B25006DB18C /* OpenGLAPI.h */; };
@@ -255,9 +271,9 @@
 		53678FDE244740C3000FF94D /* CopyingBuffer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CopyingBuffer.cpp; sourceTree = "<group>"; };
 		53678FDF244740C3000FF94D /* CopyingBuffer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CopyingBuffer.hpp; sourceTree = "<group>"; };
 		53678FE4244740F5000FF94D /* VertexBuffer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = VertexBuffer.cpp; sourceTree = "<group>"; };
-		53678FE5244740F5000FF94D /* VertexBuffer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = VertexBuffer.hpp; sourceTree = "<group>"; };
+		53678FE5244740F5000FF94D /* VertexBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VertexBuffer.h; sourceTree = "<group>"; };
 		53678FEA24474105000FF94D /* IndexBuffer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IndexBuffer.cpp; sourceTree = "<group>"; };
-		53678FEB24474105000FF94D /* IndexBuffer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IndexBuffer.hpp; sourceTree = "<group>"; };
+		53678FEB24474105000FF94D /* IndexBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IndexBuffer.h; sourceTree = "<group>"; };
 		53678FF124475087000FF94D /* Primitive.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Primitive.h; sourceTree = "<group>"; };
 		53678FF2244855DD000FF94D /* Error.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Error.cpp; sourceTree = "<group>"; };
 		536F48A82445A7ED008DCDEB /* MobileEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobileEvent.h; sourceTree = "<group>"; };
@@ -296,6 +312,14 @@
 		538872E32446785500D9BE4A /* Pipeline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pipeline.png; sourceTree = "<group>"; };
 		538B3489244972E700AF91C3 /* OpenGLShaderCompiler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenGLShaderCompiler.h; sourceTree = "<group>"; };
 		538B348A244972E700AF91C3 /* OpenGLShaderCompiler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = OpenGLShaderCompiler.cpp; sourceTree = "<group>"; };
+		538B34902449BF0100AF91C3 /* OpenGLVertexBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenGLVertexBuffer.h; sourceTree = "<group>"; };
+		538B34912449BF0100AF91C3 /* OpenGLVertexBuffer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = OpenGLVertexBuffer.cpp; sourceTree = "<group>"; };
+		538B34962449CC4900AF91C3 /* VertexArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VertexArray.h; sourceTree = "<group>"; };
+		538B34972449CC4900AF91C3 /* VertexArray.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = VertexArray.cpp; sourceTree = "<group>"; };
+		538B349C2449CCA000AF91C3 /* OpenGLIndexBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenGLIndexBuffer.h; sourceTree = "<group>"; };
+		538B349D2449CCA000AF91C3 /* OpenGLIndexBuffer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = OpenGLIndexBuffer.cpp; sourceTree = "<group>"; };
+		538B34A22449CD5000AF91C3 /* OpenGLVertexArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenGLVertexArray.h; sourceTree = "<group>"; };
+		538B34A32449CD5000AF91C3 /* OpenGLVertexArray.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = OpenGLVertexArray.cpp; sourceTree = "<group>"; };
 		53A7908F2392AE1500E29426 /* libUralEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libUralEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		53A790912392AE1500E29426 /* Ural.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ural.h; sourceTree = "<group>"; };
 		53ADA90D241D5AB100732268 /* working */ = {isa = PBXFileReference; lastKnownFileType = folder; path = working; sourceTree = "<group>"; };
@@ -495,6 +519,8 @@
 				53678FC52446F908000FF94D /* Shaders */,
 				53678FF02447505E000FF94D /* Primitives */,
 				53678FD72447405E000FF94D /* Buffers */,
+				538B34962449CC4900AF91C3 /* VertexArray.h */,
+				538B34972449CC4900AF91C3 /* VertexArray.cpp */,
 			);
 			path = Renderer;
 			sourceTree = "<group>";
@@ -502,14 +528,14 @@
 		53678FC52446F908000FF94D /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
-				53678FD524470E66000FF94D /* ShderSchema.png */,
-				53678FD424470A40000FF94D /* Shader.png */,
+				53678FD2244708A3000FF94D /* Buffers */,
+				53678FD3244708AB000FF94D /* Compiler */,
 				53678FC72446F97F000FF94D /* Shader.h */,
 				53678FC62446F97F000FF94D /* Shader.cpp */,
 				533524BE24491FB0000C3D04 /* ShaderProgram.h */,
 				533524BF24491FB0000C3D04 /* ShaderProgram.cpp */,
-				53678FD3244708AB000FF94D /* Compiler */,
-				53678FD2244708A3000FF94D /* Buffers */,
+				53678FD524470E66000FF94D /* ShderSchema.png */,
+				53678FD424470A40000FF94D /* Shader.png */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -550,10 +576,10 @@
 				53678FD924474080000FF94D /* TransformFeedbackBuffer.hpp */,
 				53678FDE244740C3000FF94D /* CopyingBuffer.cpp */,
 				53678FDF244740C3000FF94D /* CopyingBuffer.hpp */,
+				53678FE5244740F5000FF94D /* VertexBuffer.h */,
 				53678FE4244740F5000FF94D /* VertexBuffer.cpp */,
-				53678FE5244740F5000FF94D /* VertexBuffer.hpp */,
+				53678FEB24474105000FF94D /* IndexBuffer.h */,
 				53678FEA24474105000FF94D /* IndexBuffer.cpp */,
-				53678FEB24474105000FF94D /* IndexBuffer.hpp */,
 			);
 			path = Buffers;
 			sourceTree = "<group>";
@@ -787,6 +813,17 @@
 			path = Pipeline;
 			sourceTree = "<group>";
 		};
+		538B348F2449B19300AF91C3 /* Buffers */ = {
+			isa = PBXGroup;
+			children = (
+				538B34902449BF0100AF91C3 /* OpenGLVertexBuffer.h */,
+				538B34912449BF0100AF91C3 /* OpenGLVertexBuffer.cpp */,
+				538B349C2449CCA000AF91C3 /* OpenGLIndexBuffer.h */,
+				538B349D2449CCA000AF91C3 /* OpenGLIndexBuffer.cpp */,
+			);
+			path = Buffers;
+			sourceTree = "<group>";
+		};
 		53A790782392A17500E29426 = {
 			isa = PBXGroup;
 			children = (
@@ -866,6 +903,7 @@
 		53F6EA0424014E9100EF58AA /* OpenGL */ = {
 			isa = PBXGroup;
 			children = (
+				538B348F2449B19300AF91C3 /* Buffers */,
 				533524992448AEA3000C3D04 /* Shaders */,
 				538872AF2446686000D9BE4A /* OpenGLES */,
 				53CDC30124485B25006DB18C /* OpenGLAPI.h */,
@@ -875,6 +913,8 @@
 				53F6EA0624014EC600EF58AA /* ImGuiOpenGLRenderer.h */,
 				53CDC30A244865A0006DB18C /* OpenGLGraphicsDeviceInfo.h */,
 				53CDC30B244865A0006DB18C /* OpenGLGraphicsDeviceInfo.cpp */,
+				538B34A22449CD5000AF91C3 /* OpenGLVertexArray.h */,
+				538B34A32449CD5000AF91C3 /* OpenGLVertexArray.cpp */,
 			);
 			path = OpenGL;
 			sourceTree = "<group>";
@@ -916,18 +956,20 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				538B34992449CC4900AF91C3 /* VertexArray.h in Headers */,
 				5353FC0724450DAA005B88A6 /* Layer.h in Headers */,
 				538872D82446721700D9BE4A /* Error.h in Headers */,
 				533524A32448AEF3000C3D04 /* OpenGLShaderSlot.h in Headers */,
 				533524A82448EF34000C3D04 /* RenderAPI.h in Headers */,
 				536F48AE2445ABF7008DCDEB /* MobileEvent.h in Headers */,
 				5353FC0924450DAA005B88A6 /* Core.h in Headers */,
-				53678FEF24474105000FF94D /* IndexBuffer.hpp in Headers */,
+				53678FEF24474105000FF94D /* IndexBuffer.h in Headers */,
 				538B348C244972E700AF91C3 /* OpenGLShaderCompiler.h in Headers */,
 				53678FD1244700A6000FF94D /* UniformBuffer.hpp in Headers */,
 				536F48BB2445B148008DCDEB /* Application.h in Headers */,
 				538872CA24466D6700D9BE4A /* DepthBuffer.hpp in Headers */,
 				538872C424466D5500D9BE4A /* StencilBuffer.hpp in Headers */,
+				538B34A92449D04300AF91C3 /* OpenGLVertexBuffer.h in Headers */,
 				533524B42449145F000C3D04 /* OpenGLFullShader.h in Headers */,
 				536F48C12445B6D3008DCDEB /* Surface.h in Headers */,
 				53678FCB2446F97F000FF94D /* Shader.h in Headers */,
@@ -938,6 +980,7 @@
 				536F48CC2445CB89008DCDEB /* IOSSurface.h in Headers */,
 				53678FDD24474080000FF94D /* TransformFeedbackBuffer.hpp in Headers */,
 				533524C124491FB0000C3D04 /* ShaderProgram.h in Headers */,
+				538B349F2449CCA000AF91C3 /* OpenGLIndexBuffer.h in Headers */,
 				53678FE3244740C3000FF94D /* CopyingBuffer.hpp in Headers */,
 				5335249D2448AECB000C3D04 /* OpenGLShaderProgram.h in Headers */,
 				5353FC0A24450DAA005B88A6 /* test.h in Headers */,
@@ -951,10 +994,11 @@
 				536FB43924465FE8005298B6 /* OffScreenSurface.h in Headers */,
 				536F48A92445A885008DCDEB /* Event.h in Headers */,
 				53CDC30324485B25006DB18C /* OpenGLAPI.h in Headers */,
+				538B34A52449CD5000AF91C3 /* OpenGLVertexArray.h in Headers */,
 				5353FC1624450DAA005B88A6 /* stb_image.h in Headers */,
 				536F48D02445CE5E008DCDEB /* IOSInput.h in Headers */,
 				538872E22446778700D9BE4A /* Pipeline.h in Headers */,
-				53678FE9244740F5000FF94D /* VertexBuffer.hpp in Headers */,
+				53678FE9244740F5000FF94D /* VertexBuffer.h in Headers */,
 				533524AF2448F7A3000C3D04 /* OpenGLShader.h in Headers */,
 				5353FC3724450F30005B88A6 /* MobileInput.h in Headers */,
 			);
@@ -968,15 +1012,17 @@
 				53F6EA0E24019D1200EF58AA /* DesktopInput.h in Headers */,
 				53678FC324469560000FF94D /* PixelBuffer.hpp in Headers */,
 				53678FCA2446F97F000FF94D /* Shader.h in Headers */,
-				53678FE8244740F5000FF94D /* VertexBuffer.hpp in Headers */,
+				53678FE8244740F5000FF94D /* VertexBuffer.h in Headers */,
 				53D79656240066B400D752C7 /* Layer.h in Headers */,
 				53678FDC24474080000FF94D /* TransformFeedbackBuffer.hpp in Headers */,
 				53F6EA162401AF3A00EF58AA /* KeyCodes.h in Headers */,
+				538B34982449CC4900AF91C3 /* VertexArray.h in Headers */,
 				536FB43824465FE8005298B6 /* OffScreenSurface.h in Headers */,
 				533524B32449145F000C3D04 /* OpenGLFullShader.h in Headers */,
 				537F12B02393030400369F57 /* Core.h in Headers */,
 				53F704F9241D615700608BAA /* test.h in Headers */,
 				53F6EA1424019E8700EF58AA /* MacInput.h in Headers */,
+				538B34A82449D04300AF91C3 /* OpenGLVertexBuffer.h in Headers */,
 				538872E12446778700D9BE4A /* Pipeline.h in Headers */,
 				536E7862239B145A00AD166E /* ulpch.pch in Headers */,
 				53492C8D239A9C12009E1076 /* MouseEvent.h in Headers */,
@@ -998,7 +1044,8 @@
 				533524A72448EF34000C3D04 /* RenderAPI.h in Headers */,
 				53678FE2244740C3000FF94D /* CopyingBuffer.hpp in Headers */,
 				53678FD0244700A6000FF94D /* UniformBuffer.hpp in Headers */,
-				53678FEE24474105000FF94D /* IndexBuffer.hpp in Headers */,
+				53678FEE24474105000FF94D /* IndexBuffer.h in Headers */,
+				538B349E2449CCA000AF91C3 /* OpenGLIndexBuffer.h in Headers */,
 				53CDC30C244865A0006DB18C /* OpenGLGraphicsDeviceInfo.h in Headers */,
 				53492C8B239A9BFC009E1076 /* KeyEvent.h in Headers */,
 				536F48B62445B00C008DCDEB /* DesktopApplication.h in Headers */,
@@ -1007,6 +1054,7 @@
 				53722373239800D600312C05 /* Log.h in Headers */,
 				530164FF239C290600821B62 /* MacWindow.h in Headers */,
 				53492C87239A9BD5009E1076 /* ApplicationEvent.h in Headers */,
+				538B34A42449CD5000AF91C3 /* OpenGLVertexArray.h in Headers */,
 				53F704F1241D5F4B00608BAA /* stb_image.h in Headers */,
 				53CDC30224485B25006DB18C /* OpenGLAPI.h in Headers */,
 				53F6EA182401AFB600EF58AA /* MouseButtonCodes.h in Headers */,
@@ -1095,6 +1143,7 @@
 				533524C324491FB0000C3D04 /* ShaderProgram.cpp in Sources */,
 				536F48CF2445CE5E008DCDEB /* IOSInput.cpp in Sources */,
 				538872CE24466D8200D9BE4A /* FrameBuffer.cpp in Sources */,
+				538B34A72449CD5000AF91C3 /* OpenGLVertexArray.cpp in Sources */,
 				538872BC24466D4400D9BE4A /* ColorBuffer.cpp in Sources */,
 				5353FC1C24450DAA005B88A6 /* Log.cpp in Sources */,
 				533524BC244916CC000C3D04 /* ShaderCompiler.cpp in Sources */,
@@ -1106,8 +1155,10 @@
 				53678FDB24474080000FF94D /* TransformFeedbackBuffer.cpp in Sources */,
 				533524B62449145F000C3D04 /* OpenGLFullShader.cpp in Sources */,
 				5353FC2124450DAA005B88A6 /* LayerStack.cpp in Sources */,
+				538B34AB2449D04700AF91C3 /* OpenGLVertexBuffer.cpp in Sources */,
 				538872C824466D6700D9BE4A /* DepthBuffer.cpp in Sources */,
 				533524A52448AEF3000C3D04 /* OpenGLShaderSlot.cpp in Sources */,
+				538B34A12449CCA000AF91C3 /* OpenGLIndexBuffer.cpp in Sources */,
 				533524AE2448F2A6000C3D04 /* RenderAPI.cpp in Sources */,
 				538B348E244972E700AF91C3 /* OpenGLShaderCompiler.cpp in Sources */,
 				5335249F2448AECB000C3D04 /* OpenGLShaderProgram.cpp in Sources */,
@@ -1119,6 +1170,7 @@
 				53678FF4244855DD000FF94D /* Error.cpp in Sources */,
 				538872C224466D5500D9BE4A /* StencilBuffer.cpp in Sources */,
 				53678FE1244740C3000FF94D /* CopyingBuffer.cpp in Sources */,
+				538B349B2449CC4900AF91C3 /* VertexArray.cpp in Sources */,
 				5353FC2524450DAA005B88A6 /* Layer.cpp in Sources */,
 				53CDC30F244865A0006DB18C /* OpenGLGraphicsDeviceInfo.cpp in Sources */,
 			);
@@ -1137,19 +1189,23 @@
 				53678FCE244700A6000FF94D /* UniformBuffer.cpp in Sources */,
 				53F704FA241D615700608BAA /* test.cpp in Sources */,
 				538872DB2446724400D9BE4A /* OpenGLError.cpp in Sources */,
+				538B34A02449CCA000AF91C3 /* OpenGLIndexBuffer.cpp in Sources */,
 				53D79651240066A800D752C7 /* LayerStack.cpp in Sources */,
+				538B34A62449CD5000AF91C3 /* OpenGLVertexArray.cpp in Sources */,
 				53678FE6244740F5000FF94D /* VertexBuffer.cpp in Sources */,
 				53CDC30E244865A0006DB18C /* OpenGLGraphicsDeviceInfo.cpp in Sources */,
 				53F704F2241D5F4B00608BAA /* stb_image.cpp in Sources */,
 				5335249E2448AECB000C3D04 /* OpenGLShaderProgram.cpp in Sources */,
 				53678FF3244855DD000FF94D /* Error.cpp in Sources */,
 				533524BB244916CC000C3D04 /* ShaderCompiler.cpp in Sources */,
+				538B34AA2449D04600AF91C3 /* OpenGLVertexBuffer.cpp in Sources */,
 				53678FEC24474105000FF94D /* IndexBuffer.cpp in Sources */,
 				533524C224491FB0000C3D04 /* ShaderProgram.cpp in Sources */,
 				53F6EA1324019E8700EF58AA /* MacInput.cpp in Sources */,
 				53678FC82446F97F000FF94D /* Shader.cpp in Sources */,
 				53D79655240066B400D752C7 /* Layer.cpp in Sources */,
 				533524A42448AEF3000C3D04 /* OpenGLShaderSlot.cpp in Sources */,
+				538B349A2449CC4900AF91C3 /* VertexArray.cpp in Sources */,
 				533524AD2448F2A6000C3D04 /* RenderAPI.cpp in Sources */,
 				5335248E24488DB0000C3D04 /* OpenGLShader.cpp in Sources */,
 				538872CD24466D8200D9BE4A /* FrameBuffer.cpp in Sources */,

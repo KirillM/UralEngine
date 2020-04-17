@@ -33,12 +33,12 @@ namespace Ural {
         GLint* listOfSupportedFormats = (GLint*)malloc(sizeof(GLint) * numberOfSupportedShaderFormats + 1);
         glGetIntegerv(GL_SHADER_BINARY_FORMATS, listOfSupportedFormats);
 
-        for(int i = 0; i < numberOfSupportedShaderFormats; i++)
-        {
-            GLchar* supportedFormat = (GLchar*)listOfSupportedFormats[i];
-            UL_CORE_INFO("Supported Shader Formats: {0}", supportedFormat);
-        }
-
+//        for(int i = 0; i < numberOfSupportedShaderFormats; i++)
+//        {
+//            GLchar* supportedFormat = (GLchar*)listOfSupportedFormats[i];
+//            UL_CORE_INFO("Supported Shader Formats: {0}", supportedFormat);
+//        }
+//
         free(listOfSupportedFormats);
     }
 
@@ -53,18 +53,33 @@ namespace Ural {
         GLint* listOfSupportedFormats = (GLint*)malloc(sizeof(GLint) * numberOfSupportedProgramFormats);
         glGetIntegerv(GL_PROGRAM_BINARY_FORMATS, listOfSupportedFormats);
 
-        for(int i = 0; i < numberOfSupportedProgramFormats; i++)
-          {
-              GLchar* supportedFormat = (GLchar*)listOfSupportedFormats[i];
-              UL_CORE_INFO("Supported Shader Formats: {0}", supportedFormat);
-          }
+//        for(int i = 0; i < numberOfSupportedProgramFormats; i++)
+//        {
+//            GLchar* supportedFormat = (GLchar*)listOfSupportedFormats[i];
+//            UL_CORE_INFO("Supported Shader Formats: {0}", supportedFormat);
+//        }
 
         free(listOfSupportedFormats);
     }
 
-    void* ShaderCompiler::GetProgramBinary()
+    uint32_t ShaderCompiler::CurrentProgram()
     {
-        return nullptr;
+        GLint programID = 0;
+        glGetIntegerv(GL_CURRENT_PROGRAM, &programID);
+        return programID;
+    }
+
+    void* ShaderCompiler::GetProgramBinary(uint32_t programID, uint32_t binaryFormat)
+    {
+        GLint binaryLenght = 0;
+        glGetIntegerv(GL_PROGRAM_BINARY_LENGTH, &binaryLenght);
+
+        if (!binaryLenght) return nullptr;
+
+        std::vector<char> buffer(1024);
+        glGetProgramBinary(programID, 1024, &binaryLenght, &binaryFormat, buffer.data()); //?
+
+        return buffer.data();
     }
 
     void ShaderCompiler::ReleaseCompiler()

@@ -16,8 +16,10 @@ namespace Ural {
         static bool isSupported();
         static void PrintSupportedShaderFormats();
         static void PrintSupportedProgramFormats();
-        
-        static void* GetProgramBinary();
+
+        static uint32_t CurrentProgram();
+
+        static void* GetProgramBinary(uint32_t programID, uint32_t binaryFormat);
         static void ReleaseCompiler();
     };
 
