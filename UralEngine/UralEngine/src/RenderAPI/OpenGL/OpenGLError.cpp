@@ -23,5 +23,17 @@ namespace Ural {
         std::string errorString = (const char*)glGetString(errorCode);
         return errorString;
     }
+
+    void Error::PrintError()
+    {
+        GLuint errorCode = glGetError();
+        if (!errorCode) return;
+        UL_CORE_ERROR("ERROR: {0} No Description", errorCode);
+//        const GLubyte *errorString = glGetString(errorCode);
+//        if (!errorString)
+//            UL_CORE_ERROR("ERROR: {0} No Description", errorCode);
+//        else
+//            UL_CORE_ERROR("ERROR: {0} {1})", errorCode, errorString);
+    }
 }
 

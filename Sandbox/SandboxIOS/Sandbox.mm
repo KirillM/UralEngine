@@ -17,7 +17,7 @@ public:
 
     void OnUpdate() override
     {
-        UL_INFO("ExampleLayer::Update");
+       // UL_INFO("ExampleLayer::Update");
     }
 
     void OnEvent(Ural::Event& event) override

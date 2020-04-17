@@ -9,5 +9,4 @@
 #include <Error.h>
 
 namespace Ural {
-
 }

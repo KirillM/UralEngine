@@ -20,6 +20,8 @@
 #include "Renderer/Shaders/Compiler/ShaderCompiler.h"
 #include "RenderAPI/OpenGL/Shaders/Compiler/OpenGLShaderCompiler.h"
 
+#include "Error/Error.h"
+
 namespace Ural {
 
 #define BIND_EVENT_FN(x) std::bind(&MobileApplication::x, this, std::placeholders::_1)
@@ -525,23 +527,30 @@ static void glSync()
       //  glCondition();
       //  glBuffers();
 
+      //  glFramebuffer
+        GLenum test = glCheckFramebufferStatus(GL_DRAW_FRAMEBUFFER);
         glClearColor(1, 0, 0, 1); // устанавливает цвет для очистки окна
+         Error::PrintError();
+        GLenum test2 = glCheckFramebufferStatus(GL_DRAW_FRAMEBUFFER);
        // glClear(GL_COLOR_BUFFER_BIT);
 
  //       glVertex();
 //        glShaders();
 
+        //glBindFramebuffer(GL_FRAMEBUFFER_EXT, 0);
+        // glViewport(0.0, 0.0, 200, 200);
+      //  glBindFramebuffer(GL_FRAMEBUFFER, 0);
         m_SquareVA = Ural::VertexArray::Create();
 
            float squareVertices[7 * 4] = {
-               -0.5f, -0.5f, 0.0f, 1.0f, 1.0f, 0.5, 1.0,
-               0.5f, -0.5f, 0.0f, 1.0f, 1.0f, 0.5, 1.0,
-               0.5f, 0.5f, 0.0f, 1.0f, 1.0f, 0.5, 1.0,
-               -0.5f, 0.5f, 0.0f, 1.0f, 1.0f, 0.5, 1.0
+               -0.6f, -0.5f, 0.0f, 1.0f, 0.3f, 0.5f, 1.0f,
+               0.8f, -0.5f, 0.0f, 1.0f, 0.3f, 0.5f, 1.0f,
+               0.5f, 0.5f, 0.0f, 1.0f, 0.3f, 0.5f, 1.0f,
+               -0.5f, 0.5f, 0.0f, 1.0f, 0.3f, 0.5f, 1.0f
            };
 
-           Ref<VertexBuffer> squareVB;
-           squareVB.reset(VertexBuffer::Create(squareVertices, sizeof(squareVertices)));
+        Ref<VertexBuffer> squareVB = VertexBuffer::Create(squareVertices, sizeof(squareVertices));
+        Error::PrintError();
 
            BufferLayout squareVBlayout = {
                   { ShaderDataType::Float3, "a_Position" },
@@ -550,12 +559,12 @@ static void glSync()
             squareVB->SetLayout(squareVBlayout);
             m_SquareVA->AddVertexBuffer(squareVB);
 
-           unsigned int squareIndices[6] = {0, 1, 2, 2, 3, 0};
-           Ural::Ref<IndexBuffer> squareIB;
-           squareIB.reset(Ural::IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t)));
-
+        uint32_t squareIndices[6] = {2, 3, 0, 0, 1, 2};//{0, 1, 2, 2, 3, 0};
+        Ref<IndexBuffer> squareIB = IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t));
+        Error::PrintError();
            m_SquareVA->AddIndexBuffer(squareIB);
            m_SquareVA->Bind();
+        Error::PrintError();
 
           const std::string vShaderText = R"(
              #version 300 es
@@ -581,6 +590,7 @@ static void glSync()
         const std::string name = "test";
         m_Shader = Shader::Create("test", vShaderText, pShaderText);
         m_Shader->Bind();
+        Error::PrintError();
 
         ShaderCompiler::CurrentProgram();
         GraphicsDeviceInfo::PrintInfo();
@@ -655,10 +665,7 @@ static void glSync()
 
 
                glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, nullptr);
-            //glDrawArrays(GL_TRIANGLES, 0, 3);
-
-                        GLenum err = glGetError();
-                        const GLubyte *str = glGetString(glGetError()); // строка описывающая метку ошибки
+                Error::PrintError();
 
 
 

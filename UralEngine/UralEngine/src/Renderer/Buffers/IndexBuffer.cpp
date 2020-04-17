@@ -12,7 +12,7 @@
 
 namespace Ural {
 
-    IndexBuffer* IndexBuffer::Create(uint32_t* indices, uint32_t count)
+    Ref<IndexBuffer> IndexBuffer::Create(uint32_t* indices, uint32_t count)
     {
         switch (RenderAPI::s_API) {
             case RenderAPI::API::None: {
@@ -20,7 +20,7 @@ namespace Ural {
                 return nullptr;
             }
             case RenderAPI::API::OpenGL: {
-                return new OpenGLIndexBuffer(indices, count);
+                return std::make_shared<OpenGLIndexBuffer>(indices, count);
             }
         }
 

@@ -12,7 +12,7 @@
 
 namespace Ural {
 
-    VertexBuffer* VertexBuffer::Create(float* vertices, uint32_t size)
+    Ref<VertexBuffer> VertexBuffer::Create(float* vertices, uint32_t size)
     {
         switch (RenderAPI::s_API) {
             case RenderAPI::API::None: {
@@ -20,7 +20,7 @@ namespace Ural {
                 return nullptr;
             }
             case RenderAPI::API::OpenGL: {
-                return new OpenGLVertexBuffer(vertices, size);
+                return std::make_shared<OpenGLVertexBuffer>(vertices, size);
             }
         }
 

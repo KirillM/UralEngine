@@ -113,16 +113,16 @@ namespace Ural {
             Log(m_ProgramID);
         }
 
-        #ifdef DEBUG
-        glValidateProgram(m_ProgramID);
-        GLint isValidationStatusOK = 0;
-        glGetProgramiv(m_ProgramID, GL_VALIDATE_STATUS, &isValidationStatusOK);
-
-        if (!isValidationStatusOK)
-        {
-            Log(m_ProgramID);
-        }
-        #endif
+//        #ifdef DEBUG
+//        glValidateProgram(m_ProgramID);
+//        GLint isValidationStatusOK = 0;
+//        glGetProgramiv(m_ProgramID, GL_VALIDATE_STATUS, &isValidationStatusOK);
+//
+//        if (!isValidationStatusOK)
+//        {
+//            Log(m_ProgramID);
+//        }
+//        #endif
 
         glDetachShader(m_ProgramID, m_ShaderSlot->m_VertexShaderID);
         glDetachShader(m_ProgramID, m_ShaderSlot->m_FragmentShaderID);

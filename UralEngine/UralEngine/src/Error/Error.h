@@ -12,6 +12,7 @@
 namespace Ural {
     class Error {
     public:
+        static void PrintError();
         static uint8_t GetError();
         static std::string GetErrorString(uint8_t errorCode);
     };
