@@ -399,7 +399,9 @@ namespace Ural {
          Again, when no VAO is bound, glVertexAttribPointer will not work
          and will generate an error if you call it
          */
+
         glEnableVertexAttribArray(0);
+       // glVertexAttribPointer(<#GLuint indx#>, <#GLint size#>, <#GLenum type#>, <#GLboolean normalized#>, <#GLsizei stride#>, <#const GLvoid *ptr#>)
         glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, sizeof(struct vertex), (GLvoid *)offsetof(struct vertex, positions));
          glEnableVertexAttribArray(1);
         glVertexAttribPointer(1, 4, GL_FLOAT, GL_FALSE, sizeof(struct vertex), (GLvoid *)offsetof(struct vertex, colors));
@@ -526,18 +528,44 @@ static void glSync()
         glClearColor(1, 0, 0, 1); // устанавливает цвет для очистки окна
        // glClear(GL_COLOR_BUFFER_BIT);
 
-        glVertex();
+ //       glVertex();
 //        glShaders();
+
+        m_SquareVA = Ural::VertexArray::Create();
+
+           float squareVertices[7 * 4] = {
+               -0.5f, -0.5f, 0.0f, 1.0f, 1.0f, 0.5, 1.0,
+               0.5f, -0.5f, 0.0f, 1.0f, 1.0f, 0.5, 1.0,
+               0.5f, 0.5f, 0.0f, 1.0f, 1.0f, 0.5, 1.0,
+               -0.5f, 0.5f, 0.0f, 1.0f, 1.0f, 0.5, 1.0
+           };
+
+           Ref<VertexBuffer> squareVB;
+           squareVB.reset(VertexBuffer::Create(squareVertices, sizeof(squareVertices)));
+
+           BufferLayout squareVBlayout = {
+                  { ShaderDataType::Float3, "a_Position" },
+                  { ShaderDataType::Float4, "a_Color" }
+            };
+            squareVB->SetLayout(squareVBlayout);
+            m_SquareVA->AddVertexBuffer(squareVB);
+
+           unsigned int squareIndices[6] = {0, 1, 2, 2, 3, 0};
+           Ural::Ref<IndexBuffer> squareIB;
+           squareIB.reset(Ural::IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t)));
+
+           m_SquareVA->AddIndexBuffer(squareIB);
+           m_SquareVA->Bind();
 
           const std::string vShaderText = R"(
              #version 300 es
-             layout(location = 0) in vec4 a_Position;
+             layout(location = 0) in vec3 a_Position;
              layout(location = 1) in vec4 a_Color;
 
              out vec4 v_Color;
 
              void main(void) {
-                 gl_Position = a_Position;
+                 gl_Position = vec4(a_Position, 1.0);
                  v_Color = a_Color;
              })";
         const std::string pShaderText = R"(

@@ -18,6 +18,8 @@
 
 #include "RenderAPI/OpenGL/Shaders/OpenGLShader.h"
 
+#include "Renderer/VertexArray.h"
+
 #pragma GCC visibility push(default)
 
 namespace Ural {
@@ -38,6 +40,7 @@ namespace Ural {
         std::unique_ptr<HandHeldSurface> m_Surface = nullptr;
         Ref<Shader> m_Shader = nullptr;
         LayerStack m_LayerStack;
+        Ural::Ref<VertexArray> m_SquareVA;
     };
 
 }

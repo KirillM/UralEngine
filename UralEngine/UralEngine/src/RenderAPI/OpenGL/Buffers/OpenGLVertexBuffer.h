@@ -22,11 +22,14 @@ namespace Ural {
         virtual void Bind() const override;
         virtual void UnBind() const override;
 
-       // virtual void SetLayout(const BufferLayout& layout) override { m_Layout = layout; }
-       // virtual const BufferLayout& GetLayout() const override { return m_Layout; }
+        virtual void SetLayout(const BufferLayout& layout) override { m_Layout = layout; }
+        virtual const BufferLayout& GetLayout() const override { return m_Layout; }
+
+        static uint32_t Size();
+        static uint32_t Usage();
     private:
         uint32_t m_BufferID;
-      //  BufferLayout m_Layout;
+        BufferLayout m_Layout;
     };
 
 }

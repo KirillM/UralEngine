@@ -570,6 +570,7 @@
 		53678FD72447405E000FF94D /* Buffers */ = {
 			isa = PBXGroup;
 			children = (
+				538B34AC2449E01F00AF91C3 /* Params */,
 				53678FC024469560000FF94D /* PixelBuffer.cpp */,
 				53678FC124469560000FF94D /* PixelBuffer.hpp */,
 				53678FD824474080000FF94D /* TransformFeedbackBuffer.cpp */,
@@ -822,6 +823,13 @@
 				538B349D2449CCA000AF91C3 /* OpenGLIndexBuffer.cpp */,
 			);
 			path = Buffers;
+			sourceTree = "<group>";
+		};
+		538B34AC2449E01F00AF91C3 /* Params */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Params;
 			sourceTree = "<group>";
 		};
 		53A790782392A17500E29426 = {
