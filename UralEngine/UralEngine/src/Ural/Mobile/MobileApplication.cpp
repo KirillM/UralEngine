@@ -548,6 +548,7 @@ static void glSync()
                0.5f, 0.5f, 0.0f, 1.0f, 0.3f, 0.5f, 1.0f,
                -0.5f, 0.5f, 0.0f, 1.0f, 0.3f, 0.5f, 1.0f
            };
+        
 
         Ref<VertexBuffer> squareVB = VertexBuffer::Create(squareVertices, sizeof(squareVertices));
         Error::PrintError();
@@ -663,8 +664,8 @@ static void glSync()
             //GL_COLOR_BUFFER_BIT - буфер цветов (пикселей), место где хранится отображаемое изображений
             //glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-
-               glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, nullptr);
+      //  glDrawElements(<#GLenum mode#>, <#GLsizei count#>, <#GLenum type#>, <#const GLvoid *indices#>)
+               glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr);
                 Error::PrintError();
 
 
