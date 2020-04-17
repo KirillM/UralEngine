@@ -12,7 +12,7 @@ namespace Ural {
     OpenGLShaderSlot::OpenGLShaderSlot(const std::string& vertexShaderSrc, const std::string& fragmentShaderSrc)
     {
         const GLchar *vertexShaderSrcCstr = (const GLchar *)vertexShaderSrc.c_str();
-        const GLchar *fragmentShaderSrcCstr = (const GLchar *)vertexShaderSrc.c_str();
+        const GLchar *fragmentShaderSrcCstr = (const GLchar *)fragmentShaderSrc.c_str();
 
         UL_CORE_ASSERT(vertexShaderSrcCstr && fragmentShaderSrcCstr, "Must be 2 shaders !");
 
@@ -39,6 +39,21 @@ namespace Ural {
 
         glShaderSource(m_VertexShaderID, 1, &vertexShaderSrcCstr, NULL);
         glShaderSource(m_FragmentShaderID, 1, &fragmentShaderSrcCstr, NULL);
+    }
+
+    OpenGLShaderSlot::OpenGLShaderSlot(const std::vector<char> binaryShader, GLenum binaryFormat)
+    {
+        m_VertexShaderID = glCreateShader(GL_VERTEX_SHADER);
+        glShaderBinary(1, &m_VertexShaderID, binaryFormat, binaryShader.data(), (GLsizei)binaryShader.size());
+
+        GLint isVertexShaderCompiled = 0;
+        glGetShaderiv(m_VertexShaderID, GL_COMPILE_STATUS, &isVertexShaderCompiled);
+
+
+        if (isVertexShaderCompiled == GL_FALSE)
+        {
+            Log(m_VertexShaderID);
+        }
     }
 
     OpenGLShaderSlot::~OpenGLShaderSlot()
@@ -82,7 +97,7 @@ namespace Ural {
         if (glIsShader(m_VertexShaderID))
         {
             GLint isVertexShaderToDelete = 0;
-            glGetShaderiv(m_FragmentShaderID, GL_DELETE_STATUS, &isVertexShaderToDelete);
+            glGetShaderiv(m_VertexShaderID, GL_DELETE_STATUS, &isVertexShaderToDelete);
             if (isVertexShaderToDelete) return false;
         }
         else
@@ -110,6 +125,7 @@ namespace Ural {
         glGetShaderiv(m_VertexShaderID, GL_SHADER_SOURCE_LENGTH, &maxLength);
         GLchar* sourceStr = (GLchar*)malloc(sizeof(GLchar) * maxLength);
         glGetShaderSource(m_VertexShaderID, maxLength, nullptr, sourceStr);
+        free(sourceStr);
 
         UL_CORE_INFO("{0}", sourceStr);
     }
@@ -128,5 +144,7 @@ namespace Ural {
         UL_CORE_INFO("Shader Type: {0}", shaderType);
         UL_CORE_ERROR("{0}", infoLog);
         UL_CORE_ASSERT(false, "Shader compilation failure!");
+
+        free(infoLog);
     }
 }

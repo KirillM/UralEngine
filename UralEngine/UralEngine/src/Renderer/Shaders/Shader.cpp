@@ -13,33 +13,33 @@
 namespace Ural {
     Ref<Shader> Shader::Create(const std::string& filepath)
     {
-//        switch (RenderAPI::s_API) {
-//            case RenderAPI::API::None: {
-//                   UL_CORE_ASSERT(false, "RendererAPI::None not supported");
-//                   return nullptr;
-//               }
-//            case RenderAPI::API::OpenGL: {
-//                   return std::make_shared<OpenGLShader>(filepath);
-//               }
-//         }
-//
-//        UL_CORE_ASSERT(false, "Unknown RendererAPI");
+        switch (RenderAPI::s_API) {
+            case RenderAPI::API::None: {
+                   UL_CORE_ASSERT(false, "RendererAPI::None not supported");
+                   return nullptr;
+               }
+            case RenderAPI::API::OpenGL: {
+                   return std::make_shared<OpenGLShader>(filepath);
+               }
+         }
+
+        UL_CORE_ASSERT(false, "Unknown RendererAPI");
         return nullptr;
     }
 
     Ref<Shader> Shader::Create(const std::string& name, const std::string& vertexSrc, const std::string& fragmentSrc)
     {
-//        switch (RenderAPI::s_API) {
-//            case RenderAPI::API::None: {
-//                   UL_CORE_ASSERT(false, "RendererAPI::None not supported");
-//                   return nullptr;
-//               }
-//            case RenderAPI::API::OpenGL: {
-//                   return std::make_shared<OpenGLShader>(name, vertexSrc, fragmentSrc);
-//               }
-//         }
-//
-//        UL_CORE_ASSERT(false, "Unknown RendererAPI");
+        switch (RenderAPI::s_API) {
+            case RenderAPI::API::None: {
+                   UL_CORE_ASSERT(false, "RendererAPI::None not supported");
+                   return nullptr;
+               }
+            case RenderAPI::API::OpenGL: {
+                   return std::make_shared<OpenGLShader>(name, vertexSrc, fragmentSrc);
+               }
+         }
+
+        UL_CORE_ASSERT(false, "Unknown RendererAPI");
         return nullptr;
     }
 }

@@ -23,6 +23,7 @@ namespace Ural {
     public:
         OpenGLShader(const std::string& filepath);
         OpenGLShader(const std::string& name, const std::string& vertexSrc, const std::string& fragmentSrc);
+        OpenGLShader(const std::vector<char> binaryShaderOrProgram, GLenum binaryFormat, bool isBinaryProgram);
         ~OpenGLShader() = default;
 
         virtual void Bind() const override;
@@ -47,7 +48,9 @@ namespace Ural {
     private:
         std::string ReadFile(const std::string& filepath);
         std::unordered_map<GLenum, std::string> PreProcess(const std::string& source);
-        void Compile(const std::string& vertexSrc, const std::string& fragmentSrc);
+        void CompileAndLink(const std::string& vertexSrc, const std::string& fragmentSrc);
+        void LinkBinaryShader(const std::vector<char> binaryShader, GLenum binaryFormat);
+        void LoadBinaryProgram(const std::vector<char> binaryProgram, GLenum binaryFormat);
     private:
         Ref<OpenGLShaderSlot> m_ShaderSlot;
         Scope<OpenGLShaderProgram> m_ShaderProgram;

@@ -25,7 +25,7 @@ namespace Ural {
     {
         std::string source = ReadFile(filepath);
         auto shaderSources = PreProcess(source);
-        Compile(shaderSources);
+        CompileAndLink(shaderSources[GL_VERTEX_SHADER], shaderSources[GL_FRAGMENT_SHADER]);
 
         auto lastSlash = filepath.find_last_of("/\\");
         lastSlash = lastSlash == std::string::npos ? 0 : lastSlash + 1;
@@ -36,7 +36,19 @@ namespace Ural {
 
     OpenGLShader::OpenGLShader(const std::string& name, const std::string& vertexSrc, const std::string& fragmentSrc) : m_Name(name)
     {
-        Compile(vertexSrc, fragmentSrc);
+        CompileAndLink(vertexSrc, fragmentSrc);
+    }
+
+    OpenGLShader::OpenGLShader(const std::vector<char> binaryShaderOrProgram, GLenum binaryFormat, bool isBinaryProgram)
+    {
+        if (isBinaryProgram)
+        {
+            LoadBinaryProgram(binaryShaderOrProgram, binaryFormat);
+        }
+        else
+        {
+            LinkBinaryShader(binaryShaderOrProgram, binaryFormat);
+        }
     }
 
     std::string OpenGLShader::ReadFile(const std::string& filepath)
@@ -82,12 +94,25 @@ namespace Ural {
         return shaderSources;
     }
 
-    void OpenGLShader::Compile(const std::string& vertexSrc, const std::string& fragmentSrc)
+    void OpenGLShader::CompileAndLink(const std::string& vertexSrc, const std::string& fragmentSrc)
     {
-        m_ShaderSlot = make_shared<OpenGLShaderSlot>(vertexSrc, fragmentSrc);
-        m_ShaderProgram = make_unique<OpenGLShaderProgram>();
+        m_ShaderSlot = std::make_shared<OpenGLShaderSlot>(vertexSrc, fragmentSrc);
+        m_ShaderProgram = std::make_unique<OpenGLShaderProgram>();
         m_ShaderProgram->AttachShaderSlot(m_ShaderSlot);
-        m_ShaderProgram->Compile();
+        m_ShaderProgram->CompileAndLink();
+    }
+
+    void OpenGLShader::LinkBinaryShader(const std::vector<char> binaryShader, GLenum binaryFormat)
+    {
+        m_ShaderSlot = std::make_shared<OpenGLShaderSlot>(binaryShader, binaryFormat);
+        m_ShaderProgram = std::make_unique<OpenGLShaderProgram>();
+        m_ShaderProgram->AttachShaderSlot(m_ShaderSlot);
+        m_ShaderProgram->Link();
+    }
+
+    void OpenGLShader::LoadBinaryProgram(const std::vector<char> binaryProgram, GLenum binaryFormat)
+    {
+        m_ShaderProgram = std::make_unique<OpenGLShaderProgram>(binaryProgram, binaryFormat);
     }
 
     void OpenGLShader::Bind() const

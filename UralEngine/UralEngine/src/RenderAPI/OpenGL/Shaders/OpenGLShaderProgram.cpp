@@ -10,10 +10,29 @@
 
 namespace Ural {
 
+    OpenGLShaderProgram::OpenGLShaderProgram(const std::vector<char> binaryProgram, GLenum binaryFormat)
+    {
+        LoadBinaryProgram(binaryProgram, binaryFormat);
+    }
+
     OpenGLShaderProgram::~OpenGLShaderProgram()
     {
         // Deletes attached shaders
         glDeleteProgram(m_ProgramID);
+    }
+
+    void OpenGLShaderProgram::LoadBinaryProgram(const std::vector<char> binaryProgram, GLenum binaryFormat)
+    {
+        m_ProgramID = glCreateProgram();
+        glProgramBinary(m_ProgramID, binaryFormat, binaryProgram.data(), (GLsizei)binaryProgram.size());
+
+        GLint isLinkStatusOK = 0;
+        glGetProgramiv(m_ProgramID, GL_LINK_STATUS, &isLinkStatusOK);
+
+        if (!isLinkStatusOK)
+        {
+            Log(m_ProgramID);
+        }
     }
 
     void OpenGLShaderProgram::UseProgram() const
@@ -39,6 +58,12 @@ namespace Ural {
          */
         glAttachShader(m_ProgramID, m_ShaderSlot->m_VertexShaderID);
         glAttachShader(m_ProgramID, m_ShaderSlot->m_FragmentShaderID);
+
+//        GLuint positionLoc = glGetAttribLocation(m_ProgramID, "a_Position");
+//           GLuint colorLoc = glGetAttribLocation(m_ProgramID, "a_Color");
+//
+//            glBindAttribLocation(m_ProgramID, positionLoc, "a_Position");
+//            glBindAttribLocation(m_ProgramID, colorLoc, "a_Color");
     }
 
     void OpenGLShaderProgram::DetachShaderSlot()
@@ -62,10 +87,19 @@ namespace Ural {
         return true;
     }
 
+    void OpenGLShaderProgram::CompileAndLink() const
+    {
+        Compile();
+        Link();
+    }
+
     void OpenGLShaderProgram::Compile() const
     {
         m_ShaderSlot->Compile();
+    }
 
+    void OpenGLShaderProgram::Link() const
+    {
         /*
         However, relinking the program object that is currently in use will install the program object as part of the current rendering state if the link operation was successful (see glLinkProgram ). If the program object currently in use is relinked unsuccessfully, its link status will be set to GL_FALSE, but the executables and associated state will remain part of the current state until a subsequent call to glUseProgram removes it from use. After it is removed from use, it cannot be made part of current state until it has been successfully relinked
          */
@@ -104,5 +138,7 @@ namespace Ural {
 
         UL_CORE_ERROR("{0}", infoLog);
         UL_CORE_ASSERT(false, "Program Error!");
+
+        free(infoLog);
     }
 }

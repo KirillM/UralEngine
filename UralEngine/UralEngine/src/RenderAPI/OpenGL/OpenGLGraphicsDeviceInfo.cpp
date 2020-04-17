@@ -39,6 +39,7 @@
 //GL_SGI
 //GL_IBM
 //GL_SGIS
+//GL_SHADING_LANGUAGE_VERSION
 
 namespace Ural {
     void GraphicsDeviceInfo::PrintInfo()
@@ -47,6 +48,7 @@ namespace Ural {
         UL_CORE_INFO("  Vendor: {0}", glGetString(GL_VENDOR));
         UL_CORE_INFO("  Renderer: {0}", glGetString(GL_RENDERER));
         UL_CORE_INFO("  Version: {0}", glGetString(GL_VERSION));
+        UL_CORE_INFO("  Shader: {0}", glGetString(GL_SHADING_LANGUAGE_VERSION));
         UL_CORE_INFO("  Extensions: {0}", glGetString(GL_EXTENSIONS));
     }
 }

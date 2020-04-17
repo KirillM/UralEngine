@@ -17,6 +17,8 @@
 #include <glm/glm.hpp>
 
 #include "GraphicsDevice/GraphicsDeviceInfo.h"
+#include "Renderer/Shaders/Compiler/ShaderCompiler.h"
+#include "RenderAPI/OpenGL/Shaders/Compiler/OpenGLShaderCompiler.h"
 
 namespace Ural {
 
@@ -525,9 +527,9 @@ static void glSync()
        // glClear(GL_COLOR_BUFFER_BIT);
 
         glVertex();
-        //glShaders();
+//        glShaders();
 
-        const GLchar* vShaderText = R"(
+          const std::string vShaderText = R"(
              #version 300 es
              layout(location = 0) in vec4 a_Position;
              layout(location = 1) in vec4 a_Color;
@@ -538,20 +540,21 @@ static void glSync()
                  gl_Position = a_Position;
                  v_Color = a_Color;
              })";
-        const GLchar* pShaderText = R"(
+        const std::string pShaderText = R"(
             #version 300 es
-
             precision mediump float;
-
              layout(location = 0) out vec4 v_FragColor;
              in vec4 v_Color;
 
              void main(void) {
                  v_FragColor = v_Color;
              })";
-#include <memory>
-        m_Shader = make_unique<OpenGLShader>(vShaderText, pShaderText);
 
+        const std::string name = "test";
+        m_Shader = Shader::Create("test", vShaderText, pShaderText);
+        m_Shader->Bind();
+
+        ShaderCompiler::PrintSupportedProgramFormats();
         GraphicsDeviceInfo::PrintInfo();
 
     }

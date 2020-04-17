@@ -14,6 +14,7 @@
 namespace Ural {
     struct OpenGLShaderSlot {
         OpenGLShaderSlot(const std::string& vertexShaderSrc, const std::string& fragmentShaderSrc);
+        OpenGLShaderSlot(const std::vector<char> binaryShader, GLenum binaryFormat);
         ~OpenGLShaderSlot();
 
         void Compile() const;

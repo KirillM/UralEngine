@@ -36,7 +36,7 @@ namespace Ural {
         inline HandHeldSurface& GetSurface() { return *m_Surface; }
     private:
         std::unique_ptr<HandHeldSurface> m_Surface = nullptr;
-        Scope<OpenGLShader> m_Shader = nullptr;
+        Ref<Shader> m_Shader = nullptr;
         LayerStack m_LayerStack;
     };
 

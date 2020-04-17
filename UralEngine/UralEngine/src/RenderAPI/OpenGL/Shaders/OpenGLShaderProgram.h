@@ -10,12 +10,17 @@
 #define OpenGLShaderProgram_h
 
 #include "RenderAPI/OpenGL/OpenGLAPI.h"
+#include "Renderer/Shaders/ShaderProgram.h"
 #include "OpenGLShaderSlot.h"
 
 namespace Ural {
-    class OpenGLShaderProgram {
+    class OpenGLShaderProgram : public ShaderProgram {
     public:
+        OpenGLShaderProgram() = default;
+        OpenGLShaderProgram(const std::vector<char> binaryProgram, GLenum binaryFormat);
         ~OpenGLShaderProgram();
+
+        void LoadBinaryProgram(const std::vector<char> binaryProgram, GLenum binaryFormat);
 
         void UseProgram() const;
         void StopProgram() const;
@@ -25,7 +30,9 @@ namespace Ural {
 
         bool IsValid() const;
 
+        void CompileAndLink() const;
         void Compile() const;
+        void Link() const;
     public:
         GLuint m_ProgramID;
     private:
