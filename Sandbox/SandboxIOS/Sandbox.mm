@@ -15,7 +15,7 @@ public:
     {
     }
 
-    void OnUpdate() override
+    void OnUpdate(Ural::TimeStep ts) override
     {
        // UL_INFO("ExampleLayer::Update");
     }

@@ -41,6 +41,7 @@ namespace Ural {
         Ref<Shader> m_Shader = nullptr;
         LayerStack m_LayerStack;
         Ural::Ref<VertexArray> m_SquareVA;
+        std::clock_t m_LastFrameTime = 0.0f;
     };
 
 }

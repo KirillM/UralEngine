@@ -12,6 +12,7 @@
 		536F48D32445D5E1008DCDEB /* Sandbox.mm in Sources */ = {isa = PBXBuildFile; fileRef = 53EDC1C62444ED99009E8291 /* Sandbox.mm */; };
 		537F12B223930A4B00369F57 /* libUralEngine.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 537F12B123930A4B00369F57 /* libUralEngine.dylib */; };
 		537F12B323930A4B00369F57 /* libUralEngine.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 537F12B123930A4B00369F57 /* libUralEngine.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		538B34D0244A3F2500AF91C3 /* Sandbox2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 538B34CF244A3F2500AF91C3 /* Sandbox2D.cpp */; };
 		53EDC1AE2444E85D009E8291 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EDC1AD2444E85D009E8291 /* AppDelegate.m */; };
 		53EDC1B12444E85D009E8291 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EDC1B02444E85D009E8291 /* SceneDelegate.m */; };
 		53EDC1B42444E85D009E8291 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 53EDC1B32444E85D009E8291 /* ViewController.mm */; };
@@ -60,6 +61,8 @@
 /* Begin PBXFileReference section */
 		5353FC3324450E4E005B88A6 /* libUralEngine IOS.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = "libUralEngine IOS.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
 		537F12B123930A4B00369F57 /* libUralEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libUralEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		538B34CE244A3F2500AF91C3 /* Sandbox2D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sandbox2D.h; sourceTree = "<group>"; };
+		538B34CF244A3F2500AF91C3 /* Sandbox2D.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Sandbox2D.cpp; sourceTree = "<group>"; };
 		53A790CB2392C5A600E29426 /* Sandbox */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Sandbox; sourceTree = BUILT_PRODUCTS_DIR; };
 		53A790CE2392C5A600E29426 /* Sandbox.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Sandbox.cpp; sourceTree = "<group>"; };
 		53EDC1AA2444E85D009E8291 /* SandboxIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SandboxIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				53A790CE2392C5A600E29426 /* Sandbox.cpp */,
+				538B34CE244A3F2500AF91C3 /* Sandbox2D.h */,
+				538B34CF244A3F2500AF91C3 /* Sandbox2D.cpp */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -282,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				53EDC1C82444ED9E009E8291 /* Sandbox.cpp in Sources */,
+				538B34D0244A3F2500AF91C3 /* Sandbox2D.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,7 +20,9 @@
 #include "Renderer/Shaders/Compiler/ShaderCompiler.h"
 #include "RenderAPI/OpenGL/Shaders/Compiler/OpenGLShaderCompiler.h"
 
+#include "OpenGLShaderCompiler.h"
 #include "Error/Error.h"
+#include <chrono>
 
 namespace Ural {
 
@@ -623,35 +625,16 @@ static void glSync()
 
     void MobileApplication::Run()
     {
-//        glClearColor(0, 1, 0, 0); // устанавливает цвет для очистки окна
-        glClear(GL_COLOR_BUFFER_BIT);
+        std::clock_t time = std::clock();
+        TimeStep timestep = time - m_LastFrameTime;
+        m_LastFrameTime = time;
 
-    //    glVertex();
-    //    glShaders();
+        glClear(GL_COLOR_BUFFER_BIT);
+        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr);
+        Error::PrintError();
 
         //WindowResizeEvent e(1280, 720);
         //UL_TRACE(e);
-
-//        static float vertecies[6] = {
-//            -0.5f, -0.5f,
-//            0.0f, 0.5f,
-//            0.5f, -0.5f
-//        };
-//
-//        unsigned int vao;
-//        glGenVertexArrays(1, &vao);
-//        glBindVertexArray(vao);
-//
-//        unsigned int buffer;
-//        glGenBuffers(1, &buffer);
-//        glBindBuffer(GL_ARRAY_BUFFER, buffer);
-//        glBufferData(GL_ARRAY_BUFFER, sizeof(float) * 6, vertecies, GL_STATIC_DRAW);
-//        glEnableVertexAttribArray(0);
-//        glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(float) * 2, nullptr);
-
-
- //       glClearColor(1, 0, 0, 0); // устанавливает цвет для очистки окна
-
 //            int w = GetWindow().GetWidth();
 //            int h = GetWindow().GetHeight();
 //            WindowResizeEvent e(w, h);
@@ -665,17 +648,6 @@ static void glSync()
             //glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
       //  glDrawElements(<#GLenum mode#>, <#GLsizei count#>, <#GLenum type#>, <#const GLvoid *indices#>)
-               glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr);
-                Error::PrintError();
-
-
-
-
-
-
-
-
-
 //
 //            // OpenGL - машина состояний
 //            // для преключания сотосяний
@@ -689,18 +661,6 @@ static void glSync()
 ////            glGetDoublev(GLenum pname, GLdouble *params);
 ////            glGetFloatv(GLenum pname, GLfloat *params);
 ////            glGetIntegerv(GLenum pname, GLint *params);
-//
-//            // Стэк аттрибутов
-////            glPushAttrib(GLbitfield mask);
-////            glPopAttrib();
-//
-//            // Информация о драйверах
-//            //glGetString(GLenum name)
-//            //gluGetString(GLenum name)
-//
-//            // Инормация о расширения поддерживаемые драйвером
-//            const GLubyte *ext = glGetString(GL_EXTENSIONS);
-//            UL_CORE_INFO(ext);
 //
 //
 //            // Управление скоростью / качеством ( эта функця целиком определяется производителем драйверов )
@@ -742,11 +702,7 @@ static void glSync()
 //            glDisable(GL_LINE_STIPPLE);
 
             for (Layer* layer : m_LayerStack)
-                layer->OnUpdate();
-
-//            std::pair<float, float> position = MInput::GetMousePosition();
-//            UL_CORE_TRACE("{0}, {1}", std::get<0>(position), std::get<1>(position));
-
+                layer->OnUpdate(timestep);
             m_Surface->OnUpdate(); // при переключении буферов (swap buffers) неявно вызывается glFlush()
     }
 

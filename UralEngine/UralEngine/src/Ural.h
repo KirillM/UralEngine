@@ -17,6 +17,7 @@
 // Для приложений использующих Ural
 #include "Ural/Application.h"
 #include "Ural/Desktop/DesktopApplication.h"
+
 #include "Log/Log.h"
 
 // окно
@@ -43,6 +44,9 @@
 #include "Ural/Desktop/EntryPoint.h"
 //----------------------------------
 
+// время
+#include "Time/TimeStep.h"
+
 #else
 
 // surface
@@ -51,6 +55,8 @@
 // Для приложений использующих Ural
 #include "Ural/Application.h"
 #include "Ural/Mobile/MobileApplication.h"
+
+
 #include "Log/Log.h"
 
 // События
@@ -65,6 +71,9 @@
 // слои
 #include "Layers/Layer.h"
 #include "Layers/imgui/ImGuiLayer.h"
+
+// время
+#include "Time/TimeStep.h"
 
 #endif
 
