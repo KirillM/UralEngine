@@ -1,14 +1,14 @@
 //
-//  TransformFeedbackBuffer.hpp
+//  FrameBuffer.h
 //  UralEngine
 //
 //  Created by Кирилл Мезрин on 15.04.2020.
 //  Copyright © 2020 Кирилл Мезрин. All rights reserved.
 //
 
-#ifndef TransformFeedbackBuffer_hpp
-#define TransformFeedbackBuffer_hpp
+#ifndef FrameBuffer_h
+#define FrameBuffer_h
 
 #include <stdio.h>
 
-#endif /* TransformFeedbackBuffer_hpp */
+#endif /* FrameBuffer_h */

@@ -6,4 +6,4 @@
 //  Copyright © 2020 Кирилл Мезрин. All rights reserved.
 //
 
-#include "FrameBuffer.hpp"
+#include "FrameBuffer.h"

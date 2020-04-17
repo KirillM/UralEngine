@@ -1,14 +1,14 @@
 //
-//  FrameBuffer.hpp
+//  DepthBuffer.h
 //  UralEngine
 //
 //  Created by Кирилл Мезрин on 15.04.2020.
 //  Copyright © 2020 Кирилл Мезрин. All rights reserved.
 //
 
-#ifndef FrameBuffer_h
-#define FrameBuffer_h
+#ifndef DepthBuffer_h
+#define DepthBuffer_h
 
 #include <stdio.h>
 
-#endif /* FrameBuffer_h */
+#endif /* DepthBuffer_h */

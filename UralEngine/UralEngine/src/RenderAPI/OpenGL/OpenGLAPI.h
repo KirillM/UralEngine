@@ -9,6 +9,9 @@
 #ifndef OpenGLAPI_h
 #define OpenGLAPI_h
 
+// Внутри себя OpenGL работает с float
+// Аппартура ограничена 24 бит цветом (16 млн) если цвет не поддерживается аппаратурой OpenGL преобразует его к ближайшему который поддерживается аппаратурой
+
 #ifdef UL_PLATFORM_MAC
     #define GL_SILENCE_DEPRECATION
     //#include <glad/glad.h>

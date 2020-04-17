@@ -1,14 +1,14 @@
 //
-//  DepthBuffer.hpp
+//  StencilBuffer.h
 //  UralEngine
 //
 //  Created by Кирилл Мезрин on 15.04.2020.
 //  Copyright © 2020 Кирилл Мезрин. All rights reserved.
 //
 
-#ifndef DepthBuffer_h
-#define DepthBuffer_h
+#ifndef StencilBuffer_h
+#define StencilBuffer_h
 
 #include <stdio.h>
 
-#endif /* DepthBuffer_h */
+#endif /* StencilBuffer_h */

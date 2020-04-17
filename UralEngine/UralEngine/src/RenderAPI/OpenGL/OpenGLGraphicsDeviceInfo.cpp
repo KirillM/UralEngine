@@ -12,7 +12,6 @@
 // Производители могут добавлять модули к API OpenGL
 // Добавлять новые токены - которые распознаются glEnable()
 
-
 // пример
 
 //GL_ARB_color_buffer_float GL_ARB_depth_buffer_float
@@ -39,7 +38,6 @@
 //GL_SGI
 //GL_IBM
 //GL_SGIS
-//GL_SHADING_LANGUAGE_VERSION
 
 namespace Ural {
     void GraphicsDeviceInfo::PrintInfo()
