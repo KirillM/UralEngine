@@ -8,12 +8,12 @@
       location = "group:Sandbox/../UralEngine/UralEngine.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:UralEngine/vendor/glfw-build/glfw-build.xcodeproj">
+      location = "group:UralEngine/vendor/imgui-build/imgui/imgui.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:UralEngine/vendor/GLAD/GLAD.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:UralEngine/vendor/imgui-build/imgui/imgui.xcodeproj">
+      location = "group:UralEngine/vendor/glfw-build/glfw-build.xcodeproj">
    </FileRef>
 </Workspace>

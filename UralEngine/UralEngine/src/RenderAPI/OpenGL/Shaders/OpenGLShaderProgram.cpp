@@ -18,26 +18,26 @@ namespace Ural {
     OpenGLShaderProgram::~OpenGLShaderProgram()
     {
         // Deletes attached shaders
-        glDeleteProgram(m_ProgramID);
+        glDeleteProgram(ProgramID);
     }
 
     void OpenGLShaderProgram::LoadBinaryProgram(const std::vector<char> binaryProgram, GLenum binaryFormat)
     {
-        m_ProgramID = glCreateProgram();
-        glProgramBinary(m_ProgramID, binaryFormat, binaryProgram.data(), (GLsizei)binaryProgram.size());
+        ProgramID = glCreateProgram();
+        glProgramBinary(ProgramID, binaryFormat, binaryProgram.data(), (GLsizei)binaryProgram.size());
 
         GLint isLinkStatusOK = 0;
-        glGetProgramiv(m_ProgramID, GL_LINK_STATUS, &isLinkStatusOK);
+        glGetProgramiv(ProgramID, GL_LINK_STATUS, &isLinkStatusOK);
 
         if (!isLinkStatusOK)
         {
-            Log(m_ProgramID);
+            Log(ProgramID);
         }
     }
 
     void OpenGLShaderProgram::UseProgram() const
     {
-        glUseProgram(m_ProgramID);
+        glUseProgram(ProgramID);
     }
 
     void OpenGLShaderProgram::StopProgram() const
@@ -52,12 +52,12 @@ namespace Ural {
     {
         m_ShaderSlot = shaderSlot;
 
-        m_ProgramID = glCreateProgram();
+        ProgramID = glCreateProgram();
         /*
          All operations that can be performed on a shader object are valid whether or not the shader object is attached to a program object. It is permissible to attach a shader object to a program object before source code has been loaded into the shader object or before the shader object has been compiled. It is not permissible to attach multiple shader objects of the same type. It is permissible to attach a shader object to more than one program object.
          */
-        glAttachShader(m_ProgramID, m_ShaderSlot->m_VertexShaderID);
-        glAttachShader(m_ProgramID, m_ShaderSlot->m_FragmentShaderID);
+        glAttachShader(ProgramID, m_ShaderSlot->VertexShaderID);
+        glAttachShader(ProgramID, m_ShaderSlot->FragmentShaderID);
 
 //        GLuint positionLoc = glGetAttribLocation(m_ProgramID, "a_Position");
 //           GLuint colorLoc = glGetAttribLocation(m_ProgramID, "a_Color");
@@ -73,10 +73,10 @@ namespace Ural {
 
     bool OpenGLShaderProgram::IsValid() const
     {
-        if(glIsProgram(m_ProgramID))
+        if(glIsProgram(ProgramID))
         {
             GLint isProgramToDelete = 0;
-            glGetProgramiv(m_ProgramID, GL_DELETE_STATUS, &isProgramToDelete);
+            glGetProgramiv(ProgramID, GL_DELETE_STATUS, &isProgramToDelete);
             if (isProgramToDelete) return false;
         }
         else
@@ -103,14 +103,14 @@ namespace Ural {
         /*
         However, relinking the program object that is currently in use will install the program object as part of the current rendering state if the link operation was successful (see glLinkProgram ). If the program object currently in use is relinked unsuccessfully, its link status will be set to GL_FALSE, but the executables and associated state will remain part of the current state until a subsequent call to glUseProgram removes it from use. After it is removed from use, it cannot be made part of current state until it has been successfully relinked
          */
-        glLinkProgram(m_ProgramID);
+        glLinkProgram(ProgramID);
 
         GLint isLinkStatusOK = 0;
-        glGetProgramiv(m_ProgramID, GL_LINK_STATUS, &isLinkStatusOK);
+        glGetProgramiv(ProgramID, GL_LINK_STATUS, &isLinkStatusOK);
 
         if (!isLinkStatusOK)
         {
-            Log(m_ProgramID);
+            Log(ProgramID);
         }
 
 //        #ifdef DEBUG
@@ -124,8 +124,8 @@ namespace Ural {
 //        }
 //        #endif
 
-        glDetachShader(m_ProgramID, m_ShaderSlot->m_VertexShaderID);
-        glDetachShader(m_ProgramID, m_ShaderSlot->m_FragmentShaderID);
+        glDetachShader(ProgramID, m_ShaderSlot->VertexShaderID);
+        glDetachShader(ProgramID, m_ShaderSlot->FragmentShaderID);
     }
 
     void OpenGLShaderProgram::Log(GLuint programID)

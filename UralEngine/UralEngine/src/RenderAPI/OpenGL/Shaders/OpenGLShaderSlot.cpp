@@ -16,8 +16,8 @@ namespace Ural {
 
         UL_CORE_ASSERT(vertexShaderSrcCstr && fragmentShaderSrcCstr, "Must be 2 shaders !");
 
-        m_VertexShaderID = glCreateShader(GL_VERTEX_SHADER);
-        m_FragmentShaderID = glCreateShader(GL_FRAGMENT_SHADER);
+        VertexShaderID = glCreateShader(GL_VERTEX_SHADER);
+        FragmentShaderID = glCreateShader(GL_FRAGMENT_SHADER);
 
         /*
          string:
@@ -37,67 +37,67 @@ namespace Ural {
          that string is assumed to be null terminated.
          */
 
-        glShaderSource(m_VertexShaderID, 1, &vertexShaderSrcCstr, NULL);
-        glShaderSource(m_FragmentShaderID, 1, &fragmentShaderSrcCstr, NULL);
+        glShaderSource(VertexShaderID, 1, &vertexShaderSrcCstr, NULL);
+        glShaderSource(FragmentShaderID, 1, &fragmentShaderSrcCstr, NULL);
     }
 
     OpenGLShaderSlot::OpenGLShaderSlot(const std::vector<char> binaryShader, GLenum binaryFormat)
     {
-        m_VertexShaderID = glCreateShader(GL_VERTEX_SHADER);
-        glShaderBinary(1, &m_VertexShaderID, binaryFormat, binaryShader.data(), (GLsizei)binaryShader.size());
+        VertexShaderID = glCreateShader(GL_VERTEX_SHADER);
+        glShaderBinary(1, &VertexShaderID, binaryFormat, binaryShader.data(), (GLsizei)binaryShader.size());
 
         GLint isVertexShaderCompiled = 0;
-        glGetShaderiv(m_VertexShaderID, GL_COMPILE_STATUS, &isVertexShaderCompiled);
+        glGetShaderiv(VertexShaderID, GL_COMPILE_STATUS, &isVertexShaderCompiled);
 
 
         if (isVertexShaderCompiled == GL_FALSE)
         {
-            Log(m_VertexShaderID);
+            Log(VertexShaderID);
         }
     }
 
     OpenGLShaderSlot::~OpenGLShaderSlot()
     {
-        glDeleteShader(m_VertexShaderID);
-        glDeleteShader(m_FragmentShaderID);
+        glDeleteShader(VertexShaderID);
+        glDeleteShader(FragmentShaderID);
     }
 
     void OpenGLShaderSlot::Compile() const
     {
-        glCompileShader(m_VertexShaderID);
-        glCompileShader(m_FragmentShaderID);
+        glCompileShader(VertexShaderID);
+        glCompileShader(FragmentShaderID);
 
         GLint isVertexShaderCompiled = 0;
-        glGetShaderiv(m_VertexShaderID, GL_COMPILE_STATUS, &isVertexShaderCompiled);
+        glGetShaderiv(VertexShaderID, GL_COMPILE_STATUS, &isVertexShaderCompiled);
 
 
         if (isVertexShaderCompiled == GL_FALSE)
         {
-            Log(m_VertexShaderID);
+            Log(VertexShaderID);
         }
 
         GLint isFragmentShaderCompiled = 0;
-        glGetShaderiv(m_FragmentShaderID, GL_COMPILE_STATUS, &isFragmentShaderCompiled);
+        glGetShaderiv(FragmentShaderID, GL_COMPILE_STATUS, &isFragmentShaderCompiled);
 
 
         if (isFragmentShaderCompiled == GL_FALSE)
         {
-            Log(m_FragmentShaderID);
+            Log(FragmentShaderID);
         }
 
         if (isVertexShaderCompiled == GL_FALSE || isFragmentShaderCompiled == GL_FALSE)
         {
-            glDeleteShader(m_VertexShaderID);
-            glDeleteShader(m_FragmentShaderID);
+            glDeleteShader(VertexShaderID);
+            glDeleteShader(FragmentShaderID);
         }
     }
 
     bool OpenGLShaderSlot::IsValid() const
     {
-        if (glIsShader(m_VertexShaderID))
+        if (glIsShader(VertexShaderID))
         {
             GLint isVertexShaderToDelete = 0;
-            glGetShaderiv(m_VertexShaderID, GL_DELETE_STATUS, &isVertexShaderToDelete);
+            glGetShaderiv(VertexShaderID, GL_DELETE_STATUS, &isVertexShaderToDelete);
             if (isVertexShaderToDelete) return false;
         }
         else
@@ -105,10 +105,10 @@ namespace Ural {
             return false;
         }
 
-        if (glIsShader(m_FragmentShaderID))
+        if (glIsShader(FragmentShaderID))
         {
             GLint isFragmentShaderToDelete = 0;
-            glGetShaderiv(m_FragmentShaderID, GL_DELETE_STATUS, &isFragmentShaderToDelete);
+            glGetShaderiv(FragmentShaderID, GL_DELETE_STATUS, &isFragmentShaderToDelete);
             if (isFragmentShaderToDelete) return false;
         }
         else
@@ -122,9 +122,9 @@ namespace Ural {
     void OpenGLShaderSlot::PrintSource() const
     {
         GLint maxLength = 0;
-        glGetShaderiv(m_VertexShaderID, GL_SHADER_SOURCE_LENGTH, &maxLength);
+        glGetShaderiv(VertexShaderID, GL_SHADER_SOURCE_LENGTH, &maxLength);
         GLchar* sourceStr = (GLchar*)malloc(sizeof(GLchar) * maxLength);
-        glGetShaderSource(m_VertexShaderID, maxLength, nullptr, sourceStr);
+        glGetShaderSource(VertexShaderID, maxLength, nullptr, sourceStr);
         free(sourceStr);
 
         UL_CORE_INFO("{0}", sourceStr);

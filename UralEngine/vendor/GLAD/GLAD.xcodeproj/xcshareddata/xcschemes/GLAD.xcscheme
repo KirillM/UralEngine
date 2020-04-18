@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1120"
+   LastUpgradeVersion = "1140"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,24 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "53A7908E2392AE1500E29426"
-               BuildableName = "libUralEngine.dylib"
-               BlueprintName = "UralEngine"
-               ReferencedContainer = "container:../UralEngine/UralEngine.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "53A790CA2392C5A600E29426"
-               BuildableName = "Sandbox"
-               BlueprintName = "Sandbox"
-               ReferencedContainer = "container:Sandbox.xcodeproj">
+               BlueprintIdentifier = "535D3A432401256B007EFB22"
+               BuildableName = "libGLAD.a"
+               BlueprintName = "GLAD"
+               ReferencedContainer = "container:GLAD.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,26 +31,15 @@
       </Testables>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Debug"
+      buildConfiguration = "Release"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
-      useCustomWorkingDirectory = "YES"
-      customWorkingDirectory = "/Users/kirillmezrin/dev/UralEngine/working"
+      useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "53A790CA2392C5A600E29426"
-            BuildableName = "Sandbox"
-            BlueprintName = "Sandbox"
-            ReferencedContainer = "container:Sandbox.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -72,16 +47,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "53A790CA2392C5A600E29426"
-            BuildableName = "Sandbox"
-            BlueprintName = "Sandbox"
-            ReferencedContainer = "container:Sandbox.xcodeproj">
+            BlueprintIdentifier = "535D3A432401256B007EFB22"
+            BuildableName = "libGLAD.a"
+            BlueprintName = "GLAD"
+            ReferencedContainer = "container:GLAD.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

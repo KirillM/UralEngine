@@ -34,7 +34,7 @@ namespace Ural {
         void Compile() const;
         void Link() const;
     public:
-        GLuint m_ProgramID;
+        GLuint ProgramID;
     private:
         inline static void Log(GLuint programID);
     private:

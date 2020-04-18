@@ -21,8 +21,8 @@ namespace Ural {
         bool IsValid() const;
         void PrintSource() const;
 
-        GLuint m_VertexShaderID;
-        GLuint m_FragmentShaderID;
+        GLuint VertexShaderID;
+        GLuint FragmentShaderID;
     private:
         inline static void Log(GLuint shaderID);
     };

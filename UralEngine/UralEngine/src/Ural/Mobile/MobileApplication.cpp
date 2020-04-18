@@ -618,14 +618,14 @@ static void glSync()
         for (auto it = m_LayerStack.end(); it != m_LayerStack.begin(); )
         {
             (*--it)->OnEvent(e);
-            if (e.m_Handled)
+            if (e.Handled)
                 break;
         }
     }
 
     void MobileApplication::Run()
     {
-        std::clock_t time = std::clock();
+        double time = std::clock() / CLOCKS_PER_SEC;
         TimeStep timestep = time - m_LastFrameTime;
         m_LastFrameTime = time;
 

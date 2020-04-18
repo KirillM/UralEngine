@@ -61,6 +61,49 @@
 /* Begin PBXFileReference section */
 		5353FC3324450E4E005B88A6 /* libUralEngine IOS.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = "libUralEngine IOS.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
 		537F12B123930A4B00369F57 /* libUralEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libUralEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		53875EBB244B21B200BAAE82 /* Class.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Class.hpp; sourceTree = "<group>"; };
+		53875EBC244B21B200BAAE82 /* Unions.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Unions.cpp; sourceTree = "<group>"; };
+		53875EBD244B21B200BAAE82 /* Copy.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Copy.cpp; sourceTree = "<group>"; };
+		53875EBE244B21B200BAAE82 /* Instantiation.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Instantiation.cpp; sourceTree = "<group>"; };
+		53875EBF244B21B200BAAE82 /* Const.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Const.hpp; sourceTree = "<group>"; };
+		53875EC0244B21B200BAAE82 /* This.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = This.cpp; sourceTree = "<group>"; };
+		53875EC1244B21B200BAAE82 /* Strings.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Strings.cpp; sourceTree = "<group>"; };
+		53875EC2244B21B200BAAE82 /* interface.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = interface.hpp; sourceTree = "<group>"; };
+		53875EC3244B21B200BAAE82 /* Extern2.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Extern2.hpp; sourceTree = "<group>"; };
+		53875EC4244B21B200BAAE82 /* Operator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Operator.cpp; sourceTree = "<group>"; };
+		53875EC5244B21B200BAAE82 /* Constructor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Constructor.cpp; sourceTree = "<group>"; };
+		53875EC6244B21B200BAAE82 /* Lambda.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Lambda.cpp; sourceTree = "<group>"; };
+		53875EC7244B21B200BAAE82 /* Sorting.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Sorting.cpp; sourceTree = "<group>"; };
+		53875EC8244B21B200BAAE82 /* Vector.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Vector.cpp; sourceTree = "<group>"; };
+		53875EC9244B21B200BAAE82 /* interface.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = interface.cpp; sourceTree = "<group>"; };
+		53875ECA244B21B200BAAE82 /* Casting.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Casting.cpp; sourceTree = "<group>"; };
+		53875ECB244B21B200BAAE82 /* Enums.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Enums.cpp; sourceTree = "<group>"; };
+		53875ECC244B21B200BAAE82 /* Extern2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Extern2.cpp; sourceTree = "<group>"; };
+		53875ECD244B21B200BAAE82 /* FPointers.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FPointers.cpp; sourceTree = "<group>"; };
+		53875ECE244B21B200BAAE82 /* Tuple.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Tuple.cpp; sourceTree = "<group>"; };
+		53875ECF244B21B200BAAE82 /* Constructor.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Constructor.hpp; sourceTree = "<group>"; };
+		53875ED0244B21B200BAAE82 /* Arrow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Arrow.cpp; sourceTree = "<group>"; };
+		53875ED1244B21B200BAAE82 /* Smart.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Smart.cpp; sourceTree = "<group>"; };
+		53875ED2244B21B200BAAE82 /* Extern.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Extern.cpp; sourceTree = "<group>"; };
+		53875ED3244B21B200BAAE82 /* TypePuning.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TypePuning.cpp; sourceTree = "<group>"; };
+		53875ED4244B21B200BAAE82 /* Class.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Class.cpp; sourceTree = "<group>"; };
+		53875ED5244B21B200BAAE82 /* Extern.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Extern.h; sourceTree = "<group>"; };
+		53875ED6244B21B200BAAE82 /* Conversion.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Conversion.cpp; sourceTree = "<group>"; };
+		53875ED7244B21B200BAAE82 /* Static.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Static.cpp; sourceTree = "<group>"; };
+		53875ED8244B21B200BAAE82 /* Threads.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Threads.cpp; sourceTree = "<group>"; };
+		53875ED9244B21B200BAAE82 /* Templates.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Templates.cpp; sourceTree = "<group>"; };
+		53875EDA244B21B200BAAE82 /* Const.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Const.cpp; sourceTree = "<group>"; };
+		53875EDB244B21B200BAAE82 /* Time.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Time.cpp; sourceTree = "<group>"; };
+		53875EDD244B21B200BAAE82 /* Blending.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Blending.cpp; sourceTree = "<group>"; };
+		53875EDE244B21B200BAAE82 /* Textures.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Textures.cpp; sourceTree = "<group>"; };
+		53875EDF244B21B200BAAE82 /* Anisantropic.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Anisantropic.cpp; sourceTree = "<group>"; };
+		53875EE0244B21B200BAAE82 /* PrimitiveShader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PrimitiveShader.cpp; sourceTree = "<group>"; };
+		53875EE1244B21B200BAAE82 /* Commands.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Commands.cpp; sourceTree = "<group>"; };
+		53875EE6244B21B200BAAE82 /* State.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = State.cpp; sourceTree = "<group>"; };
+		53875EE7244B21B200BAAE82 /* Constants.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Constants.cpp; sourceTree = "<group>"; };
+		53875EE8244B21B200BAAE82 /* Antialiasing.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Antialiasing.cpp; sourceTree = "<group>"; };
+		53875EE9244B21B200BAAE82 /* Primitives.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Primitives.cpp; sourceTree = "<group>"; };
+		53875EEE244B245000BAAE82 /* working */ = {isa = PBXFileReference; lastKnownFileType = folder; name = working; path = ../UralEngine/working; sourceTree = "<group>"; };
 		538B34CE244A3F2500AF91C3 /* Sandbox2D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sandbox2D.h; sourceTree = "<group>"; };
 		538B34CF244A3F2500AF91C3 /* Sandbox2D.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Sandbox2D.cpp; sourceTree = "<group>"; };
 		53A790CB2392C5A600E29426 /* Sandbox */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Sandbox; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,11 +169,79 @@
 			path = src;
 			sourceTree = "<group>";
 		};
+		53875EB9244B21B200BAAE82 /* mine */ = {
+			isa = PBXGroup;
+			children = (
+				53875EBA244B21B200BAAE82 /* C++ */,
+				53875EDC244B21B200BAAE82 /* Super */,
+			);
+			name = mine;
+			path = ../mine;
+			sourceTree = "<group>";
+		};
+		53875EBA244B21B200BAAE82 /* C++ */ = {
+			isa = PBXGroup;
+			children = (
+				53875EBB244B21B200BAAE82 /* Class.hpp */,
+				53875EBC244B21B200BAAE82 /* Unions.cpp */,
+				53875EBD244B21B200BAAE82 /* Copy.cpp */,
+				53875EBE244B21B200BAAE82 /* Instantiation.cpp */,
+				53875EBF244B21B200BAAE82 /* Const.hpp */,
+				53875EC0244B21B200BAAE82 /* This.cpp */,
+				53875EC1244B21B200BAAE82 /* Strings.cpp */,
+				53875EC2244B21B200BAAE82 /* interface.hpp */,
+				53875EC3244B21B200BAAE82 /* Extern2.hpp */,
+				53875EC4244B21B200BAAE82 /* Operator.cpp */,
+				53875EC5244B21B200BAAE82 /* Constructor.cpp */,
+				53875EC6244B21B200BAAE82 /* Lambda.cpp */,
+				53875EC7244B21B200BAAE82 /* Sorting.cpp */,
+				53875EC8244B21B200BAAE82 /* Vector.cpp */,
+				53875EC9244B21B200BAAE82 /* interface.cpp */,
+				53875ECA244B21B200BAAE82 /* Casting.cpp */,
+				53875ECB244B21B200BAAE82 /* Enums.cpp */,
+				53875ECC244B21B200BAAE82 /* Extern2.cpp */,
+				53875ECD244B21B200BAAE82 /* FPointers.cpp */,
+				53875ECE244B21B200BAAE82 /* Tuple.cpp */,
+				53875ECF244B21B200BAAE82 /* Constructor.hpp */,
+				53875ED0244B21B200BAAE82 /* Arrow.cpp */,
+				53875ED1244B21B200BAAE82 /* Smart.cpp */,
+				53875ED2244B21B200BAAE82 /* Extern.cpp */,
+				53875ED3244B21B200BAAE82 /* TypePuning.cpp */,
+				53875ED4244B21B200BAAE82 /* Class.cpp */,
+				53875ED5244B21B200BAAE82 /* Extern.h */,
+				53875ED6244B21B200BAAE82 /* Conversion.cpp */,
+				53875ED7244B21B200BAAE82 /* Static.cpp */,
+				53875ED8244B21B200BAAE82 /* Threads.cpp */,
+				53875ED9244B21B200BAAE82 /* Templates.cpp */,
+				53875EDA244B21B200BAAE82 /* Const.cpp */,
+				53875EDB244B21B200BAAE82 /* Time.cpp */,
+			);
+			path = "C++";
+			sourceTree = "<group>";
+		};
+		53875EDC244B21B200BAAE82 /* Super */ = {
+			isa = PBXGroup;
+			children = (
+				53875EDD244B21B200BAAE82 /* Blending.cpp */,
+				53875EDE244B21B200BAAE82 /* Textures.cpp */,
+				53875EDF244B21B200BAAE82 /* Anisantropic.cpp */,
+				53875EE0244B21B200BAAE82 /* PrimitiveShader.cpp */,
+				53875EE1244B21B200BAAE82 /* Commands.cpp */,
+				53875EE6244B21B200BAAE82 /* State.cpp */,
+				53875EE7244B21B200BAAE82 /* Constants.cpp */,
+				53875EE8244B21B200BAAE82 /* Antialiasing.cpp */,
+				53875EE9244B21B200BAAE82 /* Primitives.cpp */,
+			);
+			path = Super;
+			sourceTree = "<group>";
+		};
 		53A790C22392C5A600E29426 = {
 			isa = PBXGroup;
 			children = (
 				53A790CD2392C5A600E29426 /* Sandbox */,
 				53EDC1AB2444E85D009E8291 /* SandboxIOS */,
+				53875EEE244B245000BAAE82 /* working */,
+				53875EB9244B21B200BAAE82 /* mine */,
 				53A790CC2392C5A600E29426 /* Products */,
 				537F12952392CAF100369F57 /* Frameworks */,
 			);
