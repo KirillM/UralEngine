@@ -85,6 +85,7 @@
 #include "Renderer/Buffers/IndexBuffer.h"
 #include "Renderer/Buffers/VertexBuffer.h"
 #include "Renderer/Textures/Texture.h"
+#include "Renderer/RenderCommand.h"
 
 // время
 #include "Time/TimeStep.h"

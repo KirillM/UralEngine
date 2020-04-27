@@ -12,6 +12,8 @@
 #include "Renderer/Buffers/VertexBuffer.h"
 #include "Renderer/Buffers/IndexBuffer.h"
 
+#pragma GCC visibility push(default)
+
 namespace Ural {
     class VertexArray {
     public:
@@ -30,5 +32,6 @@ namespace Ural {
     };
 }
 
+#pragma GCC visibility pop
 
 #endif /* VertexArray_h */

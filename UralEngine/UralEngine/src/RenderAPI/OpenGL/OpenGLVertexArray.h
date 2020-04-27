@@ -13,6 +13,8 @@
 #include "Renderer/Buffers/VertexBuffer.h"
 #include "Renderer/VertexArray.h"
 
+#pragma GCC visibility push(default)
+
 namespace Ural {
     class OpenGLVertexArray : public VertexArray {
     public:
@@ -34,5 +36,7 @@ namespace Ural {
         Ref<IndexBuffer> m_IndexBuffer;
     };
 }
+
+#pragma GCC visibility pop
 
 #endif /* OpenGLVertexArray_h */

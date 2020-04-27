@@ -11,6 +11,8 @@
 
 #include "RendererAPI.h"
 
+#pragma GCC visibility push(default)
+
 namespace Ural {
 
     class RenderCommand
@@ -45,5 +47,7 @@ namespace Ural {
     };
 
 }
+
+#pragma GCC visibility pop
 
 #endif /* RenderCommand_h */

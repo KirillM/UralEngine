@@ -15,6 +15,8 @@
 
 #include <glm/glm.hpp>
 
+#pragma GCC visibility push(default)
+
 namespace Ural {
 
     class Shader
@@ -51,5 +53,7 @@ namespace Ural {
 //
 //    };
 }
+
+#pragma GCC visibility pop
 
 #endif /* Shader_hpp */

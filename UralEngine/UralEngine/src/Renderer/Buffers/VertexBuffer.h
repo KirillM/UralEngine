@@ -9,6 +9,8 @@
 #ifndef VertexBuffer_h
 #define VertexBuffer_h
 
+#pragma GCC visibility push(default)
+
 namespace Ural {
     enum class ShaderDataType
     {
@@ -115,5 +117,7 @@ namespace Ural {
         static Ref<VertexBuffer> Create(float* vertices, uint32_t size);
     };
 }
+
+#pragma GCC visibility pop
 
 #endif /* VertexBuffer_hpp */

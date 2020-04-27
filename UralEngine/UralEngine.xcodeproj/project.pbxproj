@@ -117,8 +117,8 @@
 		5382B8BB2456A2F7005DBB7B /* OpenGLRendererAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 5382B8B82456A2F7005DBB7B /* OpenGLRendererAPI.h */; };
 		5382B8BC2456A2F7005DBB7B /* OpenGLRendererAPI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5382B8B92456A2F7005DBB7B /* OpenGLRendererAPI.cpp */; };
 		5382B8BD2456A2F7005DBB7B /* OpenGLRendererAPI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5382B8B92456A2F7005DBB7B /* OpenGLRendererAPI.cpp */; };
-		5382B8C42456A7D1005DBB7B /* OrthographicCameraController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5382B8BE2456A53C005DBB7B /* OrthographicCameraController.cpp */; };
-		5382B8C52456A7D5005DBB7B /* OrthographicCameraController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5382B8BF2456A53C005DBB7B /* OrthographicCameraController.h */; };
+		5382B8C62456AEE8005DBB7B /* OrthographicCameraController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5382B8BF2456A53C005DBB7B /* OrthographicCameraController.h */; };
+		5382B8C72456AEEA005DBB7B /* OrthographicCameraController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5382B8BE2456A53C005DBB7B /* OrthographicCameraController.cpp */; };
 		538872BB24466D4400D9BE4A /* ColorBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 538872B924466D4400D9BE4A /* ColorBuffer.cpp */; };
 		538872BC24466D4400D9BE4A /* ColorBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 538872B924466D4400D9BE4A /* ColorBuffer.cpp */; };
 		538872BD24466D4400D9BE4A /* ColorBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 538872BA24466D4400D9BE4A /* ColorBuffer.h */; };
@@ -203,8 +203,6 @@
 		53D79656240066B400D752C7 /* Layer.h in Headers */ = {isa = PBXBuildFile; fileRef = 53D79654240066B400D752C7 /* Layer.h */; };
 		53EDC1D22444F981009E8291 /* MacWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 530164F6239C134E00821B62 /* MacWindow.cpp */; };
 		53F6E9FE240148DC00EF58AA /* libimgui.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F6E9FD240148DC00EF58AA /* libimgui.a */; };
-		53F6EA022401497800EF58AA /* ImGuiLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53F6EA002401497800EF58AA /* ImGuiLayer.cpp */; };
-		53F6EA032401497800EF58AA /* ImGuiLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 53F6EA012401497800EF58AA /* ImGuiLayer.h */; };
 		53F6EA0724014EC600EF58AA /* ImGuiOpenGLRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53F6EA0524014EC600EF58AA /* ImGuiOpenGLRenderer.cpp */; };
 		53F6EA0824014EC600EF58AA /* ImGuiOpenGLRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 53F6EA0624014EC600EF58AA /* ImGuiOpenGLRenderer.h */; };
 		53F6EA0A2401627C00EF58AA /* libGLAD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F6EA092401627C00EF58AA /* libGLAD.a */; };
@@ -1012,10 +1010,9 @@
 				538872C924466D6700D9BE4A /* DepthBuffer.h in Headers */,
 				53CDC3062448657E006DB18C /* GraphicsDeviceInfo.h in Headers */,
 				538B34B6244A2E9900AF91C3 /* RenderCommand.h in Headers */,
-				5382B8C52456A7D5005DBB7B /* OrthographicCameraController.h in Headers */,
+				5382B8C62456AEE8005DBB7B /* OrthographicCameraController.h in Headers */,
 				533524C024491FB0000C3D04 /* ShaderProgram.h in Headers */,
 				536F48AD2445AADD008DCDEB /* DesktopEvent.h in Headers */,
-				53F6EA032401497800EF58AA /* ImGuiLayer.h in Headers */,
 				533524B9244916CC000C3D04 /* ShaderCompiler.h in Headers */,
 				538872BD24466D4400D9BE4A /* ColorBuffer.h in Headers */,
 				53D79652240066A800D752C7 /* LayerStack.h in Headers */,
@@ -1172,7 +1169,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53F6EA022401497800EF58AA /* ImGuiLayer.cpp in Sources */,
 				533524B52449145F000C3D04 /* OpenGLMirrorShader.cpp in Sources */,
 				538B34CC244A3E2A00AF91C3 /* OrthographicCamera.cpp in Sources */,
 				53722372239800D600312C05 /* Log.cpp in Sources */,
@@ -1215,7 +1211,7 @@
 				538B34BE244A3CF800AF91C3 /* Renderer.cpp in Sources */,
 				538B348D244972E700AF91C3 /* OpenGLShaderCompiler.cpp in Sources */,
 				538872C124466D5500D9BE4A /* StencilBuffer.cpp in Sources */,
-				5382B8C42456A7D1005DBB7B /* OrthographicCameraController.cpp in Sources */,
+				5382B8C72456AEEA005DBB7B /* OrthographicCameraController.cpp in Sources */,
 				536F48B52445B00C008DCDEB /* DesktopApplication.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

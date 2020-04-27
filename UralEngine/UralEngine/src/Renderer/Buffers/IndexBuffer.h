@@ -9,6 +9,8 @@
 #ifndef IndexBuffer_h
 #define IndexBuffer_h
 
+#pragma GCC visibility push(default)
+
 namespace Ural {
     class IndexBuffer
     {
@@ -22,5 +24,7 @@ namespace Ural {
         static Ref<IndexBuffer> Create(uint32_t* indices, uint32_t count);
     };
 }
+
+#pragma GCC visibility pop
 
 #endif /* IndexBuffer_hpp */

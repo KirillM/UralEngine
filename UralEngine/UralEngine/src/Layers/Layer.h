@@ -13,6 +13,8 @@
 #include "Events/Event.h"
 #include "Time/TimeStep.h"
 
+#pragma GCC visibility push(default)
+
 namespace Ural {
 
     class URAL_API Layer
@@ -31,5 +33,7 @@ namespace Ural {
         std::string m_DebugName;
     };
 }
+
+#pragma GCC visibility pop
 
 #endif /* Layer_h */
