@@ -40,6 +40,13 @@
 #include "Layers/Layer.h"
 #include "Layers/imgui/ImGuiLayer.h"
 
+//------Отрисовщик------------------
+// буферы + шейдеры
+#include "Renderer/Shaders/Shader.h"
+#include "Renderer/Buffers/IndexBuffer.h"
+#include "Renderer/Buffers/VertexBuffer.h"
+#include "Renderer/Textures/Texture.h"
+
 //------Точка входа-----------------
 #include "Ural/Desktop/EntryPoint.h"
 //----------------------------------
@@ -71,6 +78,13 @@
 // слои
 #include "Layers/Layer.h"
 #include "Layers/imgui/ImGuiLayer.h"
+
+//------Отрисовщик------------------
+// буферы + шейдеры
+#include "Renderer/Shaders/Shader.h"
+#include "Renderer/Buffers/IndexBuffer.h"
+#include "Renderer/Buffers/VertexBuffer.h"
+#include "Renderer/Textures/Texture.h"
 
 // время
 #include "Time/TimeStep.h"

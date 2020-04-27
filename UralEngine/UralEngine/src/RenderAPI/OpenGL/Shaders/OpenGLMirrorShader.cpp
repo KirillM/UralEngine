@@ -6,8 +6,9 @@
 //  Copyright © 2020 Кирилл Мезрин. All rights reserved.
 //
 
-#include "OpenGLFullShader.h"
+#include "OpenGLMirrorShader.h"
 
 namespace Ural {
+
 
 }

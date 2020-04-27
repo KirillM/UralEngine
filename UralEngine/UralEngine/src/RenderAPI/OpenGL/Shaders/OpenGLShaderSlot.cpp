@@ -9,6 +9,9 @@
 #include "OpenGLShaderSlot.h"
 
 namespace Ural {
+
+    static const int BUFF_SIZE = 64;
+
     OpenGLShaderSlot::OpenGLShaderSlot(const std::string& vertexShaderSrc, const std::string& fragmentShaderSrc)
     {
         const GLchar *vertexShaderSrcCstr = (const GLchar *)vertexShaderSrc.c_str();
@@ -46,6 +49,7 @@ namespace Ural {
         VertexShaderID = glCreateShader(GL_VERTEX_SHADER);
         glShaderBinary(1, &VertexShaderID, binaryFormat, binaryShader.data(), (GLsizei)binaryShader.size());
 
+        #ifdef UL_OPENGL_LOG
         GLint isVertexShaderCompiled = 0;
         glGetShaderiv(VertexShaderID, GL_COMPILE_STATUS, &isVertexShaderCompiled);
 
@@ -54,6 +58,7 @@ namespace Ural {
         {
             Log(VertexShaderID);
         }
+        #endif
     }
 
     OpenGLShaderSlot::~OpenGLShaderSlot()
@@ -67,6 +72,7 @@ namespace Ural {
         glCompileShader(VertexShaderID);
         glCompileShader(FragmentShaderID);
 
+        #ifdef UL_OPENGL_LOG
         GLint isVertexShaderCompiled = 0;
         glGetShaderiv(VertexShaderID, GL_COMPILE_STATUS, &isVertexShaderCompiled);
 
@@ -90,6 +96,7 @@ namespace Ural {
             glDeleteShader(VertexShaderID);
             glDeleteShader(FragmentShaderID);
         }
+        #endif
     }
 
     bool OpenGLShaderSlot::IsValid() const
@@ -121,11 +128,17 @@ namespace Ural {
 
     void OpenGLShaderSlot::PrintSource() const
     {
-        GLint maxLength = 0;
-        glGetShaderiv(VertexShaderID, GL_SHADER_SOURCE_LENGTH, &maxLength);
-        GLchar* sourceStr = (GLchar*)malloc(sizeof(GLchar) * maxLength);
-        glGetShaderSource(VertexShaderID, maxLength, nullptr, sourceStr);
-        free(sourceStr);
+        #ifdef UL_DYNAMIC_BUFF
+            GLint maxLength = 0;
+            glGetShaderiv(VertexShaderID, GL_SHADER_SOURCE_LENGTH, &maxLength);
+            GLchar* sourceStr = (GLchar*)malloc(sizeof(GLchar) * maxLength);
+            glGetShaderSource(VertexShaderID, maxLength, NULL, sourceStr);
+            free(sourceStr);
+        #else
+            GLchar sourceStr[BUFF_SIZE]{0};
+            glGetShaderSource(VertexShaderID, BUFF_SIZE, NULL, sourceStr);
+            UL_CORE_INFO("{0}", sourceStr);
+        #endif
 
         UL_CORE_INFO("{0}", sourceStr);
     }
@@ -135,16 +148,21 @@ namespace Ural {
         GLint shaderType = 0;
         glGetShaderiv(shaderID, GL_SHADER_TYPE, &shaderType);
 
-        GLint maxLength = 0;
-        glGetShaderiv(shaderID, GL_INFO_LOG_LENGTH, &maxLength);
-
-        GLchar* infoLog = (GLchar*)malloc(sizeof(GLchar) * maxLength);
-        glGetShaderInfoLog(shaderID, maxLength, &maxLength, infoLog);
-
         UL_CORE_INFO("Shader Type: {0}", shaderType);
-        UL_CORE_ERROR("{0}", infoLog);
-        UL_CORE_ASSERT(false, "Shader compilation failure!");
 
-        free(infoLog);
+        #ifdef UL_DYNAMIC_BUFF
+            GLint maxLength = 0;
+            glGetShaderiv(shaderID, GL_INFO_LOG_LENGTH, &maxLength);
+            GLchar* infoLog = (GLchar*)malloc(sizeof(GLchar) * maxLength);
+            glGetShaderInfoLog(shaderID, maxLength, NULL, infoLog);
+            UL_CORE_ERROR("{0}", infoLog);
+            free(infoLog);
+        #else
+            GLchar infoLog[BUFF_SIZE]{0};
+            glGetShaderInfoLog(shaderID, BUFF_SIZE, NULL, infoLog);
+            UL_CORE_ERROR("{0}", infoLog);
+        #endif
+
+        UL_CORE_ASSERT(false, "Shader compilation failure!");
     }
 }

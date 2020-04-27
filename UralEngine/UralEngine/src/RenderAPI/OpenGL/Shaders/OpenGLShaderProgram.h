@@ -24,6 +24,7 @@ namespace Ural {
 
         void UseProgram() const;
         void StopProgram() const;
+        inline GLuint GetProgram() const { return m_ProgramID; }
 
         void AttachShaderSlot(const Ref<OpenGLShaderSlot> shaderSlot);
         void DetachShaderSlot();
@@ -33,11 +34,11 @@ namespace Ural {
         void CompileAndLink() const;
         void Compile() const;
         void Link() const;
-    public:
-        GLuint ProgramID;
+
     private:
         inline static void Log(GLuint programID);
     private:
+        GLuint m_ProgramID;
         Ref<OpenGLShaderSlot> m_ShaderSlot;
     };
 }

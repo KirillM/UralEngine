@@ -9,6 +9,9 @@
 #ifndef Core_h
 #define Core_h
 
+
+// UL_DYNAMIC_BUFF=1
+// UL_OPENGL_LOG=1
 #ifdef UL_PLATFORM_MAC
 	#ifdef UL_BUILD_DLYB
 		#define URAL_API

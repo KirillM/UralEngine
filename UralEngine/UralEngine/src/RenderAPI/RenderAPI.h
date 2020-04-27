@@ -17,8 +17,7 @@ namespace Ural {
             OpenGLES,
             OpenGL,
             Vulkan,
-            Direct3D,
-            Metal
+            Direct3D
         };
     public:
         static API s_API;

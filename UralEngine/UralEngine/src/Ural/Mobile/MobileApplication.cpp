@@ -530,10 +530,10 @@ static void glSync()
       //  glBuffers();
 
       //  glFramebuffer
-        GLenum test = glCheckFramebufferStatus(GL_DRAW_FRAMEBUFFER);
-        glClearColor(1, 0, 0, 1); // устанавливает цвет для очистки окна
-         Error::PrintError();
-        GLenum test2 = glCheckFramebufferStatus(GL_DRAW_FRAMEBUFFER);
+//        GLenum test = glCheckFramebufferStatus(GL_DRAW_FRAMEBUFFER);
+//        glClearColor(1, 0, 0, 1); // устанавливает цвет для очистки окна
+//         Error::PrintError();
+//        GLenum test2 = glCheckFramebufferStatus(GL_DRAW_FRAMEBUFFER);
        // glClear(GL_COLOR_BUFFER_BIT);
 
  //       glVertex();
@@ -542,61 +542,61 @@ static void glSync()
         //glBindFramebuffer(GL_FRAMEBUFFER_EXT, 0);
         // glViewport(0.0, 0.0, 200, 200);
       //  glBindFramebuffer(GL_FRAMEBUFFER, 0);
-        m_SquareVA = Ural::VertexArray::Create();
-
-           float squareVertices[7 * 4] = {
-               -0.6f, -0.5f, 0.0f, 1.0f, 0.3f, 0.5f, 1.0f,
-               0.8f, -0.5f, 0.0f, 1.0f, 0.3f, 0.5f, 1.0f,
-               0.5f, 0.5f, 0.0f, 1.0f, 0.3f, 0.5f, 1.0f,
-               -0.5f, 0.5f, 0.0f, 1.0f, 0.3f, 0.5f, 1.0f
-           };
-        
-
-        Ref<VertexBuffer> squareVB = VertexBuffer::Create(squareVertices, sizeof(squareVertices));
-        Error::PrintError();
-
-           BufferLayout squareVBlayout = {
-                  { ShaderDataType::Float3, "a_Position" },
-                  { ShaderDataType::Float4, "a_Color" }
-            };
-            squareVB->SetLayout(squareVBlayout);
-            m_SquareVA->AddVertexBuffer(squareVB);
-
-        uint32_t squareIndices[6] = {2, 3, 0, 0, 1, 2};//{0, 1, 2, 2, 3, 0};
-        Ref<IndexBuffer> squareIB = IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t));
-        Error::PrintError();
-           m_SquareVA->AddIndexBuffer(squareIB);
-           m_SquareVA->Bind();
-        Error::PrintError();
-
-          const std::string vShaderText = R"(
-             #version 300 es
-             layout(location = 0) in vec3 a_Position;
-             layout(location = 1) in vec4 a_Color;
-
-             out vec4 v_Color;
-
-             void main(void) {
-                 gl_Position = vec4(a_Position, 1.0);
-                 v_Color = a_Color;
-             })";
-        const std::string pShaderText = R"(
-            #version 300 es
-            precision mediump float;
-             layout(location = 0) out vec4 v_FragColor;
-             in vec4 v_Color;
-
-             void main(void) {
-                 v_FragColor = v_Color;
-             })";
-
-        const std::string name = "test";
-        m_Shader = Shader::Create("test", vShaderText, pShaderText);
-        m_Shader->Bind();
-        Error::PrintError();
-
-        ShaderCompiler::CurrentProgram();
-        GraphicsDeviceInfo::PrintInfo();
+//        m_SquareVA = Ural::VertexArray::Create();
+//
+//           float squareVertices[7 * 4] = {
+//               -0.6f, -0.5f, 0.0f, 1.0f, 0.3f, 0.5f, 1.0f,
+//               0.8f, -0.5f, 0.0f, 1.0f, 0.3f, 0.5f, 1.0f,
+//               0.5f, 0.5f, 0.0f, 1.0f, 0.3f, 0.5f, 1.0f,
+//               -0.5f, 0.5f, 0.0f, 1.0f, 0.3f, 0.5f, 1.0f
+//           };
+//        
+//
+//        Ref<VertexBuffer> squareVB = VertexBuffer::Create(squareVertices, sizeof(squareVertices));
+//        Error::PrintError();
+//
+//           BufferLayout squareVBlayout = {
+//                  { ShaderDataType::Float3, "a_Position" },
+//                  { ShaderDataType::Float4, "a_Color" }
+//            };
+//        squareVB->SetLayout(squareVBlayout);
+//        m_SquareVA->AddVertexBuffer(squareVB);
+//
+//        uint32_t squareIndices[6] = {2, 3, 0, 0, 1, 2};//{0, 1, 2, 2, 3, 0};
+//        Ref<IndexBuffer> squareIB = IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t));
+//        Error::PrintError();
+//        m_SquareVA->AddIndexBuffer(squareIB);
+//        m_SquareVA->Bind();
+//        Error::PrintError();
+//
+//          const std::string vShaderText = R"(
+//             #version 300 es
+//             layout(location = 0) in vec3 a_Position;
+//             layout(location = 1) in vec4 a_Color;
+//
+//             out vec4 v_Color;
+//
+//             void main(void) {
+//                 gl_Position = vec4(a_Position, 1.0);
+//                 v_Color = a_Color;
+//             })";
+//        const std::string pShaderText = R"(
+//            #version 300 es
+//            precision mediump float;
+//             layout(location = 0) out vec4 v_FragColor;
+//             in vec4 v_Color;
+//
+//             void main(void) {
+//                 v_FragColor = v_Color;
+//             })";
+//
+//        const std::string name = "test";
+//        m_Shader = Shader::Create("test", vShaderText, pShaderText);
+//        m_Shader->Bind();
+//        Error::PrintError();
+//
+//        ShaderCompiler::CurrentProgram();
+//        GraphicsDeviceInfo::PrintInfo();
 
     }
 
@@ -629,9 +629,9 @@ static void glSync()
         TimeStep timestep = time - m_LastFrameTime;
         m_LastFrameTime = time;
 
-        glClear(GL_COLOR_BUFFER_BIT);
-        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr);
-        Error::PrintError();
+//        glClear(GL_COLOR_BUFFER_BIT);
+//        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr);
+//        Error::PrintError();
 
         //WindowResizeEvent e(1280, 720);
         //UL_TRACE(e);

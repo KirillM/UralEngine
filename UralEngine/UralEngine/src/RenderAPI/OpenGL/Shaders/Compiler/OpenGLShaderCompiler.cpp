@@ -12,6 +12,8 @@
 
 namespace Ural {
 
+    static const int BUFF_SIZE = 512;
+
     bool ShaderCompiler::isSupported()
     {
         GLboolean isSupported = 0;
@@ -30,7 +32,8 @@ namespace Ural {
 
         if (!numberOfSupportedShaderFormats) return;
 
-        GLint* listOfSupportedFormats = (GLint*)malloc(sizeof(GLint) * numberOfSupportedShaderFormats + 1);
+        GLint listOfSupportedFormats[BUFF_SIZE];
+        //(GLint*)malloc(sizeof(GLint) * numberOfSupportedShaderFormats + 1);
         glGetIntegerv(GL_SHADER_BINARY_FORMATS, listOfSupportedFormats);
 
 //        for(int i = 0; i < numberOfSupportedShaderFormats; i++)
@@ -39,7 +42,7 @@ namespace Ural {
 //            UL_CORE_INFO("Supported Shader Formats: {0}", supportedFormat);
 //        }
 //
-        free(listOfSupportedFormats);
+ //       free(listOfSupportedFormats);
     }
 
     void ShaderCompiler::PrintSupportedProgramFormats()
@@ -50,7 +53,8 @@ namespace Ural {
 
         if (!numberOfSupportedProgramFormats) return;
 
-        GLint* listOfSupportedFormats = (GLint*)malloc(sizeof(GLint) * numberOfSupportedProgramFormats);
+        GLint listOfSupportedFormats[BUFF_SIZE];
+        //= (GLint*)malloc(sizeof(GLint) * numberOfSupportedProgramFormats);
         glGetIntegerv(GL_PROGRAM_BINARY_FORMATS, listOfSupportedFormats);
 
 //        for(int i = 0; i < numberOfSupportedProgramFormats; i++)
@@ -59,7 +63,7 @@ namespace Ural {
 //            UL_CORE_INFO("Supported Shader Formats: {0}", supportedFormat);
 //        }
 
-        free(listOfSupportedFormats);
+//        free(listOfSupportedFormats);
     }
 
     uint32_t ShaderCompiler::CurrentProgram()
@@ -76,10 +80,11 @@ namespace Ural {
 
         if (!binaryLenght) return nullptr;
 
-        std::vector<char> buffer(1024);
-        glGetProgramBinary(programID, 1024, &binaryLenght, &binaryFormat, buffer.data()); //?
+       // std::vector<char> buffer(1024);
+        char data[BUFF_SIZE];
+        glGetProgramBinary(programID, BUFF_SIZE, &binaryLenght, &binaryFormat, data); //?
 
-        return buffer.data();
+        return data; //buffer.data();
     }
 
     void ShaderCompiler::ReleaseCompiler()
