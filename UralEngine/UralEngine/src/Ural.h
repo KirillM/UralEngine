@@ -77,7 +77,7 @@
 
 // слои
 #include "Layers/Layer.h"
-#include "Layers/imgui/ImGuiLayer.h"
+//#include "Layers/imgui/ImGuiLayer.h"
 
 //------Отрисовщик------------------
 // буферы + шейдеры

@@ -7,7 +7,8 @@
 //
 
 #include "RenderCommand.h"
+#include "RenderAPI/OpenGL/OpenGLRendererAPI.h"
 
 namespace Ural {
-
+    RendererAPI* RenderCommand::s_RendererAPI = new OpenGLRendererAPI();
 }

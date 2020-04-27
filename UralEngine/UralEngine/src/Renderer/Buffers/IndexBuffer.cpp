@@ -7,19 +7,19 @@
 //
 
 #include "IndexBuffer.h"
-#include "RenderAPI/RenderAPI.h"
+#include "Renderer/RendererAPI.h"
 #include "RenderAPI/OpenGL/Buffers/OpenGLIndexBuffer.h"
 
 namespace Ural {
 
     Ref<IndexBuffer> IndexBuffer::Create(uint32_t* indices, uint32_t count)
     {
-        switch (RenderAPI::s_API) {
-            case RenderAPI::API::None: {
+        switch (RendererAPI::GetAPI()) {
+            case RendererAPI::API::None: {
                 UL_CORE_ASSERT(false, "RendererAPI::None not supported");
                 return nullptr;
             }
-            case RenderAPI::API::OpenGL: {
+            case RendererAPI::API::OpenGL: {
                 return std::make_shared<OpenGLIndexBuffer>(indices, count);
             }
         }

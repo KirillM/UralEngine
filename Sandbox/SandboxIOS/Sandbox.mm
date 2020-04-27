@@ -87,6 +87,7 @@ public:
 private:
     Ural::Ref<Ural::VertexArray> m_SquareVA;
     Ural::Ref<Ural::Shader> m_Shader;
+  //  Ural::OrthographicCameraController m_CameraController;
 };
 
 class Sandbox : public Ural::MobileApplication

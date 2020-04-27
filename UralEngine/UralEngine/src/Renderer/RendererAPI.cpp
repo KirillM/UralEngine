@@ -6,8 +6,8 @@
 //  Copyright © 2020 Кирилл Мезрин. All rights reserved.
 //
 
-#include "RenderAPI.h"
+#include "RendererAPI.h"
 
 namespace Ural {
-    RenderAPI::API RenderAPI::s_API = RenderAPI::API::OpenGL;
+    RendererAPI::API RendererAPI::s_API = RendererAPI::API::OpenGL;
 }
