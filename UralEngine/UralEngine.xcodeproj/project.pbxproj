@@ -119,6 +119,10 @@
 		5382B8BD2456A2F7005DBB7B /* OpenGLRendererAPI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5382B8B92456A2F7005DBB7B /* OpenGLRendererAPI.cpp */; };
 		5382B8C62456AEE8005DBB7B /* OrthographicCameraController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5382B8BF2456A53C005DBB7B /* OrthographicCameraController.h */; };
 		5382B8C72456AEEA005DBB7B /* OrthographicCameraController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5382B8BE2456A53C005DBB7B /* OrthographicCameraController.cpp */; };
+		5382B8CA2456C04A005DBB7B /* OpenGLTexture2D.h in Headers */ = {isa = PBXBuildFile; fileRef = 5382B8C82456C04A005DBB7B /* OpenGLTexture2D.h */; };
+		5382B8CB2456C04A005DBB7B /* OpenGLTexture2D.h in Headers */ = {isa = PBXBuildFile; fileRef = 5382B8C82456C04A005DBB7B /* OpenGLTexture2D.h */; };
+		5382B8CC2456C04A005DBB7B /* OpenGLTexture2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5382B8C92456C04A005DBB7B /* OpenGLTexture2D.cpp */; };
+		5382B8CD2456C04A005DBB7B /* OpenGLTexture2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5382B8C92456C04A005DBB7B /* OpenGLTexture2D.cpp */; };
 		538872BB24466D4400D9BE4A /* ColorBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 538872B924466D4400D9BE4A /* ColorBuffer.cpp */; };
 		538872BC24466D4400D9BE4A /* ColorBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 538872B924466D4400D9BE4A /* ColorBuffer.cpp */; };
 		538872BD24466D4400D9BE4A /* ColorBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 538872BA24466D4400D9BE4A /* ColorBuffer.h */; };
@@ -290,6 +294,8 @@
 		5382B8B92456A2F7005DBB7B /* OpenGLRendererAPI.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = OpenGLRendererAPI.cpp; sourceTree = "<group>"; };
 		5382B8BE2456A53C005DBB7B /* OrthographicCameraController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OrthographicCameraController.cpp; sourceTree = "<group>"; };
 		5382B8BF2456A53C005DBB7B /* OrthographicCameraController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrthographicCameraController.h; sourceTree = "<group>"; };
+		5382B8C82456C04A005DBB7B /* OpenGLTexture2D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenGLTexture2D.h; sourceTree = "<group>"; };
+		5382B8C92456C04A005DBB7B /* OpenGLTexture2D.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = OpenGLTexture2D.cpp; sourceTree = "<group>"; };
 		538872B924466D4400D9BE4A /* ColorBuffer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ColorBuffer.cpp; sourceTree = "<group>"; };
 		538872BA24466D4400D9BE4A /* ColorBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorBuffer.h; sourceTree = "<group>"; };
 		538872BF24466D5500D9BE4A /* StencilBuffer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StencilBuffer.cpp; sourceTree = "<group>"; };
@@ -623,6 +629,8 @@
 		5382B8AB24568D1F005DBB7B /* Textures */ = {
 			isa = PBXGroup;
 			children = (
+				5382B8C82456C04A005DBB7B /* OpenGLTexture2D.h */,
+				5382B8C92456C04A005DBB7B /* OpenGLTexture2D.cpp */,
 			);
 			path = Textures;
 			sourceTree = "<group>";
@@ -940,6 +948,7 @@
 				538872CA24466D6700D9BE4A /* DepthBuffer.h in Headers */,
 				5382B8BB2456A2F7005DBB7B /* OpenGLRendererAPI.h in Headers */,
 				538872C424466D5500D9BE4A /* StencilBuffer.h in Headers */,
+				5382B8CB2456C04A005DBB7B /* OpenGLTexture2D.h in Headers */,
 				538B34A92449D04300AF91C3 /* OpenGLVertexBuffer.h in Headers */,
 				533524B42449145F000C3D04 /* OpenGLMirrorShader.h in Headers */,
 				536F48C12445B6D3008DCDEB /* Surface.h in Headers */,
@@ -989,6 +998,7 @@
 				53678FCA2446F97F000FF94D /* Shader.h in Headers */,
 				538B34C2244A3D6B00AF91C3 /* Renderer2D.h in Headers */,
 				53678FE8244740F5000FF94D /* VertexBuffer.h in Headers */,
+				5382B8CA2456C04A005DBB7B /* OpenGLTexture2D.h in Headers */,
 				53D79656240066B400D752C7 /* Layer.h in Headers */,
 				53678FDC24474080000FF94D /* TransformFeedbackBuffer.h in Headers */,
 				53F6EA162401AF3A00EF58AA /* KeyCodes.h in Headers */,
@@ -1151,6 +1161,7 @@
 				538B348E244972E700AF91C3 /* OpenGLShaderCompiler.cpp in Sources */,
 				538B34BF244A3CF800AF91C3 /* Renderer.cpp in Sources */,
 				5335249F2448AECB000C3D04 /* OpenGLShaderProgram.cpp in Sources */,
+				5382B8CD2456C04A005DBB7B /* OpenGLTexture2D.cpp in Sources */,
 				5382B8B724569688005DBB7B /* Texture2D.cpp in Sources */,
 				53CDC30024485A51006DB18C /* OpenGLError.cpp in Sources */,
 				53678FCF244700A6000FF94D /* UniformBuffer.cpp in Sources */,
@@ -1211,6 +1222,7 @@
 				538B34BE244A3CF800AF91C3 /* Renderer.cpp in Sources */,
 				538B348D244972E700AF91C3 /* OpenGLShaderCompiler.cpp in Sources */,
 				538872C124466D5500D9BE4A /* StencilBuffer.cpp in Sources */,
+				5382B8CC2456C04A005DBB7B /* OpenGLTexture2D.cpp in Sources */,
 				5382B8C72456AEEA005DBB7B /* OrthographicCameraController.cpp in Sources */,
 				536F48B52445B00C008DCDEB /* DesktopApplication.cpp in Sources */,
 			);
@@ -1253,7 +1265,6 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/vendor/glfw-build/src",
 					"$(PROJECT_DIR)/vendor/GLAD/include/glad",
-					"$(PROJECT_DIR)/Super",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -1296,7 +1307,6 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/vendor/glfw-build/src",
 					"$(PROJECT_DIR)/vendor/GLAD/include/glad",
-					"$(PROJECT_DIR)/Super",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -1468,7 +1478,6 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/vendor/glfw-build/src",
 					"$(PROJECT_DIR)/vendor/GLAD/include/glad",
-					"$(PROJECT_DIR)/Super",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1511,7 +1520,6 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/vendor/glfw-build/src",
 					"$(PROJECT_DIR)/vendor/GLAD/include/glad",
-					"$(PROJECT_DIR)/Super",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

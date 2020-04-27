@@ -47,6 +47,10 @@
 #include "Renderer/Buffers/VertexBuffer.h"
 #include "Renderer/Textures/Texture.h"
 
+// камеры
+#include "Translations/OrthographicCamera.h"
+#include "Translations/OrthographicCameraController.h"
+
 //------Точка входа-----------------
 #include "Ural/Desktop/EntryPoint.h"
 //----------------------------------
